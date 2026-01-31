@@ -1,8 +1,8 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import Projects from '../components/Projects';
-import Process from '../components/Process';
-import Skills from '../components/Skills';
+import Hero from '../components/home/Hero';
+import Projects from '../components/home/Projects';
+import Process from '../components/home/Process';
+import Skills from '../components/home/Skills';
 
 const Home: React.FC = () => {
     return (

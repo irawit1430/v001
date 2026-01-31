@@ -1,0 +1,215 @@
+/* Project Details Section */
+.rz-details {
+    background: #F9FAFB;
+    padding: 60px 20px;
+    margin-top: 50px;
+}
+
+.rz-details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 60px;
+    max-width: 1244px;
+    margin: 0 auto;
+}
+
+.rz-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rz-detail-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6F6864;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rz-detail-value {
+    font-size: 16px;
+    font-weight: 400;
+    color: #6F6864;
+}
+
+.rz-detail-line {
+    height: 1px;
+    background: #D9D9D9;
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Client Problem Section */
+.rz-problem-section {
+    padding: 80px 20px;
+}
+
+.rz-problem-layout {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1244px;
+    margin: 0 auto;
+}
+
+.rz-problem-layout .rz-section-title {
+    flex: 0 0 250px;
+    font-size: 32px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+}
+
+.rz-problem-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.rz-problem-content .rz-text-medium {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #6F6864;
+    margin: 0;
+}
+
+/* Key Challenges Section */
+.rz-challenges-section {
+    padding: 60px 20px 80px;
+}
+
+.rz-challenges-section .rz-section-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.rz-challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1244px;
+}
+
+.rz-challenge-card {
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    background: #FAFAFA;
+    border-radius: 12px;
+    border: 1px solid #EEEEEE;
+    align-items: flex-start;
+}
+
+.rz-challenge-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Icon Styles */
+.rz-icon-bars {
+    display: flex;
+    gap: 3px;
+    align-items: flex-end;
+    height: 24px;
+}
+
+.rz-icon-bars span {
+    width: 6px;
+    background: #C4A484;
+    border-radius: 2px;
+}
+
+.rz-icon-bars span:nth-child(1) {
+    height: 12px;
+}
+
+.rz-icon-bars span:nth-child(2) {
+    height: 18px;
+}
+
+.rz-icon-bars span:nth-child(3) {
+    height: 24px;
+}
+
+.rz-icon-dots {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+}
+
+.rz-icon-dots span {
+    width: 10px;
+    height: 10px;
+    background: #C4A484;
+    border-radius: 50%;
+}
+
+.rz-icon-circle {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #C4A484;
+    border-radius: 50%;
+}
+
+.rz-icon-star {
+    font-size: 24px;
+    color: #C4A484;
+}
+
+.rz-challenge-content {
+    flex: 1;
+}
+
+.rz-challenge-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+    margin: 0 0 8px 0;
+}
+
+.rz-challenge-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6F6864;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .rz-details-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .rz-problem-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .rz-problem-layout .rz-section-title {
+        flex: none;
+    }
+
+    .rz-challenges-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rz-challenges-section .rz-section-title,
+    .rz-problem-layout .rz-section-title {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rz-details-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

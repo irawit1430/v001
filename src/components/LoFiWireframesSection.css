@@ -1,0 +1,89 @@
+.bt-lofi-section {
+    padding-bottom: 80px;
+}
+
+.bt-lofi-header {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.bt-lofi-title-wrapper {
+    flex: 1;
+    min-width: 250px;
+}
+
+.bt-lofi-intro {
+    flex: 2;
+    min-width: 300px;
+}
+
+.bt-lofi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background-color: #5C3D1E;
+    /* Dark brown background from screenshot */
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.bt-lofi-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bt-lofi-image-wrapper {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100%;
+    /* Aspect ratio or fixed height might be needed if images vary, but assuming consistent */
+}
+
+.bt-lofi-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bt-lofi-caption {
+    color: #FFFFFF;
+}
+
+.bt-lofi-screen-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+}
+
+.bt-lofi-screen-desc {
+    font-size: 14px;
+    color: #E0E0E0;
+    /* Slightly lighter for description */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .bt-lofi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .bt-lofi-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bt-lofi-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}

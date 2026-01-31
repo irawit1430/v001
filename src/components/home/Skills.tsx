@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-import iconResearch from '../assets/icon-research.png';
-import iconSpecialties from '../assets/icon-specialties.png';
-import iconTools from '../assets/icon-tools.png';
-import iconMethodologies from '../assets/icon-methodologies.png';
+import iconResearch from '../../assets/icon-research.png';
+import iconSpecialties from '../../assets/icon-specialties.png';
+import iconTools from '../../assets/icon-tools.png';
+import iconMethodologies from '../../assets/icon-methodologies.png';
 
 // Skills with their specific colors from Figma - all in one flowing line
 const skills = [

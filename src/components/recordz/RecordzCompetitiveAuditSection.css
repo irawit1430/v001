@@ -1,0 +1,156 @@
+/* Competitive Audit Section */
+.rz-audit-section {
+    padding: 80px 20px;
+    max-width: 1244px;
+    margin: 0 auto;
+}
+
+.rz-audit-container {
+    width: 100%;
+}
+
+/* Header Layout */
+.rz-audit-header {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.rz-audit-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+    flex: 0 0 250px;
+}
+
+.rz-audit-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.rz-audit-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #6F6864;
+    margin: 0;
+}
+
+.rz-audit-text strong {
+    color: #333333;
+}
+
+/* Table Wrapper */
+.rz-audit-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Table Styles */
+.rz-audit-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 900px;
+}
+
+.rz-audit-table th,
+.rz-audit-table td {
+    padding: 16px 20px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+/* Header Row */
+.rz-table-header {
+    background: #333333;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.rz-table-header.rz-row-header {
+    background: #1A1A1A;
+    width: 140px;
+}
+
+/* Row Labels */
+.rz-row-label {
+    background: #5A5A5A;
+    color: #FFFFFF;
+    font-weight: 600;
+    width: 140px;
+    font-size: 14px;
+}
+
+/* Table Body */
+.rz-audit-table tbody tr:nth-child(even) {
+    background: #FAFAFA;
+}
+
+.rz-audit-table tbody tr:hover {
+    background: #F5F5F5;
+}
+
+.rz-audit-table td {
+    color: #555555;
+    line-height: 1.5;
+}
+
+/* Links */
+.rz-audit-table a {
+    color: #4A90D9;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.rz-audit-table a:hover {
+    color: #2E6BB0;
+}
+
+/* Lists in table */
+.rz-audit-table ul {
+    margin: 0;
+    padding-left: 18px;
+    list-style-type: disc;
+}
+
+.rz-audit-table li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.rz-audit-table li:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .rz-audit-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .rz-audit-title {
+        font-size: 26px;
+        flex: none;
+    }
+
+    .rz-audit-text {
+        font-size: 16px;
+    }
+
+    .rz-audit-table {
+        font-size: 13px;
+    }
+
+    .rz-audit-table th,
+    .rz-audit-table td {
+        padding: 12px 14px;
+    }
+}

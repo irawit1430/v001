@@ -1,0 +1,52 @@
+.bt-competitive-audit {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.bt-audit-header {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.bt-audit-header .bt-section-title {
+    flex: 1;
+    min-width: 250px;
+}
+
+.bt-audit-desc {
+    flex: 2;
+    min-width: 300px;
+}
+
+.bt-audit-table-container {
+    width: 100%;
+    overflow-x: auto;
+    /* Allow scrolling if table is too wide on mobile */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.bt-audit-image {
+    margin: 0;
+    /* Override default margin */
+    display: block;
+    min-width: 800px;
+    /* Ensure table remains readable */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .bt-audit-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bt-audit-image {
+        width: 100%;
+        min-width: unset;
+        /* Allow shrinking on mobile if needed, or keep scrolling */
+    }
+}

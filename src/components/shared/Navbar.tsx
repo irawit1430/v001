@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import logo from '../assets/logo.png';
+import logo from '../../assets/logo.png';
 
 const navItems = [
   { label: 'About', href: '/about', isRoute: true },
-  { label: 'Projects', href: '#projects', isRoute: false },
+  { label: 'Projects', href: '/projects', isRoute: true },
   { label: 'Contact', href: '#contact', isRoute: false },
   { label: 'Resume', href: '#resume', isRoute: false }
 ];

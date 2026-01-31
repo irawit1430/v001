@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import heroBg from '../assets/hero-bg-final.jpg';
-import heroGradient from '../assets/hero-gradient.png';
-import heroText from '../assets/hero-text.png';
+import heroBg from '../../assets/hero-bg-final.jpg';
+import heroGradient from '../../assets/hero-gradient.png';
+import heroText from '../../assets/hero-text.png';
 
 // Floating particles component
 const FloatingParticles: React.FC = () => {

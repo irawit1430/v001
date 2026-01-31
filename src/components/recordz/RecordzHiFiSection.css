@@ -1,0 +1,127 @@
+/* Hi-Fi Wireframes Section */
+.rz-hifi-section {
+    padding: 80px 20px;
+    max-width: 1244px;
+    margin: 0 auto;
+}
+
+.rz-hifi-container {
+    width: 100%;
+}
+
+/* Header Layout */
+.rz-hifi-header {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.rz-hifi-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+    flex: 0 0 220px;
+}
+
+.rz-hifi-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.rz-hifi-intro {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333333;
+    margin: 0 0 16px 0;
+}
+
+.rz-hifi-text {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #6F6864;
+    margin: 0;
+}
+
+/* Featured Large Mockups */
+.rz-hifi-featured {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.rz-hifi-featured-item {
+    text-align: center;
+}
+
+.rz-hifi-featured-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Smaller Mockups Grid */
+.rz-hifi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.rz-hifi-grid-item {
+    text-align: center;
+}
+
+.rz-hifi-grid-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.rz-hifi-grid-item:hover img {
+    transform: scale(1.02);
+}
+
+/* Captions */
+.rz-hifi-caption {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .rz-hifi-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .rz-hifi-title {
+        font-size: 26px;
+        flex: none;
+    }
+
+    .rz-hifi-intro {
+        font-size: 18px;
+    }
+
+    .rz-hifi-text {
+        font-size: 16px;
+    }
+
+    .rz-hifi-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .rz-hifi-caption {
+        font-size: 14px;
+    }
+}

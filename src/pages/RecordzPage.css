@@ -1,0 +1,276 @@
+.recordz-page {
+    width: 100%;
+    background: #FFFFFF;
+    overflow-x: hidden;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #6F6864;
+}
+
+/* Hero Section with Gradient */
+.rz-hero {
+    width: 100%;
+    position: relative;
+    /* Remove padding/margin from here, move to content wrapper */
+    padding: 0;
+    margin: 0;
+    max-width: none;
+}
+
+.rz-hero-content {
+    padding: 100px 20px 80px;
+    text-align: left;
+    position: relative;
+    max-width: 1244px;
+    margin: 0 auto;
+    z-index: 1;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+/* Gradient Background - Coral/Peach to White */
+.rz-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 700px;
+    /* Adjusted height */
+    background: linear-gradient(180deg, #F5A896 0%, #F8C4B8 20%, #FDDDD6 40%, #FFFFFF 100%);
+    z-index: 0;
+}
+
+.rz-title {
+    font-size: 50px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.rz-subtitle {
+    font-size: 30px;
+    font-weight: 400;
+    color: #6F6864;
+    margin-bottom: 50px;
+}
+
+/* Hero Image with Monitor Mockup */
+.rz-hero-image-wrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.rz-hero-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Gray gradient behind the monitor */
+.rz-hero-image-bg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 60%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #E8E8E8 50%, #BDBDBD 100%);
+    z-index: 0;
+    border-radius: 0 0 20px 20px;
+}
+
+.rz-hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+/* Project Details Section */
+.rz-details {
+    background: #F9FAFB;
+    padding: 60px 20px;
+    margin-top: 50px;
+}
+
+.rz-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1244px;
+    margin: 0 auto;
+}
+
+.rz-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rz-detail-label {
+    font-size: 28px;
+    font-weight: 500;
+    color: #6F6864;
+    text-transform: uppercase;
+}
+
+.rz-detail-value {
+    font-size: 24px;
+    font-weight: 500;
+    color: #6F6864;
+}
+
+.rz-detail-line {
+    height: 1px;
+    background: #6F6864;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Content Sections */
+.rz-section {
+    padding: 80px 20px;
+    max-width: 1244px;
+    margin: 0 auto;
+}
+
+.rz-section-title {
+    font-size: 40px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.rz-text-large {
+    font-size: 34px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #6F6864;
+    margin-bottom: 20px;
+}
+
+.rz-text-medium {
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #6F6864;
+    margin-bottom: 20px;
+}
+
+/* Dark Section (themed for 1331 Recordz - dark/black theme) */
+.rz-dark-section {
+    background: #1A1A1A;
+    color: #FFFFFF;
+    padding: 100px 20px;
+    margin: 60px 0;
+}
+
+.rz-dark-section .rz-section-title,
+.rz-dark-section .rz-text-large,
+.rz-dark-section .rz-text-medium {
+    color: #FFFFFF;
+}
+
+/* Images */
+.rz-full-image {
+    width: 100%;
+    height: auto;
+    margin: 40px 0;
+    border-radius: 10px;
+}
+
+/* Cards */
+.rz-audit-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.rz-card {
+    background: #FFFFFF;
+    border-radius: 30px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.rz-card-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.rz-card-label {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1A1A1A;
+    text-align: center;
+}
+
+/* Badge Styles */
+.rz-badge-dark {
+    background: #1A1A1A;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.rz-badge-light {
+    background: #F3F3F3;
+    color: #6F6864;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* Accent color - Green like in the screenshot */
+.rz-accent {
+    color: #4CAF50;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .rz-hero-content {
+        padding: 80px 20px 40px;
+    }
+
+    .rz-hero::before {
+        height: 400px;
+    }
+
+    .rz-title {
+        font-size: 36px;
+    }
+
+    .rz-subtitle {
+        font-size: 24px;
+    }
+
+    .rz-section-title {
+        font-size: 32px;
+    }
+
+    .rz-text-large {
+        font-size: 24px;
+    }
+
+    .rz-text-medium {
+        font-size: 20px;
+    }
+}

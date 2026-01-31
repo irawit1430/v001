@@ -1,0 +1,60 @@
+.bt-ia-section {
+    padding-bottom: 80px;
+}
+
+.bt-ia-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.bt-ia-header {
+    flex: 1;
+    min-width: 250px;
+}
+
+.bt-ia-body {
+    flex: 2;
+    min-width: 300px;
+}
+
+.bt-ia-intro {
+    font-size: 24px;
+    color: #6F6864;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.bt-ia-image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #F9F9F9;
+    /* Light background to make the diagram pop if it has transparency */
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.bt-ia-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .bt-ia-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bt-ia-intro {
+        font-size: 22px;
+    }
+
+    .bt-ia-image-wrapper {
+        padding: 20px;
+    }
+}

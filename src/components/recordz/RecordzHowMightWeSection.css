@@ -1,0 +1,113 @@
+/* How Might We Section */
+.rz-hmw-section {
+    padding: 80px 20px;
+    max-width: 1244px;
+    margin: 0 auto;
+}
+
+.rz-hmw-container {
+    width: 100%;
+}
+
+/* Header Layout */
+.rz-hmw-header {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.rz-hmw-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+    flex: 0 0 200px;
+}
+
+.rz-hmw-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.rz-hmw-intro {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333333;
+    margin: 0 0 24px 0;
+}
+
+/* Questions List */
+.rz-hmw-list {
+    list-style-type: disc;
+    padding-left: 24px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.rz-hmw-list li {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #6F6864;
+}
+
+.rz-hmw-list li strong {
+    color: #333333;
+}
+
+/* Image Grid - 2x2 */
+.rz-hmw-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.rz-hmw-image-item {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.rz-hmw-image-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.rz-hmw-image-item:hover img {
+    transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .rz-hmw-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .rz-hmw-title {
+        font-size: 26px;
+        flex: none;
+    }
+
+    .rz-hmw-intro {
+        font-size: 18px;
+    }
+
+    .rz-hmw-list li {
+        font-size: 16px;
+    }
+
+    .rz-hmw-images {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .rz-hmw-image-item img {
+        height: 220px;
+    }
+}

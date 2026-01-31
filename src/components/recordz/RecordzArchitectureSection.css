@@ -1,0 +1,155 @@
+/* Information Architecture Section */
+.rz-ia-section {
+    padding: 80px 20px;
+    max-width: 1244px;
+    margin: 0 auto;
+}
+
+.rz-ia-container {
+    width: 100%;
+}
+
+/* IA Header Layout */
+.rz-ia-header {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.rz-ia-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+    flex: 0 0 280px;
+}
+
+.rz-ia-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.rz-ia-intro {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333333;
+    margin: 0 0 16px 0;
+}
+
+.rz-ia-text {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #6F6864;
+    margin: 0;
+}
+
+/* User Flows Section */
+.rz-userflow-section {
+    padding: 60px 20px 80px;
+    max-width: 1244px;
+    margin: 0 auto;
+    border-top: 1px solid #E5E5E5;
+}
+
+.rz-userflow-container {
+    width: 100%;
+}
+
+/* User Flow Header Layout */
+.rz-userflow-header {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.rz-userflow-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+    flex: 0 0 200px;
+}
+
+.rz-userflow-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.rz-userflow-intro {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333333;
+    margin: 0 0 16px 0;
+}
+
+.rz-userflow-text {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #6F6864;
+    margin: 0 0 16px 0;
+}
+
+.rz-userflow-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Flow Subtitle */
+.rz-flow-subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333333;
+    margin: 0 0 30px 0;
+}
+
+/* Diagram Wrapper */
+.rz-diagram-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+.rz-diagram-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .rz-ia-header,
+    .rz-userflow-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .rz-ia-title,
+    .rz-userflow-title {
+        font-size: 26px;
+        flex: none;
+    }
+
+    .rz-ia-intro,
+    .rz-userflow-intro {
+        font-size: 18px;
+    }
+
+    .rz-ia-text,
+    .rz-userflow-text {
+        font-size: 16px;
+    }
+
+    .rz-flow-subtitle {
+        font-size: 20px;
+    }
+
+    .rz-diagram-image {
+        min-width: 600px;
+    }
+}

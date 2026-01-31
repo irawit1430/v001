@@ -1,0 +1,134 @@
+.bt-hifi-section {
+    padding-bottom: 80px;
+}
+
+.bt-hifi-header {
+    display: flex;
+    gap: 20px;
+    /* Reduced to match grid gap for better alignment */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.bt-hifi-title-wrapper {
+    flex: 1;
+    min-width: 200px;
+}
+
+.bt-hifi-intro {
+    flex: 3;
+    /* Increased to 3 to create a 1:3 ratio (25% / 75%) matching the 4-column grid */
+    min-width: 300px;
+}
+
+.bt-hifi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    /* No dark background for Hi-Fi section based on typical case study flows, keeping it clean or maybe light gray if needed. 
+       The screenshot shows white background for the section. */
+}
+
+.bt-hifi-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bt-hifi-image-wrapper {
+    /* Add shadow/border radius to make screens pop */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.bt-hifi-image-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.bt-hifi-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Key Features Styles */
+.bt-features-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background-color: #3E2613;
+    /* Dark brown background */
+    padding: 40px;
+    border-radius: 0;
+    /* Full width look usually, but inside container it might be rounded. Screenshot shows it might be full width or container width. Let's stick to container width with slight radius or none. Screenshot looks like a solid block. */
+    margin-top: 40px;
+}
+
+.bt-feature-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.bt-feature-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+    background-color: #F5F0EB;
+    /* Light beige circle background if needed, or just transparent */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bt-feature-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3E2613;
+    margin-bottom: 10px;
+}
+
+.bt-feature-desc {
+    font-size: 14px;
+    color: #6F6864;
+    line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .bt-hifi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bt-features-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .bt-hifi-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bt-hifi-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        /* Add some side padding on mobile if full width */
+    }
+
+    .bt-features-grid-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}

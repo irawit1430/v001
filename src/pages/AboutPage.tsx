@@ -100,14 +100,14 @@ const AboutPage: React.FC = () => {
                 display: 'flex',
                 flexWrap: 'wrap',
                 gap: '40px',
-                padding: '0 76px',
+                padding: '0 72px',
                 marginBottom: '60px'
             }}>
                 {/* Left side - Icon and Label */}
                 <div style={{
                     display: 'flex',
                     alignItems: 'flex-start',
-                    gap: '10px',
+                    gap: '8px',
                     minWidth: '200px'
                 }}>
                     <motion.img
@@ -148,7 +148,8 @@ const AboutPage: React.FC = () => {
                         maxWidth: '875px',
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: '24px'
+                        gap: '22px',
+                        marginLeft: '140px'
                     }}
                 >
                     <motion.h2
@@ -157,8 +158,8 @@ const AboutPage: React.FC = () => {
                             fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
                             fontStyle: 'normal',
                             fontWeight: 500,
-                            fontSize: '45px',
-                            lineHeight: '60px',
+                            fontSize: '35px',
+                            lineHeight: '45px',
                             color: '#6F6864',
                             marginLeft: '250px'
                         }}
@@ -171,13 +172,55 @@ const AboutPage: React.FC = () => {
                             fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
                             fontStyle: 'normal',
                             fontWeight: 400,
-                            fontSize: '25px',
-                            lineHeight: '36px',
+                            fontSize: '15px',
+                            lineHeight: '30px',
                             color: '#676564',
-                            margin: 0
+                            marginLeft: "250px",
                         }}
                     >
-                        My journey began in the Marines, where I learned resilience, empathy, and adaptability, qualities that now shape how I design with intention. As an early product designer at Bonder, I helped define and grow the product from its early stages, leading initiatives that simplified workflows, built consistency, and made complex systems approachable. I believe great design tells a story — one that uplifts, empowers, and creates connection. Outside of work, I love mentoring other creatives and exploring new ways to blend technology, empathy, and design.
+                        My journey began in the Marines, where I learned resilience, empathy, and adaptability, qualities that now shape how I design with intention.
+                    </motion.p>
+                    <motion.p
+                        variants={itemVariants}
+                        style={{
+                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                            fontStyle: 'normal',
+                            fontWeight: 400,
+                            fontSize: '15px',
+                            lineHeight: '30px',
+                            color: '#676564',
+                            marginLeft: "250px",
+                        }}
+                    >
+                        As an early product designer at Bonder, I helped define and grow the product from its early stages, leading initiatives that simplified workflows, built consistency, and made complex systems approachable.
+                    </motion.p>
+                    <motion.p
+                        variants={itemVariants}
+                        style={{
+                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                            fontStyle: 'normal',
+                            fontWeight: 400,
+                            fontSize: '15px',
+                            lineHeight: '30px',
+                            color: '#676564',
+                            marginLeft: "250px",
+                        }}
+                    >
+                        I believe great design tells a story — one that uplifts, empowers, and creates connection.
+                    </motion.p>
+                    <motion.p
+                        variants={itemVariants}
+                        style={{
+                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                            fontStyle: 'normal',
+                            fontWeight: 400,
+                            fontSize: '15px',
+                            lineHeight: '30px',
+                            color: '#676564',
+                            marginLeft: "250px",
+                        }}
+                    >
+                        Outside of work, I love mentoring other creatives and exploring new ways to blend technology, empathy, and design.
                     </motion.p>
 
                     {/* View My Resume button */}
@@ -204,7 +247,8 @@ const AboutPage: React.FC = () => {
                             fontWeight: 500,
                             fontSize: '24px',
                             lineHeight: '29px',
-                            color: '#FFFFFF'
+                            color: '#FFFFFF',
+                            marginLeft: "250px",
                         }}
                     >
                         View My Resume
@@ -317,8 +361,9 @@ const AboutPage: React.FC = () => {
                 display: 'flex',
                 flexWrap: 'wrap',
                 gap: '40px',
-                padding: '0 76px',
-                marginBottom: '60px'
+                padding: '0 72px',
+                marginBottom: '30px',
+                marginTop: '30px',
             }}>
                 {/* Left side - Label */}
                 <motion.div
@@ -334,7 +379,8 @@ const AboutPage: React.FC = () => {
                         fontWeight: 500,
                         fontSize: '30px',
                         lineHeight: '36px',
-                        color: '#FF6F61'
+                        color: '#FF6F61',
+                        marginTop: '12px'
                     }}>
                         BACKGROUND & EDUCATION
                     </span>
@@ -349,10 +395,12 @@ const AboutPage: React.FC = () => {
                     style={{
                         flex: 1,
                         minWidth: '300px',
-                        maxWidth: '875px',
+                        maxWidth: '1100px',
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: '24px'
+                        gap: '20px',
+                        marginLeft: '-10px',
+                        marginTop: '30px',
                     }}
                 >
                     <motion.h2
@@ -361,11 +409,10 @@ const AboutPage: React.FC = () => {
                             fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
                             fontStyle: 'normal',
                             fontWeight: 500,
-                            fontSize: '50px',
-                            lineHeight: '60px',
+                            fontSize: '35px',
+                            lineHeight: '45px',
                             color: '#6F6864',
-                            margin: 0,
-                            maxWidth: '768px'
+                            marginLeft: '250px'
                         }}
                     >
                         My background in Interactive Media taught me that great design is more than visuals . It's about crafting experiences that connect people.
@@ -376,130 +423,206 @@ const AboutPage: React.FC = () => {
                             fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
                             fontStyle: 'normal',
                             fontWeight: 400,
-                            fontSize: '30px',
-                            lineHeight: '36px',
+                            fontSize: '15px',
+                            lineHeight: '30px',
                             color: '#676564',
-                            margin: 0
+                            marginLeft: "250px",
                         }}
                     >
-                        My background in Interactive Media has given me a foundation in blending storytelling, design, and technology to create experiences that feel intuitive and meaningful. Through hands-on coursework and creative projects, I've learned how human behavior, aesthetics, and usability intersect, and how thoughtful design can make complex ideas feel simple. Alongside my studies, I completed the Google UX Design Certificate, where I gained practical experience in user research, wireframing, and usability testing. This program helped me strengthen my process-driven side and apply design thinking to real-world challenges. These experiences have shaped the way I approach every project: with curiosity, empathy, and a genuine desire to create designs that connect with people on a deeper level.
+                        My background in Interactive Media has given me a foundation in blending storytelling, design, and technology to create experiences that feel intuitive and meaningful.
+                    </motion.p>
+                    <motion.p
+                        variants={itemVariants}
+                        style={{
+                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                            fontStyle: 'normal',
+                            fontWeight: 400,
+                            fontSize: '15px',
+                            lineHeight: '30px',
+                            color: '#676564',
+                            marginLeft: "250px",
+                        }}
+                    >
+                        Through hands-on coursework and creative projects, I've learned how human behavior, aesthetics, and usability intersect, and how thoughtful design can make complex ideas feel simple.
+                    </motion.p>
+                    <motion.p
+                        variants={itemVariants}
+                        style={{
+                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                            fontStyle: 'normal',
+                            fontWeight: 400,
+                            fontSize: '15px',
+                            lineHeight: '30px',
+                            color: '#676564',
+                            marginLeft: "250px",
+                        }}
+                    >
+                        Alongside my studies, I completed the Google UX Design Certificate, where I gained practical experience in user research, wireframing, and usability testing.
+                    </motion.p>
+                    <motion.p
+                        variants={itemVariants}
+                        style={{
+                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                            fontStyle: 'normal',
+                            fontWeight: 400,
+                            fontSize: '15px',
+                            lineHeight: '30px',
+                            color: '#676564',
+                            marginLeft: "250px",
+                        }}
+                    >
+                        This program helped me strengthen my process-driven side and apply design thinking to real-world challenges.
+                    </motion.p>
+                    <motion.p
+                        variants={itemVariants}
+                        style={{
+                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                            fontStyle: 'normal',
+                            fontWeight: 400,
+                            fontSize: '15px',
+                            lineHeight: '30px',
+                            color: '#676564',
+                            marginLeft: "250px",
+                        }}
+                    >
+                        These experiences have shaped the way I approach every project: with curiosity, empathy, and a genuine desire to create designs that connect with people on a deeper level.
+                    </motion.p>
+
+                    {/* Education Card */}
+                    <motion.div
+                        variants={itemVariants}
+                        style={{
+                            display: 'flex',
+                            width: '100%',
+                            maxWidth: '1600px',
+                            marginLeft: '200px',
+                            marginTop: '30px',
+                            marginBottom: '30px',
+
+                        }}
+                    >
+                        <div style={{
+                            display: 'flex',
+                            width: '100%',
+                            background: '#FFF9F7', // Very light peach/beige
+                            border: '1px solid #FF6F61',
+                            borderRadius: '0px', // Sharp corners as per image
+                            overflow: 'hidden',
+                        }}>
+                            {/* Coral accent bar */}
+                            <motion.div
+                                initial={{ height: 0 }}
+                                whileInView={{ height: 'auto' }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.2 }}
+                                style={{
+                                    width: '8px',
+                                    background: '#FF6F61',
+                                    flexShrink: 0,
+                                    borderRadius: '3px',
+                                }}
+                            />
+
+                            {/* Card Content */}
+                            <div style={{
+                                boxSizing: 'border-box',
+                                flex: 1,
+                                padding: '48px 60px',
+                            }}>
+                                <h3 style={{
+                                    fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                    fontStyle: 'normal',
+                                    fontWeight: 500,
+                                    fontSize: '28px',
+                                    lineHeight: '34px',
+                                    color: '#000000',
+                                    margin: '0 0 32px 0'
+                                }}>
+                                    Education
+                                </h3>
+
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
+                                    {/* Education Item 1 */}
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                                        <span style={{
+                                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                            fontWeight: 700,
+                                            fontSize: '20px',
+                                            color: '#000000'
+                                        }}>
+                                            Bachelor of Science – Interactive Media (In Progress)
+                                        </span>
+                                        <span style={{
+                                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                            fontStyle: 'italic',
+                                            fontSize: '20px',
+                                            color: '#000000'
+                                        }}>
+                                            University of Miami
+                                        </span>
+                                        <span style={{
+                                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                            fontSize: '18px',
+                                            color: '#888888',
+                                            marginTop: '4px'
+                                        }}>
+                                            Focus: UX Design, Visual Design & Interactive Technologies
+                                        </span>
+                                    </div>
+
+                                    {/* Education Item 2 */}
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                                        <span style={{
+                                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                            fontWeight: 700,
+                                            fontSize: '20px',
+                                            color: '#000000'
+                                        }}>
+                                            User Experience Certification – Google (2023)
+                                        </span>
+                                        <span style={{
+                                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                            fontStyle: 'italic',
+                                            fontSize: '20px',
+                                            color: '#000000'
+                                        }}>
+                                            Coursera
+                                        </span>
+                                        <span style={{
+                                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                            fontSize: '18px',
+                                            color: '#888888',
+                                            marginTop: '4px'
+                                        }}>
+                                            Hands-on training in user research, prototyping, and usability testing
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Additional text */}
+                    <motion.p
+                        variants={itemVariants}
+                        style={{
+                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                            fontStyle: 'normal',
+                            fontWeight: 400,
+                            fontSize: '15px',
+                            lineHeight: '30px',
+                            color: '#6F6864',
+                            margin: 0,
+                            maxWidth: '881px',
+                            marginLeft: '250px',
+                            marginBottom: '40px'
+                        }}
+                    >
+                        Beyond formal education, I'm a continuous learner who stays curious about emerging design trends and tools. I actively seek out workshops, online courses, and collaborative projects that challenge my thinking and strengthen my design process.
                     </motion.p>
                 </motion.div>
             </section>
 
-            {/* Education Card */}
-            <motion.section
-                variants={fadeInUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    padding: '0 20px',
-                    marginBottom: '60px'
-                }}
-            >
-                <div style={{
-                    display: 'flex',
-                    maxWidth: '983px',
-                    width: '100%'
-                }}>
-                    {/* Orange accent bar */}
-                    <motion.div
-                        initial={{ height: 0 }}
-                        whileInView={{ height: '100%' }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        style={{
-                            width: '14px',
-                            minHeight: '361px',
-                            background: '#FF6F61',
-                            borderRadius: '30px',
-                            marginRight: '-4px',
-                            zIndex: 1
-                        }}
-                    />
-
-                    {/* Card background */}
-                    <div style={{
-                        boxSizing: 'border-box',
-                        flex: 1,
-                        padding: '32px 42px',
-                        background: '#FFFAF6',
-                        border: '1px solid #FF6F61'
-                    }}>
-                        <h3 style={{
-                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
-                            fontStyle: 'normal',
-                            fontWeight: 400,
-                            fontSize: '30px',
-                            lineHeight: '36px',
-                            color: '#000000',
-                            margin: '0 0 24px 0'
-                        }}>
-                            Education
-                        </h3>
-
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-                            <p style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
-                                fontStyle: 'normal',
-                                fontWeight: 500,
-                                fontSize: '24px',
-                                lineHeight: '29px',
-                                color: '#000000',
-                                margin: 0
-                            }}>
-                                Bachelor of Science – Interactive Media (In Progress)<br />
-                                University of Miami<br />
-                                Focus: UX Design, Visual Design & Interactive Technologies
-                            </p>
-
-                            <p style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
-                                fontStyle: 'normal',
-                                fontWeight: 500,
-                                fontSize: '24px',
-                                lineHeight: '29px',
-                                color: '#000000',
-                                margin: 0
-                            }}>
-                                User Experience Certification – Google (2023)<br />
-                                Coursera<br />
-                                Hands-on training in user research, prototyping, and usability testing
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </motion.section>
-
-            {/* Additional text */}
-            <motion.section
-                variants={fadeInUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                style={{
-                    padding: '0 76px',
-                    marginBottom: '80px',
-                    display: 'flex',
-                    justifyContent: 'flex-end'
-                }}
-            >
-                <p style={{
-                    fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
-                    fontStyle: 'normal',
-                    fontWeight: 400,
-                    fontSize: '30px',
-                    lineHeight: '36px',
-                    color: '#6F6864',
-                    margin: 0,
-                    maxWidth: '881px'
-                }}>
-                    Beyond formal education, I'm a continuous learner who stays curious about emerging design trends and tools. I actively seek out workshops, online courses, and collaborative projects that challenge my thinking and strengthen my design process.
-                </p>
-            </motion.section>
 
             {/* CTA Section */}
             <motion.section
@@ -518,42 +641,55 @@ const AboutPage: React.FC = () => {
                     textAlign: 'center'
                 }}
             >
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    style={{
-                        fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
-                        fontStyle: 'normal',
-                        fontWeight: 500,
-                        fontSize: '40px',
-                        lineHeight: '48px',
-                        color: '#6F6864',
-                        margin: '0 0 16px 0'
-                    }}
-                >
-                    Have a project or story to share?
-                </motion.h2>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    textAlign: 'left',
+                    maxWidth: '800px',
+                    width: '100%'
+                }}>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        style={{
+                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                            fontStyle: 'normal',
+                            fontWeight: 500,
+                            fontSize: '40px',
+                            lineHeight: '48px',
+                            color: '#6F6864',
+                            margin: '0 0 16px 0',
+                            textAlign: 'left',
+                            marginLeft: '60px'
+                        }}
+                    >
+                        Have a project or story to share?
+                    </motion.h2>
 
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 }}
-                    style={{
-                        fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
-                        fontStyle: 'normal',
-                        fontWeight: 400,
-                        fontSize: '28px',
-                        lineHeight: '33px',
-                        color: '#6F6864',
-                        margin: '0 0 40px 0',
-                        maxWidth: '622px'
-                    }}
-                >
-                    I'd love to connect , learn about your goals, and design something that truly resonates with people.
-                </motion.p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 }}
+                        style={{
+                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                            fontStyle: 'normal',
+                            fontWeight: 400,
+                            fontSize: '28px',
+                            lineHeight: '33px',
+                            color: '#6F6864',
+                            margin: '0 0 50px 0',
+                            maxWidth: '800px',
+                            textAlign: 'left',
+                            marginLeft: '60px'
+                        }}
+                    >
+                        I'd love to connect , learn about your goals, and design something that truly resonates with people.
+                    </motion.p>
+                </div>
 
                 <motion.a
                     href="#contact"
@@ -577,7 +713,8 @@ const AboutPage: React.FC = () => {
                         fontWeight: 500,
                         fontSize: '30px',
                         lineHeight: '36px',
-                        color: '#FFFFFF'
+                        color: '#FFFFFF',
+                        marginRight: '20px'
                     }}
                 >
                     Let's Talk

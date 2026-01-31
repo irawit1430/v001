@@ -1,0 +1,69 @@
+.bt-user-flows-section {
+    padding-bottom: 80px;
+}
+
+.bt-flows-row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.bt-flows-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.bt-flows-right {
+    flex: 2;
+    min-width: 300px;
+}
+
+.bt-text-gray {
+    color: #6F6864;
+}
+
+.bt-flow-subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    color: #6F6864;
+    /* Or match the screenshot's gray */
+    margin-bottom: 20px;
+}
+
+.bt-flows-image-wrapper {
+    width: 100%;
+    /* No background or padding needed if it's just the diagram on white */
+}
+
+.bt-flows-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bt-flows-list-container {
+    margin-top: 40px;
+}
+
+.bt-flows-list li {
+    font-size: 18px;
+    /* Slightly smaller than main text if needed */
+    color: #6F6864;
+    margin-bottom: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .bt-flows-row {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .bt-flows-left,
+    .bt-flows-right {
+        width: 100%;
+    }
+}

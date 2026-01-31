@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-import smilingSun from '../assets/smiling sun.png';
-import curvArrow from '../assets/curv arro.png';
+import smilingSun from '../../assets/smiling sun.png';
+import curvArrow from '../../assets/curv arro.png';
 
 const steps = [
     { id: 1, title: "Research & Discovery", desc: "I start by understanding user needs, pain points, and goals through interviews, surveys, and competitive analysis." },
@@ -174,7 +174,7 @@ const Process: React.FC = () => {
                         textAlign: 'center',
                         marginBottom: '3rem',
                         position: 'absolute',
-                        top: '-80px',
+                        top: '-65px',
                         left: 0,
                         width: '100%',
                         zIndex: 10
@@ -187,7 +187,7 @@ const Process: React.FC = () => {
                     Design Process
                 </motion.h2>
 
-                <div style={{ textAlign: 'center', marginBottom: '5rem', position: 'relative', maxWidth: '800px', margin: '0 auto 5rem' }}>
+                <div style={{ textAlign: 'center', marginBottom: '5rem', position: 'relative', maxWidth: '800px', margin: '0 auto 2rem' }}>
                     {/* Animated Left Sun - Continuous Rotation */}
                     <motion.img
                         src={smilingSun}
@@ -280,7 +280,8 @@ const Process: React.FC = () => {
                             display: 'block',
                             margin: '0 auto',
                             width: '90px',
-                            height: 'auto'
+                            height: 'auto',
+                            marginTop: '-1rem'
                         }}
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -290,7 +291,7 @@ const Process: React.FC = () => {
                     />
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 2fr))', gap: '2rem', marginTop: '-1.5rem' }}>
                     {steps.map((step, index) => (
                         <StepCard key={step.id} step={step} index={index} />
                     ))}

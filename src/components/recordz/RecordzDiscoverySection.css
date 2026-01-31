@@ -1,0 +1,132 @@
+/* Discovery Section */
+.rz-discovery-section {
+    padding: 80px 20px;
+    max-width: 1244px;
+    margin: 0 auto;
+}
+
+.rz-discovery-container {
+    width: 100%;
+}
+
+/* Header Layout */
+.rz-discovery-header {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.rz-discovery-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+    flex: 0 0 200px;
+}
+
+.rz-discovery-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.rz-discovery-subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+    margin: 0 0 20px 0;
+}
+
+.rz-discovery-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #6F6864;
+    margin: 0;
+}
+
+/* Image Grid */
+.rz-discovery-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.rz-discovery-image-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.rz-discovery-image-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.rz-discovery-image-item img:hover {
+    transform: scale(1.02);
+}
+
+.rz-discovery-caption {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .rz-discovery-images {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rz-discovery-image-item:last-child {
+        grid-column: span 2;
+    }
+
+    .rz-discovery-image-item:last-child img {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .rz-discovery-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .rz-discovery-title {
+        font-size: 26px;
+        flex: none;
+    }
+
+    .rz-discovery-subtitle {
+        font-size: 20px;
+    }
+
+    .rz-discovery-text {
+        font-size: 16px;
+    }
+
+    .rz-discovery-images {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rz-discovery-image-item:last-child {
+        grid-column: span 1;
+    }
+
+    .rz-discovery-image-item:last-child img {
+        max-width: 100%;
+    }
+
+    .rz-discovery-image-item img {
+        height: 250px;
+    }
+}
