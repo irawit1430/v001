@@ -20,6 +20,10 @@ import CaseStudyProblem from '../components/case-studies/shared/CaseStudyProblem
 
 // Import images
 import heroImage from '../assets/1331-recordz-hero.png';
+import iconShield from '../assets/icon-shield.png';
+import iconBadge from '../assets/icon-badge.png';
+import iconBooks from '../assets/icon-books.png';
+import iconCommunity from '../assets/icon-community.png';
 
 const RecordzPage: React.FC = () => {
     useEffect(() => {
@@ -77,10 +81,10 @@ const RecordzPage: React.FC = () => {
                 description="These insights summarize the most important patterns uncovered during research and discovery, highlighting the core challenges studios and labels face when building a cohesive digital presence."
                 backgroundColor="bg-taupe"
                 insights={[
-                    { title: 'Trust & Safety', description: 'Clear product conditions and trusted sellers build confidence', emoji: '🛡️' },
-                    { title: 'Platform Clarity', description: 'Inconsistent descriptions and images hinder product evaluation', emoji: '📦' },
-                    { title: 'Navigation Simplicity', description: 'Cluttered layouts and categories hinder mobile product discovery', emoji: '📑' },
-                    { title: 'Artist Community', description: 'Existing platforms lack parent-focused community and trust features', emoji: '👥' },
+                    { title: 'Trust & Safety', description: 'Clear product conditions and trusted sellers build confidence', icon: iconShield },
+                    { title: 'Platform Clarity', description: 'Inconsistent descriptions and images hinder product evaluation', icon: iconBadge },
+                    { title: 'Navigation Simplicity', description: 'Cluttered layouts and categories hinder mobile product discovery', icon: iconBooks },
+                    { title: 'Artist Community', description: 'Existing platforms lack parent-focused community and trust features', icon: iconCommunity },
                 ]}
             />
 

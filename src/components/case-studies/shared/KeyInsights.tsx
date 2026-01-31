@@ -50,15 +50,17 @@ const KeyInsights: React.FC<KeyInsightsProps> = ({
                             style={{ boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
                         >
                             {/* Icon */}
-                            <div className="w-[60px] h-[60px] rounded-full bg-gray-100 flex items-center justify-center mb-6">
+                            <div className="w-[80px] h-[80px] rounded-full flex items-center justify-center mb-6">
                                 {insight.icon ? (
                                     <img
                                         src={insight.icon}
                                         alt={insight.title}
-                                        className="w-8 h-8 object-contain"
+                                        className="w-full h-full object-contain"
                                     />
                                 ) : (
-                                    <span className="text-3xl">{insight.emoji || '💡'}</span>
+                                    <div className="w-[60px] h-[60px] rounded-full bg-gray-100 flex items-center justify-center">
+                                        <span className="text-3xl">{insight.emoji || '💡'}</span>
+                                    </div>
                                 )}
                             </div>
 
