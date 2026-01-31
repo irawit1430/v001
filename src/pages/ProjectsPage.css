@@ -21,11 +21,13 @@
 }
 
 .projects-description {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 36px;
     color: #6F6864;
     max-width: 1053px;
     margin: 0 auto;
+    margin: 0 auto;      /* centers the container */
+    text-align: left;   /* aligns text to the left */
 }
 
 .projects-filter {

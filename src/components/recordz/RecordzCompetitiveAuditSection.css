@@ -68,21 +68,21 @@
 
 /* Header Row */
 .rz-table-header {
-    background: #333333;
+    background: #6F6864;
     color: #FFFFFF;
     font-weight: 600;
     font-size: 15px;
 }
 
 .rz-table-header.rz-row-header {
-    background: #1A1A1A;
+    background: #5C5450;
     width: 140px;
 }
 
 /* Row Labels */
 .rz-row-label {
-    background: #5A5A5A;
-    color: #FFFFFF;
+    background: #5C5450 !important;
+    color: #FFFFFF !important;
     font-weight: 600;
     width: 140px;
     font-size: 14px;
@@ -97,8 +97,12 @@
     background: #F5F5F5;
 }
 
+.rz-audit-table tbody tr:hover .rz-row-label {
+    background: #5C5450 !important;
+}
+
 .rz-audit-table td {
-    color: #555555;
+    color: #333333;
     line-height: 1.5;
 }
 
