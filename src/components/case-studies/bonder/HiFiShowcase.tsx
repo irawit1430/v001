@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ASSETS = {
     screenCircle: 'bg-gray-200',

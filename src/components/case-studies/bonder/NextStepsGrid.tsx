@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ASSETS = {
     iconUserTesting: 'bg-gray-300',
