@@ -41,32 +41,30 @@ const BabyThriftPage: React.FC = () => {
 
     return (
         <div className="baby-thrift-page">
-            <div className="bt-container">
-                {/* Hero Section */}
-                <CaseStudyHero
-                    title="Baby Thrift"
-                    subtitle="Thrifting Application"
-                    imageSrc={heroImage}
-                    imageAlt="Baby Thrift App Screens"
-                />
+            {/* Hero Section */}
+            <CaseStudyHero
+                title="Baby Thrift"
+                subtitle="Thrifting Application"
+                imageSrc={heroImage}
+                imageAlt="Baby Thrift App Screens"
+            />
 
-                {/* Project Details */}
-                <CaseStudyOverview items={overviewItems} />
+            {/* Project Details */}
+            <CaseStudyOverview items={overviewItems} />
 
-                {/* Problem Statement */}
-                <CaseStudyProblem
-                    problemText={
-                        <>
-                            Many parents face frustration as their children <strong>quickly outgrow clothing</strong>, leading to wasted items and unnecessary spending. This challenge also contributes to environmental waste, prompting parents to seek more resourceful ways to de-clutter and reuse their children's wardrobes.
-                        </>
-                    }
-                    solutionText={
-                        <>
-                            💡 <strong>In response to this problem</strong>, parents seek a reliable and intuitive marketplace experience that supports confident decision-making by emphasizing transparency, usability, and a streamlined path from discovery to checkout.
-                        </>
-                    }
-                />
-            </div>
+            {/* Problem Statement */}
+            <CaseStudyProblem
+                problemText={
+                    <>
+                        Many parents face frustration as their children <strong>quickly outgrow clothing</strong>, leading to wasted items and unnecessary spending. This challenge also contributes to environmental waste, prompting parents to seek more resourceful ways to de-clutter and reuse their children's wardrobes.
+                    </>
+                }
+                solutionText={
+                    <>
+                        💡 <strong>In response to this problem</strong>, parents seek a reliable and intuitive marketplace experience that supports confident decision-making by emphasizing transparency, usability, and a streamlined path from discovery to checkout.
+                    </>
+                }
+            />
 
             {/* Research Overview - Full Width */}
             <ResearchOverview

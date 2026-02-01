@@ -33,24 +33,22 @@ const FreshOutPage: React.FC = () => {
 
     return (
         <div className="fresh-out-page">
-            <div className="fo-container">
-                {/* Hero Section */}
-                <CaseStudyHero
-                    title="Fresh Out"
-                    subtitle="Veteran Social Application"
-                    imageSrc={heroImage}
-                    imageAlt="Fresh Out App Screens"
-                />
+            {/* Hero Section */}
+            <CaseStudyHero
+                title="Fresh Out"
+                subtitle="Veteran Social Application"
+                imageSrc={heroImage}
+                imageAlt="Fresh Out App Screens"
+            />
 
-                {/* Project Details */}
-                <CaseStudyOverview items={overviewItems} />
+            {/* Project Details */}
+            <CaseStudyOverview items={overviewItems} />
 
-                {/* Problem Statement */}
-                <CaseStudyProblem
-                    problemText="Upon transitioning out of the military, veterans frequently encounter profound feelings of isolation. This period can be exceptionally challenging for them as they are compelled to embark on a fresh journey, encompassing their professional pursuits, place of residence, and social circles."
-                    solutionText="💡 In Response to this problem, veterans are actively pursuing avenues to establish connections with fellow veterans, thereby facilitating networking opportunities and fostering meaningful interpersonal bonds."
-                />
-            </div>
+            {/* Problem Statement */}
+            <CaseStudyProblem
+                problemText="Upon transitioning out of the military, veterans frequently encounter profound feelings of isolation. This period can be exceptionally challenging for them as they are compelled to embark on a fresh journey, encompassing their professional pursuits, place of residence, and social circles."
+                solutionText="💡 In Response to this problem, veterans are actively pursuing avenues to establish connections with fellow veterans, thereby facilitating networking opportunities and fostering meaningful interpersonal bonds."
+            />
 
             {/* Research Overview - Full Width */}
             <ResearchOverview

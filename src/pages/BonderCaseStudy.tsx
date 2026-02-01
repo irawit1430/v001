@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import Navbar from '../components/shared/Navbar';
+
 import CaseStudyHero from '../components/case-studies/shared/CaseStudyHero';
 import CaseStudyOverview from '../components/case-studies/shared/CaseStudyOverview';
 import CaseStudyProblem from '../components/case-studies/shared/CaseStudyProblem';
@@ -37,72 +37,68 @@ const BonderCaseStudy = () => {
     ];
 
     return (
-        <div className="w-full min-h-screen bg-white font-sans">
-            <Navbar />
+        <div className="bonder-page">
+            {/* Hero with 3 phone mockups */}
+            <CaseStudyHero
+                title="Bonder"
+                subtitle="Social Media Application"
+                imageSrc="/bonder-hero-mockups.png"
+                imageAlt="Bonder App Mockups"
+            />
 
-            <main className="w-full">
-                {/* Hero with 3 phone mockups */}
-                <CaseStudyHero
-                    title="Bonder"
-                    subtitle="Social Media Application"
-                    imageSrc="/bonder-hero-mockups.png"
-                    imageAlt="Bonder App Mockups"
-                />
+            {/* Meta: Role, Duration, Prototype, etc. */}
+            <CaseStudyOverview items={overviewItems} />
 
-                {/* Meta: Role, Duration, Prototype, etc. */}
-                <CaseStudyOverview items={overviewItems} />
+            {/* Problem Statement */}
+            <CaseStudyProblem
+                problemText="Bonder's CEO recognized an opportunity to grow the platform through new partnerships with Lifetime Fitness. However, because these experiences were entirely new, the app lacked the foundational user flows needed to support onboarding, event discovery, and partner engagement."
+                solutionText="💡My role was to create net-new interaction flows that define how users navigate, access, and benefit from these partnerships. The challenge was to design intuitive pathways that feel native to Bonder while serving the unique needs of each partner."
+            />
 
-                {/* Problem Statement */}
-                <CaseStudyProblem
-                    problemText="Bonder's CEO recognized an opportunity to grow the platform through new partnerships with Lifetime Fitness. However, because these experiences were entirely new, the app lacked the foundational user flows needed to support onboarding, event discovery, and partner engagement."
-                    solutionText="💡My role was to create net-new interaction flows that define how users navigate, access, and benefit from these partnerships. The challenge was to design intuitive pathways that feel native to Bonder while serving the unique needs of each partner."
-                />
+            {/* Research Overview */}
+            <ResearchOverview
+                description="A combination of discovery research, competitive analysis, and early user exploration helped reveal the challenges veterans face during transition."
+                backgroundColor="bg-taupe"
+            />
+            <DiscoverySection />
+            <WireframeGallery />
+            <PersonaSection />
+            <CompetitiveAuditSection />
+            <KeyInsights
+                description="These insights summarize the most important patterns uncovered during research and discovery, highlighting the core challenges users face when trying to build meaningful connections."
+                backgroundColor="bg-taupe"
+                insights={[
+                    { title: 'Community Focus', description: 'Users prioritize finding genuine connections over quantity of matches', emoji: '🤝' },
+                    { title: 'Location Matters', description: 'Proximity-based discovery increases likelihood of in-person meetups', emoji: '📍' },
+                    { title: 'Event-Driven', description: 'Shared activities reduce social anxiety & create natural conversation starters', emoji: '🎉' },
+                    { title: 'Authentic Profiles', description: 'Users want real interests and personality, not curated perfection', emoji: '✨' },
+                ]}
+            />
+            <HowMightWeSection />
+            <SolutionOverviewSection />
+            <UserJourneyMapSection />
+            <InfoArchitectureSection />
+            <UserFlowSection />
+            <LoFiWireframesSection />
 
-                {/* Research Overview */}
-                <ResearchOverview
-                    description="A combination of discovery research, competitive analysis, and early user exploration helped reveal the challenges veterans face during transition."
-                    backgroundColor="bg-taupe"
-                />
-                <DiscoverySection />
-                <WireframeGallery />
-                <PersonaSection />
-                <CompetitiveAuditSection />
-                <KeyInsights
-                    description="These insights summarize the most important patterns uncovered during research and discovery, highlighting the core challenges users face when trying to build meaningful connections."
-                    backgroundColor="bg-taupe"
-                    insights={[
-                        { title: 'Community Focus', description: 'Users prioritize finding genuine connections over quantity of matches', emoji: '🤝' },
-                        { title: 'Location Matters', description: 'Proximity-based discovery increases likelihood of in-person meetups', emoji: '📍' },
-                        { title: 'Event-Driven', description: 'Shared activities reduce social anxiety & create natural conversation starters', emoji: '🎉' },
-                        { title: 'Authentic Profiles', description: 'Users want real interests and personality, not curated perfection', emoji: '✨' },
-                    ]}
-                />
-                <HowMightWeSection />
-                <SolutionOverviewSection />
-                <UserJourneyMapSection />
-                <InfoArchitectureSection />
-                <UserFlowSection />
-                <LoFiWireframesSection />
+            {/* Hi-Fi Wireframes */}
+            <HiFiShowcase />
 
-                {/* Hi-Fi Wireframes */}
-                <HiFiShowcase />
+            {/* Next Steps Grid */}
+            <NextStepsGrid />
 
-                {/* Next Steps Grid */}
-                <NextStepsGrid />
+            {/* Final Quote */}
+            <section className="w-full bg-white py-16 px-4">
+                <div className="max-w-[999px] mx-auto text-center">
+                    <p className="text-[28px] font-normal text-taupe leading-relaxed">
+                        Thank you for reviewing this case study. I'm always open to feedback and would love to discuss how these design solutions could be applied to your projects.
+                    </p>
+                </div>
+            </section>
 
-                {/* Final Quote */}
-                <section className="w-full bg-white py-16 px-4">
-                    <div className="max-w-[999px] mx-auto text-center">
-                        <p className="text-[28px] font-normal text-taupe leading-relaxed">
-                            Thank you for reviewing this case study. I'm always open to feedback and would love to discuss how these design solutions could be applied to your projects.
-                        </p>
-                    </div>
-                </section>
+            {/* Get in Touch CTA */}
+            <GetInTouchSection />
 
-                {/* Get in Touch CTA */}
-                <GetInTouchSection />
-
-            </main>
         </div>
     );
 };
