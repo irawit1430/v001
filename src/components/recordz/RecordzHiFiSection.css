@@ -1,7 +1,7 @@
 /* Hi-Fi Wireframes Section */
 .rz-hifi-section {
     padding: 80px 20px;
-    max-width: 1244px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -16,6 +16,10 @@
     align-items: flex-start;
     flex-wrap: wrap;
     margin-bottom: 60px;
+    max-width: 1244px;
+    /* Keep text content constrained */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .rz-hifi-title {
@@ -51,6 +55,8 @@
     flex-direction: column;
     gap: 60px;
     margin-bottom: 60px;
+    align-items: center;
+    /* Center the images */
 }
 
 .rz-hifi-featured-item {
@@ -58,13 +64,20 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
+    /* Ensure container takes full width */
 }
 
 .rz-hifi-featured-item img {
-    max-width: 100%;
+    width: 1301px;
     height: auto;
+    /* Maintain aspect ratio, or use 976px if strictly enforced but auto is safer for responsive */
+    max-width: 100%;
+    /* Responsive safeguard */
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+    /* Ensure no stretching if fixed dimensions used */
 }
 
 /* Smaller Mockups Grid */
