@@ -1,6 +1,11 @@
 import React from 'react';
 import './RecordzDetailsSection.css';
 
+import challengeLaptop from '../../assets/challenge-laptop.png';
+import challengeCircle from '../../assets/challenge-circle.png';
+import challengeCompass from '../../assets/challenge-compass.png';
+import challengeShield from '../../assets/challenge-shield.png';
+
 const RecordzDetailsSection: React.FC = () => {
     return (
         <>
@@ -10,11 +15,7 @@ const RecordzDetailsSection: React.FC = () => {
                 <div className="rz-challenges-grid">
                     <div className="rz-challenge-card">
                         <div className="rz-challenge-icon">
-                            <div className="rz-icon-bars">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
+                            <img src={challengeLaptop} alt="Laptop" className="w-full h-full object-contain" />
                         </div>
                         <div className="rz-challenge-content">
                             <h3 className="rz-challenge-title">Unified Dual Experience</h3>
@@ -24,12 +25,7 @@ const RecordzDetailsSection: React.FC = () => {
 
                     <div className="rz-challenge-card">
                         <div className="rz-challenge-icon">
-                            <div className="rz-icon-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
+                            <img src={challengeCircle} alt="Distinct" className="w-full h-full object-contain" />
                         </div>
                         <div className="rz-challenge-content">
                             <h3 className="rz-challenge-title">Clear Distinction by Color</h3>
@@ -39,7 +35,7 @@ const RecordzDetailsSection: React.FC = () => {
 
                     <div className="rz-challenge-card">
                         <div className="rz-challenge-icon">
-                            <div className="rz-icon-circle"></div>
+                            <img src={challengeCompass} alt="Navigation" className="w-full h-full object-contain" />
                         </div>
                         <div className="rz-challenge-content">
                             <h3 className="rz-challenge-title">Intuitive User Navigation</h3>
@@ -49,7 +45,7 @@ const RecordzDetailsSection: React.FC = () => {
 
                     <div className="rz-challenge-card">
                         <div className="rz-challenge-icon">
-                            <div className="rz-icon-star">★</div>
+                            <img src={challengeShield} alt="Identity" className="w-full h-full object-contain" />
                         </div>
                         <div className="rz-challenge-content">
                             <h3 className="rz-challenge-title">Strong Professional Identity</h3>

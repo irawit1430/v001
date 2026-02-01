@@ -86,13 +86,6 @@
     margin-bottom: 40px;
 }
 
-.rz-challenges-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 1244px;
-}
-
 .rz-challenge-card {
     display: flex;
     gap: 16px;
@@ -100,7 +93,22 @@
     background: #FAFAFA;
     border-radius: 12px;
     border: 1px solid #EEEEEE;
-    align-items: flex-start;
+    align-items: center;
+    width: 607px;
+    height: 153px;
+    box-sizing: border-box;
+    /* Ensure padding doesn't add to width */
+}
+
+/* Center grid items */
+.rz-challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 607px);
+    /* Enforce column width */
+    gap: 20px;
+    max-width: 1244px;
+    justify-content: center;
+    /* Center the grid in container */
 }
 
 .rz-challenge-icon {
@@ -112,55 +120,11 @@
     flex-shrink: 0;
 }
 
-/* Icon Styles */
-.rz-icon-bars {
-    display: flex;
-    gap: 3px;
-    align-items: flex-end;
-    height: 24px;
-}
-
-.rz-icon-bars span {
-    width: 6px;
-    background: #C4A484;
-    border-radius: 2px;
-}
-
-.rz-icon-bars span:nth-child(1) {
-    height: 12px;
-}
-
-.rz-icon-bars span:nth-child(2) {
-    height: 18px;
-}
-
-.rz-icon-bars span:nth-child(3) {
-    height: 24px;
-}
-
-.rz-icon-dots {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4px;
-}
-
-.rz-icon-dots span {
-    width: 10px;
-    height: 10px;
-    background: #C4A484;
-    border-radius: 50%;
-}
-
-.rz-icon-circle {
-    width: 24px;
-    height: 24px;
-    border: 3px solid #C4A484;
-    border-radius: 50%;
-}
-
-.rz-icon-star {
-    font-size: 24px;
-    color: #C4A484;
+/* Icon Styles - Replaced by images */
+.rz-challenge-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .rz-challenge-content {

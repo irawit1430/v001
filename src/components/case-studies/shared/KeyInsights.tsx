@@ -26,31 +26,33 @@ const KeyInsights: React.FC<KeyInsightsProps> = ({
 }) => {
     return (
         <section className={`w-full ${backgroundColor} py-16 md:py-24 ${className}`}>
-            <div className="max-w-[1200px] mx-auto px-4 md:px-12 lg:px-24">
-                {/* Header */}
-                <div className="mb-8">
-                    <h2 className={`text-[32px] md:text-[40px] font-medium ${textColor} leading-tight`}>
+            <div className="max-w-[1244px] mx-auto px-4 md:px-8">
+                {/* Header & Description Row */}
+                <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
+                    <h2 className={`text-[32px] md:text-[40px] font-medium ${textColor} leading-tight md:w-1/3`}>
                         {title}
                     </h2>
-                </div>
 
-                {/* Description */}
-                <div className="max-w-[900px] mb-16">
-                    <p className={`text-[20px] md:text-[28px] font-normal ${textColor} leading-relaxed`}>
+                    <p className={`text-[20px] md:text-[24px] font-normal ${textColor} leading-relaxed md:w-2/3 max-w-[800px]`}>
                         {description}
                     </p>
                 </div>
 
                 {/* Insight Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
                     {insights.map((insight, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-[20px] p-6 md:p-8 shadow-lg flex flex-col items-center text-center min-h-[280px]"
-                            style={{ boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
+                            className="bg-white rounded-[20px] p-5 shadow-lg flex flex-col items-center text-center justify-center"
+                            style={{
+                                width: '270px',
+                                height: '270px',
+                                borderRadius: '20px',
+                                boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25)'
+                            }}
                         >
                             {/* Icon */}
-                            <div className="w-[80px] h-[80px] rounded-full flex items-center justify-center mb-6">
+                            <div className="w-[80px] h-[80px] rounded-full flex items-center justify-center mb-4">
                                 {insight.icon ? (
                                     <img
                                         src={insight.icon}
@@ -64,11 +66,11 @@ const KeyInsights: React.FC<KeyInsightsProps> = ({
                                 )}
                             </div>
 
-                            <h3 className="text-[22px] md:text-[26px] font-medium text-black leading-tight mb-4">
+                            <h3 className="text-[22px] font-medium text-black leading-tight mb-2">
                                 {insight.title}
                             </h3>
 
-                            <p className="text-[16px] md:text-[18px] font-normal text-taupe leading-normal">
+                            <p className="text-[15px] font-normal text-taupe leading-snug">
                                 {insight.description}
                             </p>
                         </div>
