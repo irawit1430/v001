@@ -20,7 +20,7 @@ const CaseStudyOverview: React.FC<CaseStudyOverviewProps> = ({ items, className 
                     {items.map((item, index) => (
                         <div key={index} className="flex flex-col gap-2">
                             {/* Label */}
-                            <span className="text-[28px] font-medium text-taupe leading-tight uppercase">
+                            <span className="text-[16px] font-medium text-taupe leading-tight uppercase tracking-wider">
                                 {item.label}
                             </span>
 
@@ -28,12 +28,12 @@ const CaseStudyOverview: React.FC<CaseStudyOverviewProps> = ({ items, className 
                             {item.isLink ? (
                                 <a
                                     href={item.href}
-                                    className="text-[24px] font-medium text-taupe hover:text-peach transition-colors"
+                                    className="text-[20px] font-medium text-taupe hover:text-peach transition-colors"
                                 >
                                     {item.value}
                                 </a>
                             ) : (
-                                <span className="text-[24px] font-medium text-taupe">
+                                <span className="text-[20px] font-medium text-taupe">
                                     {item.value}
                                 </span>
                             )}
