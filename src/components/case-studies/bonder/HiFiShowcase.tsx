@@ -20,10 +20,10 @@ const HiFiShowcase = () => {
 
                 {/* Header */}
                 <div className="max-w-[800px] flex flex-col gap-6">
-                    <h2 className="text-[40px] font-medium text-black leading-tight">
+                    <h2 className="text-[32px] font-medium text-black leading-tight">
                         Hi-Fi Wireframes
                     </h2>
-                    <p className="text-[34px] font-normal text-taupe leading-tight">
+                    <p className="text-[24px] font-normal text-[#333333] leading-tight">
                         The Hi-Fi designs brought the app’s visual identity to life.
                     </p>
                 </div>
@@ -31,7 +31,7 @@ const HiFiShowcase = () => {
                 {/* Screens Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
                     {screens.map((screen, index) => (
-                        <div key={index} className="flex flex-col items-center gap-6">
+                        <div key={index} className="flex flex-col items-start gap-6">
                             {/* Phone Placeholder */}
                             <div
                                 className={`w-full max-w-[318px] h-[692px] rounded-[30px] shadow-xl ${screen.bg} flex items-center justify-center text-taupe/30 text-xl`}
@@ -39,7 +39,7 @@ const HiFiShowcase = () => {
                                 {screen.label} Mockup
                             </div>
                             {/* Label */}
-                            <span className="text-[20px] font-medium text-black text-center">
+                            <span className="text-[22px] font-medium text-black text-left leading-tight">
                                 {screen.label}
                             </span>
                         </div>

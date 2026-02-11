@@ -1,5 +1,4 @@
-import React from 'react';
-import './RecordzCompetitiveAuditSection.css';
+
 
 const RecordzCompetitiveAuditSection: React.FC = () => {
     return (

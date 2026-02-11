@@ -1,6 +1,6 @@
 import React from 'react';
-import GenericCaseStudyLayout from '../components/shared/GenericCaseStudyLayout';
-import type { ProjectData } from '../components/shared/GenericCaseStudyLayout';
+import CaseStudyLayout from '../components/case-studies/templates/CaseStudyLayout';
+import type { ProjectData } from '../components/case-studies/templates/CaseStudyLayout';
 
 // Import a placeholder image (using the 1331 recordz hero as a reference)
 import heroImage from '../assets/1331-recordz-hero.png';
@@ -122,7 +122,7 @@ const TestProject: React.FC = () => {
         colors: ['#F5A896', '#6F6864', '#1A1A1A', '#FFFFFF'],
     };
 
-    return <GenericCaseStudyLayout projectData={testProjectData} />;
+    return <CaseStudyLayout projectData={testProjectData} />;
 };
 
 export default TestProject;

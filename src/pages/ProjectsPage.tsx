@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import './ProjectsPage.css';
-import ProjectCard from '../components/shared/ProjectCard';
+import { Navbar } from '../components/case-studies/new-template/layout/Navbar';
+import ProjectCard from '../components/ui/ProjectCard';
 
 import projectFreshOut from '../assets/project-fresh-out.png';
 import projectBonder from '../assets/Bonder.png';
@@ -85,6 +85,13 @@ const projects: Project[] = [
     }
 ];
 
+const navigationLinks = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "#contact" },
+    { label: "Resume", href: "#resume" },
+];
+
 const ProjectsPage: React.FC = () => {
     const [filter, setFilter] = useState<'ALL' | Category>('ALL');
 
@@ -93,63 +100,70 @@ const ProjectsPage: React.FC = () => {
         : projects.filter(p => p.type === filter);
 
     return (
-        <div className="projects-page">
-            {/* Header Section */}
-            <div className="projects-header">
-                <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="projects-title"
-                >
-                    Projects
-                </motion.h1>
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 }}
-                    className="projects-description"
-                >
-                    A collection of design work that reflects how I approach storytelling, problem-solving, and creating experiences that connect with people.
-                </motion.p>
-            </div>
+        <div className="w-full min-h-screen bg-white font-['SF_Pro_Display',_sans-serif]">
+            <Navbar
+                logoSrc="/figmaAssets/seashell-pink-removebg-preview-1.png"
+                logoAlt="Logo"
+                links={navigationLinks}
+            />
 
-            {/* Filter Section */}
-            <div className="projects-filter">
-                <span className="filter-label">
-                    FILTER: Showing All
-                </span>
+            <div className="pt-[150px] pb-[100px] md:pt-[120px]">
+                {/* Header Section */}
+                <div className="text-center mb-[60px] px-5">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="text-[40px] font-normal text-black mb-6 md:text-[48px]"
+                    >
+                        Projects
+                    </motion.h1>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="text-[20px] leading-[32px] text-[#6F6864] max-w-[800px] mx-auto text-left"
+                    >
+                        <p>
+                            A collection of design work that reflects how I approach storytelling, problem-solving, and creating experiences that connect with people.
+                        </p>
+                    </motion.div>
+                </div>
 
-                <div className="filter-buttons">
-                    {(['ALL', 'APPLICATIONS', 'UI', 'EXTRAS'] as const).map((item) => (
-                        <motion.button
-                            key={item}
-                            onClick={() => setFilter(item)}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="filter-btn"
-                            style={{
-                                background: filter === item ? '#FF6F61' : '#FFF1E5',
-                                color: filter === item ? '#FFFFFF' : '#FF6F61',
+                {/* Filter Section */}
+                <div className="flex justify-center items-center gap-4 mb-[60px] flex-wrap px-5">
+                    <span className="text-[20px] text-[#6F6864] font-medium mr-2">
+                        FILTER: Showing All
+                    </span>
+
+                    <div className="flex gap-3 flex-wrap justify-center">
+                        {(['ALL', 'APPLICATIONS', 'UI', 'EXTRAS'] as const).map((item) => (
+                            <motion.button
+                                key={item}
+                                onClick={() => setFilter(item)}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className={`py-2 px-6 rounded-full border-none text-[16px] font-medium cursor-pointer transition-all duration-200 ${filter === item ? 'bg-[#FF6F61] text-white' : 'bg-[#FFF1E5] text-[#FF6F61]'
+                                    }`}
+                            >
+                                {item}
+                            </motion.button>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Projects Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] max-w-[1440px] mx-auto px-5 md:px-[60px] lg:px-[120px]">
+                    {filteredProjects.map((project, index) => (
+                        <ProjectCard
+                            key={project.id}
+                            project={{
+                                ...project,
+                                tags: [project.role]
                             }}
-                        >
-                            {item}
-                        </motion.button>
+                            index={index}
+                        />
                     ))}
                 </div>
-            </div>
-
-            {/* Projects Grid */}
-            <div className="projects-grid">
-                {filteredProjects.map((project, index) => (
-                    <ProjectCard
-                        key={project.id}
-                        project={{
-                            ...project,
-                            tags: [project.role] // Map role to tags for the card
-                        }}
-                        index={index}
-                    />
-                ))}
             </div>
         </div>
     );

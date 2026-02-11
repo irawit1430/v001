@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 // Import images
@@ -6,7 +6,7 @@ import img1 from '../assets/1st.png';
 import img2 from '../assets/2nd.png';
 import img3 from '../assets/3rd.png';
 import logo from '../assets/logo.png';
-import GetInTouchSection from '../components/shared/GetInTouchSection';
+import GetInTouchSection from '../components/sections/GetInTouchSection';
 
 const AboutPage: React.FC = () => {
     const containerVariants = {
@@ -52,11 +52,11 @@ const AboutPage: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                         style={{
-                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                            fontFamily: '"SF Pro Display", sans-serif',
                             fontStyle: 'normal',
                             fontWeight: 400,
-                            fontSize: '40px',
-                            lineHeight: '48px',
+                            fontSize: '50px',
+                            lineHeight: '60px',
                             color: '#000000',
                             margin: '0 0 10px 0'
                         }}
@@ -70,11 +70,11 @@ const AboutPage: React.FC = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.6 }}
                         style={{
-                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                            fontFamily: '"SF Pro Display", sans-serif',
                             fontStyle: 'normal',
                             fontWeight: 400,
-                            fontSize: '25px',
-                            lineHeight: '36px',
+                            fontSize: '30px',
+                            lineHeight: '42px',
                             color: '#6F6864',
                             margin: '0 auto',
                             maxWidth: '1105px'
@@ -122,7 +122,7 @@ const AboutPage: React.FC = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.4, duration: 0.5 }}
                             style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 fontStyle: 'normal',
                                 fontWeight: 500,
                                 fontSize: '30px',
@@ -153,11 +153,11 @@ const AboutPage: React.FC = () => {
                         <motion.h2
                             variants={itemVariants}
                             style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 fontStyle: 'normal',
                                 fontWeight: 500,
-                                fontSize: '35px',
-                                lineHeight: '45px',
+                                fontSize: '50px',
+                                lineHeight: '60px',
                                 color: '#6F6864',
                                 marginLeft: '250px'
                             }}
@@ -167,11 +167,11 @@ const AboutPage: React.FC = () => {
                         <motion.p
                             variants={itemVariants}
                             style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 fontStyle: 'normal',
                                 fontWeight: 400,
-                                fontSize: '15px',
-                                lineHeight: '30px',
+                                fontSize: '30px',
+                                lineHeight: '42px',
                                 color: '#676564',
                                 marginLeft: "250px",
                             }}
@@ -181,11 +181,11 @@ const AboutPage: React.FC = () => {
                         <motion.p
                             variants={itemVariants}
                             style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 fontStyle: 'normal',
                                 fontWeight: 400,
-                                fontSize: '15px',
-                                lineHeight: '30px',
+                                fontSize: '30px',
+                                lineHeight: '42px',
                                 color: '#676564',
                                 marginLeft: "250px",
                             }}
@@ -195,11 +195,11 @@ const AboutPage: React.FC = () => {
                         <motion.p
                             variants={itemVariants}
                             style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 fontStyle: 'normal',
                                 fontWeight: 400,
-                                fontSize: '15px',
-                                lineHeight: '30px',
+                                fontSize: '30px',
+                                lineHeight: '42px',
                                 color: '#676564',
                                 marginLeft: "250px",
                             }}
@@ -209,11 +209,11 @@ const AboutPage: React.FC = () => {
                         <motion.p
                             variants={itemVariants}
                             style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 fontStyle: 'normal',
                                 fontWeight: 400,
-                                fontSize: '15px',
-                                lineHeight: '30px',
+                                fontSize: '30px',
+                                lineHeight: '42px',
                                 color: '#676564',
                                 marginLeft: "250px",
                             }}
@@ -240,7 +240,7 @@ const AboutPage: React.FC = () => {
                                 borderRadius: '10px',
                                 textDecoration: 'none',
                                 cursor: 'pointer',
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 fontStyle: 'normal',
                                 fontWeight: 500,
                                 fontSize: '24px',
@@ -254,105 +254,49 @@ const AboutPage: React.FC = () => {
                     </motion.div>
                 </section>
 
-                {/* Photo Gallery - Stacked with Hover Reveal */}
-                {(() => {
-                    const [isStackHovered, setIsStackHovered] = useState(false);
-                    const [activeImage, setActiveImage] = useState<number | null>(null);
-
-                    const getImageStyle = (index: number) => {
-                        const baseRotations = [-8, 0, 8];
-                        const hoveredRotations = [-15, 0, 15];
-                        const hoveredX = [-200, 0, 200];
-                        const hoveredY = [20, -30, 20];
-
-                        const isActive = activeImage === index;
-
-                        if (isActive) {
-                            return {
-                                rotate: 0,
-                                x: hoveredX[index],
-                                y: hoveredY[index] - 30,
-                                scale: 1.2,
-                                zIndex: 20
-                            };
-                        }
-
-                        if (isStackHovered) {
-                            return {
-                                rotate: hoveredRotations[index],
-                                x: hoveredX[index],
-                                y: hoveredY[index],
-                                scale: 1,
-                                zIndex: index + 1
-                            };
-                        }
-
-                        return {
-                            rotate: baseRotations[index],
-                            x: 0,
-                            y: 0,
-                            scale: index === 1 ? 1 : 0.95,
-                            zIndex: index + 1
-                        };
-                    };
-
-                    return (
-                        <motion.section
-                            variants={containerVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
+                {/* Photo Gallery - Side by Side */}
+                <motion.section
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        gap: '24px',
+                        padding: '0 72px',
+                        marginBottom: '80px'
+                    }}
+                >
+                    {[img1, img2, img3].map((img, index) => (
+                        <motion.div
+                            key={index}
                             style={{
-                                display: 'flex',
-                                justifyContent: 'center',
-                                padding: '0 20px',
-                                marginBottom: '80px'
+                                flex: '1 1 0',
+                                maxWidth: '380px',
+                                borderRadius: '16px',
+                                overflow: 'hidden',
+                                boxShadow: '0 8px 30px rgba(0, 0, 0, 0.12)'
                             }}
+                            whileHover={{
+                                scale: 1.03,
+                                boxShadow: '0 12px 40px rgba(0, 0, 0, 0.2)'
+                            }}
+                            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                         >
-                            <div
+                            <img
+                                src={img}
+                                alt={`About photo ${index + 1}`}
                                 style={{
-                                    position: 'relative',
-                                    width: '400px',
+                                    width: '100%',
                                     height: '400px',
-                                    cursor: 'pointer'
+                                    objectFit: 'cover',
+                                    display: 'block'
                                 }}
-                                onMouseEnter={() => setIsStackHovered(true)}
-                                onMouseLeave={() => {
-                                    setIsStackHovered(false);
-                                    setActiveImage(null);
-                                }}
-                            >
-                                {[img1, img2, img3].map((img, index) => (
-                                    <motion.div
-                                        key={index}
-                                        animate={getImageStyle(index)}
-                                        transition={{ type: 'spring', stiffness: 200, damping: 20 }}
-                                        onMouseEnter={() => isStackHovered && setActiveImage(index)}
-                                        onMouseLeave={() => setActiveImage(null)}
-                                        style={{
-                                            position: 'absolute',
-                                            top: 0,
-                                            left: 0,
-                                            width: '100%',
-                                            height: '100%',
-                                            borderRadius: index === 1 ? '10px' : '20px',
-                                            overflow: 'hidden',
-                                            boxShadow: activeImage === index
-                                                ? '0 30px 80px rgba(0, 0, 0, 0.4)'
-                                                : '0 10px 40px rgba(0, 0, 0, 0.2)'
-                                        }}
-                                    >
-                                        <img
-                                            src={img}
-                                            alt={`Gallery image ${index + 1}`}
-                                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                        />
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </motion.section>
-                    );
-                })()}
+                            />
+                        </motion.div>
+                    ))}
+                </motion.section>
 
                 {/* BACKGROUND & EDUCATION Section */}
                 <section style={{
@@ -372,7 +316,7 @@ const AboutPage: React.FC = () => {
                         style={{ minWidth: '200px' }}
                     >
                         <span style={{
-                            fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                            fontFamily: '"SF Pro Display", sans-serif',
                             fontStyle: 'normal',
                             fontWeight: 500,
                             fontSize: '30px',
@@ -404,11 +348,11 @@ const AboutPage: React.FC = () => {
                         <motion.h2
                             variants={itemVariants}
                             style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 fontStyle: 'normal',
                                 fontWeight: 500,
-                                fontSize: '35px',
-                                lineHeight: '45px',
+                                fontSize: '50px',
+                                lineHeight: '60px',
                                 color: '#6F6864',
                                 marginLeft: '250px'
                             }}
@@ -418,11 +362,11 @@ const AboutPage: React.FC = () => {
                         <motion.p
                             variants={itemVariants}
                             style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 fontStyle: 'normal',
                                 fontWeight: 400,
-                                fontSize: '15px',
-                                lineHeight: '30px',
+                                fontSize: '30px',
+                                lineHeight: '42px',
                                 color: '#676564',
                                 marginLeft: "250px",
                             }}
@@ -432,11 +376,11 @@ const AboutPage: React.FC = () => {
                         <motion.p
                             variants={itemVariants}
                             style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 fontStyle: 'normal',
                                 fontWeight: 400,
-                                fontSize: '15px',
-                                lineHeight: '30px',
+                                fontSize: '30px',
+                                lineHeight: '42px',
                                 color: '#676564',
                                 marginLeft: "250px",
                             }}
@@ -446,11 +390,11 @@ const AboutPage: React.FC = () => {
                         <motion.p
                             variants={itemVariants}
                             style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 fontStyle: 'normal',
                                 fontWeight: 400,
-                                fontSize: '15px',
-                                lineHeight: '30px',
+                                fontSize: '30px',
+                                lineHeight: '42px',
                                 color: '#676564',
                                 marginLeft: "250px",
                             }}
@@ -460,11 +404,11 @@ const AboutPage: React.FC = () => {
                         <motion.p
                             variants={itemVariants}
                             style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 fontStyle: 'normal',
                                 fontWeight: 400,
-                                fontSize: '15px',
-                                lineHeight: '30px',
+                                fontSize: '30px',
+                                lineHeight: '42px',
                                 color: '#676564',
                                 marginLeft: "250px",
                             }}
@@ -474,11 +418,11 @@ const AboutPage: React.FC = () => {
                         <motion.p
                             variants={itemVariants}
                             style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 fontStyle: 'normal',
                                 fontWeight: 400,
-                                fontSize: '15px',
-                                lineHeight: '30px',
+                                fontSize: '30px',
+                                lineHeight: '42px',
                                 color: '#676564',
                                 marginLeft: "250px",
                             }}
@@ -528,7 +472,7 @@ const AboutPage: React.FC = () => {
                                     padding: '48px 60px',
                                 }}>
                                     <h3 style={{
-                                        fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                        fontFamily: '"SF Pro Display", sans-serif',
                                         fontStyle: 'normal',
                                         fontWeight: 500,
                                         fontSize: '28px',
@@ -543,7 +487,7 @@ const AboutPage: React.FC = () => {
                                         {/* Education Item 1 */}
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                                             <span style={{
-                                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                                fontFamily: '"SF Pro Display", sans-serif',
                                                 fontWeight: 700,
                                                 fontSize: '20px',
                                                 color: '#000000'
@@ -551,7 +495,7 @@ const AboutPage: React.FC = () => {
                                                 Bachelor of Science – Interactive Media (In Progress)
                                             </span>
                                             <span style={{
-                                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                                fontFamily: '"SF Pro Display", sans-serif',
                                                 fontStyle: 'italic',
                                                 fontSize: '20px',
                                                 color: '#000000'
@@ -559,7 +503,7 @@ const AboutPage: React.FC = () => {
                                                 University of Miami
                                             </span>
                                             <span style={{
-                                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                                fontFamily: '"SF Pro Display", sans-serif',
                                                 fontSize: '18px',
                                                 color: '#888888',
                                                 marginTop: '4px'
@@ -571,7 +515,7 @@ const AboutPage: React.FC = () => {
                                         {/* Education Item 2 */}
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                                             <span style={{
-                                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                                fontFamily: '"SF Pro Display", sans-serif',
                                                 fontWeight: 700,
                                                 fontSize: '20px',
                                                 color: '#000000'
@@ -579,7 +523,7 @@ const AboutPage: React.FC = () => {
                                                 User Experience Certification – Google (2023)
                                             </span>
                                             <span style={{
-                                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                                fontFamily: '"SF Pro Display", sans-serif',
                                                 fontStyle: 'italic',
                                                 fontSize: '20px',
                                                 color: '#000000'
@@ -587,7 +531,7 @@ const AboutPage: React.FC = () => {
                                                 Coursera
                                             </span>
                                             <span style={{
-                                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                                fontFamily: '"SF Pro Display", sans-serif',
                                                 fontSize: '18px',
                                                 color: '#888888',
                                                 marginTop: '4px'
@@ -604,11 +548,11 @@ const AboutPage: React.FC = () => {
                         <motion.p
                             variants={itemVariants}
                             style={{
-                                fontFamily: '"SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 fontStyle: 'normal',
                                 fontWeight: 400,
-                                fontSize: '15px',
-                                lineHeight: '30px',
+                                fontSize: '30px',
+                                lineHeight: '42px',
                                 color: '#6F6864',
                                 margin: 0,
                                 maxWidth: '881px',

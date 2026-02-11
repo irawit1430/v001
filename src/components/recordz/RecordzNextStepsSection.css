@@ -63,6 +63,12 @@
     flex-shrink: 0;
 }
 
+.rz-nextstep-icon-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
 /* Content */
 .rz-nextstep-content h3 {
     font-size: 18px;
@@ -80,7 +86,7 @@
 
 /* Thank You Message */
 .rz-thankyou-message {
-    text-align: center;
+    text-align: left;
     padding: 40px 20px;
 }
 

@@ -1,0 +1,112 @@
+Skill name: CaseStudyNormalizer
+Purpose: Normalize, fix, or build case-study sections so all case-study pages visually match the FreshOut reference without introducing cascading layout changes.
+
+Context:
+
+Reference / canonical page: FreshOutPage.tsx (use its classes, wrapper, spacing, and typography as the single source of truth).
+
+Pages to normalize: BonderCaseStudy.tsx, RecordzPage.tsx, BabyThriftPage.tsx (and any additional case study pages supplied).
+
+Theme folder remains authoritative for shared components — do NOT change theme files.
+
+Hard global rules (MUST obey)
+
+Audit first. Produce a structured audit report (see Output format) before making any edits.
+
+Do NOT modify: theme/ folder, navbar, footer, global design tokens.
+
+Do NOT refactor component structure; only apply targeted normalization unless audit shows structural mismatch that prevents parity (then propose, don't apply).
+
+Make changes only to the listed case study pages and only where they deviate from FreshOut.
+
+Use Tailwind utilities only for typography/spacing adjustments (use bracket utilities if exact px required). Remove inline styles where possible.
+
+Preserve functionality (links, buttons, responsiveness). Run smoke tests (no console errors).
+
+Step A — Audit (mandatory, no edits):
+For each target page, compare the following against FreshOutPage.tsx and report exact differences (classes and px where relevant):
+
+Container wrapper (max-w, px, mx-auto)
+
+Section wrapper spacing (py / mt classes)
+
+Heading class sets (text size, weight, line-height classes)
+
+Paragraph class sets (text size, leading)
+
+List classes (space-y, pl vs list-inside, text color)
+
+Grid definitions (e.g., md:grid-cols-2, gaps) and any custom column fractions
+
+Any inline styles or absolute-positioned blocks in the page code
+
+Image container rules used in page (height, object-fit, alignment)
+Produce the audit as a table: Page | Element | FreshOut class | Page class | Difference | Severity (low/medium/high)
+
+Step B — Propose normalization plan:
+Using the audit output, generate a minimal plan for each page that lists concrete replacements (exact Tailwind classes to copy from FreshOut). Example line:
+BonderCaseStudy.tsx — SolutionOverview list: replace class "space-y-2 list-inside" → "space-y-6 md:space-y-8 pl-5 text-[#6e6764] text-lg md:text-xl"
+Ask for confirmation only if any proposed change would affect layout beyond that page (e.g., changing grid column fractions like md:grid-cols-[1.2fr_1fr]).
+
+Step C — Apply normalization (only after audit/proposal):
+For each approved item:
+
+Replace classes exactly as in FreshOut (or use the proposed exact class replacement).
+
+Remove inline styles that conflict with tailwind classes. If removal creates regression, revert and flag for manual review.
+
+Ensure images use style={{ height: '100%', objectFit: 'cover' }} inside the fixed-height preview container; top-align containers when FreshOut shows anchored visuals.
+
+Ensure description paragraphs use 2-line clamp where FreshOut uses truncation: display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; line-height:1.5 (apply only on project grid cards, not on case study copy).
+
+For headings that break: run grid-aware diagnostic (see Step D) before applying md:whitespace-nowrap.
+
+Step D — Grid-aware heading fix (prevent overflow):
+For any major heading that wraps undesirably:
+
+Check whether heading sits inside md:grid-cols-2. If yes, measure the heading column width (desktop).
+
+If width >= required width for a single line at current font size, apply md:whitespace-nowrap.
+
+If width is too small, propose adjusting column ratio (e.g., md:grid-cols-[1.2fr_1fr] or md:grid-cols-[1.3fr_1fr]) — do not apply without confirmation.
+
+Step E — Typographic & alignment lock:
+Enforce these standard classes (copy exactly from FreshOut):
+
+Problem statement / big headings: text-4xl md:text-5xl font-semibold leading-tight (replace with FreshOut exact if different)
+
+Subheaders: font-medium text-xl md:text-2xl mb-6
+
+Body: text-lg md:text-xl leading-relaxed
+
+Lists: space-y-6 md:space-y-8 text-[#6e6764] text-lg md:text-xl pl-5
+
+Global alignment inside the case-study wrapper: text-left (overwrite any text-center in these pages)
+
+Step F — Visual parity checks:
+After modifications:
+
+Render page in desktop (1440px) and mobile breakpoints.
+
+Take before/after screenshots for the modified sections.
+
+Run visual checklist: container width same, section spacing same (± 2px), heading line breaks match FreshOut, no overflow/scrollbars.
+
+Step G — Outputs (deliver exactly):
+For every run, return:
+
+Audit table (as described)
+
+Proposed changes (diff-like list)
+
+Files modified (paths) + small code diffs (before → after snippets)
+
+Verification screenshots or DOM confirmations (if possible)
+
+Final confirmation: All pages normalized to FreshOut reference OR list of remaining blockers that need human approval
+
+Safety & rollback:
+
+If any change causes layout regression outside target page, automatically revert that change and log it as reverted — needs manual review.
+
+Begin by running Step A (audit) and return the report.

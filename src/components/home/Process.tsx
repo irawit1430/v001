@@ -165,7 +165,7 @@ const Process: React.FC = () => {
                 <motion.h2
                     className="section-title"
                     style={{
-                        fontFamily: '"SF Pro Display", "Inter", sans-serif',
+                        fontFamily: '"SF Pro Display", sans-serif',
                         fontStyle: 'normal',
                         fontWeight: 600,
                         fontSize: '40px',
@@ -247,7 +247,7 @@ const Process: React.FC = () => {
                         style={{
                             fontSize: '2.5rem',
                             marginBottom: '1rem',
-                            fontFamily: '"SF Pro Display", "Inter", sans-serif',
+                            fontFamily: '"SF Pro Display", sans-serif',
                             fontWeight: 600
                         }}
                         initial={{ opacity: 0, y: 20 }}

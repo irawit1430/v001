@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 import projectFreshOut from '../../assets/project-fresh-out.png';
 import projectBonder from '../../assets/Bonder.png';
@@ -13,7 +14,8 @@ const projects = [
         category: "Mobile Application | Social App",
         tags: ["Lead UX Designer"],
         description: "Led the design of a social media application focused on reducing loneliness and fostering meaningful connection within the veteran community.",
-        image: projectFreshOut
+        image: projectFreshOut,
+        link: "/projects/fresh-out"
     },
     {
         id: 2,
@@ -21,7 +23,8 @@ const projects = [
         category: "Mobile Application | Social App",
         tags: ["Lead UX Designer"],
         description: "Led the design of a social media application for Bonder, crafting a branded interface to support their collaboration with Life Time Fitness.",
-        image: projectBonder
+        image: projectBonder,
+        link: "/projects/bonder"
     },
     {
         id: 3,
@@ -38,11 +41,12 @@ const projects = [
         category: "Mobile Application | Thrifting App",
         tags: ["Lead UX Designer"],
         description: "Led the design of a community-driven mobile application for baby thrift shopping, connecting parents through sustainable resale and shared resources.",
-        image: projectBabyThrift
+        image: projectBabyThrift,
+        link: "/projects/baby-thrift"
     }
 ];
 
-import ProjectCard from '../shared/ProjectCard';
+import ProjectCard from '../ui/ProjectCard';
 
 const Projects: React.FC = () => {
     return (
@@ -58,7 +62,7 @@ const Projects: React.FC = () => {
                 <motion.h2
                     className="section-title"
                     style={{
-                        fontFamily: '"SF Pro Display", "Inter", sans-serif',
+                        fontFamily: '"SF Pro Display", sans-serif',
                         fontWeight: 600,
                         fontSize: '34px',
                         lineHeight: '41px',
@@ -79,7 +83,7 @@ const Projects: React.FC = () => {
                         textAlign: 'left',
                         maxWidth: '885px',
                         margin: '0 auto 4rem',
-                        fontFamily: '"SF Pro Display", "Inter", sans-serif',
+                        fontFamily: '"SF Pro Display", sans-serif',
                         fontWeight: 400,
                         fontSize: '20px',
                         lineHeight: '29px',
@@ -95,7 +99,7 @@ const Projects: React.FC = () => {
                 </motion.p>
 
                 <motion.div
-                    style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))', gap: '3rem' }}
+                    style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -117,40 +121,41 @@ const Projects: React.FC = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.5, ease: 'easeOut' }}
                 >
-                    <motion.a
-                        href="/projects"
-                        style={{
-                            fontFamily: '"SF Pro Display", "Inter", sans-serif',
-                            fontStyle: 'normal',
-                            fontWeight: 600,
-                            fontSize: '24px',
-                            lineHeight: '29px',
-                            textDecoration: 'none',
-                            color: '#6F6864',
-                            display: 'inline-block',
-                            position: 'relative',
-                            marginTop: '-2rem',
-                            marginBottom: '0rem'
-                        }}
-                        whileHover={{ x: 8, color: '#FF6F61' }}
-                        transition={{ type: 'spring', stiffness: 400 }}
-                    >
-                        [ View All Projects → ]
+                    <Link to="/projects" style={{ textDecoration: 'none' }}>
                         <motion.span
                             style={{
-                                position: 'absolute',
-                                bottom: -4,
-                                left: 0,
-                                width: '100%',
-                                height: '2px',
-                                background: '#FF6F61',
-                                transformOrigin: 'left'
+                                fontFamily: '"SF Pro Display", sans-serif',
+                                fontStyle: 'normal',
+                                fontWeight: 600,
+                                fontSize: '24px',
+                                lineHeight: '29px',
+                                textDecoration: 'none',
+                                color: '#6F6864',
+                                display: 'inline-block',
+                                position: 'relative',
+                                marginTop: '-2rem',
+                                marginBottom: '0rem'
                             }}
-                            initial={{ scaleX: 0 }}
-                            whileHover={{ scaleX: 1 }}
-                            transition={{ duration: 0.3 }}
-                        />
-                    </motion.a>
+                            whileHover={{ x: 8, color: '#FF6F61' }}
+                            transition={{ type: 'spring', stiffness: 400 }}
+                        >
+                            [ View All Projects → ]
+                            <motion.span
+                                style={{
+                                    position: 'absolute',
+                                    bottom: -4,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '2px',
+                                    background: '#FF6F61',
+                                    transformOrigin: 'left'
+                                }}
+                                initial={{ scaleX: 0 }}
+                                whileHover={{ scaleX: 1 }}
+                                transition={{ duration: 0.3 }}
+                            />
+                        </motion.span>
+                    </Link>
                 </motion.div>
             </div>
         </motion.section>

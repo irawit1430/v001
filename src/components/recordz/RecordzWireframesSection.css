@@ -57,7 +57,7 @@
 .rz-wireframe-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .rz-wireframe-image-wrapper {
@@ -78,7 +78,7 @@
 }
 
 .rz-wireframe-caption {
-    text-align: center;
+    text-align: left;
     margin-top: 16px;
 }
 

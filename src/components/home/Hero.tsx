@@ -71,7 +71,7 @@ const GlowButton: React.FC<{ href: string; children: React.ReactNode; delay: num
             borderRadius: '10px',
             fontSize: '24px',
             fontWeight: 500,
-            fontFamily: '"Instrument Sans", sans-serif',
+            fontFamily: '"SF Pro Display", sans-serif',
             lineHeight: '29px',
             textDecoration: 'none',
             cursor: 'pointer'

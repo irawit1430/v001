@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/SFProDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/SFProDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/SFProDisplay-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/SFProDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   --color-primary: #FF8C69;
   /* Peach/Salmon color from the buttons */
@@ -12,8 +40,8 @@
   --color-text: #333333;
   --color-text-light: #666666;
 
-  --font-main: 'Inter', sans-serif;
-  /* Placeholder, we might need to load a specific font */
+  --font-main: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* SF Pro Display — unified project font */
 
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;

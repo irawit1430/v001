@@ -11,9 +11,10 @@ interface KeyInsightsProps {
     title?: string;
     description: string;
     insights: InsightCard[];
-    backgroundColor?: string; // Tailwind class like 'bg-taupe' or 'bg-[#212873]'
-    textColor?: string; // Tailwind class like 'text-white'
+    backgroundColor?: string;
+    textColor?: string;
     className?: string;
+    align?: 'left' | 'center';
 }
 
 const KeyInsights: React.FC<KeyInsightsProps> = ({
@@ -23,6 +24,7 @@ const KeyInsights: React.FC<KeyInsightsProps> = ({
     backgroundColor = 'bg-taupe',
     textColor = 'text-white',
     className = '',
+    align = 'center',
 }) => {
     return (
         <section className={`w-full ${backgroundColor} py-16 md:py-24 ${className}`}>
@@ -43,7 +45,7 @@ const KeyInsights: React.FC<KeyInsightsProps> = ({
                     {insights.map((insight, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-[20px] p-5 shadow-lg flex flex-col items-center text-center justify-center"
+                            className={`bg-white rounded-[20px] p-5 shadow-lg flex flex-col justify-center ${align === 'center' ? 'items-center text-center' : 'items-start text-left'}`}
                             style={{
                                 width: '270px',
                                 height: '270px',

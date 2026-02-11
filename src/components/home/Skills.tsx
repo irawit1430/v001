@@ -176,7 +176,7 @@ const Skills: React.FC = () => {
                                 marginBottom: '1.25rem',
                                 fontWeight: 500,
                                 color: '#2E211B',
-                                fontFamily: '"SF Pro Display", "Inter", sans-serif',
+                                fontFamily: '"SF Pro Display", sans-serif',
                                 letterSpacing: '0.05em'
                             }}
                             initial={{ opacity: 0, y: 20 }}
@@ -199,7 +199,7 @@ const Skills: React.FC = () => {
                                         borderRadius: '30px',
                                         fontSize: '16px',
                                         fontWeight: 600,
-                                        fontFamily: '"Instrument Sans", sans-serif',
+                                        fontFamily: '"SF Pro Display", sans-serif',
                                         letterSpacing: '0.05em',
                                         cursor: 'pointer',
                                         display: 'inline-block',

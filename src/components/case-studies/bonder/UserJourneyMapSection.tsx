@@ -44,17 +44,17 @@ const UserJourneyMapSection = () => {
             <div className="max-w-container mx-auto px-4 md:px-8">
 
                 {/* Header */}
-                <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 mb-16">
-                    <div className="lg:w-1/3">
-                        <h2 className="text-[40px] font-medium text-black leading-tight">
+                <div className="flex flex-col lg:flex-row gap-8 lg:gap-[60px] mb-16">
+                    <div className="lg:w-1/3 max-w-[200px]">
+                        <h2 className="text-[32px] font-medium text-black leading-tight">
                             User Journey:
                         </h2>
                     </div>
                     <div className="lg:w-2/3">
-                        <p className="text-[34px] font-medium text-taupe leading-tight mb-4">
+                        <p className="text-[24px] font-medium text-[#333333] leading-tight mb-4">
                             Mapping the emotional journey from discovery to lasting connections.
                         </p>
-                        <p className="text-[30px] font-normal text-taupe leading-relaxed">
+                        <p className="text-[18px] font-normal text-[#6F6864] leading-[1.7]">
                             This journey illustrates how a first-time Bonder user moves from initial awareness to long-term community engagement. Each stage highlights the user's goals, emotions, and key product opportunities that reduce friction and support meaningful, real-world connections.
                         </p>
                     </div>
@@ -62,13 +62,13 @@ const UserJourneyMapSection = () => {
 
                 {/* Journey Map Grid */}
                 <div className="overflow-x-auto">
-                    <div className="min-w-[1200px]">
+                    <div className="min-w-[1000px]">
 
                         {/* Stage Headers */}
                         <div className="grid grid-cols-5 gap-4 mb-4">
                             {stages.map((stage, i) => (
-                                <div key={i} className={`${stage.color} rounded-[20px] py-6 px-4 text-center`}>
-                                    <span className="text-[30px] font-medium text-white">{stage.name}</span>
+                                <div key={i} className={`${stage.color} rounded-[12px] py-4 px-3 text-center`}>
+                                    <span className="text-[18px] font-medium text-white">{stage.name}</span>
                                 </div>
                             ))}
                         </div>
@@ -76,8 +76,8 @@ const UserJourneyMapSection = () => {
                         {/* Actions Row */}
                         <div className="grid grid-cols-5 gap-4 mb-4">
                             {actions.map((action, i) => (
-                                <div key={i} className="bg-white border border-[#D9D9D9] rounded-[10px] p-4 min-h-[126px]">
-                                    <p className="text-[20px] font-medium text-black leading-normal">{action}</p>
+                                <div key={i} className="bg-white border border-[#D9D9D9] rounded-[10px] p-4 min-h-[120px]">
+                                    <p className="text-[14px] font-medium text-black leading-normal">{action}</p>
                                 </div>
                             ))}
                         </div>
@@ -85,8 +85,8 @@ const UserJourneyMapSection = () => {
                         {/* Quotes Row */}
                         <div className="grid grid-cols-5 gap-4 mb-4">
                             {quotes.map((quote, i) => (
-                                <div key={i} className="bg-white border border-[#D9D9D9] rounded-[10px] p-4 min-h-[126px]">
-                                    <p className="text-[20px] font-normal italic text-taupe leading-normal">{quote}</p>
+                                <div key={i} className="bg-white border border-[#D9D9D9] rounded-[10px] p-4 min-h-[100px]">
+                                    <p className="text-[14px] font-normal italic text-[#6F6864] leading-normal">{quote}</p>
                                 </div>
                             ))}
                         </div>
@@ -94,9 +94,9 @@ const UserJourneyMapSection = () => {
                         {/* Emotions Row */}
                         <div className="grid grid-cols-5 gap-4 mb-4">
                             {emotions.map((emotion, i) => (
-                                <div key={i} className="bg-white border border-[#D9D9D9] rounded-[10px] p-4 min-h-[69px] flex items-center justify-center gap-3">
-                                    <span className="text-3xl">{emotion.emoji}</span>
-                                    <span className="text-[30px] font-medium text-black">{emotion.label}</span>
+                                <div key={i} className="bg-white border border-[#D9D9D9] rounded-[10px] p-4 min-h-[60px] flex items-center justify-center gap-2">
+                                    <span className="text-2xl">{emotion.emoji}</span>
+                                    <span className="text-[16px] font-medium text-black">{emotion.label}</span>
                                 </div>
                             ))}
                         </div>
@@ -104,8 +104,8 @@ const UserJourneyMapSection = () => {
                         {/* Opportunities Row */}
                         <div className="grid grid-cols-5 gap-4">
                             {opportunities.map((opp, i) => (
-                                <div key={i} className="bg-white border border-[#D9D9D9] rounded-[10px] p-4 min-h-[126px]">
-                                    <p className="text-[20px] font-medium text-black leading-normal">{opp}</p>
+                                <div key={i} className="bg-white border border-[#D9D9D9] rounded-[10px] p-4 min-h-[120px]">
+                                    <p className="text-[14px] font-medium text-black leading-normal">{opp}</p>
                                 </div>
                             ))}
                         </div>

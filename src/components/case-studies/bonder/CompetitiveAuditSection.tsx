@@ -6,18 +6,18 @@ const CompetitiveAuditSection = () => {
     return (
         <section className="w-full bg-white py-16 md:py-24">
             <div className="max-w-container mx-auto px-4 md:px-8">
-                <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-[60px]">
 
                     {/* Left Column - Header */}
-                    <div className="lg:w-1/3">
-                        <h2 className="text-[40px] font-medium text-black leading-tight">
+                    <div className="lg:w-1/3 max-w-[200px]">
+                        <h2 className="text-[32px] font-medium text-black leading-tight">
                             Competitive Audit:
                         </h2>
                     </div>
 
                     {/* Right Column - Content */}
                     <div className="lg:w-2/3">
-                        <p className="text-[30px] font-medium text-taupe leading-relaxed">
+                        <p className="text-[18px] font-normal text-[#6F6864] leading-[1.7]">
                             Analyzing competitors helped reveal where current fitness and membership apps succeed and where they fall short. While they offer strong booking and discovery tools, competitors lack unified event flows, real-time support, and connected venue ecosystems. These gaps highlight clear opportunities for Bonder to improve the Lifetime member experience.
                         </p>
                     </div>
