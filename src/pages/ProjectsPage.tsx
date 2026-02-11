@@ -102,7 +102,7 @@ const ProjectsPage: React.FC = () => {
     return (
         <div className="w-full min-h-screen bg-white font-['SF_Pro_Display',_sans-serif]">
             <Navbar
-                logoSrc="/figmaAssets/seashell-pink-removebg-preview-1.png"
+                logoSrc={`${import.meta.env.BASE_URL}figmaAssets/seashell-pink-removebg-preview-1.png`}
                 logoAlt="Logo"
                 links={navigationLinks}
             />

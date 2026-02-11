@@ -31,31 +31,31 @@ const projectDetails = [
 
 
 const researchLabels = [
-    { icon: "/figmaAssets/speech-bubble-removebg-preview-1.svg", label: "Discovery" },
-    { icon: "/figmaAssets/twocellphones-removebg-preview--1--1.svg", label: "Competitive Audit" },
-    { icon: "/figmaAssets/chart-removebg-preview-2.svg", label: "User Testing" },
-    { icon: "/figmaAssets/lightbuldddd-removebg-preview-1.svg", label: "Insight" },
+    { icon: `${import.meta.env.BASE_URL}figmaAssets/speech-bubble-removebg-preview-1.svg`, label: "Discovery" },
+    { icon: `${import.meta.env.BASE_URL}figmaAssets/twocellphones-removebg-preview--1--1.svg`, label: "Competitive Audit" },
+    { icon: `${import.meta.env.BASE_URL}figmaAssets/chart-removebg-preview-2.svg`, label: "User Testing" },
+    { icon: `${import.meta.env.BASE_URL}figmaAssets/lightbuldddd-removebg-preview-1.svg`, label: "Insight" },
 ];
 
 const keyInsights = [
     {
-        icon: "/figmaAssets/group-77.png",
+        icon: `${import.meta.env.BASE_URL}figmaAssets/group-77.png`,
         title: "Community Focus",
         description: "Users prioritize finding genuine connections over quantity of matches",
     },
     {
-        icon: "/figmaAssets/group-78.png",
+        icon: `${import.meta.env.BASE_URL}figmaAssets/group-78.png`,
         title: "Location Matters",
         description: "Proximity-based discovery increases likelihood of in person meet up",
     },
     {
-        icon: "/figmaAssets/group-79.png",
-        topIcon: "/figmaAssets/calendar-icon.png",
+        icon: `${import.meta.env.BASE_URL}figmaAssets/group-79.png`,
+        topIcon: `${import.meta.env.BASE_URL}figmaAssets/calendar-icon.png`,
         title: "Event-Driven",
         description: "Shared activities reduce social anxiety & create natural conversation starters",
     },
     {
-        icon: "/figmaAssets/group-80.png",
+        icon: `${import.meta.env.BASE_URL}figmaAssets/group-80.png`,
         title: "Authentic Profiles",
         description: "Users want to real interest and personality, not curated perfection.",
     },
@@ -63,32 +63,32 @@ const keyInsights = [
 
 const nextSteps = [
     {
-        icon: "/figmaAssets/user-groups.png",
+        icon: `${import.meta.env.BASE_URL}figmaAssets/user-groups.png`,
         title: "User Testing",
         description: "Conduct usability testing with target users to validate design decisions and identify pain points.",
     },
     {
-        icon: "/figmaAssets/restart.png",
+        icon: `${import.meta.env.BASE_URL}figmaAssets/restart.png`,
         title: "Iterate & Refine",
         description: "Incorporate feedback to improve the user experience and address any discovered issues.",
     },
     {
-        icon: "/figmaAssets/line-chart.png",
+        icon: `${import.meta.env.BASE_URL}figmaAssets/line-chart.png`,
         title: "Analytics Integration",
         description: "Implement tracking to measure key metrics like user engagement and retention rates.",
     },
     {
-        icon: "/figmaAssets/features-list.png",
+        icon: `${import.meta.env.BASE_URL}figmaAssets/features-list.png`,
         title: "Future Features",
         description: "Explore premium features like event creation, business partnerships, and community moderation tools.",
     },
 ];
 
 const loFiScreens = [
-    { src: "/figmaAssets/group-70.png", alt: "Connect Screen", label: "Connect Screen", sublabel: "Meet new veterans" },
-    { src: "/figmaAssets/housing-3.png", alt: "Housing Screen", label: "Housing Screen", sublabel: "Find safe housing" },
-    { src: "/figmaAssets/housing-3.png", alt: "Housing Screen", label: "Housing Screen", sublabel: "Find safe housing" },
-    { src: "/figmaAssets/housing-3.png", alt: "Housing Screen", label: "Housing Screen", sublabel: "Find safe housing" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/group-70.png`, alt: "Connect Screen", label: "Connect Screen", sublabel: "Meet new veterans" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "Housing Screen", label: "Housing Screen", sublabel: "Find safe housing" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "Housing Screen", label: "Housing Screen", sublabel: "Find safe housing" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "Housing Screen", label: "Housing Screen", sublabel: "Find safe housing" },
 ];
 
 
@@ -97,7 +97,7 @@ const FreshOutPage = () => {
     return (
         <div className="bg-white overflow-hidden w-full">
             <Navbar
-                logoSrc="/figmaAssets/seashell-pink-removebg-preview-1.png"
+                logoSrc={`${import.meta.env.BASE_URL}figmaAssets/seashell-pink-removebg-preview-1.png`}
                 logoAlt="Seashell pink logo"
                 links={navigationLinks}
             />
@@ -105,7 +105,7 @@ const FreshOutPage = () => {
             <HeroSection
                 title="Fresh Out"
                 subtitle="Veteran Social Application"
-                imageSrc="/figmaAssets/freshout-hero-image.png"
+                imageSrc={`${import.meta.env.BASE_URL}figmaAssets/freshout-hero-image.png`}
                 imageAlt="Fresh Out hero image"
             />
 

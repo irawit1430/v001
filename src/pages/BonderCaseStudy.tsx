@@ -52,7 +52,7 @@ const keyInsights = [
     },
     {
         icon: iconShield,
-        topIcon: "/figmaAssets/calendar-icon.png",
+        topIcon: `${import.meta.env.BASE_URL}figmaAssets/calendar-icon.png`,
         title: "Event-Driven",
         description: "Events are the primary catalyst for connection",
     },
@@ -64,10 +64,10 @@ const keyInsights = [
 ];
 
 const researchLabels = [
-    { icon: "/figmaAssets/speech-bubble-removebg-preview-1.svg", label: "Discovery" },
-    { icon: "/figmaAssets/twocellphones-removebg-preview--1--1.svg", label: "Competitive Audit" },
-    { icon: "/figmaAssets/chart-removebg-preview-2.svg", label: "User Testing" },
-    { icon: "/figmaAssets/lightbuldddd-removebg-preview-1.svg", label: "Insight" },
+    { icon: `${import.meta.env.BASE_URL}figmaAssets/speech-bubble-removebg-preview-1.svg`, label: "Discovery" },
+    { icon: `${import.meta.env.BASE_URL}figmaAssets/twocellphones-removebg-preview--1--1.svg`, label: "Competitive Audit" },
+    { icon: `${import.meta.env.BASE_URL}figmaAssets/chart-removebg-preview-2.svg`, label: "User Testing" },
+    { icon: `${import.meta.env.BASE_URL}figmaAssets/lightbuldddd-removebg-preview-1.svg`, label: "Insight" },
 ];
 
 const nextSteps = [
@@ -94,10 +94,10 @@ const nextSteps = [
 ];
 
 const loFiScreens = [
-    { src: "/figmaAssets/bonder-lofi-1.png", alt: "Lo-Fi Wireframe 1" },
-    { src: "/figmaAssets/bonder-lofi-2.png", alt: "Lo-Fi Wireframe 2" },
-    { src: "/figmaAssets/bonder-lofi-3.png", alt: "Lo-Fi Wireframe 3" },
-    { src: "/figmaAssets/bonder-lofi-4.png", alt: "Lo-Fi Wireframe 4" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-lofi-1.png`, alt: "Lo-Fi Wireframe 1" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-lofi-2.png`, alt: "Lo-Fi Wireframe 2" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-lofi-3.png`, alt: "Lo-Fi Wireframe 3" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-lofi-4.png`, alt: "Lo-Fi Wireframe 4" },
 ];
 
 const hiFiScreens = [
@@ -112,7 +112,7 @@ const BonderCaseStudy = () => {
     return (
         <div className="bg-white overflow-hidden w-full">
             <Navbar
-                logoSrc="/figmaAssets/seashell-pink-removebg-preview-1.png"
+                logoSrc={`${import.meta.env.BASE_URL}figmaAssets/seashell-pink-removebg-preview-1.png`}
                 logoAlt="Seashell pink logo"
                 links={navigationLinks}
             />
@@ -120,7 +120,7 @@ const BonderCaseStudy = () => {
             <HeroSection
                 title="Bonder"
                 subtitle="Social Media Application"
-                imageSrc="/bonder-hero-mockups.png"
+                imageSrc={`${import.meta.env.BASE_URL}bonder-hero-mockups.png`}
                 imageAlt="Bonder App Mockups"
             />
 

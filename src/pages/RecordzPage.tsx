@@ -74,10 +74,10 @@ const keyInsights = [
 ];
 
 const researchLabels = [
-    { icon: "/figmaAssets/speech-bubble-removebg-preview-1.svg", label: "Discovery" },
-    { icon: "/figmaAssets/twocellphones-removebg-preview--1--1.svg", label: "Competitive Audit" },
-    { icon: "/figmaAssets/chart-removebg-preview-2.svg", label: "User Testing" },
-    { icon: "/figmaAssets/lightbuldddd-removebg-preview-1.svg", label: "Insight" },
+    { icon: `${import.meta.env.BASE_URL}figmaAssets/speech-bubble-removebg-preview-1.svg`, label: "Discovery" },
+    { icon: `${import.meta.env.BASE_URL}figmaAssets/twocellphones-removebg-preview--1--1.svg`, label: "Competitive Audit" },
+    { icon: `${import.meta.env.BASE_URL}figmaAssets/chart-removebg-preview-2.svg`, label: "User Testing" },
+    { icon: `${import.meta.env.BASE_URL}figmaAssets/lightbuldddd-removebg-preview-1.svg`, label: "Insight" },
 ];
 
 const challenges = [
@@ -139,7 +139,7 @@ const RecordzPage = () => {
     return (
         <div className="bg-white overflow-hidden w-full">
             <Navbar
-                logoSrc="/figmaAssets/seashell-pink-removebg-preview-1.png"
+                logoSrc={`${import.meta.env.BASE_URL}figmaAssets/seashell-pink-removebg-preview-1.png`}
                 logoAlt="Seashell pink logo"
                 links={navigationLinks}
             />
