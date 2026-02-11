@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Navbar } from '../components/case-studies/new-template/layout/Navbar';
+
 import ProjectCard from '../components/ui/ProjectCard';
 
 import projectFreshOut from '../assets/project-fresh-out.png';
@@ -85,12 +85,7 @@ const projects: Project[] = [
     }
 ];
 
-const navigationLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "#contact" },
-    { label: "Resume", href: "#resume" },
-];
+
 
 const ProjectsPage: React.FC = () => {
     const [filter, setFilter] = useState<'ALL' | Category>('ALL');
@@ -101,11 +96,7 @@ const ProjectsPage: React.FC = () => {
 
     return (
         <div className="w-full min-h-screen bg-white font-['SF_Pro_Display',_sans-serif]">
-            <Navbar
-                logoSrc={`${import.meta.env.BASE_URL}figmaAssets/seashell-pink-removebg-preview-1.png`}
-                logoAlt="Logo"
-                links={navigationLinks}
-            />
+
 
             <div className="pt-[150px] pb-[100px] md:pt-[120px]">
                 {/* Header Section */}

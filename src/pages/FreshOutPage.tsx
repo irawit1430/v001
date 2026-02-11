@@ -1,23 +1,18 @@
-import { Navbar } from "../components/case-studies/new-template/layout/Navbar";
+
 
 import { HeroSection } from "../components/case-studies/new-template/layout/HeroSection";
 import { ContentSection } from "../components/case-studies/new-template/layout/ContentSection";
 import { TwoColumnSection } from "../components/case-studies/new-template/layout/TwoColumnSection";
 import { SectionHeading } from "../components/case-studies/new-template/layout/SectionHeading";
-import { CTASection } from "../components/case-studies/new-template/layout/CTASection";
+
+import GetInTouchSection from "../components/sections/GetInTouchSection";
 import { ProjectDetailGrid } from "../components/case-studies/new-template/cards/ProjectDetailGrid";
 import { StepCard } from "../components/case-studies/new-template/cards/StepCard";
 import { ImageGallery } from "../components/case-studies/new-template/cards/ImageGallery";
 import ResearchOverview from "../components/case-studies/shared/ResearchOverview";
 import KeyInsights from "../components/case-studies/shared/KeyInsights";
 
-const navigationLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "#contact" },
-    { label: "Resume", href: "#resume" },
-];
+
 
 const projectDetails = [
     { label: "ROLE", value: "Lead UX Designer" },
@@ -96,11 +91,7 @@ const loFiScreens = [
 const FreshOutPage = () => {
     return (
         <div className="bg-white overflow-hidden w-full">
-            <Navbar
-                logoSrc={`${import.meta.env.BASE_URL}figmaAssets/seashell-pink-removebg-preview-1.png`}
-                logoAlt="Seashell pink logo"
-                links={navigationLinks}
-            />
+
 
             <HeroSection
                 title="Fresh Out"
@@ -315,7 +306,7 @@ const FreshOutPage = () => {
                 <img
                     className="w-full h-auto"
                     alt="Information Architecture"
-                    src="/figmaAssets/freshout-info-architecture.png"
+                    src={`${import.meta.env.BASE_URL}figmaAssets/freshout-info-architecture.png`}
                 />
             </ContentSection>
 
@@ -340,11 +331,11 @@ const FreshOutPage = () => {
                 <div className="space-y-12">
                     <div>
                         <p className="text-[#6e6764] text-xl md:text-2xl mb-4">Sign up</p>
-                        <img className="w-full h-auto object-cover" alt="Sign up flow" src="/figmaAssets/sign-up.svg" />
+                        <img className="w-full h-auto object-cover" alt="Sign up flow" src={`${import.meta.env.BASE_URL}figmaAssets/sign-up.svg`} />
                     </div>
                     <div>
                         <p className="text-[#6e6764] text-xl md:text-2xl mb-4">Events</p>
-                        <img className="w-full h-auto object-cover" alt="Events flow" src="/figmaAssets/event.png" />
+                        <img className="w-full h-auto object-cover" alt="Events flow" src={`${import.meta.env.BASE_URL}figmaAssets/event.png`} />
                     </div>
                 </div>
             </ContentSection>
@@ -366,7 +357,7 @@ const FreshOutPage = () => {
             />
 
             <ContentSection>
-                <img className="w-full h-auto object-cover" alt="Survey infograph" src="/figmaAssets/survey-infograph.png" />
+                <img className="w-full h-auto object-cover" alt="Survey infograph" src={`${import.meta.env.BASE_URL}figmaAssets/survey-infograph.png`} />
                 <p className="mt-8 text-[#6e6764] text-base md:text-lg leading-relaxed text-left max-w-4xl mx-auto">
                     Because the survey <span className="font-medium">included 7 participants</span>,
                     these results should be interpreted directionally. They highlight clear trends but
@@ -466,11 +457,8 @@ const FreshOutPage = () => {
             </ContentSection>
 
             {/* Contact CTA */}
-            <CTASection
-                title="Get in Touch!"
-                description="If you'd like to connect or learn more about this project, feel free to reach out."
-                buttons={[{ label: "Email" }, { label: "Linkedin" }]}
-            />
+            {/* Contact CTA */}
+            <GetInTouchSection theme="dark" />
 
         </div>
     );

@@ -37,22 +37,7 @@ const NavLink: React.FC<NavLinkProps> = ({ item, index }) => {
     borderRadius: '2px'
   };
 
-  const tooltipStyle = {
-    position: 'absolute' as const,
-    top: '100%',
-    left: '50%',
-    transform: 'translateX(-50%)',
-    marginTop: '8px',
-    padding: '8px 12px',
-    background: 'rgba(0, 0, 0, 0.85)',
-    color: 'white',
-    fontSize: '14px',
-    fontWeight: 400,
-    borderRadius: '6px',
-    whiteSpace: 'nowrap' as const,
-    zIndex: 1000,
-    pointerEvents: 'none' as const
-  };
+
 
   if (item.isRoute) {
     return (
@@ -79,15 +64,7 @@ const NavLink: React.FC<NavLinkProps> = ({ item, index }) => {
             />
           </Link>
         </motion.div>
-        {/* Tooltip */}
-        <motion.div
-          style={tooltipStyle}
-          initial={{ opacity: 0, y: -5 }}
-          animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : -5 }}
-          transition={{ duration: 0.2 }}
-        >
-          work in progress ✨
-        </motion.div>
+
       </motion.li>
     );
   }
@@ -114,15 +91,7 @@ const NavLink: React.FC<NavLinkProps> = ({ item, index }) => {
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         />
       </motion.span>
-      {/* Tooltip */}
-      <motion.div
-        style={tooltipStyle}
-        initial={{ opacity: 0, y: -5 }}
-        animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : -5 }}
-        transition={{ duration: 0.2 }}
-      >
-        still working on it ✨
-      </motion.div>
+
     </motion.li>
   );
 };
@@ -197,7 +166,7 @@ const Navbar: React.FC = () => {
         fontWeight: 400,
         fontFamily: '"SF Pro Display", sans-serif',
         position: 'absolute',
-        width: '486px',
+        width: 'auto',
         height: '34px',
         right: '60px',
         top: '18px'

@@ -1,11 +1,11 @@
-import { Navbar } from "../components/case-studies/new-template/layout/Navbar";
+
 import { UserJourneyMap } from "../components/case-studies/new-template/cards/UserJourneyMap";
 
 import { HeroSection } from "../components/case-studies/new-template/layout/HeroSection";
 import { ContentSection } from "../components/case-studies/new-template/layout/ContentSection";
 import { TwoColumnSection } from "../components/case-studies/new-template/layout/TwoColumnSection";
 import { SectionHeading } from "../components/case-studies/new-template/layout/SectionHeading";
-import { CTASection } from "../components/case-studies/new-template/layout/CTASection";
+import GetInTouchSection from "../components/sections/GetInTouchSection";
 import { ProjectDetailGrid } from "../components/case-studies/new-template/cards/ProjectDetailGrid";
 import { StepCard } from "../components/case-studies/new-template/cards/StepCard";
 import { ImageGallery } from "../components/case-studies/new-template/cards/ImageGallery";
@@ -22,13 +22,7 @@ import iconIterate from "../assets/icon-iterate.png";
 import iconAnalytics from "../assets/icon-analytics.png";
 import iconFeatures from "../assets/icon-features.png";
 
-const navigationLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "#contact" },
-    { label: "Resume", href: "#resume" },
-];
+
 
 const projectDetails = [
     { label: "ROLE", value: "Lead UX Designer" },
@@ -111,11 +105,7 @@ const hiFiScreens = [
 const BonderCaseStudy = () => {
     return (
         <div className="bg-white overflow-hidden w-full">
-            <Navbar
-                logoSrc={`${import.meta.env.BASE_URL}figmaAssets/seashell-pink-removebg-preview-1.png`}
-                logoAlt="Seashell pink logo"
-                links={navigationLinks}
-            />
+
 
             <HeroSection
                 title="Bonder"
@@ -422,11 +412,8 @@ const BonderCaseStudy = () => {
             </ContentSection>
 
             {/* CTA */}
-            <CTASection
-                title="Get in Touch!"
-                description="If you'd like to connect or learn more about this project, feel free to reach out."
-                buttons={[{ label: "Email" }, { label: "Linkedin" }]}
-            />
+            {/* CTA */}
+            <GetInTouchSection theme="dark" />
 
         </div>
     );
