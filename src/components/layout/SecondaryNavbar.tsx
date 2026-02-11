@@ -55,7 +55,7 @@ const NavLink: React.FC<NavLinkProps> = ({ item, index }) => {
         onMouseEnter: () => setIsHovered(true),
         onMouseLeave: () => setIsHovered(false),
         whileHover: { scale: 1.05 },
-        transition: { type: 'spring', stiffness: 400, damping: 17 }
+        transition: { type: 'spring' as const, stiffness: 400, damping: 17 }
     };
 
     if (item.isRoute) {
@@ -97,7 +97,7 @@ const NavLink: React.FC<NavLinkProps> = ({ item, index }) => {
 };
 
 export default function SecondaryNavbar() {
-    const [mobileOpen, setMobileOpen] = useState(false);
+
 
     // Using the same styles as original Navbar
     return (
