@@ -182,7 +182,7 @@ const BonderCaseStudy = () => {
             {/* Persona Card */}
             <ContentSection className="!pt-0 !pb-16">
                 <div className="w-full rounded-2xl">
-                    <img src="/figmaAssets/persona-miles.png" alt="Persona Miles" className="w-full h-auto rounded-2xl shadow-sm" />
+                    <img src={`${import.meta.env.BASE_URL}figmaAssets/persona-miles.png`} alt="Persona Miles" className="w-full h-auto rounded-2xl shadow-sm" />
                 </div>
             </ContentSection>
 
@@ -199,7 +199,7 @@ const BonderCaseStudy = () => {
             {/* Competitive Audit Diagram */}
             <ContentSection className="!pt-0 !pb-16">
                 <div className="w-full rounded-2xl">
-                    <img src="/figmaAssets/bonder-competitive-audit.png" alt="Competitive Audit" className="w-full h-auto rounded-2xl shadow-sm" />
+                    <img src={`${import.meta.env.BASE_URL}figmaAssets/bonder-competitive-audit.png`} alt="Competitive Audit" className="w-full h-auto rounded-2xl shadow-sm" />
                 </div>
             </ContentSection>
 
@@ -244,9 +244,9 @@ const BonderCaseStudy = () => {
             <ContentSection className="!pt-0 !pb-16">
                 <ImageGallery
                     images={[
-                        { src: "/figmaAssets/bonder-hmw-1.png", alt: "How Might We Sketch 1" },
-                        { src: "/figmaAssets/bonder-hmw-2.png", alt: "How Might We Sketch 2" },
-                        { src: "/figmaAssets/bonder-hmw-3.png", alt: "How Might We Sketch 3" },
+                        { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hmw-1.png`, alt: "How Might We Sketch 1" },
+                        { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hmw-2.png`, alt: "How Might We Sketch 2" },
+                        { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hmw-3.png`, alt: "How Might We Sketch 3" },
                     ]}
                     columns={3}
                 />
@@ -357,7 +357,7 @@ const BonderCaseStudy = () => {
             </ContentSection>
             <ContentSection className="!pt-0 !pb-16">
                 <div className="w-full rounded-2xl">
-                    <img src="/figmaAssets/bonder-ia.png" alt="Information Architecture Diagram" className="w-full h-auto rounded-2xl shadow-sm" />
+                    <img src={`${import.meta.env.BASE_URL}figmaAssets/bonder-ia.png`} alt="Information Architecture Diagram" className="w-full h-auto rounded-2xl shadow-sm" />
                 </div>
             </ContentSection>
 
@@ -374,7 +374,7 @@ const BonderCaseStudy = () => {
             />
             <ContentSection className="!pt-0 !pb-16">
                 <div className="w-full rounded-2xl">
-                    <img src="/figmaAssets/bonder-user-flow.png" alt="User Flow Diagram" className="w-full h-auto rounded-2xl shadow-sm" />
+                    <img src={`${import.meta.env.BASE_URL}figmaAssets/bonder-user-flow.png`} alt="User Flow Diagram" className="w-full h-auto rounded-2xl shadow-sm" />
                 </div>
             </ContentSection>
 

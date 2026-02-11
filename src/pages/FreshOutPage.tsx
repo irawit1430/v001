@@ -191,7 +191,7 @@ const FreshOutPage = () => {
                 <img
                     className="w-full h-auto object-contain"
                     alt="Discovery research"
-                    src="/figmaAssets/discovery-image-group.png"
+                    src={`${import.meta.env.BASE_URL}figmaAssets/discovery-image-group.png`}
                 />
             </ContentSection>
 
@@ -216,7 +216,7 @@ const FreshOutPage = () => {
                 <img
                     className="w-full h-auto object-cover"
                     alt="Competitive audit"
-                    src="/figmaAssets/conpersensive-audit-image.png"
+                    src={`${import.meta.env.BASE_URL}figmaAssets/conpersensive-audit-image.png`}
                 />
             </ContentSection>
 
@@ -261,7 +261,7 @@ const FreshOutPage = () => {
                 <img
                     className="w-full h-auto object-contain"
                     alt="How might we"
-                    src="/figmaAssets/how-might-we-image-group.png"
+                    src={`${import.meta.env.BASE_URL}figmaAssets/how-might-we-image-group.png`}
                 />
             </ContentSection>
 
@@ -417,7 +417,7 @@ const FreshOutPage = () => {
             />
 
             <ContentSection className="!py-0">
-                <img className="w-full h-auto object-cover" alt="Hi-Fi wireframes" src="/figmaAssets/hifi.png" />
+                <img className="w-full h-auto object-cover" alt="Hi-Fi wireframes" src={`${import.meta.env.BASE_URL}figmaAssets/hifi.png`} />
             </ContentSection>
 
             {/* Key Features */}
@@ -425,7 +425,7 @@ const FreshOutPage = () => {
                 left={
                     <div>
                         <SectionHeading title="Key Features:" />
-                        <img className="w-full max-w-md h-auto mt-8" alt="Key feature" src="/figmaAssets/key-feature.png" />
+                        <img className="w-full max-w-md h-auto mt-8" alt="Key feature" src={`${import.meta.env.BASE_URL}figmaAssets/key-feature.png`} />
                     </div>
                 }
                 right={
