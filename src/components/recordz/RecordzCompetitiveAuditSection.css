@@ -89,16 +89,17 @@
 }
 
 /* Table Body */
-.rz-audit-table tbody tr:nth-child(even) {
+/* Table Body */
+.rz-audit-table td:nth-child(2),
+.rz-audit-table td:nth-child(4),
+.rz-audit-table th:nth-child(2),
+.rz-audit-table th:nth-child(4) {
     background: #FAFAFA;
 }
 
-.rz-audit-table tbody tr:hover {
-    background: #F5F5F5;
-}
-
-.rz-audit-table tbody tr:hover .rz-row-label {
-    background: #5C5450 !important;
+.rz-audit-table td {
+    color: #333333;
+    line-height: 1.5;
 }
 
 .rz-audit-table td {

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { ScrollReveal } from "../../../ui/ScrollReveal";
 
 interface ContentSectionProps {
     children: ReactNode;
@@ -15,7 +16,11 @@ export function ContentSection({
 }: ContentSectionProps) {
     return (
         <section id={id} className={`${bgColor} w-full py-16 md:py-24 px-6 md:px-16 lg:px-24 ${className}`}>
-            <div className="max-w-[1200px] mx-auto">{children}</div>
+            <div className="max-w-[1200px] mx-auto">
+                <ScrollReveal width="100%">
+                    {children}
+                </ScrollReveal>
+            </div>
         </section>
     );
 }

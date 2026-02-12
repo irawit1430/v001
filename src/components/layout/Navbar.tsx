@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import logo from '../../assets/logo.png';
+import defaultLogo from '../../assets/logo.png';
 
-const navItems = [
+const logoPink = `${import.meta.env.BASE_URL}figmaAssets/seashell-pink-removebg-preview-1.png`;
+
+const baseNavItems = [
   { label: 'About', href: '/about', isRoute: true },
   { label: 'Projects', href: '/projects', isRoute: true },
-  { label: 'Contact', href: '#contact', isRoute: false },
-  { label: 'Resume', href: '#resume', isRoute: false }
+  { label: 'Contact', href: '/contact', isRoute: true },
+  { label: 'Resume', href: `${import.meta.env.BASE_URL}figmaAssets/Desiree Walker resume 2026.pdf`, isRoute: false }
 ];
 
 interface NavLinkProps {
-  item: typeof navItems[0];
+  item: { label: string; href: string; isRoute: boolean };
   index: number;
 }
 
@@ -37,23 +39,24 @@ const NavLink: React.FC<NavLinkProps> = ({ item, index }) => {
     borderRadius: '2px'
   };
 
+  const motionProps = {
+    initial: { opacity: 0, y: -20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { delay: 0.3 + index * 0.1, duration: 0.5 },
+    style: { position: 'relative' as const }
+  };
 
+  const hoverProps = {
+    onMouseEnter: () => setIsHovered(true),
+    onMouseLeave: () => setIsHovered(false),
+    whileHover: { scale: 1.05 },
+    transition: { type: 'spring' as const, stiffness: 400, damping: 17 }
+  };
 
   if (item.isRoute) {
     return (
-      <motion.li
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
-        style={{ position: 'relative' }}
-      >
-        <motion.div
-          style={{ display: 'inline-block' }}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          whileHover={{ scale: 1.05 }}
-          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-        >
+      <motion.li {...motionProps}>
+        <motion.div style={{ display: 'inline-block' }} {...hoverProps}>
           <Link to={item.href} style={linkStyle}>
             {item.label}
             <motion.span
@@ -64,24 +67,18 @@ const NavLink: React.FC<NavLinkProps> = ({ item, index }) => {
             />
           </Link>
         </motion.div>
-
       </motion.li>
     );
   }
 
   return (
-    <motion.li
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
-      style={{ position: 'relative' }}
-    >
-      <motion.span
+    <motion.li {...motionProps}>
+      <motion.a
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
         style={{ ...linkStyle, cursor: 'pointer' }}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        whileHover={{ scale: 1.05 }}
-        transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+        {...hoverProps}
       >
         {item.label}
         <motion.span
@@ -90,14 +87,15 @@ const NavLink: React.FC<NavLinkProps> = ({ item, index }) => {
           animate={{ width: isHovered ? '100%' : 0 }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         />
-      </motion.span>
-
+      </motion.a>
     </motion.li>
   );
 };
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -106,6 +104,27 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Determine nav items based on route
+  const navItems = isHomePage
+    ? baseNavItems
+    : [{ label: 'Home', href: '/', isRoute: true }, ...baseNavItems];
+
+  // Determine background style
+  // On home page: transparent/translucent initially, opaque when scrolled
+  // On other pages: always opaque (like SecondaryNavbar)
+  const isOpaque = !isHomePage || scrolled;
+
+  const backgroundStyle = isOpaque
+    ? 'linear-gradient(90deg, rgba(255, 218, 185, 0.95) 0%, rgba(255, 111, 97, 0.95) 50%, rgba(255, 158, 128, 0.95) 100%)'
+    : 'linear-gradient(90deg, rgba(255, 218, 185, 0.7) 0%, rgba(255, 111, 97, 0.7) 50%, rgba(255, 158, 128, 0.7) 100%)';
+
+  const boxShadowStyle = isOpaque
+    ? '0px 4px 20px rgba(0, 0, 0, 0.3)'
+    : '0px 4px 4px rgba(0, 0, 0, 0.2)';
+
+  // Determine logo
+  const currentLogo = isHomePage ? defaultLogo : logoPink;
 
   return (
     <motion.nav
@@ -126,10 +145,8 @@ const Navbar: React.FC = () => {
         height: '70px',
         zIndex: 100,
         color: 'white',
-        background: scrolled
-          ? 'linear-gradient(90deg, rgba(255, 218, 185, 0.95) 0%, rgba(255, 111, 97, 0.95) 50%, rgba(255, 158, 128, 0.95) 100%)'
-          : 'linear-gradient(90deg, rgba(255, 218, 185, 0.7) 0%, rgba(255, 111, 97, 0.7) 50%, rgba(255, 158, 128, 0.7) 100%)',
-        boxShadow: scrolled ? '0px 4px 20px rgba(0, 0, 0, 0.3)' : '0px 4px 4px rgba(0, 0, 0, 0.2)',
+        background: backgroundStyle,
+        boxShadow: boxShadowStyle,
         backdropFilter: 'blur(10px)',
         transition: 'all 0.3s ease'
       }}
@@ -152,7 +169,7 @@ const Navbar: React.FC = () => {
           whileHover={{ scale: 1.1, rotate: 5 }}
           transition={{ type: 'spring', stiffness: 300 }}
         >
-          <img src={logo} alt="Logo" style={{ width: '100%', height: 'auto' }} />
+          <img src={currentLogo} alt="Logo" style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
         </motion.div>
       </Link>
       <ul style={{
@@ -180,3 +197,4 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+

@@ -160,9 +160,9 @@ const Footer: React.FC = () => {
                         <div style={{ textAlign: 'center' }}>
                             <h4 style={{ fontWeight: 600, marginBottom: '0.75rem', fontSize: '1.1rem' }}>Navigation</h4>
                             <ul style={{ display: 'grid', gap: '0.5rem', opacity: 0.9 }}>
-                                <li><AnimatedLink href="#about">About</AnimatedLink></li>
-                                <li><AnimatedLink href="#projects">Projects</AnimatedLink></li>
-                                <li><AnimatedLink href="#contact">Contact</AnimatedLink></li>
+                                <li><AnimatedLink href="/about">About</AnimatedLink></li>
+                                <li><AnimatedLink href="/projects">Projects</AnimatedLink></li>
+                                <li><AnimatedLink href="/contact">Contact</AnimatedLink></li>
                             </ul>
                         </div>
 
@@ -170,8 +170,7 @@ const Footer: React.FC = () => {
                         <div style={{ textAlign: 'center' }}>
                             <h4 style={{ fontWeight: 600, marginBottom: '0.75rem', fontSize: '1.1rem' }}>Social</h4>
                             <ul style={{ display: 'grid', gap: '0.5rem', opacity: 0.9 }}>
-                                <li><AnimatedLink href="#">Linkedin</AnimatedLink></li>
-                                <li><AnimatedLink href="#">Instagram</AnimatedLink></li>
+                                <li><AnimatedLink href="https://www.linkedin.com/in/desiree-walker/">Linkedin</AnimatedLink></li>
                             </ul>
                         </div>
 
@@ -179,8 +178,8 @@ const Footer: React.FC = () => {
                         <div style={{ textAlign: 'center' }}>
                             <h4 style={{ fontWeight: 600, marginBottom: '0.75rem', fontSize: '1.1rem' }}>Contact</h4>
                             <ul style={{ display: 'grid', gap: '0.5rem', opacity: 0.9 }}>
-                                <li><AnimatedLink href="mailto:email@example.com">Email</AnimatedLink></li>
-                                <li><AnimatedLink href="#">Resume</AnimatedLink></li>
+                                <li><AnimatedLink href="mailto:desireewalkerux@yahoo.com">Email</AnimatedLink></li>
+                                <li><AnimatedLink href={`${import.meta.env.BASE_URL}figmaAssets/Desiree Walker resume 2026.pdf`}>Resume</AnimatedLink></li>
                             </ul>
                         </div>
                     </motion.div>

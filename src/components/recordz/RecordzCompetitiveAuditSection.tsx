@@ -1,5 +1,7 @@
 
 
+import './RecordzCompetitiveAuditSection.css';
+
 const RecordzCompetitiveAuditSection: React.FC = () => {
     return (
         <section className="rz-audit-section">

@@ -11,6 +11,7 @@ import { StepCard } from "../components/case-studies/new-template/cards/StepCard
 import { ImageGallery } from "../components/case-studies/new-template/cards/ImageGallery";
 import ResearchOverview from "../components/case-studies/shared/ResearchOverview";
 import KeyInsights from "../components/case-studies/shared/KeyInsights";
+import RecordzCompetitiveAuditSection from "../components/recordz/RecordzCompetitiveAuditSection";
 
 // Import images
 import heroImage from '../assets/1331-recordz-hero.png';
@@ -101,8 +102,10 @@ const wireframeImages = [
 ];
 
 const hifiScreens = [
-    { src: hifiWelcome, alt: "Initial Welcome Screen", label: "Initial Welcome Screen" },
-    { src: hifiLabelAbout, alt: "Label About Screen", label: "Label About Screen" },
+    { src: hifiWelcome, alt: "Initial Welcome Screen", label: "1331 Recordz Initial Welcome Screen" },
+    { src: hifiStudioLanding, alt: "Studio Landing Screen", label: "1331 Recordz Studio Landing Screen" },
+    { src: hifiStudioAbout, alt: "Studio About Screen", label: "1331 Recordz Studio About Screen" },
+    { src: hifiLabelAbout, alt: "Label About Screen", label: "1331 Recordz Label About Screen" },
 ];
 
 const nextSteps = [
@@ -146,12 +149,12 @@ const RecordzPage = () => {
                 <ProjectDetailGrid details={projectDetails} />
             </ContentSection>
 
-            {/* Problem Statement */}
+            {/* Client Problem */}
             <TwoColumnSection
-                left={<SectionHeading title="Problem Statement:" />}
+                left={<SectionHeading title="Client Problem:" />}
                 right={
                     <p className="text-[#6e6764] text-lg md:text-2xl leading-relaxed md:pt-16">
-                        <strong>1331 Recordz needed a cohesive website that clearly represented both sides of their business:</strong> a professional recording studio and an independent music label. The challenge was to merge these two identities into a single experience while keeping each distinct.
+                        <span className="font-semibold">1331 Recordz needed a cohesive website that clearly represented both sides of their business:</span> <em>a professional recording studio</em> and an <em>independent music label</em>. The challenge was to merge these two identities into a single experience while keeping each distinct, <span className="font-semibold">using color and visual hierarchy to differentiate studio services from label content</span> without confusing users.
                     </p>
                 }
             />
@@ -161,7 +164,7 @@ const RecordzPage = () => {
                 <SectionHeading title="Key Challenges:" className="mb-10" />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
                     {challenges.map((challenge, index) => (
-                        <InsightCard key={index} {...challenge} />
+                        <InsightCard key={index} {...challenge} layout="horizontal" />
                     ))}
                 </div>
             </ContentSection>
@@ -178,9 +181,9 @@ const RecordzPage = () => {
                 left={<SectionHeading title="Discovery:" />}
                 right={
                     <div className="flex flex-col gap-4 md:pt-16">
-                        <h3 className="text-xl md:text-2xl font-semibold text-[#333] leading-tight">Understanding the Creative Landscape:</h3>
+                        <h3 className="text-xl md:text-2xl font-semibold text-[#6e6764] leading-tight">Understanding the Creative Landscape:</h3>
                         <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                            1331 Recordz was created to support independent artists navigating an industry that often values output over identity. Many emerging musicians struggle with visibility, creative ownership, and access to trusted collaborators.
+                            1331 Recordz was created to support independent artists navigating an industry that often values output over <span className="font-semibold">identity</span>. Many emerging musicians struggle with visibility, creative ownership, and access to trusted collaborators. Early exploration revealed a common need for spaces that prioritize authentic collaboration, creative freedom, and long-term growth. This discovery phase focused on understanding how artists work and how a studio and label can function as a creative partner and not a gatekeeper.
                         </p>
                     </div>
                 }
@@ -198,39 +201,8 @@ const RecordzPage = () => {
             />
 
             {/* Competitive Audit Table */}
-            <ContentSection>
-                <SectionHeading title="Competitive Audit:" description="Analyzing competing Miami based recording studios and labels." className="mb-12" />
-
-                <div className="overflow-x-auto">
-                    <table className="w-full text-left border-collapse min-w-[800px]">
-                        <thead>
-                            <tr>
-                                <th className="p-4 border-b-2 border-gray-200"></th>
-                                <th className="p-4 border-b-2 border-gray-200 font-bold bg-gray-50">Criteria Recording Studios</th>
-                                <th className="p-4 border-b-2 border-gray-200 font-bold">Circle House Studios</th>
-                                <th className="p-4 border-b-2 border-gray-200 font-bold bg-gray-50">Hit Factory Criteria</th>
-                                <th className="p-4 border-b-2 border-gray-200 font-bold">Art House Studios</th>
-                            </tr>
-                        </thead>
-                        <tbody className="text-[#6e6764] text-base">
-                            <tr>
-                                <td className="p-4 border-b border-gray-100 font-semibold bg-gray-50">Product Summary</td>
-                                <td className="p-4 border-b border-gray-100 bg-gray-50">Legendary Miami based recording studio.</td>
-                                <td className="p-4 border-b border-gray-100">Known for hip hop and culture.</td>
-                                <td className="p-4 border-b border-gray-100 bg-gray-50">High end production services.</td>
-                                <td className="p-4 border-b border-gray-100">Boutique studio for independent artists.</td>
-                            </tr>
-                            <tr>
-                                <td className="p-4 border-b border-gray-100 font-semibold bg-gray-50">Target Users</td>
-                                <td className="p-4 border-b border-gray-100 bg-gray-50">Established artists, top tier.</td>
-                                <td className="p-4 border-b border-gray-100">Independent and established.</td>
-                                <td className="p-4 border-b border-gray-100 bg-gray-50">Professional musicians, commercial.</td>
-                                <td className="p-4 border-b border-gray-100">Independent musicians, creatives.</td>
-                            </tr>
-                            {/* Simplified table for brevity, but captures structure */}
-                        </tbody>
-                    </table>
-                </div>
+            <ContentSection className="!p-0">
+                <RecordzCompetitiveAuditSection />
             </ContentSection>
 
             {/* How Might We */}
@@ -244,26 +216,26 @@ const RecordzPage = () => {
                         <ul className="space-y-4 text-[#6e6764] text-lg md:text-xl">
                             <li className="flex gap-3 items-start">
                                 <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
-                                <span>How might we build trust and credibility for independent artists using 1331 Recordz?</span>
+                                <span>How might we build <span className="font-semibold">trust and credibility</span> for independent artists using 1331 Recordz?</span>
                             </li>
                             <li className="flex gap-3 items-start">
                                 <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
-                                <span>How might we simplify service discovery so artists quickly understand their options?</span>
+                                <span>How might we <span className="font-semibold">simplify service discovery</span> so artists quickly understand their options?</span>
                             </li>
                             <li className="flex gap-3 items-start">
                                 <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
-                                <span>How might we reduce friction and uncertainty in the booking process?</span>
+                                <span>How might we <span className="font-semibold">reduce friction and uncertainty</span> in the booking process?</span>
                             </li>
                             <li className="flex gap-3 items-start">
                                 <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
-                                <span>How might we design a platform that feels supportive, professional, and artist-centered?</span>
+                                <span>How might we design a platform that feels <span className="font-semibold">supportive, professional, and artist-centered</span>?</span>
                             </li>
                         </ul>
                     </div>
                 }
             />
             <ContentSection>
-                <ImageGallery images={hmwImages} columns={4} />
+                <ImageGallery images={hmwImages} columns={2} />
             </ContentSection>
 
             {/* Solution Overview */}
@@ -350,8 +322,11 @@ const RecordzPage = () => {
                 left={<SectionHeading title="Hi-Fi Wireframes:" />}
                 right={
                     <div className="flex flex-col gap-6 md:pt-16">
+                        <p className="font-medium text-[#6e6764] text-xl md:text-2xl leading-relaxed">
+                            The Hi-Fi designs brought the app's visual identity to life.
+                        </p>
                         <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                            The Hi-Fi designs brought the app's visual identity to life. Typography, color, and layout choices came together to create a polished experience centered on connection.
+                            Moving onto high-fidelity screens helped refine the visual system, unify the design language, and ensure the interface felt intuitive and welcoming. Typography, color, and layout choices came together to create a polished experience centered on connection and community.
                         </p>
                     </div>
                 }
@@ -368,13 +343,16 @@ const RecordzPage = () => {
             <ContentSection>
                 <SectionHeading
                     title="Next Steps:"
-                    description="Road map for future development"
+                    description="Road map for future development and continuous improvement"
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
                     {nextSteps.map((step, index) => (
                         <StepCard key={index} {...step} />
                     ))}
                 </div>
+                <p className="text-center text-[#6e6764] text-lg md:text-xl mt-16 max-w-4xl mx-auto leading-relaxed">
+                    Thank you for reviewing this case study. I’m always open to feedback and would love to discuss how these design solutions could be applied to your projects.
+                </p>
             </ContentSection>
 
             {/* CTA */}

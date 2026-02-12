@@ -223,7 +223,9 @@ const AboutPage: React.FC = () => {
 
                         {/* View My Resume button */}
                         <motion.a
-                            href="#resume"
+                            href={`${import.meta.env.BASE_URL}figmaAssets/Desiree Walker resume 2026.pdf`}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6, duration: 0.5 }}

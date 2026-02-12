@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { ScrollReveal } from "../../../ui/ScrollReveal";
 
 interface TwoColumnSectionProps {
     left: ReactNode;
@@ -21,8 +22,16 @@ export function TwoColumnSection({
                 className={`max-w-[1200px] mx-auto flex flex-col ${reverseOnMobile ? "flex-col-reverse" : ""
                     } md:flex-row gap-10 md:gap-16`}
             >
-                <div className="lg:w-1/3">{left}</div>
-                <div className="lg:w-2/3">{right}</div>
+                <div className="lg:w-1/3">
+                    <ScrollReveal width="100%">
+                        {left}
+                    </ScrollReveal>
+                </div>
+                <div className="lg:w-2/3">
+                    <ScrollReveal width="100%" delay={0.2}>
+                        {right}
+                    </ScrollReveal>
+                </div>
             </div>
         </section>
     );

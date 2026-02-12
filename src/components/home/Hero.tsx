@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, type HTMLMotionProps } from 'framer-motion';
 import heroBg from '../../assets/hero-bg-final.jpg';
 import heroGradient from '../../assets/hero-gradient.png';
 import heroText from '../../assets/hero-text.png';
@@ -51,9 +51,16 @@ const FloatingParticles: React.FC = () => {
 };
 
 // Animated button
-const GlowButton: React.FC<{ href: string; children: React.ReactNode; delay: number }> = ({ href, children, delay }) => (
+interface GlowButtonProps extends HTMLMotionProps<"a"> {
+    href: string;
+    children: React.ReactNode;
+    delay: number;
+}
+
+const GlowButton: React.FC<GlowButtonProps> = ({ href, children, delay, ...props }) => (
     <motion.a
         href={href}
+        {...props}
         className="btn"
         initial={{ opacity: 0, y: 20, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -203,7 +210,14 @@ const Hero: React.FC = () => {
                     }}
                 >
                     <GlowButton href="#projects" delay={0.2}>Projects</GlowButton>
-                    <GlowButton href="#resume" delay={0.3}>Resume</GlowButton>
+                    <GlowButton
+                        href={`${import.meta.env.BASE_URL}figmaAssets/Desiree Walker resume 2026.pdf`}
+                        delay={0.3}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Resume
+                    </GlowButton>
                 </motion.div>
             </div>
 
