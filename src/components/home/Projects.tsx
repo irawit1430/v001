@@ -52,24 +52,15 @@ const Projects: React.FC = () => {
     return (
         <motion.section
             id="projects"
-            style={{ padding: 'var(--spacing-lg) 0', background: 'var(--color-light)' }}
+            className="py-16 md:py-24 bg-[var(--color-light)]"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
         >
-            <div className="container">
+            <div className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-20">
                 <motion.h2
-                    className="section-title"
-                    style={{
-                        fontFamily: '"SF Pro Display", sans-serif',
-                        fontWeight: 600,
-                        fontSize: '34px',
-                        lineHeight: '41px',
-                        color: '#FF6F61',
-                        textAlign: 'center',
-                        marginBottom: '1rem'
-                    }}
+                    className="section-title font-['SF_Pro_Display',_sans-serif] font-semibold text-2xl md:text-[34px] leading-tight text-[#FF6F61] text-center mb-4"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -79,17 +70,7 @@ const Projects: React.FC = () => {
                 </motion.h2>
 
                 <motion.p
-                    style={{
-                        textAlign: 'left',
-                        maxWidth: '885px',
-                        margin: '0 auto 4rem',
-                        fontFamily: '"SF Pro Display", sans-serif',
-                        fontWeight: 400,
-                        fontSize: '20px',
-                        lineHeight: '29px',
-                        letterSpacing: '0.05em',
-                        color: '#6F6864'
-                    }}
+                    className="text-left max-w-[885px] mx-auto mb-16 font-['SF_Pro_Display',_sans-serif] font-normal text-base md:text-xl leading-relaxed tracking-wide text-[#6F6864]"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -99,7 +80,7 @@ const Projects: React.FC = () => {
                 </motion.p>
 
                 <motion.div
-                    style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-4"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -111,45 +92,22 @@ const Projects: React.FC = () => {
                 </motion.div>
 
                 <motion.div
-                    style={{
-                        textAlign: 'right',
-                        marginTop: '2rem',
-                        paddingRight: '20px'
-                    }}
+                    className="text-right mt-8 pr-0 md:pr-5"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.5, ease: 'easeOut' }}
                 >
-                    <Link to="/projects" style={{ textDecoration: 'none' }}>
+                    <Link to="/projects" className="no-underline">
                         <motion.span
-                            style={{
-                                fontFamily: '"SF Pro Display", sans-serif',
-                                fontStyle: 'normal',
-                                fontWeight: 600,
-                                fontSize: '24px',
-                                lineHeight: '29px',
-                                textDecoration: 'none',
-                                color: '#6F6864',
-                                display: 'inline-block',
-                                position: 'relative',
-                                marginTop: '-2rem',
-                                marginBottom: '0rem'
-                            }}
+                            className="font-['SF_Pro_Display',_sans-serif] font-semibold text-lg md:text-2xl no-underline text-[#6F6864] inline-block relative"
                             whileHover={{ x: 8, color: '#FF6F61' }}
                             transition={{ type: 'spring', stiffness: 400 }}
                         >
                             [ View All Projects → ]
                             <motion.span
-                                style={{
-                                    position: 'absolute',
-                                    bottom: -4,
-                                    left: 0,
-                                    width: '100%',
-                                    height: '2px',
-                                    background: '#FF6F61',
-                                    transformOrigin: 'left'
-                                }}
+                                className="absolute -bottom-1 left-0 w-full h-[2px] bg-[#FF6F61]"
+                                style={{ transformOrigin: 'left' }}
                                 initial={{ scaleX: 0 }}
                                 whileHover={{ scaleX: 1 }}
                                 transition={{ duration: 0.3 }}

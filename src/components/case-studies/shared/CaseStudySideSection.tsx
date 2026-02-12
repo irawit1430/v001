@@ -15,7 +15,7 @@ const CaseStudySideSection: React.FC<CaseStudySideSectionProps> = ({
 }) => {
     return (
         <section id={id} className={`w-full py-16 md:py-24 px-4 md:px-12 ${className}`}>
-            <div className="max-w-[1200px] mx-auto">
+            <div className="max-w-[1244px] mx-auto">
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
                     {/* Left Column - Header */}
                     <div className="lg:w-1/3">

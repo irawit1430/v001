@@ -48,11 +48,8 @@ const KeyInsights: React.FC<KeyInsightsProps> = ({
                     {insights.map((insight, index) => (
                         <ScrollReveal key={index} width="100%" delay={index * 0.1}>
                             <div
-                                className={`bg-white rounded-[20px] p-5 shadow-lg flex flex-col justify-center ${align === 'center' ? 'items-center text-center' : 'items-start text-left'}`}
+                                className={`bg-white rounded-[20px] p-5 shadow-lg flex flex-col justify-center w-full max-w-[270px] aspect-square ${align === 'center' ? 'items-center text-center' : 'items-start text-left'}`}
                                 style={{
-                                    width: '270px',
-                                    height: '270px',
-                                    borderRadius: '20px',
                                     boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25)'
                                 }}
                             >

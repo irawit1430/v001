@@ -6,7 +6,7 @@ const NextStepsSection: React.FC = () => {
             <div className="max-w-[1440px] mx-auto relative">
                 <div className="mb-[60px]">
                     <h2 className="text-[40px] font-medium text-black mb-[30px] md:text-[32px]">Next Steps:</h2>
-                    <p className="text-[30px] leading-[1.4] font-normal text-[#6F6864] mb-5 md:text-[20px]" style={{ maxWidth: '600px' }}>
+                    <p className="text-[30px] leading-[1.4] font-normal text-[#6F6864] mb-5 md:text-[20px] max-w-[600px]">
                         Road map for future development and continuous improvement
                     </p>
                 </div>

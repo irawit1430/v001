@@ -29,32 +29,22 @@ const StepCard: React.FC<{ step: typeof steps[0]; index: number }> = ({ step, in
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             whileHover={{ y: -8, scale: 1.02 }}
+            className="relative overflow-hidden cursor-pointer p-6 md:p-8 rounded-2xl text-center"
             style={{
                 background: isHovered
                     ? 'linear-gradient(135deg, #FFFFFF 0%, #FFF5F2 100%)'
                     : 'white',
-                padding: '2rem',
-                borderRadius: '16px',
                 border: isHovered ? '2px solid #FF6F61' : '1px solid #eee',
-                textAlign: 'center',
                 boxShadow: isHovered
                     ? '0 20px 40px rgba(255, 111, 97, 0.15)'
                     : '0 4px 20px rgba(0, 0, 0, 0.05)',
-                position: 'relative',
-                overflow: 'hidden',
-                cursor: 'pointer'
             }}
         >
             {/* Background decoration on hover */}
             <motion.div
+                className="absolute inset-0 pointer-events-none"
                 style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
                     background: 'radial-gradient(circle at 50% 0%, rgba(255, 111, 97, 0.1) 0%, transparent 50%)',
-                    pointerEvents: 'none'
                 }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: isHovered ? 1 : 0 }}
@@ -63,22 +53,11 @@ const StepCard: React.FC<{ step: typeof steps[0]; index: number }> = ({ step, in
 
             {/* Animated Step Number */}
             <motion.div
+                className="relative z-[1] w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full flex items-center justify-center text-lg md:text-xl font-bold text-white mx-auto mb-4 md:mb-6"
                 style={{
-                    width: '60px',
-                    height: '60px',
                     background: isHovered
                         ? 'linear-gradient(135deg, #FF6F61 0%, #FF9E80 100%)'
                         : 'var(--color-primary)',
-                    color: 'white',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '1.4rem',
-                    fontWeight: 'bold',
-                    margin: '0 auto 1.5rem',
-                    position: 'relative',
-                    zIndex: 1
                 }}
                 animate={{
                     scale: isHovered ? [1, 1.1, 1] : 1,
@@ -92,13 +71,7 @@ const StepCard: React.FC<{ step: typeof steps[0]; index: number }> = ({ step, in
             >
                 {/* Pulse ring effect */}
                 <motion.div
-                    style={{
-                        position: 'absolute',
-                        inset: -4,
-                        borderRadius: '50%',
-                        border: '2px solid #FF6F61',
-                        opacity: 0
-                    }}
+                    className="absolute -inset-1 rounded-full border-2 border-[#FF6F61] opacity-0"
                     animate={{
                         scale: isHovered ? [1, 1.5] : 1,
                         opacity: isHovered ? [0.6, 0] : 0
@@ -113,13 +86,7 @@ const StepCard: React.FC<{ step: typeof steps[0]; index: number }> = ({ step, in
             </motion.div>
 
             <motion.h4
-                style={{
-                    fontSize: '1.2rem',
-                    marginBottom: '1rem',
-                    color: 'var(--color-primary)',
-                    position: 'relative',
-                    zIndex: 1
-                }}
+                className="relative z-[1] text-base md:text-lg mb-3 md:mb-4 text-[var(--color-primary)]"
                 animate={{ scale: isHovered ? 1.05 : 1 }}
                 transition={{ type: 'spring', stiffness: 300 }}
             >
@@ -127,13 +94,7 @@ const StepCard: React.FC<{ step: typeof steps[0]; index: number }> = ({ step, in
             </motion.h4>
 
             <motion.p
-                style={{
-                    fontSize: '0.9rem',
-                    color: 'var(--color-text-light)',
-                    position: 'relative',
-                    zIndex: 1,
-                    lineHeight: 1.6
-                }}
+                className="relative z-[1] text-sm md:text-base text-[var(--color-text-light)] leading-relaxed"
                 animate={{ opacity: isHovered ? 1 : 0.8 }}
             >
                 {step.desc}
@@ -141,12 +102,8 @@ const StepCard: React.FC<{ step: typeof steps[0]; index: number }> = ({ step, in
 
             {/* Progress indicator */}
             <motion.div
+                className="absolute bottom-0 left-0 right-0 h-[3px]"
                 style={{
-                    position: 'absolute',
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    height: '3px',
                     background: 'linear-gradient(90deg, #FF6F61, #FF9E80)',
                     transformOrigin: 'left'
                 }}
@@ -160,25 +117,10 @@ const StepCard: React.FC<{ step: typeof steps[0]; index: number }> = ({ step, in
 
 const Process: React.FC = () => {
     return (
-        <section style={{ padding: 'var(--spacing-xl) 0', background: '#FFF5F2', position: 'relative' }}>
-            <div className="container">
+        <section className="py-16 md:py-24 relative" style={{ background: '#FFF5F2' }}>
+            <div className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-20">
                 <motion.h2
-                    className="section-title"
-                    style={{
-                        fontFamily: '"SF Pro Display", sans-serif',
-                        fontStyle: 'normal',
-                        fontWeight: 600,
-                        fontSize: '40px',
-                        lineHeight: '48px',
-                        color: '#FF6F61',
-                        textAlign: 'center',
-                        marginBottom: '3rem',
-                        position: 'absolute',
-                        top: '-65px',
-                        left: 0,
-                        width: '100%',
-                        zIndex: 10
-                    }}
+                    className="section-title font-['SF_Pro_Display',_sans-serif] font-semibold text-3xl md:text-[40px] leading-tight text-[#FF6F61] text-center mb-8 md:mb-12"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -187,18 +129,12 @@ const Process: React.FC = () => {
                     Design Process
                 </motion.h2>
 
-                <div style={{ textAlign: 'center', marginBottom: '5rem', position: 'relative', maxWidth: '800px', margin: '0 auto 2rem' }}>
-                    {/* Animated Left Sun - Continuous Rotation */}
+                <div className="text-center mb-8 md:mb-12 relative max-w-[800px] mx-auto">
+                    {/* Animated Left Sun - Hidden on mobile */}
                     <motion.img
                         src={smilingSun}
                         alt=""
-                        style={{
-                            position: 'absolute',
-                            left: '-10px',
-                            top: '-70px',
-                            width: '200px',
-                            height: 'auto'
-                        }}
+                        className="absolute -left-2 -top-[70px] w-[120px] md:w-[200px] h-auto hidden md:block"
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -215,18 +151,12 @@ const Process: React.FC = () => {
                         whileHover={{ scale: 1.1 }}
                     />
 
-                    {/* Animated Right Sun - Continuous Rotation (clockwise) */}
+                    {/* Animated Right Sun - Hidden on mobile */}
                     <motion.img
                         src={smilingSun}
                         alt=""
-                        style={{
-                            position: 'absolute',
-                            right: '-10px',
-                            top: '-70px',
-                            width: '200px',
-                            height: 'auto',
-                            transform: 'scaleX(-1)'
-                        }}
+                        className="absolute -right-2 -top-[70px] w-[120px] md:w-[200px] h-auto hidden md:block"
+                        style={{ transform: 'scaleX(-1)' }}
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -244,12 +174,7 @@ const Process: React.FC = () => {
                     />
 
                     <motion.h3
-                        style={{
-                            fontSize: '2.5rem',
-                            marginBottom: '1rem',
-                            fontFamily: '"SF Pro Display", sans-serif',
-                            fontWeight: 600
-                        }}
+                        className="text-2xl md:text-[2.5rem] mb-4 font-['SF_Pro_Display',_sans-serif] font-semibold"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -259,11 +184,7 @@ const Process: React.FC = () => {
                     </motion.h3>
 
                     <motion.p
-                        style={{
-                            color: 'var(--color-text-light)',
-                            fontSize: '1rem',
-                            marginBottom: '2rem'
-                        }}
+                        className="text-[var(--color-text-light)] text-sm md:text-base mb-6 md:mb-8"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -276,13 +197,7 @@ const Process: React.FC = () => {
                     <motion.img
                         src={curvArrow}
                         alt=""
-                        style={{
-                            display: 'block',
-                            margin: '0 auto',
-                            width: '90px',
-                            height: 'auto',
-                            marginTop: '-1rem'
-                        }}
+                        className="block mx-auto w-[60px] md:w-[90px] h-auto -mt-2 md:-mt-4"
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -291,7 +206,7 @@ const Process: React.FC = () => {
                     />
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 2fr))', gap: '2rem', marginTop: '-1.5rem' }}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                     {steps.map((step, index) => (
                         <StepCard key={step.id} step={step} index={index} />
                     ))}

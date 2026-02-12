@@ -11,6 +11,7 @@ import BabyThriftPage from './pages/BabyThriftPage';
 import BonderCaseStudy from './pages/BonderCaseStudy';
 import RecordzPage from './pages/RecordzPage';
 import TestProject from './pages/TestProject';
+import CoralWayLoungePage from './pages/CoralWayLoungePage';
 import ContactPage from './pages/ContactPage';
 
 // Inner component to access useLocation
@@ -28,6 +29,7 @@ const AnimatedRoutes = () => {
         <Route path="/projects/bonder" element={<BonderCaseStudy />} />
         <Route path="/projects/1331-recordz" element={<RecordzPage />} />
         <Route path="/test-project" element={<TestProject />} />
+        <Route path="/projects/coral-way-lounge" element={<CoralWayLoungePage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </PageTransition>

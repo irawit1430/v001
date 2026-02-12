@@ -85,9 +85,21 @@ button {
 }
 
 .container {
-  max-width: var(--container-width);
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 var(--spacing-sm);
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 5rem;
+  }
 }
 
 .btn {

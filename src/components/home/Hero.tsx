@@ -18,17 +18,16 @@ const FloatingParticles: React.FC = () => {
     );
 
     return (
-        <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none', zIndex: 0 }}>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
             {particles.map((p) => (
                 <motion.div
                     key={p.id}
+                    className="absolute rounded-full"
                     style={{
-                        position: 'absolute',
                         left: `${p.x}%`,
                         top: `${p.y}%`,
                         width: p.size,
                         height: p.size,
-                        borderRadius: '50%',
                         background: 'rgba(255, 255, 255, 0.3)',
                         filter: 'blur(1px)'
                     }}
@@ -61,7 +60,7 @@ const GlowButton: React.FC<GlowButtonProps> = ({ href, children, delay, ...props
     <motion.a
         href={href}
         {...props}
-        className="btn"
+        className="btn flex items-center justify-center rounded-[10px] text-xl md:text-2xl font-medium no-underline cursor-pointer w-full sm:w-[184px] h-[50px] md:h-[60px]"
         initial={{ opacity: 0, y: 20, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ delay, type: 'spring', stiffness: 400, damping: 15 }}
@@ -70,18 +69,7 @@ const GlowButton: React.FC<GlowButtonProps> = ({ href, children, delay, ...props
         style={{
             background: 'linear-gradient(90deg, #FF6F61 0%, #FF9E80 100%)',
             color: '#F5F5F5',
-            width: '184px',
-            height: '60px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            borderRadius: '10px',
-            fontSize: '24px',
-            fontWeight: 500,
             fontFamily: '"SF Pro Display", sans-serif',
-            lineHeight: '29px',
-            textDecoration: 'none',
-            cursor: 'pointer'
         }}
     >
         {children}
@@ -108,35 +96,15 @@ const Hero: React.FC = () => {
 
     return (
         <motion.section
-            className="hero"
+            className="hero relative flex items-center justify-center text-white text-center overflow-hidden w-full h-screen"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            style={{
-                height: '100vh',
-                width: '100%',
-                position: 'relative',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                textAlign: 'center',
-                overflow: 'hidden'
-            }}
         >
             {/* Background Image with subtle zoom animation */}
             <motion.div
-                style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    backgroundImage: `url(${heroBg})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    zIndex: -2
-                }}
+                className="absolute inset-0 bg-cover bg-center -z-20"
+                style={{ backgroundImage: `url(${heroBg})` }}
                 initial={{ scale: 1.15, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1.8, ease: 'easeOut' }}
@@ -144,17 +112,8 @@ const Hero: React.FC = () => {
 
             {/* Gradient Overlay with fade in */}
             <motion.div
-                style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    backgroundImage: `url(${heroGradient})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    zIndex: -1
-                }}
+                className="absolute inset-0 bg-cover bg-center -z-10"
+                style={{ backgroundImage: `url(${heroGradient})` }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.2, delay: 0.3 }}
@@ -163,15 +122,7 @@ const Hero: React.FC = () => {
             {/* Floating particles */}
             <FloatingParticles />
 
-            <div className="hero-content" style={{
-                maxWidth: '100%',
-                padding: '0 20px',
-                zIndex: 1,
-                marginTop: '-50px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center'
-            }}>
+            <div className="hero-content w-full max-w-full px-5 z-[1] -mt-12 flex flex-col items-center">
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -185,11 +136,8 @@ const Hero: React.FC = () => {
                     <motion.img
                         src={heroText}
                         alt="Hi, I'm Desiree, UX Designer turning complex problems into elegant, user-centered solutions. Based in Miami, FL"
+                        className="w-full max-w-[921px] h-auto block"
                         style={{
-                            maxWidth: '100%',
-                            width: '921px',
-                            height: 'auto',
-                            display: 'block',
                             filter: 'drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3))'
                         }}
                         whileHover={{ scale: 1.02 }}
@@ -198,16 +146,7 @@ const Hero: React.FC = () => {
                 </motion.div>
 
                 <motion.div
-                    className="cta-buttons"
-                    style={{
-                        display: 'flex',
-                        gap: '1.5rem',
-                        justifyContent: 'center',
-                        marginTop: '1rem',
-                        width: '384px',
-                        height: '60px',
-                        margin: '1rem auto 0'
-                    }}
+                    className="cta-buttons flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mt-4 w-full max-w-[384px] mx-auto"
                 >
                     <GlowButton href="#projects" delay={0.2}>Projects</GlowButton>
                     <GlowButton
@@ -223,13 +162,13 @@ const Hero: React.FC = () => {
 
             {/* Enhanced scroll indicator with pulse effect */}
             <motion.div
-                className="scroll-indicator"
+                className="scroll-indicator absolute bottom-10 left-1/2 -translate-x-1/2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
-                style={{ position: 'absolute', bottom: '40px', left: '50%', transform: 'translateX(-50%)' }}
             >
                 <motion.div
+                    className="flex flex-col items-center gap-2"
                     animate={{
                         y: [0, 12, 0],
                         opacity: [0.5, 1, 0.5]
@@ -239,41 +178,13 @@ const Hero: React.FC = () => {
                         repeat: Infinity,
                         ease: 'easeInOut'
                     }}
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        gap: '8px'
-                    }}
                 >
-                    <motion.span
-                        style={{
-                            fontSize: '12px',
-                            letterSpacing: '2px',
-                            textTransform: 'uppercase',
-                            opacity: 0.8
-                        }}
-                    >
+                    <motion.span className="text-xs tracking-[2px] uppercase opacity-80">
                         Scroll
                     </motion.span>
-                    <motion.div
-                        style={{
-                            width: '24px',
-                            height: '40px',
-                            border: '2px solid rgba(255,255,255,0.5)',
-                            borderRadius: '12px',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            paddingTop: '8px'
-                        }}
-                    >
+                    <motion.div className="w-6 h-10 border-2 border-white/50 rounded-xl flex justify-center pt-2">
                         <motion.div
-                            style={{
-                                width: '4px',
-                                height: '8px',
-                                background: 'white',
-                                borderRadius: '2px'
-                            }}
+                            className="w-1 h-2 bg-white rounded-sm"
                             animate={{ y: [0, 12, 0] }}
                             transition={{ duration: 1.5, repeat: Infinity }}
                         />

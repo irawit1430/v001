@@ -1,0 +1,140 @@
+You are not designing a new layout.
+You are replicating an existing system.
+
+Reference file:
+FreshOutPage.tsx
+
+All new case study pages must match it structurally.
+
+🔒 STRICT RULES
+
+Do NOT create new layout structures.
+
+Do NOT invent spacing.
+
+Do NOT modify typography scale.
+
+Do NOT use inline styles.
+
+Do NOT add mx-5 or custom padding overrides.
+
+Do NOT manually recreate shared sections.
+
+Only use existing shared components.
+
+🧱 STRUCTURE REQUIREMENT
+
+Every new case study page must follow EXACT order:
+
+Hero Section (same layout as FreshOut)
+
+Project Metadata Section (Role, Duration, etc.)
+
+Problem Statement
+
+Research Overview (shared component)
+
+Discovery
+
+Persona
+
+Competitive Audit
+
+Key Insights (shared component)
+
+How Might We
+
+Solution Overview
+
+Information Architecture
+
+User Flow
+
+Wireframes (Lo-Fi + Hi-Fi)
+
+Next Steps
+
+Contact Section
+
+Order must match exactly.
+
+📐 SPACING STANDARD
+
+If section uses TwoColumnSection:
+Right column MUST have:
+
+md:pt-16
+
+
+Section wrapper spacing must match FreshOut.
+
+No custom spacing allowed.
+
+🎯 TYPOGRAPHY STANDARD
+
+Use EXACT same classes as FreshOut:
+
+Headings:
+
+text-4xl md:text-5xl font-medium
+
+
+Body:
+
+text-lg md:text-xl leading-relaxed
+
+
+Lists:
+Use flex bullet system
+NOT <ul> list-disc
+
+🧩 COMPONENT RULE
+
+If FreshOut uses:
+
+<ResearchOverview />
+<KeyInsights />
+<TwoColumnSection />
+<ContentSection />
+
+You MUST use same component.
+
+Do NOT rewrite section manually.
+
+📸 ASSET RULE
+
+When I provide:
+
+• Screenshot of section
+• Asset images
+
+You must:
+
+Extract text exactly
+
+Place it inside correct component
+
+Preserve layout system
+
+Match spacing from FreshOut
+
+Do NOT guess missing content.
+If content is missing → ask.
+
+🧠 VALIDATION STEP (MANDATORY)
+
+Before finishing page, verify:
+
+Does structure match FreshOut?
+
+Are shared components used?
+
+Is md:pt-16 applied?
+
+Is typography identical?
+
+Are lists using flex bullets?
+
+Are section paddings consistent?
+
+If not identical → fix.

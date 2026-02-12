@@ -72,7 +72,8 @@ const projects: Project[] = [
         type: 'EXTRAS',
         role: "Lead UX Designer",
         description: "Conducted comprehensive UX research and designed complete user experience for a second hand baby products marketplace, improving navigations and check-out flow.",
-        image: projectCoralWay
+        image: projectCoralWay,
+        link: "/projects/coral-way-lounge"
     },
     {
         id: 6,

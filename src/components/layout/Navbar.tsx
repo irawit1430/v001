@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import defaultLogo from '../../assets/logo.png';
 
 const logoPink = `${import.meta.env.BASE_URL}figmaAssets/seashell-pink-removebg-preview-1.png`;
@@ -15,20 +15,13 @@ const baseNavItems = [
 interface NavLinkProps {
   item: { label: string; href: string; isRoute: boolean };
   index: number;
+  onClick?: () => void;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ item, index }) => {
+const NavLink: React.FC<NavLinkProps> = ({ item, index, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
   const location = useLocation();
   const isActive = item.isRoute && location.pathname === item.href;
-
-  const linkStyle = {
-    textDecoration: 'none',
-    color: 'white',
-    position: 'relative' as const,
-    display: 'inline-block',
-    padding: '4px 0'
-  };
 
   const underlineStyle = {
     position: 'absolute' as const,
@@ -43,7 +36,6 @@ const NavLink: React.FC<NavLinkProps> = ({ item, index }) => {
     initial: { opacity: 0, y: -20 },
     animate: { opacity: 1, y: 0 },
     transition: { delay: 0.3 + index * 0.1, duration: 0.5 },
-    style: { position: 'relative' as const }
   };
 
   const hoverProps = {
@@ -56,8 +48,12 @@ const NavLink: React.FC<NavLinkProps> = ({ item, index }) => {
   if (item.isRoute) {
     return (
       <motion.li {...motionProps}>
-        <motion.div style={{ display: 'inline-block' }} {...hoverProps}>
-          <Link to={item.href} style={linkStyle}>
+        <motion.div className="inline-block" {...hoverProps}>
+          <Link
+            to={item.href}
+            onClick={onClick}
+            className="relative inline-block py-1 text-white no-underline"
+          >
             {item.label}
             <motion.span
               style={underlineStyle}
@@ -77,7 +73,7 @@ const NavLink: React.FC<NavLinkProps> = ({ item, index }) => {
         href={item.href}
         target="_blank"
         rel="noopener noreferrer"
-        style={{ ...linkStyle, cursor: 'pointer' }}
+        className="relative inline-block py-1 text-white no-underline cursor-pointer"
         {...hoverProps}
       >
         {item.label}
@@ -94,6 +90,7 @@ const NavLink: React.FC<NavLinkProps> = ({ item, index }) => {
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
@@ -105,14 +102,25 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Determine nav items based on route
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location.pathname]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileOpen]);
+
   const navItems = isHomePage
     ? baseNavItems
     : [{ label: 'Home', href: '/', isRoute: true }, ...baseNavItems];
 
-  // Determine background style
-  // On home page: transparent/translucent initially, opaque when scrolled
-  // On other pages: always opaque (like SecondaryNavbar)
   const isOpaque = !isHomePage || scrolled;
 
   const backgroundStyle = isOpaque
@@ -123,78 +131,89 @@ const Navbar: React.FC = () => {
     ? '0px 4px 20px rgba(0, 0, 0, 0.3)'
     : '0px 4px 4px rgba(0, 0, 0, 0.2)';
 
-  // Determine logo
   const currentLogo = isHomePage ? defaultLogo : logoPink;
 
   return (
-    <motion.nav
-      className="navbar"
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '0 3rem',
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        width: '100%',
-        height: '70px',
-        zIndex: 100,
-        color: 'white',
-        background: backgroundStyle,
-        boxShadow: boxShadowStyle,
-        backdropFilter: 'blur(10px)',
-        transition: 'all 0.3s ease'
-      }}
-    >
-      <Link to="/">
-        <motion.div
-          className="logo"
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            padding: '10px',
-            gap: '10px',
-            position: 'absolute',
-            width: '79px',
-            height: '72px',
-            left: '22px',
-            top: '-1px'
-          }}
-          whileHover={{ scale: 1.1, rotate: 5 }}
-          transition={{ type: 'spring', stiffness: 300 }}
+    <>
+      <motion.nav
+        className="navbar fixed top-0 left-0 right-0 w-full h-[70px] z-[100] flex items-center justify-between px-4 md:px-12"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        style={{
+          color: 'white',
+          background: backgroundStyle,
+          boxShadow: boxShadowStyle,
+          backdropFilter: 'blur(10px)',
+          transition: 'all 0.3s ease'
+        }}
+      >
+        {/* Logo */}
+        <Link to="/" className="flex-shrink-0">
+          <motion.div
+            className="logo flex items-center w-[60px] h-[55px] md:w-[79px] md:h-[72px]"
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
+            <img src={currentLogo} alt="Logo" className="w-full h-auto object-contain" />
+          </motion.div>
+        </Link>
+
+        {/* Desktop Nav */}
+        <ul className="hidden md:flex items-center gap-[30px] list-none text-[28px] font-normal font-['SF_Pro_Display',_sans-serif]">
+          {navItems.map((item, index) => (
+            <NavLink key={item.label} item={item} index={index} />
+          ))}
+        </ul>
+
+        {/* Hamburger Button (Mobile) */}
+        <button
+          className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px] z-[110]"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle navigation menu"
         >
-          <img src={currentLogo} alt="Logo" style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
-        </motion.div>
-      </Link>
-      <ul style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        padding: '0px',
-        gap: '30px',
-        listStyle: 'none',
-        fontSize: '28px',
-        fontWeight: 400,
-        fontFamily: '"SF Pro Display", sans-serif',
-        position: 'absolute',
-        width: 'auto',
-        height: '34px',
-        right: '60px',
-        top: '18px'
-      }}>
-        {navItems.map((item, index) => (
-          <NavLink key={item.label} item={item} index={index} />
-        ))}
-      </ul>
-    </motion.nav>
+          <motion.span
+            className="block w-7 h-[3px] bg-white rounded-full"
+            animate={mobileOpen ? { rotate: 45, y: 9 } : { rotate: 0, y: 0 }}
+            transition={{ duration: 0.3 }}
+          />
+          <motion.span
+            className="block w-7 h-[3px] bg-white rounded-full"
+            animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
+            transition={{ duration: 0.2 }}
+          />
+          <motion.span
+            className="block w-7 h-[3px] bg-white rounded-full"
+            animate={mobileOpen ? { rotate: -45, y: -9 } : { rotate: 0, y: 0 }}
+            transition={{ duration: 0.3 }}
+          />
+        </button>
+      </motion.nav>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            className="fixed inset-0 z-[99] flex flex-col items-center justify-center md:hidden"
+            style={{
+              background: 'linear-gradient(180deg, rgba(255, 111, 97, 0.98) 0%, rgba(255, 158, 128, 0.98) 100%)',
+              backdropFilter: 'blur(20px)'
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ul className="flex flex-col items-center gap-8 list-none text-[32px] font-normal font-['SF_Pro_Display',_sans-serif]">
+              {navItems.map((item, index) => (
+                <NavLink key={item.label} item={item} index={index} onClick={() => setMobileOpen(false)} />
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 
 export default Navbar;
-
