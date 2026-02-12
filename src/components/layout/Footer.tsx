@@ -113,16 +113,73 @@ const Footer: React.FC = () => {
                 }}
             />
 
-            <div className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-20 py-16">
+            <div className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-20 py-10 md:py-16">
+
+                {/* ─── MOBILE LAYOUT (< md) ─── */}
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8"
+                    className="flex flex-col items-center md:hidden"
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
+                    {/* Name + Description */}
+                    <motion.div variants={itemVariants} className="text-center mb-6">
+                        <motion.h3
+                            className="text-2xl font-semibold mb-1"
+                            whileHover={{ scale: 1.02 }}
+                        >
+                            Desiree J. Walker
+                        </motion.h3>
+                        <p className="opacity-90 leading-relaxed text-base">
+                            UX Designer creating meaningful digital experiences.
+                        </p>
+                    </motion.div>
+
+                    {/* Divider */}
+                    <div className="w-16 h-px bg-white/20 mb-6" />
+
+                    {/* Navigation - 2 col grid */}
+                    <motion.div variants={itemVariants} className="w-full mb-6">
+                        <h4 className="font-semibold mb-3 text-lg text-center">Navigation</h4>
+                        <ul className="grid grid-cols-2 gap-3 text-center opacity-90">
+                            <li><AnimatedLink href="/about">About</AnimatedLink></li>
+                            <li><AnimatedLink href="/projects">Projects</AnimatedLink></li>
+                            <li><AnimatedLink href="/contact">Contact</AnimatedLink></li>
+                            <li><AnimatedLink href={`${import.meta.env.BASE_URL}figmaAssets/Desiree Walker resume 2026.pdf`}>Resume</AnimatedLink></li>
+                        </ul>
+                    </motion.div>
+
+                    {/* Divider */}
+                    <div className="w-16 h-px bg-white/20 mb-6" />
+
+                    {/* Social + Contact stacked */}
+                    <motion.div variants={itemVariants} className="flex gap-10 text-center">
+                        <div>
+                            <h4 className="font-semibold mb-2 text-lg">Social</h4>
+                            <ul className="grid gap-2 opacity-90">
+                                <li><AnimatedLink href="https://www.linkedin.com/in/desiree-walker/">Linkedin</AnimatedLink></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 className="font-semibold mb-2 text-lg">Contact</h4>
+                            <ul className="grid gap-2 opacity-90">
+                                <li><AnimatedLink href="mailto:desireewalkerux@yahoo.com">Email</AnimatedLink></li>
+                            </ul>
+                        </div>
+                    </motion.div>
+                </motion.div>
+
+                {/* ─── DESKTOP LAYOUT (≥ md) ─── */}
+                <motion.div
+                    className="hidden md:grid md:grid-cols-4 md:gap-8"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
                     {/* Left Side - Main Info */}
-                    <motion.div variants={itemVariants} className="text-center md:text-left">
+                    <motion.div variants={itemVariants} className="text-left">
                         <motion.h3
                             className="text-2xl font-semibold mb-2"
                             whileHover={{ scale: 1.02 }}
@@ -130,7 +187,7 @@ const Footer: React.FC = () => {
                             Desiree J. Walker
                         </motion.h3>
                         <motion.p
-                            className="max-w-[300px] mx-auto md:mx-0 opacity-90 leading-relaxed text-base"
+                            className="max-w-[300px] opacity-90 leading-relaxed text-base"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 0.9 }}
                             viewport={{ once: true }}
@@ -141,7 +198,7 @@ const Footer: React.FC = () => {
                     </motion.div>
 
                     {/* Navigation Column */}
-                    <motion.div variants={itemVariants} className="text-center md:text-left">
+                    <motion.div variants={itemVariants} className="text-left">
                         <h4 className="font-semibold mb-3 text-lg">Navigation</h4>
                         <ul className="grid gap-2 opacity-90">
                             <li><AnimatedLink href="/about">About</AnimatedLink></li>
@@ -151,7 +208,7 @@ const Footer: React.FC = () => {
                     </motion.div>
 
                     {/* Social Column */}
-                    <motion.div variants={itemVariants} className="text-center md:text-left">
+                    <motion.div variants={itemVariants} className="text-left">
                         <h4 className="font-semibold mb-3 text-lg">Social</h4>
                         <ul className="grid gap-2 opacity-90">
                             <li><AnimatedLink href="https://www.linkedin.com/in/desiree-walker/">Linkedin</AnimatedLink></li>
@@ -159,7 +216,7 @@ const Footer: React.FC = () => {
                     </motion.div>
 
                     {/* Contact Column */}
-                    <motion.div variants={itemVariants} className="text-center md:text-left">
+                    <motion.div variants={itemVariants} className="text-left">
                         <h4 className="font-semibold mb-3 text-lg">Contact</h4>
                         <ul className="grid gap-2 opacity-90">
                             <li><AnimatedLink href="mailto:desireewalkerux@yahoo.com">Email</AnimatedLink></li>
