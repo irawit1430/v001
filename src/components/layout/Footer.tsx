@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 interface AnimatedLinkProps {
@@ -8,36 +9,65 @@ interface AnimatedLinkProps {
 
 const AnimatedLink: React.FC<AnimatedLinkProps> = ({ href, children }) => {
     const [isHovered, setIsHovered] = useState(false);
+    const isExternal = href.startsWith('http') || href.startsWith('mailto');
+
+    const commonStyle = {
+        position: 'relative' as const,
+        display: 'inline-block',
+        color: 'white',
+        textDecoration: 'none'
+    };
+
+    const underline = (
+        <motion.span
+            style={{
+                position: 'absolute',
+                bottom: -2,
+                left: 0,
+                height: '1px',
+                background: 'white',
+                transformOrigin: 'left'
+            }}
+            initial={{ width: 0 }}
+            animate={{ width: isHovered ? '100%' : 0 }}
+            transition={{ duration: 0.3 }}
+        />
+    );
+
+    if (isExternal) {
+        return (
+            <motion.a
+                href={href}
+                style={commonStyle}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                whileHover={{ x: 8 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {children}
+                {underline}
+            </motion.a>
+        );
+    }
 
     return (
-        <motion.a
-            href={href}
-            style={{
-                position: 'relative',
-                display: 'inline-block',
-                color: 'white',
-                textDecoration: 'none'
-            }}
+        <Link
+            to={href}
+            style={commonStyle}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            whileHover={{ x: 8 }}
-            transition={{ type: 'spring', stiffness: 300 }}
         >
-            {children}
-            <motion.span
-                style={{
-                    position: 'absolute',
-                    bottom: -2,
-                    left: 0,
-                    height: '1px',
-                    background: 'white',
-                    transformOrigin: 'left'
-                }}
-                initial={{ width: 0 }}
-                animate={{ width: isHovered ? '100%' : 0 }}
-                transition={{ duration: 0.3 }}
-            />
-        </motion.a>
+            <motion.div
+                style={{ display: 'inline-block' }}
+                whileHover={{ x: 8 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+            >
+                {children}
+            </motion.div>
+            {underline}
+        </Link>
     );
 };
 
