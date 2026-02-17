@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { motion, useScroll, useTransform, type HTMLMotionProps } from 'framer-motion';
 import heroBg from '../../assets/hero-bg-final.jpg';
-import heroGradient from '../../assets/hero-gradient.png';
+
 import heroText from '../../assets/hero-text.png';
 
 // Floating particles component
@@ -60,17 +60,12 @@ const GlowButton: React.FC<GlowButtonProps> = ({ href, children, delay, ...props
     <motion.a
         href={href}
         {...props}
-        className="btn flex items-center justify-center rounded-[10px] text-xl md:text-2xl font-medium no-underline cursor-pointer w-full sm:w-[184px] h-[50px] md:h-[60px]"
+        className="bg-gradient-to-r from-[#ff6f61] to-[#ff9e80] text-white rounded-[10px] px-8 py-4 min-w-[184px] h-[60px] font-['SF_Pro_Display',sans-serif] font-medium text-[30px] hover:shadow-lg transition-shadow flex items-center justify-center no-underline cursor-pointer"
         initial={{ opacity: 0, y: 20, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ delay, type: 'spring', stiffness: 400, damping: 15 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        style={{
-            background: 'linear-gradient(90deg, #FF6F61 0%, #FF9E80 100%)',
-            color: '#F5F5F5',
-            fontFamily: '"SF Pro Display", sans-serif',
-        }}
     >
         {children}
     </motion.a>
@@ -110,10 +105,12 @@ const Hero: React.FC = () => {
                 transition={{ duration: 1.8, ease: 'easeOut' }}
             />
 
-            {/* Gradient Overlay with fade in */}
+            {/* Gradient Overlay with fade in — matches Figma spec */}
             <motion.div
-                className="absolute inset-0 bg-cover bg-center -z-10"
-                style={{ backgroundImage: `url(${heroGradient})` }}
+                className="absolute inset-0 -z-10"
+                style={{
+                    background: 'linear-gradient(0deg, rgba(255, 111, 97, 0.24) 0%, rgba(234, 224, 199, 0.15) 100%)'
+                }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.2, delay: 0.3 }}
@@ -146,7 +143,7 @@ const Hero: React.FC = () => {
                 </motion.div>
 
                 <motion.div
-                    className="cta-buttons flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mt-4 w-full max-w-[384px] mx-auto"
+                    className="cta-buttons flex flex-col sm:flex-row gap-4 sm:gap-8 mt-[40px] items-center justify-center"
                 >
                     <GlowButton href="#projects" delay={0.2}>Projects</GlowButton>
                     <GlowButton

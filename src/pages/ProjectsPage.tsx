@@ -105,7 +105,7 @@ const ProjectsPage: React.FC = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-[40px] font-normal text-black mb-6 md:text-[48px]"
+                        className="text-[40px] font-normal text-black mb-6 font-['SF_Pro_Display',sans-serif]"
                     >
                         Projects
                     </motion.h1>
@@ -113,7 +113,7 @@ const ProjectsPage: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-[20px] leading-[32px] text-[#6F6864] max-w-[800px] mx-auto text-left"
+                        className="font-['SF_Pro_Display',sans-serif] text-[24px] leading-relaxed text-[#6f6864] max-w-[800px] mx-auto text-center"
                     >
                         <p>
                             A collection of design work that reflects how I approach storytelling, problem-solving, and creating experiences that connect with people.
@@ -123,7 +123,7 @@ const ProjectsPage: React.FC = () => {
 
                 {/* Filter Section */}
                 <div className="flex justify-center items-center gap-4 mb-[60px] flex-wrap px-5">
-                    <span className="text-[20px] text-[#6F6864] font-medium mr-2">
+                    <span className="font-['SF_Pro_Display',sans-serif] text-[16px] text-[#6f6864] font-medium mr-2">
                         FILTER: Showing All
                     </span>
 
@@ -144,7 +144,7 @@ const ProjectsPage: React.FC = () => {
                 </div>
 
                 {/* Projects Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] max-w-[1440px] mx-auto px-5 md:px-[60px] lg:px-[120px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1440px] mx-auto px-4">
                     {filteredProjects.map((project, index) => (
                         <ProjectCard
                             key={project.id}

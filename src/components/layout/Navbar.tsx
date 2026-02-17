@@ -124,8 +124,8 @@ const Navbar: React.FC = () => {
   const isOpaque = !isHomePage || scrolled;
 
   const backgroundStyle = isOpaque
-    ? 'linear-gradient(90deg, rgba(255, 218, 185, 0.95) 0%, rgba(255, 111, 97, 0.95) 50%, rgba(255, 158, 128, 0.95) 100%)'
-    : 'linear-gradient(90deg, rgba(255, 218, 185, 0.7) 0%, rgba(255, 111, 97, 0.7) 50%, rgba(255, 158, 128, 0.7) 100%)';
+    ? 'linear-gradient(90deg, rgba(255, 218, 185, 0.7) 0%, rgba(255, 111, 97, 0.7) 50%, rgba(255, 158, 128, 0.7) 100%)'
+    : 'linear-gradient(90deg, rgba(255, 218, 185, 0.4) 0%, rgba(255, 111, 97, 0.4) 50%, rgba(255, 158, 128, 0.4) 100%)';
 
   const boxShadowStyle = isOpaque
     ? '0px 4px 20px rgba(0, 0, 0, 0.3)'
@@ -136,7 +136,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <motion.nav
-        className="navbar fixed top-0 left-0 right-0 w-full h-[70px] z-[100] flex items-center justify-between px-4 md:px-12"
+        className="navbar fixed top-0 left-0 right-0 w-full h-[70px] z-[100]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -148,46 +148,66 @@ const Navbar: React.FC = () => {
           transition: 'all 0.3s ease'
         }}
       >
-        {/* Logo */}
-        <Link to="/" className="flex-shrink-0">
-          <motion.div
-            className="logo flex items-center w-[60px] h-[55px] md:w-[79px] md:h-[72px]"
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            transition={{ type: 'spring', stiffness: 300 }}
+        <div className="max-w-[1440px] mx-auto h-full px-4 flex items-center justify-between">
+          {/* Logo */}
+          <Link to="/" className="flex items-center p-2.5">
+            <motion.div
+              className="logo flex items-center"
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              <img src={currentLogo} alt="Logo" className="w-[59px] h-[59px] object-cover" />
+            </motion.div>
+          </Link>
+
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-[30px] font-['Instrument_Sans',sans-serif] text-[28px] text-white">
+            {navItems.map((item) =>
+              item.isRoute ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="hover:opacity-80 transition-opacity text-white no-underline"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:opacity-80 transition-opacity text-white no-underline"
+                >
+                  {item.label}
+                </a>
+              )
+            )}
+          </nav>
+
+          {/* Hamburger Button (Mobile) */}
+          <button
+            className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px] z-[110]"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle navigation menu"
           >
-            <img src={currentLogo} alt="Logo" className="w-full h-auto object-contain" />
-          </motion.div>
-        </Link>
-
-        {/* Desktop Nav */}
-        <ul className="hidden md:flex items-center gap-[30px] list-none text-[28px] font-normal font-['SF_Pro_Display',_sans-serif]">
-          {navItems.map((item, index) => (
-            <NavLink key={item.label} item={item} index={index} />
-          ))}
-        </ul>
-
-        {/* Hamburger Button (Mobile) */}
-        <button
-          className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px] z-[110]"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle navigation menu"
-        >
-          <motion.span
-            className="block w-7 h-[3px] bg-white rounded-full"
-            animate={mobileOpen ? { rotate: 45, y: 9 } : { rotate: 0, y: 0 }}
-            transition={{ duration: 0.3 }}
-          />
-          <motion.span
-            className="block w-7 h-[3px] bg-white rounded-full"
-            animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
-            transition={{ duration: 0.2 }}
-          />
-          <motion.span
-            className="block w-7 h-[3px] bg-white rounded-full"
-            animate={mobileOpen ? { rotate: -45, y: -9 } : { rotate: 0, y: 0 }}
-            transition={{ duration: 0.3 }}
-          />
-        </button>
+            <motion.span
+              className="block w-7 h-[3px] bg-white rounded-full"
+              animate={mobileOpen ? { rotate: 45, y: 9 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.3 }}
+            />
+            <motion.span
+              className="block w-7 h-[3px] bg-white rounded-full"
+              animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
+              transition={{ duration: 0.2 }}
+            />
+            <motion.span
+              className="block w-7 h-[3px] bg-white rounded-full"
+              animate={mobileOpen ? { rotate: -45, y: -9 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.3 }}
+            />
+          </button>
+        </div>
       </motion.nav>
 
       {/* Mobile Menu Overlay */}
@@ -204,7 +224,7 @@ const Navbar: React.FC = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <ul className="flex flex-col items-center gap-8 list-none text-[32px] font-normal font-['SF_Pro_Display',_sans-serif]">
+            <ul className="flex flex-col items-center gap-8 list-none text-[32px] font-normal font-['Instrument_Sans',sans-serif]">
               {navItems.map((item, index) => (
                 <NavLink key={item.label} item={item} index={index} onClick={() => setMobileOpen(false)} />
               ))}

@@ -11,11 +11,11 @@ const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({ theme = 'light' }
         <section className={`w-full py-20 ${isDark ? 'bg-[#212873]' : 'bg-white'}`}>
             <div className="max-w-[1244px] mx-auto px-5 md:px-8 text-center">
                 <ScrollReveal width="100%">
-                    <h2 className={`text-[40px] font-medium leading-tight mb-4 ${isDark ? 'text-white' : 'text-[#2E211B]'}`}>
+                    <h2 className={`font-['SF_Pro_Display',sans-serif] text-[40px] font-medium leading-tight mb-4 ${isDark ? 'text-white' : 'text-[#2E211B]'}`}>
                         Get in Touch!
                     </h2>
 
-                    <p className={`text-[30px] font-normal leading-relaxed max-w-[674px] mx-auto mb-10 text-left ${isDark ? 'text-[#d9d9d9]' : 'text-[#6F6864]'}`}>
+                    <p className={`font-['SF_Pro_Display',sans-serif] text-[24px] md:text-[30px] md:leading-[36px] font-normal leading-relaxed max-w-[674px] mx-auto mb-10 text-center ${isDark ? 'text-[#d9d9d9]' : 'text-[#6F6864]'}`}>
                         If you'd like to connect or learn more about this project, feel free to reach out.
                     </p>
 
@@ -23,13 +23,13 @@ const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({ theme = 'light' }
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-[10px]">
                         <a
                             href="mailto:desireewalkerux@yahoo.com"
-                            className="w-full sm:w-[223px] h-[61px] bg-gradient-to-r from-[#FF6F61] to-[#FF9E80] rounded-[20px] flex items-center justify-center text-[24px] sm:text-[30px] font-medium text-white hover:from-[#E6614F] hover:to-[#E68E72] transition-all"
+                            className={`min-w-[223px] h-[61px] ${isDark ? 'bg-[#0954E2] rounded-[20px]' : 'bg-gradient-to-r from-[#FF6F61] to-[#FF9E80] rounded-[10px]'} flex items-center justify-center font-['SF_Pro_Display',sans-serif] text-[24px] md:text-[30px] md:leading-[36px] font-medium text-white transition-all shadow-none hover:shadow-[0_8px_20px_rgba(255,111,97,0.4)] hover:scale-105`}
                         >
                             Email
                         </a>
                         <a
                             href="https://www.linkedin.com/in/desiree-walker/"
-                            className="w-full sm:w-[223px] h-[61px] bg-gradient-to-r from-[#FF6F61] to-[#FF9E80] rounded-[20px] flex items-center justify-center text-[24px] sm:text-[30px] font-medium text-white hover:from-[#E6614F] hover:to-[#E68E72] transition-all"
+                            className={`min-w-[223px] h-[61px] ${isDark ? 'bg-[#0954E2] rounded-[20px]' : 'bg-gradient-to-r from-[#FF6F61] to-[#FF9E80] rounded-[10px]'} flex items-center justify-center font-['SF_Pro_Display',sans-serif] text-[24px] md:text-[30px] md:leading-[36px] font-medium text-white transition-all shadow-none hover:shadow-[0_8px_20px_rgba(255,111,97,0.4)] hover:scale-105`}
                             target="_blank"
                             rel="noopener noreferrer"
                         >

@@ -18,14 +18,14 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({
 }) => {
     return (
         <section className={`w-full bg-white pt-24 pb-8 overflow-hidden ${className}`}>
-            <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-16">
+            <div className="max-w-[1244px] mx-auto px-4">
                 {/* Title Section */}
                 <div className="mb-6 mt-10">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="text-[40px] md:text-[48px] font-semibold text-black leading-tight tracking-tight"
+                        className="font-['SF_Pro_Display',sans-serif] text-[40px] font-semibold text-black leading-tight tracking-tight"
                     >
                         {title}
                     </motion.h1>
@@ -33,7 +33,7 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="text-[18px] md:text-[22px] font-normal text-taupe mt-1"
+                        className="font-['SF_Pro_Display',sans-serif] text-[20px] font-normal text-taupe mt-1"
                     >
                         {subtitle}
                     </motion.p>

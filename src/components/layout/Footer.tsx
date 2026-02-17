@@ -1,229 +1,70 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-
-interface AnimatedLinkProps {
-    href: string;
-    children: React.ReactNode;
-}
-
-const AnimatedLink: React.FC<AnimatedLinkProps> = ({ href, children }) => {
-    const [isHovered, setIsHovered] = useState(false);
-    const isExternal = href.startsWith('http') || href.startsWith('mailto');
-
-    const underline = (
-        <motion.span
-            className="absolute -bottom-[2px] left-0 h-[1px] bg-white"
-            style={{ transformOrigin: 'left' }}
-            initial={{ width: 0 }}
-            animate={{ width: isHovered ? '100%' : 0 }}
-            transition={{ duration: 0.3 }}
-        />
-    );
-
-    if (isExternal) {
-        return (
-            <motion.a
-                href={href}
-                className="relative inline-block text-white no-underline"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                whileHover={{ x: 8 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                {children}
-                {underline}
-            </motion.a>
-        );
-    }
-
-    return (
-        <Link
-            to={href}
-            className="relative inline-block text-white no-underline"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
-            <motion.div
-                className="inline-block"
-                whileHover={{ x: 8 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-            >
-                {children}
-            </motion.div>
-            {underline}
-        </Link>
-    );
-};
-
-const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1,
-            delayChildren: 0.2
-        }
-    }
-};
-
-const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { type: 'spring' as const, stiffness: 100 }
-    }
-};
+import defaultLogo from '../../assets/logo.png';
 
 const Footer: React.FC = () => {
+    const resumeUrl = `${import.meta.env.BASE_URL}figmaAssets/Desiree Walker resume 2026.pdf`;
+
     return (
-        <footer className="relative overflow-hidden text-white" style={{ background: 'var(--color-primary)' }}>
-            {/* Animated gradient top border */}
-            <motion.div
-                className="absolute top-0 left-0 right-0 h-1"
-                style={{
-                    background: 'linear-gradient(90deg, #FF9E80, #FFFFFF, #FF9E80, #FFFFFF, #FF9E80)',
-                    backgroundSize: '200% 100%'
-                }}
-                animate={{
-                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                }}
-                transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: 'linear'
-                }}
-            />
+        <footer className="bg-gradient-to-r from-[rgba(255,218,185,0.9)] via-[rgba(255,111,97,0.9)] to-[rgba(255,158,128,0.9)] py-12">
+            <div className="max-w-[1200px] mx-auto px-4">
+                {/* Logo + Name + Tagline */}
+                <div className="flex flex-col items-center mb-8">
+                    <img
+                        src={defaultLogo}
+                        alt="Logo"
+                        className="w-[80px] h-[80px] object-cover mb-4"
+                    />
+                    <h3 className="font-['SF_Pro_Display',sans-serif] font-semibold text-[28px] text-white mb-2">
+                        Desiree J. Walker
+                    </h3>
+                    <p className="font-['SF_Pro_Display',sans-serif] text-[18px] text-white/90 text-center max-w-[500px]">
+                        UX Designer creating meaningful digital experiences
+                    </p>
+                </div>
 
-            {/* Background decoration */}
-            <motion.div
-                className="absolute top-1/2 -right-[100px] w-[300px] h-[300px] rounded-full pointer-events-none"
-                style={{ background: 'rgba(255, 255, 255, 0.05)' }}
-                animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.05, 0.1, 0.05]
-                }}
-                transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: 'easeInOut'
-                }}
-            />
+                {/* Navigation Links — dot-separated */}
+                <div className="flex flex-wrap justify-center gap-8 mb-8 font-['SF_Pro_Display',sans-serif] text-[18px] text-white">
+                    <Link to="/about" className="hover:text-white/70 transition-colors text-white no-underline">
+                        About
+                    </Link>
+                    <span className="text-white/50">•</span>
+                    <a href="#projects" className="hover:text-white/70 transition-colors text-white no-underline">
+                        Projects
+                    </a>
+                    <span className="text-white/50">•</span>
+                    <a href="#contact" className="hover:text-white/70 transition-colors text-white no-underline">
+                        Contact
+                    </a>
+                    <span className="text-white/50">•</span>
+                    <a
+                        href={resumeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white/70 transition-colors text-white no-underline"
+                    >
+                        Resume
+                    </a>
+                    <span className="text-white/50">•</span>
+                    <a
+                        href="https://www.linkedin.com/in/desiree-walker/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white/70 transition-colors text-white no-underline"
+                    >
+                        LinkedIn
+                    </a>
+                </div>
 
-            <div className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-20 py-10 md:py-16">
+                {/* Divider */}
+                <div className="border-t border-white/30 mb-6" />
 
-                {/* ─── MOBILE LAYOUT (< md) ─── */}
-                <motion.div
-                    className="flex flex-col items-center md:hidden"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
-                    {/* Name + Description */}
-                    <motion.div variants={itemVariants} className="text-center mb-6">
-                        <motion.h3
-                            className="text-2xl font-semibold mb-1"
-                            whileHover={{ scale: 1.02 }}
-                        >
-                            Desiree J. Walker
-                        </motion.h3>
-                        <p className="opacity-90 leading-relaxed text-base">
-                            UX Designer creating meaningful digital experiences.
-                        </p>
-                    </motion.div>
-
-                    {/* Divider */}
-                    <div className="w-16 h-px bg-white/20 mb-6" />
-
-                    {/* Navigation - 2 col grid */}
-                    <motion.div variants={itemVariants} className="w-full mb-6">
-                        <h4 className="font-semibold mb-3 text-lg text-center">Navigation</h4>
-                        <ul className="grid grid-cols-2 gap-3 text-center opacity-90">
-                            <li><AnimatedLink href="/about">About</AnimatedLink></li>
-                            <li><AnimatedLink href="/projects">Projects</AnimatedLink></li>
-                            <li><AnimatedLink href="/contact">Contact</AnimatedLink></li>
-                            <li><AnimatedLink href={`${import.meta.env.BASE_URL}figmaAssets/Desiree Walker resume 2026.pdf`}>Resume</AnimatedLink></li>
-                        </ul>
-                    </motion.div>
-
-                    {/* Divider */}
-                    <div className="w-16 h-px bg-white/20 mb-6" />
-
-                    {/* Social + Contact stacked */}
-                    <motion.div variants={itemVariants} className="flex gap-10 text-center">
-                        <div>
-                            <h4 className="font-semibold mb-2 text-lg">Social</h4>
-                            <ul className="grid gap-2 opacity-90">
-                                <li><AnimatedLink href="https://www.linkedin.com/in/desiree-walker/">Linkedin</AnimatedLink></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold mb-2 text-lg">Contact</h4>
-                            <ul className="grid gap-2 opacity-90">
-                                <li><AnimatedLink href="mailto:desireewalkerux@yahoo.com">Email</AnimatedLink></li>
-                            </ul>
-                        </div>
-                    </motion.div>
-                </motion.div>
-
-                {/* ─── DESKTOP LAYOUT (≥ md) ─── */}
-                <motion.div
-                    className="hidden md:grid md:grid-cols-4 md:gap-8"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
-                    {/* Left Side - Main Info */}
-                    <motion.div variants={itemVariants} className="text-left">
-                        <motion.h3
-                            className="text-2xl font-semibold mb-2"
-                            whileHover={{ scale: 1.02 }}
-                        >
-                            Desiree J. Walker
-                        </motion.h3>
-                        <motion.p
-                            className="max-w-[300px] opacity-90 leading-relaxed text-base"
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 0.9 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.3 }}
-                        >
-                            UX Designer creating meaningful digital experiences.
-                        </motion.p>
-                    </motion.div>
-
-                    {/* Navigation Column */}
-                    <motion.div variants={itemVariants} className="text-left">
-                        <h4 className="font-semibold mb-3 text-lg">Navigation</h4>
-                        <ul className="grid gap-2 opacity-90">
-                            <li><AnimatedLink href="/about">About</AnimatedLink></li>
-                            <li><AnimatedLink href="/projects">Projects</AnimatedLink></li>
-                            <li><AnimatedLink href="/contact">Contact</AnimatedLink></li>
-                        </ul>
-                    </motion.div>
-
-                    {/* Social Column */}
-                    <motion.div variants={itemVariants} className="text-left">
-                        <h4 className="font-semibold mb-3 text-lg">Social</h4>
-                        <ul className="grid gap-2 opacity-90">
-                            <li><AnimatedLink href="https://www.linkedin.com/in/desiree-walker/">Linkedin</AnimatedLink></li>
-                        </ul>
-                    </motion.div>
-
-                    {/* Contact Column */}
-                    <motion.div variants={itemVariants} className="text-left">
-                        <h4 className="font-semibold mb-3 text-lg">Contact</h4>
-                        <ul className="grid gap-2 opacity-90">
-                            <li><AnimatedLink href="mailto:desireewalkerux@yahoo.com">Email</AnimatedLink></li>
-                            <li><AnimatedLink href={`${import.meta.env.BASE_URL}figmaAssets/Desiree Walker resume 2026.pdf`}>Resume</AnimatedLink></li>
-                        </ul>
-                    </motion.div>
-                </motion.div>
+                {/* Copyright */}
+                <div className="text-center">
+                    <p className="font-['SF_Pro_Display',sans-serif] text-[16px] text-white/80">
+                        © 2026 Desiree J. Walker. All rights reserved.
+                    </p>
+                </div>
             </div>
         </footer>
     );

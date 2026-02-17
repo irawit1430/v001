@@ -15,7 +15,7 @@ interface CaseStudyOverviewProps {
 const CaseStudyOverview: React.FC<CaseStudyOverviewProps> = ({ items, className = '' }) => {
     return (
         <section className={`w-full bg-light-grey py-12 ${className}`}>
-            <div className="max-w-container mx-auto px-4 md:px-24">
+            <div className="max-w-container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-y-8 gap-x-16">
                     {items.map((item, index) => (
                         <div key={index} className="flex flex-col gap-2">

@@ -11,8 +11,8 @@ export function StepCard({ icon, title, description }: StepCardProps) {
                 <img className="w-7 h-7 object-contain" alt={title} src={icon} />
             </div>
             <div className="flex flex-col gap-2">
-                <h3 className="font-medium text-xl md:text-2xl text-[#6e6764]">{title}</h3>
-                <p className="font-normal text-base md:text-lg text-[#6e6764] leading-relaxed">
+                <h3 className="font-medium text-xl md:text-[30px] md:leading-[36px] text-[#6F6864]">{title}</h3>
+                <p className="font-normal text-base md:text-[20px] md:leading-[24px] text-[#6F6864] leading-relaxed">
                     {description}
                 </p>
             </div>

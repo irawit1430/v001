@@ -32,15 +32,15 @@ const AboutPage: React.FC = () => {
 
     return (
         <>
-            <div className="bg-white min-h-screen pt-[120px] w-full max-w-[1440px] mx-auto">
+            <div className="bg-white min-h-screen pt-[120px] w-full max-w-[1440px] mx-auto px-4">
                 {/* Hero Section - Title and Subtitle */}
-                <section className="text-center px-5 md:px-10 lg:px-20 mb-10">
+                <section className="text-center mb-10">
                     {/* About Me Title */}
                     <motion.h1
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="font-['SF_Pro_Display',_sans-serif] font-normal text-3xl md:text-[50px] leading-tight md:leading-[60px] text-black mb-2"
+                        className="font-['SF_Pro_Display',sans-serif] font-normal text-[40px] leading-tight text-black mb-2"
                     >
                         About Me
                     </motion.h1>
@@ -50,7 +50,7 @@ const AboutPage: React.FC = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.6 }}
-                        className="font-['SF_Pro_Display',_sans-serif] font-normal text-xl md:text-[30px] leading-relaxed md:leading-[42px] text-[#6F6864] mx-auto max-w-[1105px]"
+                        className="font-['SF_Pro_Display',sans-serif] font-normal text-[24px] md:text-[30px] md:leading-[36px] leading-relaxed text-[#6F6864] mx-auto max-w-[1105px]"
                     >
                         I design thoughtful, human-centered experiences that turn complex problems into clarity.
                     </motion.p>
@@ -60,7 +60,7 @@ const AboutPage: React.FC = () => {
                 <div className="w-full max-w-[1440px] h-px bg-[#D9D9D9] mx-auto mb-[60px]" />
 
                 {/* WHO AM I Section */}
-                <section className="flex flex-col md:flex-row flex-wrap gap-8 md:gap-10 px-5 md:px-10 lg:px-[72px] mb-[60px]">
+                <section className="flex flex-col md:flex-row flex-wrap gap-8 md:gap-10 mb-[60px]">
                     {/* Left side - Icon and Label */}
                     <div className="flex items-start gap-2 min-w-[200px]">
                         <motion.img
@@ -76,7 +76,7 @@ const AboutPage: React.FC = () => {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.4, duration: 0.5 }}
-                            className="font-['SF_Pro_Display',_sans-serif] font-medium text-xl md:text-[30px] leading-[36px] text-[#FF6F61] mt-3"
+                            className="font-['SF_Pro_Display',sans-serif] font-medium text-[24px] md:text-[30px] leading-[36px] text-[#FF6F61] mt-3"
                         >
                             WHO AM I?
                         </motion.span>
@@ -91,31 +91,31 @@ const AboutPage: React.FC = () => {
                     >
                         <motion.h2
                             variants={itemVariants}
-                            className="font-['SF_Pro_Display',_sans-serif] font-medium text-2xl md:text-[50px] leading-tight md:leading-[60px] text-[#6F6864] md:ml-0 lg:ml-[250px]"
+                            className="font-['SF_Pro_Display',sans-serif] font-medium text-[32px] md:text-[50px] md:leading-[60px] leading-tight text-[#6F6864] md:ml-0 lg:ml-[250px]"
                         >
                             Hi I'm Desiree, a UX Designer with a passion for storytelling and creating digital experiences that connect people in meaningful ways.
                         </motion.h2>
                         <motion.p
                             variants={itemVariants}
-                            className="font-['SF_Pro_Display',_sans-serif] font-normal text-lg md:text-[30px] leading-relaxed md:leading-[42px] text-[#676564] md:ml-0 lg:ml-[250px]"
+                            className="font-['SF_Pro_Display',sans-serif] font-normal text-[20px] md:text-[30px] md:leading-[36px] leading-relaxed text-[#676564] md:ml-0 lg:ml-[250px]"
                         >
                             My journey began in the Marines, where I learned resilience, empathy, and adaptability, qualities that now shape how I design with intention.
                         </motion.p>
                         <motion.p
                             variants={itemVariants}
-                            className="font-['SF_Pro_Display',_sans-serif] font-normal text-lg md:text-[30px] leading-relaxed md:leading-[42px] text-[#676564] md:ml-0 lg:ml-[250px]"
+                            className="font-['SF_Pro_Display',sans-serif] font-normal text-[20px] leading-relaxed text-[#6f6864] md:ml-0 lg:ml-[250px]"
                         >
                             As an early product designer at Bonder, I helped define and grow the product from its early stages, leading initiatives that simplified workflows, built consistency, and made complex systems approachable.
                         </motion.p>
                         <motion.p
                             variants={itemVariants}
-                            className="font-['SF_Pro_Display',_sans-serif] font-normal text-lg md:text-[30px] leading-relaxed md:leading-[42px] text-[#676564] md:ml-0 lg:ml-[250px]"
+                            className="font-['SF_Pro_Display',sans-serif] font-normal text-[20px] leading-relaxed text-[#6f6864] md:ml-0 lg:ml-[250px]"
                         >
                             I believe great design tells a story — one that uplifts, empowers, and creates connection.
                         </motion.p>
                         <motion.p
                             variants={itemVariants}
-                            className="font-['SF_Pro_Display',_sans-serif] font-normal text-lg md:text-[30px] leading-relaxed md:leading-[42px] text-[#676564] md:ml-0 lg:ml-[250px]"
+                            className="font-['SF_Pro_Display',sans-serif] font-normal text-[20px] leading-relaxed text-[#6f6864] md:ml-0 lg:ml-[250px]"
                         >
                             Outside of work, I love mentoring other creatives and exploring new ways to blend technology, empathy, and design.
                         </motion.p>
@@ -130,7 +130,7 @@ const AboutPage: React.FC = () => {
                             transition={{ delay: 0.6, duration: 0.5 }}
                             whileHover={{ scale: 1.05, y: -3 }}
                             whileTap={{ scale: 0.98 }}
-                            className="inline-flex justify-center items-center px-6 md:px-8 w-fit h-[50px] md:h-[60px] rounded-[10px] no-underline cursor-pointer font-['SF_Pro_Display',_sans-serif] font-medium text-lg md:text-2xl text-white md:ml-0 lg:ml-[250px]"
+                            className="inline-flex justify-center items-center px-8 w-fit h-[60px] rounded-[10px] no-underline cursor-pointer font-['SF_Pro_Display',sans-serif] font-medium text-[24px] text-white md:ml-0 lg:ml-[250px]"
                             style={{
                                 background: 'linear-gradient(90deg, #FF6F61 0%, #FF9E80 100%)',
                             }}
@@ -146,12 +146,12 @@ const AboutPage: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 px-5 md:px-10 lg:px-[72px] mb-[60px] md:mb-[80px]"
+                    className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-[60px] md:mb-[80px]"
                 >
                     {[img1, img2, img3].map((img, index) => (
                         <motion.div
                             key={index}
-                            className="w-full max-w-[380px] mx-auto rounded-2xl overflow-hidden"
+                            className="w-full max-w-[400px] mx-auto rounded-[20px] overflow-hidden"
                             style={{
                                 boxShadow: '0 8px 30px rgba(0, 0, 0, 0.12)'
                             }}
@@ -171,7 +171,7 @@ const AboutPage: React.FC = () => {
                 </motion.section>
 
                 {/* BACKGROUND & EDUCATION Section */}
-                <section className="flex flex-col md:flex-row flex-wrap gap-8 md:gap-10 px-5 md:px-10 lg:px-[72px] mb-8 mt-8">
+                <section className="flex flex-col md:flex-row flex-wrap gap-8 md:gap-10 mb-8 mt-8">
                     {/* Left side - Label */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -180,7 +180,7 @@ const AboutPage: React.FC = () => {
                         transition={{ duration: 0.5 }}
                         className="min-w-[200px]"
                     >
-                        <span className="font-['SF_Pro_Display',_sans-serif] font-medium text-xl md:text-[30px] leading-[36px] text-[#FF6F61] mt-3 block">
+                        <span className="font-['SF_Pro_Display',sans-serif] font-medium text-[24px] md:text-[30px] leading-[36px] text-[#FF6F61] mt-3 block">
                             BACKGROUND & EDUCATION
                         </span>
                     </motion.div>
@@ -195,37 +195,37 @@ const AboutPage: React.FC = () => {
                     >
                         <motion.h2
                             variants={itemVariants}
-                            className="font-['SF_Pro_Display',_sans-serif] font-medium text-2xl md:text-[50px] leading-tight md:leading-[60px] text-[#6F6864] md:ml-0 lg:ml-[250px]"
+                            className="font-['SF_Pro_Display',sans-serif] font-medium text-[32px] md:text-[50px] md:leading-[60px] leading-tight text-[#6F6864] md:ml-0 lg:ml-[250px]"
                         >
                             My background in Interactive Media taught me that great design is more than visuals . It's about crafting experiences that connect people.
                         </motion.h2>
                         <motion.p
                             variants={itemVariants}
-                            className="font-['SF_Pro_Display',_sans-serif] font-normal text-lg md:text-[30px] leading-relaxed md:leading-[42px] text-[#676564] md:ml-0 lg:ml-[250px]"
+                            className="font-['SF_Pro_Display',sans-serif] font-normal text-[20px] md:text-[30px] md:leading-[36px] leading-relaxed text-[#676564] md:ml-0 lg:ml-[250px]"
                         >
                             My background in Interactive Media has given me a foundation in blending storytelling, design, and technology to create experiences that feel intuitive and meaningful.
                         </motion.p>
                         <motion.p
                             variants={itemVariants}
-                            className="font-['SF_Pro_Display',_sans-serif] font-normal text-lg md:text-[30px] leading-relaxed md:leading-[42px] text-[#676564] md:ml-0 lg:ml-[250px]"
+                            className="font-['SF_Pro_Display',sans-serif] font-normal text-[20px] leading-relaxed text-[#6f6864] md:ml-0 lg:ml-[250px]"
                         >
                             Through hands-on coursework and creative projects, I've learned how human behavior, aesthetics, and usability intersect, and how thoughtful design can make complex ideas feel simple.
                         </motion.p>
                         <motion.p
                             variants={itemVariants}
-                            className="font-['SF_Pro_Display',_sans-serif] font-normal text-lg md:text-[30px] leading-relaxed md:leading-[42px] text-[#676564] md:ml-0 lg:ml-[250px]"
+                            className="font-['SF_Pro_Display',sans-serif] font-normal text-[20px] leading-relaxed text-[#6f6864] md:ml-0 lg:ml-[250px]"
                         >
                             Alongside my studies, I completed the Google UX Design Certificate, where I gained practical experience in user research, wireframing, and usability testing.
                         </motion.p>
                         <motion.p
                             variants={itemVariants}
-                            className="font-['SF_Pro_Display',_sans-serif] font-normal text-lg md:text-[30px] leading-relaxed md:leading-[42px] text-[#676564] md:ml-0 lg:ml-[250px]"
+                            className="font-['SF_Pro_Display',sans-serif] font-normal text-[20px] leading-relaxed text-[#6f6864] md:ml-0 lg:ml-[250px]"
                         >
                             This program helped me strengthen my process-driven side and apply design thinking to real-world challenges.
                         </motion.p>
                         <motion.p
                             variants={itemVariants}
-                            className="font-['SF_Pro_Display',_sans-serif] font-normal text-lg md:text-[30px] leading-relaxed md:leading-[42px] text-[#676564] md:ml-0 lg:ml-[250px]"
+                            className="font-['SF_Pro_Display',sans-serif] font-normal text-[20px] leading-relaxed text-[#6f6864] md:ml-0 lg:ml-[250px]"
                         >
                             These experiences have shaped the way I approach every project: with curiosity, empathy, and a genuine desire to create designs that connect with people on a deeper level.
                         </motion.p>
@@ -235,45 +235,45 @@ const AboutPage: React.FC = () => {
                             variants={itemVariants}
                             className="w-full max-w-[1600px] md:ml-0 lg:ml-[200px] my-8"
                         >
-                            <div className="flex w-full bg-[#FFF9F7] border border-[#FF6F61] overflow-hidden">
+                            <div className="flex w-full bg-[#FFFAF6] border border-[#FF6F61] overflow-hidden">
                                 {/* Coral accent bar */}
                                 <motion.div
                                     initial={{ height: 0 }}
                                     whileInView={{ height: 'auto' }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6, delay: 0.2 }}
-                                    className="w-2 bg-[#FF6F61] flex-shrink-0 rounded-[3px]"
+                                    className="w-[14px] bg-[#FF6F61] flex-shrink-0 rounded-[30px]"
                                 />
 
                                 {/* Card Content */}
                                 <div className="flex-1 p-6 md:p-12">
-                                    <h3 className="font-['SF_Pro_Display',_sans-serif] font-medium text-xl md:text-[28px] leading-[34px] text-black mb-6 md:mb-8">
+                                    <h3 className="font-['SF_Pro_Display',sans-serif] font-normal text-[24px] md:text-[30px] md:leading-[36px] leading-[34px] text-black mb-6 md:mb-8">
                                         Education
                                     </h3>
 
                                     <div className="flex flex-col gap-8 md:gap-10">
                                         {/* Education Item 1 */}
                                         <div className="flex flex-col gap-1">
-                                            <span className="font-['SF_Pro_Display',_sans-serif] font-bold text-base md:text-xl text-black">
+                                            <span className="font-['SF_Pro_Display',sans-serif] font-medium text-[18px] md:text-[24px] md:leading-[29px] text-black">
                                                 Bachelor of Science – Interactive Media (In Progress)
                                             </span>
-                                            <span className="font-['SF_Pro_Display',_sans-serif] italic text-base md:text-xl text-black">
+                                            <span className="font-['SF_Pro_Display',sans-serif] font-medium text-[18px] md:text-[24px] md:leading-[29px] text-black">
                                                 University of Miami
                                             </span>
-                                            <span className="font-['SF_Pro_Display',_sans-serif] text-sm md:text-lg text-[#888888] mt-1">
+                                            <span className="font-['SF_Pro_Display',sans-serif] font-medium text-[16px] md:text-[24px] md:leading-[29px] text-black mt-1">
                                                 Focus: UX Design, Visual Design & Interactive Technologies
                                             </span>
                                         </div>
 
                                         {/* Education Item 2 */}
                                         <div className="flex flex-col gap-1">
-                                            <span className="font-['SF_Pro_Display',_sans-serif] font-bold text-base md:text-xl text-black">
+                                            <span className="font-['SF_Pro_Display',sans-serif] font-medium text-[18px] md:text-[24px] md:leading-[29px] text-black">
                                                 User Experience Certification – Google (2023)
                                             </span>
-                                            <span className="font-['SF_Pro_Display',_sans-serif] italic text-base md:text-xl text-black">
+                                            <span className="font-['SF_Pro_Display',sans-serif] font-medium text-[18px] md:text-[24px] md:leading-[29px] text-black">
                                                 Coursera
                                             </span>
-                                            <span className="font-['SF_Pro_Display',_sans-serif] text-sm md:text-lg text-[#888888] mt-1">
+                                            <span className="font-['SF_Pro_Display',sans-serif] font-medium text-[16px] md:text-[24px] md:leading-[29px] text-black mt-1">
                                                 Hands-on training in user research, prototyping, and usability testing
                                             </span>
                                         </div>
@@ -285,7 +285,7 @@ const AboutPage: React.FC = () => {
                         {/* Additional text */}
                         <motion.p
                             variants={itemVariants}
-                            className="font-['SF_Pro_Display',_sans-serif] font-normal text-lg md:text-[30px] leading-relaxed md:leading-[42px] text-[#6F6864] max-w-[881px] md:ml-0 lg:ml-[250px] mb-10"
+                            className="font-['SF_Pro_Display',sans-serif] font-normal text-[20px] md:text-[30px] md:leading-[36px] leading-relaxed text-[#6F6864] max-w-[881px] md:ml-0 lg:ml-[250px] mb-10"
                         >
                             Beyond formal education, I'm a continuous learner who stays curious about emerging design trends and tools. I actively seek out workshops, online courses, and collaborative projects that challenge my thinking and strengthen my design process.
                         </motion.p>
