@@ -130,7 +130,7 @@ const AboutPage: React.FC = () => {
                             transition={{ delay: 0.6, duration: 0.5 }}
                             whileHover={{ scale: 1.05, y: -3 }}
                             whileTap={{ scale: 0.98 }}
-                            className="inline-flex justify-center items-center px-8 w-fit h-[60px] rounded-[10px] no-underline cursor-pointer font-['SF_Pro_Display',sans-serif] font-medium text-[24px] text-white md:ml-0 lg:ml-[250px]"
+                            className="inline-flex justify-center items-center px-8 w-fit h-[60px] rounded-[10px] no-underline cursor-pointer font-['SF_Pro_Display',sans-serif] font-medium text-[24px] text-white md:ml-0 lg:ml-[250px] shadow-lg hover:shadow-2xl transition-all duration-300"
                             style={{
                                 background: 'linear-gradient(90deg, #FF6F61 0%, #FF9E80 100%)',
                             }}
@@ -144,7 +144,7 @@ const AboutPage: React.FC = () => {
                 <motion.section
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.6 }}
                     className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-[60px] md:mb-[80px]"
                 >
@@ -176,7 +176,7 @@ const AboutPage: React.FC = () => {
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         transition={{ duration: 0.5 }}
                         className="min-w-[200px]"
                     >
@@ -190,7 +190,7 @@ const AboutPage: React.FC = () => {
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         className="flex-1 min-w-[300px] max-w-[1100px] flex flex-col gap-5 mt-8"
                     >
                         <motion.h2
@@ -240,7 +240,7 @@ const AboutPage: React.FC = () => {
                                 <motion.div
                                     initial={{ height: 0 }}
                                     whileInView={{ height: 'auto' }}
-                                    viewport={{ once: true }}
+                                    viewport={{ once: false }}
                                     transition={{ duration: 0.6, delay: 0.2 }}
                                     className="w-[14px] bg-[#FF6F61] flex-shrink-0 rounded-[30px]"
                                 />

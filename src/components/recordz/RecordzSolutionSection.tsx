@@ -6,7 +6,7 @@ const RecordzSolutionSection: React.FC = () => {
             <div className="w-full">
                 {/* Header */}
                 <div className="flex gap-[60px] items-start flex-wrap mb-[60px] md:flex-col md:gap-5">
-                    <h2 className="text-[32px] font-medium text-black m-0 flex-[0_0_220px] md:text-[26px] md:flex-none">Solution Overview:</h2>
+                    <h2 className="text-[32px] font-medium text-black m-0 flex-[0_0_220px] md:text-[26px] md:flex-none whitespace-nowrap">Solution Overview:</h2>
                     <div className="flex-1 min-w-[300px]">
                         <p className="text-[22px] leading-[1.5] text-[#333] mb-5 md:text-[20px]">
                             <strong>Turning creative vision into cultural impact with the right platform.</strong>

@@ -60,11 +60,11 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({
         <section className={`py-20 px-5 max-w-[1244px] mx-auto ${className}`}>
             <div className="w-full">
                 {/* Header */}
-                <div className="flex gap-[60px] items-start flex-wrap mb-[50px] md:flex-col md:gap-5">
-                    <h2 className="text-[32px] font-medium text-black m-0 flex-[0_0_250px] md:text-[26px] md:flex-none">
+                <div className="flex gap-[60px] items-start mb-[50px] md:flex-col md:gap-5">
+                    <h2 className="text-[32px] font-medium text-black m-0 flex-[0_0_250px] whitespace-nowrap md:text-[26px] md:flex-none">
                         {auditData.title || 'Competitive Audit:'}
                     </h2>
-                    <div className="flex-1 min-w-[300px]">
+                    <div className="flex-1">
                         <div className="text-[18px] leading-[1.7] text-[#6F6864] m-0 [&>strong]:text-[#333333] md:text-[16px]">
                             {auditData.description}
                         </div>

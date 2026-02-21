@@ -89,18 +89,10 @@ const NavLink: React.FC<NavLinkProps> = ({ item, index, onClick }) => {
 };
 
 const Navbar: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -121,32 +113,17 @@ const Navbar: React.FC = () => {
     ? baseNavItems
     : [{ label: 'Home', href: '/', isRoute: true }, ...baseNavItems];
 
-  const isOpaque = !isHomePage || scrolled;
 
-  const backgroundStyle = isOpaque
-    ? 'linear-gradient(90deg, rgba(255, 218, 185, 0.7) 0%, rgba(255, 111, 97, 0.7) 50%, rgba(255, 158, 128, 0.7) 100%)'
-    : 'linear-gradient(90deg, rgba(255, 218, 185, 0.4) 0%, rgba(255, 111, 97, 0.4) 50%, rgba(255, 158, 128, 0.4) 100%)';
-
-  const boxShadowStyle = isOpaque
-    ? '0px 4px 20px rgba(0, 0, 0, 0.3)'
-    : '0px 4px 4px rgba(0, 0, 0, 0.2)';
 
   const currentLogo = isHomePage ? defaultLogo : logoPink;
 
   return (
     <>
       <motion.nav
-        className="navbar fixed top-0 left-0 right-0 w-full h-[70px] z-[100]"
+        className="navbar fixed top-0 left-0 right-0 h-[70px] bg-gradient-to-r from-[rgba(255,218,185,0.7)] via-[rgba(255,111,97,0.7)] to-[rgba(255,158,128,0.7)] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.2)] z-50"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        style={{
-          color: 'white',
-          background: backgroundStyle,
-          boxShadow: boxShadowStyle,
-          backdropFilter: 'blur(10px)',
-          transition: 'all 0.3s ease'
-        }}
       >
         <div className="max-w-[1440px] mx-auto h-full px-4 flex items-center justify-between">
           {/* Logo */}

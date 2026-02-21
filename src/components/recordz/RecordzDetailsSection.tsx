@@ -10,7 +10,7 @@ const RecordzDetailsSection: React.FC = () => {
         <>
             {/* Key Challenges Section */}
             <section className="py-[60px] px-5 pb-[80px]">
-                <h2 className="text-[32px] font-medium text-black mb-10 md:text-[26px]">Key Challenges:</h2>
+                <h2 className="text-[32px] font-medium text-black mb-10 md:text-[26px] whitespace-nowrap">Key Challenges:</h2>
                 <div className="grid grid-cols-[repeat(2,607px)] gap-5 max-w-[1244px] justify-center mx-auto md:grid-cols-1 md:w-full">
                     <div className="flex gap-4 p-6 bg-[#FAFAFA] rounded-[12px] border border-[#EEEEEE] items-center w-[607px] h-[153px] md:w-full md:h-auto">
                         <div className="w-10 h-10 flex items-center justify-center shrink-0">

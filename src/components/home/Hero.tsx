@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
-import { motion, useScroll, useTransform, type HTMLMotionProps } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import heroBg from '../../assets/hero-bg-final.jpg';
 
-import heroText from '../../assets/hero-text.png';
+
 
 // Floating particles component
 const FloatingParticles: React.FC = () => {
@@ -50,26 +50,7 @@ const FloatingParticles: React.FC = () => {
 };
 
 // Animated button
-interface GlowButtonProps extends HTMLMotionProps<"a"> {
-    href: string;
-    children: React.ReactNode;
-    delay: number;
-}
 
-const GlowButton: React.FC<GlowButtonProps> = ({ href, children, delay, ...props }) => (
-    <motion.a
-        href={href}
-        {...props}
-        className="bg-gradient-to-r from-[#ff6f61] to-[#ff9e80] text-white rounded-[10px] px-8 py-4 min-w-[184px] h-[60px] font-['SF_Pro_Display',sans-serif] font-medium text-[30px] hover:shadow-lg transition-shadow flex items-center justify-center no-underline cursor-pointer"
-        initial={{ opacity: 0, y: 20, scale: 0.95 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ delay, type: 'spring', stiffness: 400, damping: 15 }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-    >
-        {children}
-    </motion.a>
-);
 
 const Hero: React.FC = () => {
     // Scroll-based fade out animation
@@ -91,7 +72,7 @@ const Hero: React.FC = () => {
 
     return (
         <motion.section
-            className="hero relative flex items-center justify-center text-white text-center overflow-hidden w-full h-screen"
+            className="hero relative flex items-center justify-center text-white text-center overflow-hidden w-full min-h-screen mt-[70px]"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -119,73 +100,67 @@ const Hero: React.FC = () => {
             {/* Floating particles */}
             <FloatingParticles />
 
-            <div className="hero-content w-full max-w-full px-5 z-[1] -mt-12 flex flex-col items-center">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.2 }}
+            <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
+                <motion.h1
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
                     style={{
-                        marginBottom: '2rem',
                         opacity: textOpacity,
                         y: textY
                     }}
+                    className="font-['SF_Pro_Display',sans-serif] font-semibold text-[32px] md:text-[40px] lg:text-[50px] text-white mb-6 mt-[100px] max-w-[900px] leading-[1.3]"
                 >
-                    <motion.img
-                        src={heroText}
-                        alt="Hi, I'm Desiree, UX Designer turning complex problems into elegant, user-centered solutions. Based in Miami, FL"
-                        className="w-full max-w-[921px] h-auto block"
-                        style={{
-                            filter: 'drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3))'
-                        }}
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ type: 'spring', stiffness: 300 }}
-                    />
-                </motion.div>
+                    Hi, I'm Desiree,<br />
+                    UX Designer turning complex problems into elegant, user-centered solutions. Based in <span className="bg-clip-text bg-gradient-to-r from-[#ffdab9] to-[#ff6f61] text-transparent" style={{ WebkitTextFillColor: 'transparent' }}>Miami, FL</span>
+                </motion.h1>
 
                 <motion.div
-                    className="cta-buttons flex flex-col sm:flex-row gap-4 sm:gap-8 mt-[40px] items-center justify-center"
+                    className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-[40px] items-center justify-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                    <GlowButton href="#projects" delay={0.2}>Projects</GlowButton>
-                    <GlowButton
-                        href={`${import.meta.env.BASE_URL}figmaAssets/Desiree Walker resume 2026.pdf`}
-                        delay={0.3}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <motion.button
+                        className="bg-gradient-to-r from-[#ff6f61] to-[#ff9e80] text-white rounded-[10px] px-8 py-4 min-w-[184px] h-[60px] font-['SF_Pro_Display',sans-serif] font-medium text-[30px] shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
+                        Projects
+                    </motion.button>
+                    <motion.button
+                        className="bg-gradient-to-r from-[#ff6f61] to-[#ff9e80] text-white rounded-[10px] px-8 py-4 min-w-[184px] h-[60px] font-['SF_Pro_Display',sans-serif] font-medium text-[30px] shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => window.open(`${import.meta.env.BASE_URL}figmaAssets/Desiree Walker resume 2026.pdf`, '_blank')}
                     >
                         Resume
-                    </GlowButton>
+                    </motion.button>
                 </motion.div>
             </div>
 
-            {/* Enhanced scroll indicator with pulse effect */}
+            {/* Enhanced scroll indicator with arrow */}
             <motion.div
-                className="scroll-indicator absolute bottom-10 left-1/2 -translate-x-1/2"
+                className="mt-[225px] cursor-pointer absolute bottom-10 left-1/2 -translate-x-1/2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
                 <motion.div
-                    className="flex flex-col items-center gap-2"
                     animate={{
-                        y: [0, 12, 0],
-                        opacity: [0.5, 1, 0.5]
+                        y: [0, 12, 0]
                     }}
                     transition={{
-                        duration: 2,
+                        duration: 1.5,
                         repeat: Infinity,
                         ease: 'easeInOut'
                     }}
                 >
-                    <motion.span className="text-xs tracking-[2px] uppercase opacity-80">
-                        Scroll
-                    </motion.span>
-                    <motion.div className="w-6 h-10 border-2 border-white/50 rounded-xl flex justify-center pt-2">
-                        <motion.div
-                            className="w-1 h-2 bg-white rounded-sm"
-                            animate={{ y: [0, 12, 0] }}
-                            transition={{ duration: 1.5, repeat: Infinity }}
-                        />
-                    </motion.div>
+                    <svg className="w-[50px] h-[50px] hover:opacity-80 transition-opacity" fill="none" viewBox="0 0 50 50">
+                        <path d="M43.1641 12.5H39.502C39.2529 12.5 39.0186 12.6221 38.8721 12.8223L25 31.9434L11.1279 12.8223C10.9814 12.6221 10.7471 12.5 10.498 12.5H6.83594C6.51855 12.5 6.33301 12.8613 6.51855 13.1201L23.7354 36.8555C24.3604 37.7148 25.6396 37.7148 26.2598 36.8555L43.4766 13.1201C43.667 12.8613 43.4814 12.5 43.1641 12.5Z" fill="white" />
+                    </svg>
                 </motion.div>
             </motion.div>
         </motion.section>

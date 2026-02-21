@@ -20,7 +20,7 @@ const HiFiShowcase = () => {
 
                 {/* Header */}
                 <div className="max-w-[800px] flex flex-col gap-6">
-                    <h2 className="text-[32px] font-medium text-black leading-tight">
+                    <h2 className="text-[32px] font-medium text-black leading-tight whitespace-nowrap">
                         Hi-Fi Wireframes
                     </h2>
                     <p className="text-[24px] font-normal text-[#333333] leading-tight">

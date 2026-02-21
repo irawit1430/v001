@@ -10,7 +10,7 @@ const RecordzNextStepsSection: React.FC = () => {
             <div className="w-full">
                 {/* Header */}
                 <div className="mb-10">
-                    <h2 className="text-[32px] font-semibold text-black m-0 mb-3 md:text-[26px]">Next Steps:</h2>
+                    <h2 className="text-[32px] font-semibold text-black m-0 mb-3 md:text-[26px] whitespace-nowrap">Next Steps:</h2>
                     <p className="text-[18px] text-[#6F6864] m-0 md:text-[16px]">
                         Road map for future development and continuous improvement
                     </p>

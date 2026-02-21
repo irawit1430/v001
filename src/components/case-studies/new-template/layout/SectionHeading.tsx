@@ -24,7 +24,7 @@ export function SectionHeading({
     return (
         <ScrollReveal width="100%">
             <div className={`flex flex-col ${alignClass} gap-3 max-w-3xl ${className}`}>
-                <h2 className={`font-medium text-3xl md:text-[40px] ${textColor} leading-tight`}>
+                <h2 className={`font-['SF_Pro_Display',sans-serif] font-medium text-3xl md:text-[40px] ${textColor} leading-tight whitespace-nowrap`}>
                     {title}
                 </h2>
                 {subtitle && (

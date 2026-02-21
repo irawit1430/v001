@@ -6,6 +6,7 @@ export interface InsightCard {
     description: string;
     emoji?: string;
     icon?: string;
+    topIcon?: string;
 }
 
 interface KeyInsightsProps {
@@ -33,11 +34,11 @@ const KeyInsights: React.FC<KeyInsightsProps> = ({
                 {/* Header & Description Row */}
                 <ScrollReveal width="100%">
                     <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
-                        <h2 className={`text-[32px] md:text-[40px] font-medium ${textColor} leading-tight md:w-1/3`}>
+                        <h2 className={`text-[32px] md:text-[40px] font-medium ${textColor} leading-tight md:w-1/3 whitespace-nowrap`}>
                             {title}
                         </h2>
 
-                        <p className={`text-[20px] md:text-[24px] font-normal ${textColor} leading-relaxed md:w-2/3 max-w-[800px]`}>
+                        <p className={`text-[20px] md:text-[24px] font-normal ${textColor} leading-relaxed md:w-2/3 max-w-[800px] md:pt-[52px]`}>
                             {description}
                         </p>
                     </div>
@@ -54,7 +55,7 @@ const KeyInsights: React.FC<KeyInsightsProps> = ({
                                 }}
                             >
                                 {/* Icon */}
-                                <div className="w-[80px] h-[80px] rounded-full flex items-center justify-center mb-4">
+                                <div className="relative w-[80px] h-[80px] rounded-full flex items-center justify-center mb-4">
                                     {insight.icon ? (
                                         <img
                                             src={insight.icon}
@@ -65,6 +66,13 @@ const KeyInsights: React.FC<KeyInsightsProps> = ({
                                         <div className="w-[60px] h-[60px] rounded-full bg-gray-100 flex items-center justify-center">
                                             <span className="text-3xl">{insight.emoji || '💡'}</span>
                                         </div>
+                                    )}
+                                    {insight.topIcon && (
+                                        <img
+                                            src={insight.topIcon}
+                                            alt={`${insight.title} overlay`}
+                                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 object-contain pointer-events-none"
+                                        />
                                     )}
                                 </div>
 

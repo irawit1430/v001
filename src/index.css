@@ -128,3 +128,18 @@ button {
   margin-bottom: var(--spacing-lg);
   font-weight: 700;
 }
+
+/* Global Image Hover Effect */
+img.rounded-xl,
+img.rounded-2xl,
+img.rounded-lg,
+img.rounded-md {
+  transition: transform 0.3s ease;
+}
+
+img.rounded-xl:hover,
+img.rounded-2xl:hover,
+img.rounded-lg:hover,
+img.rounded-md:hover {
+  transform: scale(1.02);
+}

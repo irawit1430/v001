@@ -113,10 +113,11 @@ const ProjectsPage: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="font-['SF_Pro_Display',sans-serif] text-[24px] leading-relaxed text-[#6f6864] max-w-[800px] mx-auto text-center"
+                        className="font-['SF_Pro_Display',sans-serif] text-[24px] leading-relaxed text-[#6f6864] max-w-[960px] mx-auto text-left"
                     >
                         <p>
-                            A collection of design work that reflects how I approach storytelling, problem-solving, and creating experiences that connect with people.
+                            A collection of design work that reflects how I approach storytelling, problem-solving,<br />
+                            and creating experiences that connect with people.
                         </p>
                     </motion.div>
                 </div>

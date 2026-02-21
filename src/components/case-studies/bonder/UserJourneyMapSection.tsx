@@ -46,7 +46,7 @@ const UserJourneyMapSection = () => {
                 {/* Header */}
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-[60px] mb-16">
                     <div className="lg:w-1/3 max-w-[200px]">
-                        <h2 className="text-[32px] font-medium text-black leading-tight">
+                        <h2 className="text-[32px] font-medium text-black leading-tight whitespace-nowrap">
                             User Journey:
                         </h2>
                     </div>

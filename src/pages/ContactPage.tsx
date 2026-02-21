@@ -135,9 +135,9 @@ const ContactPage: React.FC = () => {
 
                                 <motion.button
                                     type="submit"
-                                    whileHover={{ scale: 1.02 }}
-                                    whileTap={{ scale: 0.98 }}
-                                    className="w-full md:w-auto h-[60px] px-8 bg-gradient-to-r from-[#FF6F61] to-[#FF9E80] rounded-[10px] flex items-center justify-center font-['SF_Pro_Display',sans-serif] text-[30px] font-medium text-white transition-all shadow-none hover:shadow-[0_8px_20px_rgba(255,111,97,0.4)] hover:scale-105 border-none cursor-pointer"
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="w-full md:w-auto h-[60px] px-8 bg-gradient-to-r from-[#FF6F61] to-[#FF9E80] rounded-[10px] flex items-center justify-center font-['SF_Pro_Display',sans-serif] text-[30px] font-medium text-white transition-all duration-300 shadow-lg hover:shadow-2xl border-none cursor-pointer"
                                 >
                                     Send Message
                                 </motion.button>

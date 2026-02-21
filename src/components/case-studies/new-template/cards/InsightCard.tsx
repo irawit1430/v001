@@ -29,7 +29,7 @@ export function InsightCard({ icon, topIcon, title, description, layout = 'verti
                 <img className="w-14 h-14 md:w-20 md:h-20 object-contain" alt={title} src={icon} />
                 {topIcon && (
                     <img
-                        className="absolute w-8 h-8 md:w-10 md:h-10 object-contain pointer-events-none"
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 object-contain pointer-events-none"
                         alt={`${title} top icon`}
                         src={topIcon}
                     />

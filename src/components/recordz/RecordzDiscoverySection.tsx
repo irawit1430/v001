@@ -11,7 +11,7 @@ const RecordzDiscoverySection: React.FC = () => {
             <div className="w-full">
                 {/* Header with Title and Description */}
                 <div className="flex gap-[60px] items-start flex-wrap mb-[50px] md:flex-col md:gap-5">
-                    <h2 className="text-[32px] font-medium text-black m-0 flex-[0_0_200px] md:text-[26px] md:flex-none">Discovery:</h2>
+                    <h2 className="text-[32px] font-medium text-black m-0 flex-[0_0_200px] md:text-[26px] md:flex-none whitespace-nowrap">Discovery:</h2>
                     <div className="flex-1 min-w-[300px]">
                         <h3 className="text-[24px] font-semibold text-[#333] mb-5 md:text-[20px]">Understanding the Creative Landscape:</h3>
                         <p className="text-[18px] leading-[1.7] text-[#6F6864] m-0 md:text-[16px]">

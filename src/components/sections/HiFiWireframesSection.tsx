@@ -11,7 +11,7 @@ const HiFiWireframesSection: React.FC = () => {
             <div className="max-w-[1440px] mx-auto relative">
                 <div className="flex gap-5 items-start flex-wrap mb-[60px] md:flex-col">
                     <div className="flex-1 min-w-[200px]">
-                        <h2 className="text-[40px] font-medium text-black mb-[30px] md:text-[32px]">Hi-Fi Wireframes:</h2>
+                        <h2 className="text-[40px] font-medium text-black mb-[30px] md:text-[32px] whitespace-nowrap">Hi-Fi Wireframes:</h2>
                     </div>
                     <div className="flex-[3] min-w-[300px]">
                         <h3 className="text-[24px] font-medium text-[#6F6864] mb-5">
@@ -59,7 +59,7 @@ const HiFiWireframesSection: React.FC = () => {
                 <div className="mt-[100px]">
                     <div className="flex gap-5 items-start flex-wrap mb-[60px] md:flex-col">
                         <div className="flex-1 min-w-[200px]">
-                            <h2 className="text-[40px] font-medium text-black mb-[30px] md:text-[32px]">Key Features:</h2>
+                            <h2 className="text-[40px] font-medium text-black mb-[30px] md:text-[32px] whitespace-nowrap">Key Features:</h2>
                         </div>
                         <div className="flex-[3] min-w-[300px]">
                             <h3 className="text-[24px] font-medium text-[#6F6864] mb-5">

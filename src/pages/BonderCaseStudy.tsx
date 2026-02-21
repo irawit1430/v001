@@ -11,12 +11,13 @@ import { StepCard } from "../components/case-studies/new-template/cards/StepCard
 import { ImageGallery } from "../components/case-studies/new-template/cards/ImageGallery";
 import ResearchOverview from "../components/case-studies/shared/ResearchOverview";
 import KeyInsights from "../components/case-studies/shared/KeyInsights";
+import CompetitiveAuditSection from "../components/case-studies/bonder/CompetitiveAuditSection";
+import InfoArchitectureSection from "../components/case-studies/bonder/InfoArchitectureSection";
 
 // Import assets
 import iconCommunity from "../assets/icon-community.png";
 import iconLocation from "../assets/icon-location.png";
 import iconBadge from "../assets/icon-badge.png";
-import iconShield from "../assets/icon-shield.png";
 import iconUserTesting from "../assets/icon-user-testing.png";
 import iconIterate from "../assets/icon-iterate.png";
 import iconAnalytics from "../assets/icon-analytics.png";
@@ -45,7 +46,7 @@ const keyInsights = [
         description: "Key value driver for in-person attendance",
     },
     {
-        icon: iconShield,
+        icon: `${import.meta.env.BASE_URL}figmaAssets/group-79.png`,
         topIcon: `${import.meta.env.BASE_URL}figmaAssets/calendar-icon.png`,
         title: "Event-Driven",
         description: "Events are the primary catalyst for connection",
@@ -104,7 +105,7 @@ const hiFiScreens = [
 
 const BonderCaseStudy = () => {
     return (
-        <div className="bg-white overflow-hidden w-full">
+        <div className="min-h-screen bg-[#FFFFFF] overflow-hidden w-full">
 
 
             <HeroSection
@@ -115,7 +116,7 @@ const BonderCaseStudy = () => {
             />
 
             {/* Project Details */}
-            <ContentSection bgColor="bg-gray-50">
+            <ContentSection bgColor="bg-[#F9FAFB]">
                 <ProjectDetailGrid details={projectDetails} />
             </ContentSection>
 
@@ -123,12 +124,25 @@ const BonderCaseStudy = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Problem Statement:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="font-medium text-[#6e6764] text-lg md:text-2xl leading-relaxed">
-                            <span className="font-semibold">Bonder's CEO recognized an opportunity to grow the platform</span> through new partnerships with Lifetime Fitness. However, because these experiences were entirely new, the app lacked the foundational user flows needed to support onboarding, event discovery, and partner engagement.
+                    <div className="flex flex-col gap-6">
+                        <p className="text-[#6F6864] leading-relaxed">
+                            <span className="text-lg md:text-[34px] md:leading-[41px] font-medium">
+                                Bonder's CEO recognized an opportunity to grow the platform
+                            </span>
+                            <span className="text-lg md:text-[30px] md:leading-[36px]">
+                                {" "}through new partnerships with Lifetime Fitness. However, because these experiences were entirely new, the app lacked the foundational user flows needed to support onboarding, event discovery, and partner engagement.
+                            </span>
                         </p>
-                        <p className="text-[#6e6764] text-lg md:text-2xl leading-relaxed">
-                            💡 My role was to create net-new interaction flows that define how users navigate, access, and benefit from these partnerships. The challenge was to design intuitive pathways that feel native to Bonder while serving the unique needs of each partner.
+                        <p className="text-[#6F6864] leading-relaxed">
+                            <span className="text-lg md:text-[30px] md:leading-[36px]">
+                                💡
+                            </span>
+                            <span className="text-lg md:text-[34px] md:leading-[41px] font-medium">
+                                {" "}My role was to create net-new interaction flows
+                            </span>
+                            <span className="text-lg md:text-[30px] md:leading-[36px]">
+                                {" "}that define how users navigate, access, and benefit from these partnerships. The challenge was to design intuitive pathways that feel native to Bonder while serving the unique needs of each partner.
+                            </span>
                         </p>
                     </div>
                 }
@@ -145,16 +159,22 @@ const BonderCaseStudy = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Discovery:" />}
                 right={
-                    <div className="flex flex-col gap-4 md:pt-16">
-                        <h3 className="text-xl md:text-2xl font-semibold text-[#6e6764] leading-tight">
+                    <div className="flex flex-col gap-5">
+                        <p className="font-semibold text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] text-center">
                             Understanding the Problem Space:
-                        </h3>
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                            <span className="font-semibold">Researching Lifetime's role within Bonder highlighted how scattered and inconsistent</span> wellness and membership experiences can be. My goal was to understand why users often struggle to feel connected, supported, and aware of what their venue offers, especially when navigating services, events, and community activities.
                         </p>
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                            <span className="font-semibold">Early exploration revealed a consistent issue:</span> members often feel unsure about how to access or engage with their venue's full ecosystem. They struggle to find events, understand available services, and get support. Current platforms don't offer a unified experience that creates clarity, connection, or a sense of belonging.
-                        </p>
+                        <div className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
+                            <p>
+                                <span className="font-medium">Researching Lifetime's role within Bonder highlighted how scattered and inconsistent</span>
+                                <span> wellness and membership experiences can be. My goal was to understand why users often struggle to feel connected, supported, and aware of what their venue offers, especially when navigating services, events, and community activities.</span>
+                            </p>
+                            <p className="mt-5">
+                                <span className="font-medium">Early exploration revealed a consistent issue:</span>
+                                <span> members often feel unsure about how to access or engage with their venue's full ecosystem. They struggle to find events, understand available services, and get support. </span>
+                                <span className="font-medium">Current platforms don't offer a unified experience</span>
+                                <span> that creates clarity, connection, or a sense of belonging.</span>
+                            </p>
+                        </div>
                     </div>
                 }
             />
@@ -163,7 +183,7 @@ const BonderCaseStudy = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Persona:" />}
                 right={
-                    <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
+                    <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                         I created this persona to capture the needs of a typical Lifetime member who wants to stay engaged but often feels unsure about how to navigate the venue's full range of services. Miles reflects the goals and frustrations observed in research and helped guide the design toward clearer access to events, easier communication with staff, and a more connected membership experience.
                     </p>
                 }
@@ -171,27 +191,13 @@ const BonderCaseStudy = () => {
 
             {/* Persona Card */}
             <ContentSection className="!pt-0 !pb-16">
-                <div className="w-full rounded-2xl">
+                <div className="w-full max-w-[1100px] mx-auto rounded-2xl">
                     <img src={`${import.meta.env.BASE_URL}figmaAssets/persona-miles.png`} alt="Persona Miles" className="w-full h-auto rounded-2xl shadow-sm" />
                 </div>
             </ContentSection>
 
             {/* Competitive Audit */}
-            <TwoColumnSection
-                left={<SectionHeading title="Competitive Audit:" />}
-                right={
-                    <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                        Analyzing competitors helped reveal where current fitness and membership apps succeed and where they fall short. While they offer strong booking and discovery tools, competitors lack unified event flows, real-time support, and connected venue ecosystems. These gaps highlight clear opportunities for Bonder to improve the Lifetime member experience.
-                    </p>
-                }
-            />
-
-            {/* Competitive Audit Diagram */}
-            <ContentSection className="!pt-0 !pb-16">
-                <div className="w-full rounded-2xl">
-                    <img src={`${import.meta.env.BASE_URL}figmaAssets/bonder-competitive-audit.png`} alt="Competitive Audit" className="w-full h-auto rounded-2xl shadow-sm" />
-                </div>
-            </ContentSection>
+            <CompetitiveAuditSection />
 
             {/* Key Insights */}
             <KeyInsights
@@ -205,11 +211,11 @@ const BonderCaseStudy = () => {
             <TwoColumnSection
                 left={<SectionHeading title="How Might We?" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="font-medium text-[#6e6764] text-xl md:text-2xl leading-tight">
+                    <div className="flex flex-col gap-6">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight">
                             Turning insights into opportunity through the right questions.
                         </p>
-                        <ul className="space-y-4 text-[#6e6764] text-lg md:text-xl">
+                        <ul className="space-y-4 text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
                             <li className="flex gap-3 items-start">
                                 <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
                                 <span>How might we help members easily understand and navigate Lifetime's full ecosystem?</span>
@@ -246,24 +252,13 @@ const BonderCaseStudy = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Solution Overview:" />}
                 right={
-                    <div className="flex flex-col md:pt-16">
-                        <p className="font-medium text-[#6e6764] text-xl md:text-2xl leading-tight mb-8">
-                            Turning insights into a streamlined, unified member experience.
+                    <div className="flex flex-col gap-6">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight">
+                            Bonder is a community-first platform designed to bridge the gap between digital interaction and real-world connection.
                         </p>
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                            Bonder streamlines the Lifetime member experience by unifying events, community engagement, and staff communication into one clear platform. It reduces the confusion of scattered tools and helps members stay informed, connected, and engaged with their venue.
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                            For Life Time Fitness, the goal was to create a branded digital ecosystem—a "Third Place"—where members could connect, find workout partners, and engage with the club’s community beyond the gym floor.
                         </p>
-                        <div className="mt-12 text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                            <p className="font-medium text-xl md:text-2xl mb-6">
-                                The solution is shaped by four core goals:
-                            </p>
-                            <ol className="list-decimal pl-5 space-y-6 md:space-y-8">
-                                <li className="pl-2">Help members easily discover and join relevant events and communities.</li>
-                                <li className="pl-2">Create a unified space where communication with staff and advisors feels simple and accessible.</li>
-                                <li className="pl-2">Reduce friction caused by fragmented tools, calendars, and discovery channels.</li>
-                                <li className="pl-2">Support long-term engagement through personalized recommendations and connected member journeys.</li>
-                            </ol>
-                        </div>
                     </div>
                 }
             />
@@ -272,7 +267,7 @@ const BonderCaseStudy = () => {
             <ContentSection bgColor="bg-[#f0f0f0]">
                 <div className="flex flex-col md:flex-row gap-10 mb-12">
                     <SectionHeading title="User Journey:" className="md:whitespace-nowrap" />
-                    <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed max-w-2xl">
+                    <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                         Mapping the emotional journey from discovery to lasting connections. This journey illustrates how a first-time Bonder user moves from initial awareness to long-term community engagement. Each stage highlights the user's goals, emotions, and key product opportunities that reduce friction and support meaningful, real-world connections.
                     </p>
                 </div>
@@ -319,38 +314,33 @@ const BonderCaseStudy = () => {
             </ContentSection>
 
             {/* Information Architecture */}
-            <ContentSection>
-                <div className="flex flex-col md:flex-row gap-10 md:gap-16">
-                    <div className="lg:w-1/2">
-                        <SectionHeading title="Information Architecture:" className="md:whitespace-nowrap" />
+            <TwoColumnSection
+                left={<SectionHeading title="Information Architecture:" />}
+                right={
+                    <div className="flex flex-col gap-6">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-relaxed">
+                            To translate strategic insights into a clear product structure, I mapped the core navigation system.
+                        </p>
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                            The information architecture shows how members move through key areas of the app, forming the basis for its user flows and interface design.
+                        </p>
                     </div>
-                    <div className="lg:w-1/2">
-                        <div className="flex flex-col gap-6 md:pt-16">
-                            <p className="font-medium text-[#6e6764] text-xl md:text-2xl leading-relaxed">
-                                To translate strategic insights into a clear product structure, I mapped the core navigation system.
-                            </p>
-                            <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                                The information architecture shows how members move through key areas of the app, forming the basis for its user flows and interface design.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </ContentSection>
+                }
+            />
             <ContentSection className="!pt-0 !pb-16">
-                <div className="w-full rounded-2xl">
-                    <img src={`${import.meta.env.BASE_URL}figmaAssets/bonder-ia.png`} alt="Information Architecture Diagram" className="w-full h-auto rounded-2xl shadow-sm" />
-                </div>
+                <InfoArchitectureSection />
             </ContentSection>
 
             {/* User Flows */}
             <TwoColumnSection
+                className="!pb-5"
                 left={<SectionHeading title="User Flows:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="font-medium text-[#6e6764] text-xl md:text-2xl">
+                    <div className="flex flex-col gap-6">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
                             These user flows outline the event flow within the Bonder app, mapping how users discover, join, and engage with Life Time Fitness events.
                         </p>
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                             Defining this flow early helped validate system logic, reduce friction for Life Time members, and ensure a seamless experience from entry to participation.
                         </p>
                     </div>
@@ -358,7 +348,7 @@ const BonderCaseStudy = () => {
             />
             <ContentSection className="!pt-0 !pb-16">
                 <div className="w-full rounded-2xl">
-                    <img src={`${import.meta.env.BASE_URL}figmaAssets/bonder-user-flow.png`} alt="User Flow Diagram" className="w-full h-auto rounded-2xl shadow-sm" />
+                    <img src={`${import.meta.env.BASE_URL}figmaAssets/bonder-user-flow.png`} alt="User Flow Diagram" className="w-full max-w-[800px] mx-auto h-auto rounded-2xl shadow-sm" />
                 </div>
             </ContentSection>
 
@@ -366,8 +356,8 @@ const BonderCaseStudy = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Lo-Fi Wireframes:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
+                    <div className="flex flex-col gap-6">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                             To support the Lifetime partnership, I created Lo-Fi wireframes for the Bonder app that map out key user journeys and core functionality. This step prioritized usability, content organization, and flow clarity to ensure an intuitive experience before refining visual design.
                         </p>
                     </div>
@@ -381,11 +371,11 @@ const BonderCaseStudy = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Hi-Fi Wireframes:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="font-medium text-[#6e6764] text-xl md:text-2xl">
+                    <div className="flex flex-col gap-6">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
                             The Hi-Fi designs brought the app's visual identity to life.
                         </p>
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                             Moving onto high-fidelity screens helped refine the visual system, unify the design language, and ensure the interface felt intuitive and welcoming for Lifetime members and the broader Bonder community.
                         </p>
                     </div>
@@ -406,16 +396,14 @@ const BonderCaseStudy = () => {
                         <StepCard key={index} {...step} />
                     ))}
                 </div>
-                <p className="mt-12 text-left text-[#6e6764] text-base md:text-lg max-w-3xl mx-auto">
-                    Thank you for reviewing this case study. I'm always open to
-                    feedback and would love to discuss how these design solutions could be
-                    applied to your projects.
+                <p className="mt-12 text-center text-[#6F6864] text-base md:text-[28px] md:leading-[33px] max-w-5xl mx-auto">
+                    Thank you for reviewing this case study. I'm always open to feedback and would love to discuss how these design solutions could be applied to your projects.
                 </p>
             </ContentSection>
 
             {/* CTA */}
-            {/* CTA */}
-            <GetInTouchSection theme="dark" />
+            {/* Contact CTA */}
+            <GetInTouchSection theme="dark" bgColor="bg-[#6F6864]" buttonBgColor="#D9D9D9" buttonTextColor="black" />
 
         </div>
     );

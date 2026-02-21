@@ -82,7 +82,7 @@ const Process: React.FC = () => {
                                 key={step.id}
                                 initial={{ opacity: 0, y: 40 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-50px" }}
+                                viewport={{ once: false, margin: "-50px" }}
                                 transition={{
                                     delay: index * 0.15,
                                     duration: 0.6,

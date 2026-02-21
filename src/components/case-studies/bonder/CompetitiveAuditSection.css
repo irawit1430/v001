@@ -1,0 +1,157 @@
+/* Bonder Competitive Audit Section */
+.bd-audit-section {
+    padding: 80px 20px;
+    max-width: 1244px;
+    margin: 0 auto;
+}
+
+.bd-audit-container {
+    width: 100%;
+}
+
+/* Header Layout */
+.bd-audit-header {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.bd-audit-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+    flex: 0 0 250px;
+    white-space: nowrap;
+}
+
+.bd-audit-content {
+    flex: 1;
+}
+
+.bd-audit-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #6F6864;
+    margin: 0;
+}
+
+.bd-audit-text strong {
+    color: #333333;
+}
+
+/* Table Wrapper */
+.bd-audit-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Table Styles */
+.bd-audit-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 900px;
+}
+
+.bd-audit-table th,
+.bd-audit-table td {
+    padding: 16px 20px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+/* Header Row */
+.bd-table-header {
+    background: #000000;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.bd-table-header.bd-row-header {
+    background: #000000;
+    width: 140px;
+}
+
+/* Row Labels */
+.bd-row-label {
+    background: #7B7B7B !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+    width: 140px;
+    font-size: 14px;
+}
+
+/* Table Body alternating columns */
+.bd-audit-table td:nth-child(2),
+.bd-audit-table td:nth-child(4) {
+    background: #FFFFFF;
+}
+
+.bd-audit-table td:nth-child(3),
+.bd-audit-table td:nth-child(5) {
+    background: #EBF8FF;
+}
+
+.bd-audit-table td {
+    color: #333333;
+    line-height: 1.5;
+}
+
+/* Links */
+.bd-audit-table a {
+    color: #8C52FF;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.bd-audit-table a:hover {
+    color: #7234ED;
+}
+
+/* Lists in table */
+.bd-audit-table ul {
+    margin: 0;
+    padding-left: 18px;
+    list-style-type: disc;
+}
+
+.bd-audit-table li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.bd-audit-table li:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bd-audit-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bd-audit-title {
+        font-size: 26px;
+        flex: none;
+    }
+
+    .bd-audit-text {
+        font-size: 16px;
+    }
+
+    .bd-audit-table {
+        font-size: 13px;
+    }
+
+    .bd-audit-table th,
+    .bd-audit-table td {
+        padding: 12px 14px;
+    }
+}

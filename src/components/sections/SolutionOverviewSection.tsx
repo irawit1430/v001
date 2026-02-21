@@ -5,7 +5,7 @@ const SolutionOverviewSection: React.FC = () => {
         <section className="py-20 px-5 max-w-[1244px] mx-auto pb-20">
             <div className="flex gap-10 items-start flex-wrap md:flex-col md:gap-5">
                 <div className="flex-1 min-w-[250px]">
-                    <h2 className="text-[40px] font-medium text-black mb-[30px] md:text-[32px]">Solution Overview:</h2>
+                    <h2 className="text-[40px] font-medium text-black mb-[30px] md:text-[32px] whitespace-nowrap">Solution Overview:</h2>
                 </div>
                 <div className="flex-[2] min-w-[300px]">
                     <p className="text-[28px] text-[#6F6864] mb-5 font-medium md:text-[24px]">

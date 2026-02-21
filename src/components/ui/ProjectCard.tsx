@@ -22,7 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         <motion.div
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: false, margin: "-80px" }}
             transition={{
                 duration: 0.7,
                 delay: index * 0.12,
@@ -75,9 +75,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                     {project.link ? (
                         <Link to={project.link} className="flex-shrink-0">
                             <motion.button
-                                className="bg-gradient-to-r from-[#ff6f61] to-[#ff9e80] text-white rounded-[5px] px-3 md:px-4 py-2 font-['SF_Pro_Display',sans-serif] font-medium text-xs md:text-[14px] whitespace-nowrap border-none cursor-pointer"
-                                whileHover={{ boxShadow: '0 4px 12px rgba(255, 111, 97, 0.4)' }}
-                                whileTap={{ scale: 0.97 }}
+                                className="bg-gradient-to-r from-[#ff6f61] to-[#ff9e80] text-white rounded-[5px] px-3 md:px-4 py-2 font-['SF_Pro_Display',sans-serif] font-medium text-xs md:text-[14px] whitespace-nowrap border-none cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                                 transition={{ duration: 0.2 }}
                             >
                                 View Case Study
@@ -85,9 +85,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                         </Link>
                     ) : (
                         <motion.button
-                            className="bg-gradient-to-r from-[#ff6f61] to-[#ff9e80] text-white rounded-[5px] px-3 md:px-4 py-2 font-['SF_Pro_Display',sans-serif] font-medium text-xs md:text-[14px] whitespace-nowrap border-none cursor-pointer flex-shrink-0"
-                            whileHover={{ boxShadow: '0 4px 12px rgba(255, 111, 97, 0.4)' }}
-                            whileTap={{ scale: 0.97 }}
+                            className="bg-gradient-to-r from-[#ff6f61] to-[#ff9e80] text-white rounded-[5px] px-3 md:px-4 py-2 font-['SF_Pro_Display',sans-serif] font-medium text-xs md:text-[14px] whitespace-nowrap border-none cursor-pointer flex-shrink-0 shadow-lg hover:shadow-2xl transition-all duration-300"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
                             transition={{ duration: 0.2 }}
                         >
                             View Case Study

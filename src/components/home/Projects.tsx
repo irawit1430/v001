@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+
+
 import { Link } from 'react-router-dom';
 
 import projectFreshOut from '../../assets/project-fresh-out.png';
@@ -60,8 +60,9 @@ const Projects: React.FC = () => {
             </h2>
 
             {/* Subtitle */}
-            <p className="font-['SF_Pro_Display',sans-serif] text-[24px] text-[#6f6864] text-center max-w-[885px] mx-auto mb-16 leading-normal tracking-[1.2px]">
-                A showcase of recent work spanning from mobile apps, web applications, and comprehensive UX research projects.
+            <p className="font-['SF_Pro_Display',sans-serif] text-[24px] text-[#6f6864] text-left max-w-[960px] mx-auto mb-16 leading-normal tracking-[1.2px]">
+                A showcase of recent work spanning from mobile apps, web applications,<br />
+                and comprehensive UX research projects.
             </p>
 
             {/* Project Cards Grid */}

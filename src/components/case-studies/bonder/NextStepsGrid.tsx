@@ -31,7 +31,7 @@ const NextStepsGrid = () => {
         <section className="w-full bg-white py-16 md:py-24">
             <div className="max-w-container mx-auto px-4 md:px-8 flex flex-col gap-12">
 
-                <h2 className="text-[32px] font-medium text-black leading-tight">
+                <h2 className="text-[32px] font-medium text-black leading-tight whitespace-nowrap">
                     Next Steps:
                 </h2>
 

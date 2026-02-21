@@ -11,7 +11,7 @@ const RecordzWireframesSection: React.FC = () => {
             <div className="max-w-[1244px] mx-auto">
                 {/* Header */}
                 <div className="flex gap-[60px] items-start flex-wrap mb-[50px] md:flex-col md:gap-5">
-                    <h2 className="text-[32px] font-medium text-white m-0 flex-[0_0_220px] md:text-[26px] md:flex-none">Lo-Fi Wireframes:</h2>
+                    <h2 className="text-[32px] font-medium text-white m-0 flex-[0_0_220px] md:text-[26px] md:flex-none whitespace-nowrap">Lo-Fi Wireframes:</h2>
                     <div className="flex-1 min-w-[300px]">
                         <p className="text-[20px] leading-[1.5] text-white mb-4 md:text-[18px]">
                             <strong>Low-fidelity wireframes were created to establish a clear and intuitive layout for 1331 Recordz's dual studio and label platform.</strong>

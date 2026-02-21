@@ -16,9 +16,9 @@ export function HeroSection({ title, subtitle, imageSrc, imageAlt = "" }: HeroSe
                     {subtitle}
                 </p>
             </div>
-            <div className="relative z-0 w-full flex justify-center -mt-8 md:-mt-12">
+            <div className="relative z-0 w-full flex justify-center mt-2 md:mt-0">
                 <img
-                    className="w-full max-w-[1200px] h-auto object-contain px-6"
+                    className="w-full max-w-[1000px] h-auto object-contain px-6"
                     alt={imageAlt}
                     src={imageSrc}
                 />

@@ -4,6 +4,8 @@ import { HeroSection } from "../components/case-studies/new-template/layout/Hero
 import { ContentSection } from "../components/case-studies/new-template/layout/ContentSection";
 import { TwoColumnSection } from "../components/case-studies/new-template/layout/TwoColumnSection";
 import { SectionHeading } from "../components/case-studies/new-template/layout/SectionHeading";
+import FreshOutCompetitiveAuditSection from "../components/case-studies/fresh-out/FreshOutCompetitiveAuditSection";
+import FreshOutInformationArchitectureSection from "../components/case-studies/fresh-out/FreshOutInformationArchitectureSection";
 
 import GetInTouchSection from "../components/sections/GetInTouchSection";
 import { ProjectDetailGrid } from "../components/case-studies/new-template/cards/ProjectDetailGrid";
@@ -11,7 +13,8 @@ import { StepCard } from "../components/case-studies/new-template/cards/StepCard
 import { ImageGallery } from "../components/case-studies/new-template/cards/ImageGallery";
 import ResearchOverview from "../components/case-studies/shared/ResearchOverview";
 import KeyInsights from "../components/case-studies/shared/KeyInsights";
-
+import FreshOutUserFlow from "../components/case-studies/fresh-out/FreshOutUserFlow";
+import FreshOutEventFlow from "../components/case-studies/fresh-out/FreshOutEventFlow";
 
 
 const projectDetails = [
@@ -90,7 +93,7 @@ const loFiScreens = [
 
 const FreshOutPage = () => {
     return (
-        <div className="bg-white overflow-hidden w-full">
+        <div className="min-h-screen bg-[#FFFFFF] overflow-hidden w-full">
 
 
             <HeroSection
@@ -101,7 +104,7 @@ const FreshOutPage = () => {
             />
 
             {/* Project Details */}
-            <ContentSection bgColor="bg-gray-50">
+            <ContentSection bgColor="bg-[#F9FAFB]">
                 <ProjectDetailGrid details={projectDetails} />
             </ContentSection>
 
@@ -111,21 +114,33 @@ const FreshOutPage = () => {
                     <SectionHeading title="Problem Statement:" />
                 }
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="font-medium text-[#6F6864] text-lg md:text-[34px] md:leading-[41px] leading-relaxed">
-                            Upon transitioning out of the military, veterans frequently encounter
-                            profound feelings of isolation.
-                            This period can be exceptionally challenging for them as they are
-                            compelled to embark on a fresh journey, encompassing their
-                            professional pursuits, place of residence, and social circles.
+                    <div className="flex flex-col gap-6">
+                        <p className="text-[#6F6864] leading-relaxed">
+                            <span className="text-lg md:text-[34px] md:leading-[41px] font-medium">
+                                Upon transitioning out of the military, veterans frequently encounter
+                                profound feelings of isolation.{" "}
+                            </span>
+                            <span className="text-lg md:text-[30px] md:leading-[36px]">
+                                This period can be exceptionally challenging for them as they are
+                                compelled to embark on a fresh journey, encompassing their
+                                professional pursuits, place of residence, and social circles.
+                            </span>
                         </p>
-                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
-                            <span className="font-semibold">
-                                💡In Response to this problem,
-                            </span>{" "}
-                            veterans are actively pursuing avenues to establish connections with
-                            fellow veterans, thereby facilitating networking opportunities and
-                            fostering meaningful interpersonal bonds.
+                        <p className="text-[#6F6864] leading-relaxed">
+                            <span className="text-lg md:text-[30px] md:leading-[36px]">
+                                💡
+                            </span>
+                            <span className="text-lg md:text-[34px] md:leading-[41px] font-medium">
+                                In Response to this problem
+                            </span>
+                            <span className="text-lg md:text-[30px] md:leading-[36px] font-medium">
+                                ,{" "}
+                            </span>
+                            <span className="text-lg md:text-[30px] md:leading-[36px]">
+                                veterans are actively pursuing avenues to establish connections with
+                                fellow veterans, thereby facilitating networking opportunities and
+                                fostering meaningful interpersonal bonds.
+                            </span>
                         </p>
                     </div>
                 }
@@ -142,64 +157,59 @@ const FreshOutPage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Discovery:" />}
                 right={
-                    <div className="flex flex-col gap-4 md:pt-16">
-                        <h3 className="font-semibold text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
+                    <div className="flex flex-col gap-5">
+                        <p className="font-semibold text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] text-center">
                             Understanding the Problem Space:
-                        </h3>
-                        <p className="font-medium text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
-                            Transitioning out of the military is a major life shift that impacts
-                            every dimension of a veteran's life
-                            — community, identity, support systems, and daily structure. While
-                            researching this challenge,
-                            my goal was to understand the emotional, social, and logistical
-                            hurdles veterans face
-                            when trying to build new connections in civilian life.
                         </p>
-                        <p className="font-medium text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
-                            Through early exploration, I
-                            uncovered a recurring theme:
-                            veterans often feel disconnected,
-                            unseen, and unsupported during the transition period,
-                            especially when they relocate,
-                            enroll in school, or pursue new careers.
-                            Traditional social platforms fail to recreate the sense of camaraderie
-                            and trust veterans are accustomed to.
-                        </p>
+                        <div className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
+                            <p>
+                                <span className="font-medium">Transitioning out of the military is a major life shift that impacts every dimension of a veteran's life</span>
+                                <span> — community, identity, support systems, and daily structure. While researching this challenge</span>
+                                <span className="font-medium">, my goal was to understand the emotional, social, and logistical hurdles veterans face</span>
+                                <span> when trying to build new connections in civilian life.</span>
+                            </p>
+                            <p className="mt-5">
+                                <span>Through early </span>
+                                <span className="font-medium">exploration,</span>
+                                <span> I </span>
+                                <span className="font-medium">uncovered a recurring theme:</span>
+                                <br />
+                                <span>veterans</span>
+                                <span className="font-medium"> often feel disconnected</span>
+                                <span>, unseen, and unsupported during the transition period, </span>
+                                <span className="font-medium">especially when they relocate,</span>
+                                <span> enroll in school, or pursue new careers. </span>
+                                <span className="font-medium">Traditional social platforms fail to recreate the sense of camaraderie </span>
+                                <span>and trust veterans are accustomed to.</span>
+                            </p>
+                        </div>
                     </div>
                 }
             />
 
-            {/* Discovery Image */}
+            {/* Discovery Images */}
             <ContentSection className="!py-0">
-                <img
-                    className="w-full h-auto object-contain"
-                    alt="Discovery research"
-                    src={`${import.meta.env.BASE_URL}figmaAssets/discovery-image-group.png`}
-                />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[1100px] mx-auto">
+                    <img
+                        className="w-full h-auto object-cover rounded-xl"
+                        alt="Discovery research 1"
+                        src={`${import.meta.env.BASE_URL}figmaAssets/freshout-discovery-1.jpg`}
+                    />
+                    <img
+                        className="w-full h-auto object-cover rounded-xl"
+                        alt="Discovery research 2"
+                        src={`${import.meta.env.BASE_URL}figmaAssets/freshout-discovery-2.png`}
+                    />
+                    <img
+                        className="w-full h-auto object-cover rounded-xl"
+                        alt="Discovery research 3"
+                        src={`${import.meta.env.BASE_URL}figmaAssets/freshout-discovery-3.jpg`}
+                    />
+                </div>
             </ContentSection>
 
             {/* Competitive Audit */}
-            <TwoColumnSection
-                left={<SectionHeading title="Competitive Audit:" />}
-                right={
-                    <p className="font-medium text-[#6F6864] text-lg md:text-[34px] md:leading-[41px] leading-relaxed md:pt-16">
-                        The competitive audit evaluates key platforms
-                        that support veterans in building community, accessing resources, and
-                        navigating post-service life. By comparing core features, strengths,
-                        and weaknesses across competitors, this analysis reveals clear
-                        opportunities to differentiate the product and address unmet needs
-                        within the veteran support landscape.
-                    </p>
-                }
-            />
-
-            <ContentSection className="!pt-0 !pb-16">
-                <img
-                    className="w-full h-auto object-cover"
-                    alt="Competitive audit"
-                    src={`${import.meta.env.BASE_URL}figmaAssets/conpersensive-audit-image.png`}
-                />
-            </ContentSection>
+            <FreshOutCompetitiveAuditSection />
 
             {/* Key Insights */}
             <KeyInsights
@@ -212,23 +222,35 @@ const FreshOutPage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="How Might We?" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
+                    <div className="flex flex-col gap-6">
                         <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight">
                             Turning insights into opportunity through the right questions.
                         </p>
-                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
-                            How might we reduce digital overwhelm during transition?
-                            How might we build purposeful, meaningful interactions?
-                            How might we help veterans feel safe and in control?
-                            How might we surface shared military experiences?
-                        </p>
+                        <ul className="space-y-4 text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
+                            <li className="flex gap-3 items-start">
+                                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
+                                <span>How might we reduce digital overwhelm during transition?</span>
+                            </li>
+                            <li className="flex gap-3 items-start">
+                                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
+                                <span>How might we build purposeful, meaningful interactions?</span>
+                            </li>
+                            <li className="flex gap-3 items-start">
+                                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
+                                <span>How might we help veterans feel safe and in control?</span>
+                            </li>
+                            <li className="flex gap-3 items-start">
+                                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
+                                <span>How might we surface shared military experiences?</span>
+                            </li>
+                        </ul>
                     </div>
                 }
             />
 
             <ContentSection className="!py-0">
                 <img
-                    className="w-full h-auto object-contain"
+                    className="w-full max-w-[1100px] mx-auto h-auto rounded-2xl"
                     alt="How might we"
                     src={`${import.meta.env.BASE_URL}figmaAssets/how-might-we-image-group.png`}
                 />
@@ -238,7 +260,7 @@ const FreshOutPage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Solution Overview:" />}
                 right={
-                    <div className="flex flex-col md:pt-16">
+                    <div className="flex flex-col">
                         <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight mb-8">
                             Turning insights into opportunity with the right questions.
                         </p>
@@ -252,7 +274,7 @@ const FreshOutPage = () => {
                             <p className="font-medium text-xl md:text-[34px] md:leading-[41px] mb-6">
                                 The solution is shaped by four core goals:
                             </p>
-                            <ol className="list-decimal pl-5 space-y-6 md:space-y-8 text-lg md:text-[34px] md:leading-[41px] font-medium">
+                            <ol className="list-decimal pl-5 space-y-6 md:space-y-8 text-lg md:text-[34px] md:leading-[41px] font-normal">
                                 <li className="pl-2">Enable veterans to connect through shared service experience</li>
                                 <li className="pl-2">Create a safe and trusted environment for communication</li>
                                 <li className="pl-2">Reduce the noise of traditional social feeds</li>
@@ -267,7 +289,7 @@ const FreshOutPage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Information Architecture:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
+                    <div className="flex flex-col gap-6">
                         <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-relaxed">
                             To translate strategic insights into a clear product structure, I
                             mapped Fresh Out's core navigation system.
@@ -280,19 +302,15 @@ const FreshOutPage = () => {
                 }
             />
 
-            <ContentSection className="!py-4">
-                <img
-                    className="w-full h-auto"
-                    alt="Information Architecture"
-                    src={`${import.meta.env.BASE_URL}figmaAssets/freshout-info-architecture.png`}
-                />
+            <ContentSection className="!py-4 !px-0 sm:!px-4 md:!px-8 w-full max-w-full overflow-hidden">
+                <FreshOutInformationArchitectureSection />
             </ContentSection>
 
             {/* User Flows */}
             <TwoColumnSection
                 left={<SectionHeading title="User Flows:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
+                    <div className="flex flex-col gap-6">
                         <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
                             These user flows outline the key steps veterans take inside the app.
                         </p>
@@ -305,15 +323,15 @@ const FreshOutPage = () => {
                 }
             />
 
-            <ContentSection>
-                <div className="space-y-12">
-                    <div>
-                        <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4">Sign up</p>
-                        <img className="w-full h-auto object-cover" alt="Sign up flow" src={`${import.meta.env.BASE_URL}figmaAssets/sign-up.svg`} />
+            <ContentSection className="!px-0 sm:!px-4 md:!px-8 w-full max-w-full">
+                <div className="space-y-12 w-full">
+                    <div className="w-full overflow-hidden">
+                        <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4 pl-4 md:pl-0">Sign up</p>
+                        <FreshOutUserFlow />
                     </div>
-                    <div>
-                        <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4">Events</p>
-                        <img className="w-full h-auto object-cover" alt="Events flow" src={`${import.meta.env.BASE_URL}figmaAssets/event.png`} />
+                    <div className="px-4 md:px-0 overflow-hidden">
+                        <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4 pl-4 md:pl-0">Events</p>
+                        <FreshOutEventFlow />
                     </div>
                 </div>
             </ContentSection>
@@ -322,7 +340,7 @@ const FreshOutPage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Survey:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
+                    <div className="flex flex-col gap-6">
                         <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
                             Survey responses revealed common pain points and opportunities.
                         </p>
@@ -335,12 +353,11 @@ const FreshOutPage = () => {
             />
 
             <ContentSection>
-                <img className="w-full h-auto object-cover" alt="Survey infograph" src={`${import.meta.env.BASE_URL}figmaAssets/survey-infograph.png`} />
-                <p className="mt-8 text-[#6F6864] text-base md:text-[28px] md:leading-[33px] leading-relaxed text-left max-w-4xl mx-auto">
-                    Because the survey included 7 participants,
-                    these results should be interpreted directionally. They highlight clear trends but
-                    are not statistically generalizable. The findings were used to guide early design
-                    decisions and will be validated further with additional testing.
+                <img className="w-full max-w-[1100px] mx-auto h-auto rounded-2xl" alt="Survey infograph" src={`${import.meta.env.BASE_URL}figmaAssets/survey-infograph.png`} />
+                <p className="mt-10 text-[#6F6864] text-base md:text-[28px] md:leading-[33px] leading-relaxed text-left max-w-[1146px] mx-auto">
+                    <span> Because the survey</span>
+                    <span className="font-medium"> included 7 participants</span>
+                    <span>, these results should be interpreted directionally. They highlight clear trends but are not statistically generalizable. The findings were used to guide early design decisions and will be validated further with additional testing.</span>
                 </p>
             </ContentSection>
 
@@ -348,7 +365,7 @@ const FreshOutPage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Lo-Fi Wireframes:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
+                    <div className="flex flex-col gap-6">
                         <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
                             Early wireframes helped shape the core structure of the app.
                         </p>
@@ -371,7 +388,7 @@ const FreshOutPage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Hi-Fi Wireframes:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
+                    <div className="flex flex-col gap-6">
                         <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
                             The Hi-Fi designs brought the app's visual identity to life.
                         </p>
@@ -386,7 +403,7 @@ const FreshOutPage = () => {
             />
 
             <ContentSection className="!py-0">
-                <img className="w-full h-auto object-cover" alt="Hi-Fi wireframes" src={`${import.meta.env.BASE_URL}figmaAssets/hifi.png`} />
+                <img className="w-full max-w-[1100px] mx-auto h-auto rounded-2xl" alt="Hi-Fi wireframes" src={`${import.meta.env.BASE_URL}figmaAssets/hifi.png`} />
             </ContentSection>
 
             {/* Key Features */}
@@ -398,13 +415,13 @@ const FreshOutPage = () => {
                     </div>
                 }
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="font-medium text-[#6F6864] text-lg md:text-[34px] md:leading-[41px] leading-relaxed">
+                    <div className="flex flex-col gap-6">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[34px] md:leading-[41px] leading-relaxed">
                             The key features below highlight the core
                             functionality of the product, each designed to support veterans in staying informed,
                             connected, and in control of their transition journey.
                         </p>
-                        <ul className="space-y-3 text-[#6F6864] font-medium text-lg md:text-[30px] md:leading-[36px]">
+                        <ul className="space-y-3 text-[#6F6864] font-normal text-lg md:text-[30px] md:leading-[36px]">
                             <li>Housing Finder</li>
                             <li>Roommate Search</li>
                             <li>Localized Events</li>
@@ -427,16 +444,14 @@ const FreshOutPage = () => {
                         <StepCard key={index} {...step} />
                     ))}
                 </div>
-                <p className="mt-12 text-center text-[#6F6864] text-base md:text-[28px] md:leading-[33px] max-w-3xl mx-auto">
-                    Thank you for reviewing this case study. I'm always open to
-                    feedback and would love to discuss how these design solutions could be
-                    applied to your projects.
+                <p className="mt-12 text-center text-[#6F6864] text-base md:text-[28px] md:leading-[33px] max-w-5xl mx-auto">
+                    Thank you for reviewing this case study. I'm always open to feedback and would love to discuss how these design solutions could be applied to your projects.
                 </p>
             </ContentSection>
 
             {/* Contact CTA */}
             {/* Contact CTA */}
-            <GetInTouchSection theme="dark" />
+            <GetInTouchSection theme="dark" bgColor="bg-[#2E3278]" buttonBgColor="#0954E2" buttonTextColor="white" />
 
         </div>
     );

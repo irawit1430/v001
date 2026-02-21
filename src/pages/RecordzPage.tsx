@@ -1,5 +1,4 @@
 
-
 import { HeroSection } from "../components/case-studies/new-template/layout/HeroSection";
 import { ContentSection } from "../components/case-studies/new-template/layout/ContentSection";
 import { TwoColumnSection } from "../components/case-studies/new-template/layout/TwoColumnSection";
@@ -12,6 +11,7 @@ import { ImageGallery } from "../components/case-studies/new-template/cards/Imag
 import ResearchOverview from "../components/case-studies/shared/ResearchOverview";
 import KeyInsights from "../components/case-studies/shared/KeyInsights";
 import RecordzCompetitiveAuditSection from "../components/recordz/RecordzCompetitiveAuditSection";
+import RecordzUserFlowSection from "../components/recordz/RecordzUserFlowSection";
 
 // Import images
 import heroImage from '../assets/1331-recordz-hero.png';
@@ -23,6 +23,7 @@ import iconUserTesting from '../assets/icon-user-testing.png';
 import iconIterate from '../assets/icon-iterate.png';
 import iconAnalytics from '../assets/icon-analytics.png';
 import iconFeatures from '../assets/icon-features.png';
+import eventRef from '../assets/event-overlay.png';
 
 import challengeLaptop from '../assets/challenge-laptop.png';
 import challengeCircle from '../assets/challenge-circle.png';
@@ -38,8 +39,8 @@ import meetingHmw from '../assets/hmw-meeting.png';
 import wireframeHmw from '../assets/hmw-wireframe.png';
 import djHmw from '../assets/hmw-dj.png';
 
-import iaDiagram from '../assets/ia-diagram.png';
-import userFlowDiagram from '../assets/user-flow-diagram.png';
+// import iaDiagram from '../assets/ia-diagram.png';
+// import userFlowDiagram from '../assets/user-flow-diagram.png';
 
 import wireframeWelcome from '../assets/wireframe-welcome.png';
 import wireframeLanding from '../assets/wireframe-studio-landing.png';
@@ -128,13 +129,14 @@ const nextSteps = [
         icon: iconFeatures,
         title: "Future Features",
         description: "Explore premium features like event creation, business partnerships, and community moderation tools.",
+        overlayIcon: eventRef,
     },
 ];
 
 
 const RecordzPage = () => {
     return (
-        <div className="bg-white overflow-hidden w-full">
+        <div className="min-h-screen bg-[#FFFFFF] overflow-hidden w-full">
 
 
             <HeroSection
@@ -145,7 +147,7 @@ const RecordzPage = () => {
             />
 
             {/* Project Details */}
-            <ContentSection bgColor="bg-gray-50">
+            <ContentSection bgColor="bg-[#F9FAFB]">
                 <ProjectDetailGrid details={projectDetails} />
             </ContentSection>
 
@@ -153,9 +155,16 @@ const RecordzPage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Client Problem:" />}
                 right={
-                    <p className="text-[#6e6764] text-lg md:text-2xl leading-relaxed md:pt-16">
-                        <span className="font-semibold">1331 Recordz needed a cohesive website that clearly represented both sides of their business:</span> <em>a professional recording studio</em> and an <em>independent music label</em>. The challenge was to merge these two identities into a single experience while keeping each distinct, <span className="font-semibold">using color and visual hierarchy to differentiate studio services from label content</span> without confusing users.
-                    </p>
+                    <div className="flex flex-col gap-6">
+                        <p className="text-[#6F6864] leading-relaxed">
+                            <span className="text-lg md:text-[34px] md:leading-[41px] font-medium">1331 Recordz needed a cohesive website that clearly represented both sides of their business:</span>
+                            <span className="text-lg md:text-[30px] md:leading-[36px]">
+                                {" "}<em>a professional recording studio</em> and an <em>independent music label</em>. The challenge was to merge these two identities into a single experience while keeping each distinct,{" "}
+                            </span>
+                            <span className="text-lg md:text-[30px] md:leading-[36px] font-medium">using color and visual hierarchy to differentiate studio services from label content</span>
+                            <span className="text-lg md:text-[30px] md:leading-[36px]"> without confusing users.</span>
+                        </p>
+                    </div>
                 }
             />
 
@@ -180,16 +189,24 @@ const RecordzPage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Discovery:" />}
                 right={
-                    <div className="flex flex-col gap-4 md:pt-16">
-                        <h3 className="text-xl md:text-2xl font-semibold text-[#6e6764] leading-tight">Understanding the Creative Landscape:</h3>
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                            1331 Recordz was created to support independent artists navigating an industry that often values output over <span className="font-semibold">identity</span>. Many emerging musicians struggle with visibility, creative ownership, and access to trusted collaborators. Early exploration revealed a common need for spaces that prioritize authentic collaboration, creative freedom, and long-term growth. This discovery phase focused on understanding how artists work and how a studio and label can function as a creative partner and not a gatekeeper.
-                        </p>
+                    <div className="flex flex-col gap-5">
+                        <p className="font-semibold text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] text-center">Understanding the Creative Landscape:</p>
+                        <div className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
+                            <p>
+                                <span className="font-medium">1331 Recordz was created to support independent artists</span>
+                                <span> navigating an industry that often values output over identity. Many emerging musicians struggle with visibility, creative ownership, and access to trusted collaborators. </span>
+                                <span className="font-medium">Early exploration revealed a common need for spaces that prioritize authentic collaboration, creative freedom, and long-term growth.</span>
+                                <span> This discovery phase focused on understanding how artists work and how a studio and label can function as a creative partner and not a gatekeeper.</span>
+                            </p>
+                        </div>
                     </div>
                 }
             />
-            <ContentSection>
-                <ImageGallery images={discoveryImages} columns={3} />
+            {/* Discovery Images */}
+            <ContentSection className="!py-0">
+                <div className="max-w-[1100px] mx-auto rounded-2xl overflow-hidden">
+                    <ImageGallery images={discoveryImages} columns={3} />
+                </div>
             </ContentSection>
 
             {/* Key Insights */}
@@ -209,32 +226,32 @@ const RecordzPage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="How Might We?" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="font-medium text-[#6e6764] text-xl md:text-2xl leading-tight">
+                    <div className="flex flex-col gap-6">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight">
                             Turning insights into opportunity through the right questions.
                         </p>
-                        <ul className="space-y-4 text-[#6e6764] text-lg md:text-xl">
+                        <ul className="space-y-4 text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
                             <li className="flex gap-3 items-start">
                                 <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
-                                <span>How might we build <span className="font-semibold">trust and credibility</span> for independent artists using 1331 Recordz?</span>
+                                <span>How might we build <span className="font-medium">trust and credibility</span> for independent artists using 1331 Recordz?</span>
                             </li>
                             <li className="flex gap-3 items-start">
                                 <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
-                                <span>How might we <span className="font-semibold">simplify service discovery</span> so artists quickly understand their options?</span>
+                                <span>How might we <span className="font-medium">simplify service discovery</span> so artists quickly understand their options?</span>
                             </li>
                             <li className="flex gap-3 items-start">
                                 <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
-                                <span>How might we <span className="font-semibold">reduce friction and uncertainty</span> in the booking process?</span>
+                                <span>How might we <span className="font-medium">reduce friction and uncertainty</span> in the booking process?</span>
                             </li>
                             <li className="flex gap-3 items-start">
                                 <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
-                                <span>How might we design a platform that feels <span className="font-semibold">supportive, professional, and artist-centered</span>?</span>
+                                <span>How might we design a platform that feels <span className="font-medium">supportive, professional, and artist-centered</span>?</span>
                             </li>
                         </ul>
                     </div>
                 }
             />
-            <ContentSection>
+            <ContentSection className="!py-0">
                 <ImageGallery images={hmwImages} columns={2} />
             </ContentSection>
 
@@ -243,11 +260,11 @@ const RecordzPage = () => {
                 left={<SectionHeading title="Solution Overview:" />}
                 right={
                     <div className="flex flex-col gap-6">
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
+                        <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                             1331 Recordz is a Miami, FL–based independent record label and music studio that empowers artists through creative freedom, transparent practices, and hands-on production support.
                         </p>
-                        <div className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                            <p className="font-medium text-xl md:text-2xl mb-6">
+                        <div className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                            <p className="font-medium text-xl md:text-[34px] md:leading-[41px] mb-6">
                                 The solution is shaped by four core goals:
                             </p>
                             <ul className="space-y-4 md:space-y-8">
@@ -277,64 +294,86 @@ const RecordzPage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Information Architecture:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
+                    <div className="flex flex-col gap-6">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-relaxed">
+                            Organizing the Studio Experience
+                        </p>
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                             The information architecture shows how users navigate key sections of the site, separating the record label and studio identities while maintaining a cohesive brand experience.
+                        </p>
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                            To ensure the platform was easy to navigate, I created an Information Architecture (IA) map.
+                            This structure organizes the studio's services, booking flow, and artist resources into clear, logical categories.
                         </p>
                     </div>
                 }
             />
-            <ContentSection className="!pt-0 !pb-16">
-                <img src={iaDiagram} alt="IA Diagram" className="w-full h-auto object-cover rounded-2xl" />
+
+            <ContentSection className="!py-4">
+                <img
+                    className="w-full max-w-[800px] mx-auto h-auto rounded-2xl"
+                    alt="Information Architecture Diagram"
+                    src={`${import.meta.env.BASE_URL}figmaAssets/ia-diagram.png`}
+                />
             </ContentSection>
 
+            {/* User Flows */}
             <TwoColumnSection
                 left={<SectionHeading title="User Flows:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                            The site architecture clearly separates 1331 Recordz's record label and studio offerings. The studio booking flow was intentionally kept simple and inquiry-based.
+                    <div className="flex flex-col gap-6">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
+                            Streamlining the Booking Process
+                        </p>
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                            I mapped out the primary user flow—booking a studio session.
+                            This flow focuses on minimizing steps, providing clear pricing, and confirming availability upfront.
                         </p>
                     </div>
                 }
             />
-            <ContentSection className="!pt-0 !pb-16">
-                <img src={userFlowDiagram} alt="User Flow Diagram" className="w-full h-auto object-cover rounded-2xl" />
+
+            <ContentSection className="!p-0 max-w-[1400px]">
+                <RecordzUserFlowSection />
             </ContentSection>
 
             {/* Lo-Fi Wireframes */}
             <TwoColumnSection
                 left={<SectionHeading title="Lo-Fi Wireframes:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                            Low-fidelity wireframes were created to establish a clear and intuitive layout. This phase emphasized information hierarchy and wayfinding.
+                    <div className="flex flex-col gap-6">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
+                            Structuring the Layout
+                        </p>
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                            I began with low-fidelity wireframes to test layout concepts and ensure the hierarchy of information met artist needs.
+                            Key focus areas included the homepage layout, service selection, and the booking calendar interface.
                         </p>
                     </div>
                 }
             />
             <ContentSection bgColor="bg-[#6F6864]"> {/* Using dark background as in original */}
-                <ImageGallery images={wireframeImages} columns={3} />
+                <ImageGallery images={wireframeImages} columns={3} centerLabels />
             </ContentSection>
 
             {/* Hi-Fi Wireframes */}
             <TwoColumnSection
                 left={<SectionHeading title="Hi-Fi Wireframes:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="font-medium text-[#6e6764] text-xl md:text-2xl leading-relaxed">
+                    <div className="flex flex-col gap-6">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
                             The Hi-Fi designs brought the app's visual identity to life.
                         </p>
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                             Moving onto high-fidelity screens helped refine the visual system, unify the design language, and ensure the interface felt intuitive and welcoming. Typography, color, and layout choices came together to create a polished experience centered on connection and community.
                         </p>
                     </div>
                 }
             />
-            <ContentSection>
-                <div className="flex flex-col gap-12 mb-12">
-                    <img src={hifiStudioLanding} alt="Studio Landing" className="w-full rounded-2xl shadow-lg" />
-                    <img src={hifiStudioAbout} alt="Studio About" className="w-full rounded-2xl shadow-lg" />
+            <ContentSection className="!py-0">
+                <div className="flex flex-col gap-12 mb-12 max-w-[1100px] mx-auto">
+                    <img src={hifiStudioLanding} alt="Studio Landing" className="w-full rounded-2xl" />
+                    <img src={hifiStudioAbout} alt="Studio About" className="w-full rounded-2xl" />
                 </div>
                 <ImageGallery images={hifiScreens} columns={2} />
             </ContentSection>
@@ -350,14 +389,13 @@ const RecordzPage = () => {
                         <StepCard key={index} {...step} />
                     ))}
                 </div>
-                <p className="text-center text-[#6e6764] text-lg md:text-xl mt-16 max-w-4xl mx-auto leading-relaxed">
+                <p className="text-center text-[#6F6864] text-base md:text-[28px] md:leading-[33px] mt-12 max-w-5xl mx-auto leading-relaxed">
                     Thank you for reviewing this case study. I’m always open to feedback and would love to discuss how these design solutions could be applied to your projects.
                 </p>
             </ContentSection>
 
-            {/* CTA */}
-            {/* CTA */}
-            <GetInTouchSection theme="dark" />
+            {/* Contact CTA */}
+            <GetInTouchSection theme="dark" bgColor="bg-[#6F6864]" buttonBgColor="#D9D9D9" buttonTextColor="black" />
 
         </div>
     );

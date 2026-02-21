@@ -9,7 +9,7 @@ const HowMightWeSection: React.FC = () => {
             <div className="flex gap-10 items-start flex-wrap mb-[60px] md:gap-5 md:flex-col">
                 <div className="flex-1 min-w-[250px]">
                     <div className="w-full">
-                        <h2 className="text-[40px] font-medium text-black mb-[30px] md:text-[32px]">How Might We?</h2>
+                        <h2 className="text-[40px] font-medium text-black mb-[30px] md:text-[32px] whitespace-nowrap">How Might We?</h2>
                     </div>
                 </div>
                 <div className="flex-[2] min-w-[300px]">

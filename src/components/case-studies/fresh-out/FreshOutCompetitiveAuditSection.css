@@ -1,0 +1,158 @@
+/* Fresh Out Competitive Audit Section */
+.fo-audit-section {
+    padding: 80px 20px;
+    max-width: 1244px;
+    margin: 0 auto;
+}
+
+.fo-audit-container {
+    width: 100%;
+}
+
+/* Header Layout */
+.fo-audit-header {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.fo-audit-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+    flex: 0 0 250px;
+}
+
+.fo-audit-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.fo-audit-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #6F6864;
+    margin: 0;
+}
+
+.fo-audit-text strong {
+    color: #333333;
+}
+
+/* Table Wrapper */
+.fo-audit-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Table Styles */
+.fo-audit-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 900px;
+}
+
+.fo-audit-table th,
+.fo-audit-table td {
+    padding: 16px 20px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+/* Header Row */
+.fo-table-header {
+    background: #000000;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.fo-table-header.fo-row-header {
+    background: #000000;
+    width: 140px;
+}
+
+/* Row Labels */
+.fo-row-label {
+    background: #212873 !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+    width: 140px;
+    font-size: 14px;
+}
+
+/* Table Body alternating columns */
+.fo-audit-table td:nth-child(2),
+.fo-audit-table td:nth-child(4) {
+    background: #FFFFFF;
+}
+
+.fo-audit-table td:nth-child(3),
+.fo-audit-table td:nth-child(5) {
+    background: #F4F6FF;
+}
+
+.fo-audit-table td {
+    color: #333333;
+    line-height: 1.5;
+}
+
+/* Links */
+.fo-audit-table a {
+    color: #4A90D9;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.fo-audit-table a:hover {
+    color: #2E6BB0;
+}
+
+/* Lists in table */
+.fo-audit-table ul {
+    margin: 0;
+    padding-left: 18px;
+    list-style-type: disc;
+}
+
+.fo-audit-table li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.fo-audit-table li:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .fo-audit-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .fo-audit-title {
+        font-size: 26px;
+        flex: none;
+    }
+
+    .fo-audit-text {
+        font-size: 16px;
+    }
+
+    .fo-audit-table {
+        font-size: 13px;
+    }
+
+    .fo-audit-table th,
+    .fo-audit-table td {
+        padding: 12px 14px;
+    }
+}

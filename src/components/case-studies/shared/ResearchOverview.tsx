@@ -45,13 +45,13 @@ const ResearchOverview: React.FC<ResearchOverviewProps> = ({
                     <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 mb-16">
                         {/* Left Column - Header */}
                         <div className="lg:w-1/3">
-                            <h2 className={`text-[32px] md:text-[40px] font-medium ${textColor} leading-tight`}>
+                            <h2 className={`text-[32px] md:text-[40px] font-medium ${textColor} leading-tight whitespace-nowrap`}>
                                 {title}
                             </h2>
                         </div>
 
                         {/* Right Column - Description */}
-                        <div className="lg:w-2/3">
+                        <div className="lg:w-2/3 lg:pt-[52px]">
                             <p className={`text-[20px] md:text-[28px] font-normal ${textColor} leading-relaxed`}>
                                 {description}
                             </p>

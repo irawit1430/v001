@@ -7,7 +7,7 @@ import { SectionHeading } from "../components/case-studies/new-template/layout/S
 import GetInTouchSection from "../components/sections/GetInTouchSection";
 import { ProjectDetailGrid } from "../components/case-studies/new-template/cards/ProjectDetailGrid";
 import { StepCard } from "../components/case-studies/new-template/cards/StepCard";
-import { ImageGallery } from "../components/case-studies/new-template/cards/ImageGallery";
+
 import ResearchOverview from "../components/case-studies/shared/ResearchOverview";
 import KeyInsights from "../components/case-studies/shared/KeyInsights";
 
@@ -75,12 +75,7 @@ const nextSteps = [
     },
 ];
 
-const loFiScreens = [
-    { src: `${import.meta.env.BASE_URL}figmaAssets/group-70.png`, alt: "Connect Screen", label: "Connect Screen", sublabel: "Meet new veterans" },
-    { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "Housing Screen", label: "Housing Screen", sublabel: "Find safe housing" },
-    { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "Housing Screen", label: "Housing Screen", sublabel: "Find safe housing" },
-    { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "Housing Screen", label: "Housing Screen", sublabel: "Find safe housing" },
-];
+
 
 
 
@@ -107,18 +102,28 @@ const CoralWayLoungePage = () => {
                     <SectionHeading title="Problem Statement:" />
                 }
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="font-medium text-[#6e6764] text-lg md:text-2xl leading-relaxed">
-                            Many VR environments prioritize visual spectacle over emotional comfort, which can leave users feeling detached or overwhelmed.{" "}
-                            <span className="font-normal">
+                    <div className="flex flex-col gap-6">
+                        <p className="text-[#6F6864] leading-relaxed">
+                            <span className="text-lg md:text-[34px] md:leading-[41px] font-medium">
+                                Many VR environments prioritize visual spectacle over emotional comfort, which can leave users feeling detached or overwhelmed.{" "}
+                            </span>
+                            <span className="text-lg md:text-[30px] md:leading-[36px]">
                                 When virtual spaces lack warmth, natural cues, and meaningful interactivity, it becomes difficult for users to feel grounded or present within the experience.
                             </span>
                         </p>
-                        <p className="text-[#6e6764] text-lg md:text-2xl leading-relaxed">
-                            <span className="font-semibold text-xl md:text-2xl">
-                                💡In response to this problem,
-                            </span>{" "}
-                            users seek immersive VR environments that foster comfort, emotional connection, and intuitive interaction by emphasizing spatial clarity, environmental warmth, and purposeful engagement.
+                        <p className="text-[#6F6864] leading-relaxed">
+                            <span className="text-lg md:text-[30px] md:leading-[36px]">
+                                💡
+                            </span>
+                            <span className="text-lg md:text-[34px] md:leading-[41px] font-medium">
+                                In response to this problem
+                            </span>
+                            <span className="text-lg md:text-[30px] md:leading-[36px] font-medium">
+                                ,{" "}
+                            </span>
+                            <span className="text-lg md:text-[30px] md:leading-[36px]">
+                                users seek immersive VR environments that foster comfort, emotional connection, and intuitive interaction by emphasizing spatial clarity, environmental warmth, and purposeful engagement.
+                            </span>
                         </p>
                     </div>
                 }
@@ -135,38 +140,42 @@ const CoralWayLoungePage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Discovery:" />}
                 right={
-                    <div className="flex flex-col gap-4 md:pt-16">
-                        <h3 className="font-semibold text-[#6e6764] text-xl md:text-2xl">
+                    <div className="flex flex-col gap-5">
+                        <p className="font-semibold text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] text-center">
                             Understanding the Problem Space:
-                        </h3>
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                            <span className="font-medium">
-                                Exploratory research revealed that while many VR environments support social interaction, they often lack the emotional safety and atmosphere needed for meaningful connection.
-                            </span>{" "}
-                            Users can feel hesitant to engage with others when virtual spaces feel overwhelming, impersonal, or overly game-driven.
                         </p>
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                            Discovery efforts highlighted a gap for VR experiences that encourage socialization in a low-pressure, welcoming environment, one where users can comfortably start conversations, share activities, and gradually build connections. Observations showed that familiar social cues, shared activities, and casual interaction spaces help users feel more at ease and open to engagement.
-                        </p>
+                        <div className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
+                            <p>
+                                <span className="font-medium">Exploratory research revealed that while many VR environments support social interaction, they often lack the emotional safety and atmosphere needed for meaningful connection.</span>
+                                <span> Users can feel hesitant to engage with others when virtual spaces feel overwhelming, impersonal, or overly game-driven.</span>
+                            </p>
+                            <p className="mt-5">
+                                <span>Discovery efforts highlighted a gap for VR experiences that </span>
+                                <span className="font-medium">encourage socialization in a low-pressure, welcoming environment,</span>
+                                <span> one where users can comfortably start conversations, share activities, and gradually build connections. </span>
+                                <span className="font-medium">Observations showed that familiar social cues, shared activities, and casual interaction spaces</span>
+                                <span> help users feel more at ease and open to engagement.</span>
+                            </p>
+                        </div>
                     </div>
                 }
             />
 
             {/* Discovery Images */}
             <ContentSection className="!py-0">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[1100px] mx-auto">
                     <img
-                        className="w-full h-auto object-cover"
+                        className="w-full h-auto object-cover rounded-xl"
                         alt="Discovery research 1"
                         src={`${import.meta.env.BASE_URL}figmaAssets/coral-discovery-1.jpg`}
                     />
                     <img
-                        className="w-full h-auto object-cover"
+                        className="w-full h-auto object-cover rounded-xl"
                         alt="Discovery research 2"
                         src={`${import.meta.env.BASE_URL}figmaAssets/coral-discovery-2.png`}
                     />
                     <img
-                        className="w-full h-auto object-cover"
+                        className="w-full h-auto object-cover rounded-xl"
                         alt="Discovery research 3"
                         src={`${import.meta.env.BASE_URL}figmaAssets/coral-discovery-3.jpg`}
                     />
@@ -334,14 +343,14 @@ const CoralWayLoungePage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Competitive Audit:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
+                    <div className="flex flex-col gap-6">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                             <span className="font-medium">
                                 Analyzing existing social and wellness-focused VR platforms revealed that while many support either social interaction or relaxation, few successfully combine both.
                             </span>{" "}
                             Social VR spaces often lack emotional comfort, while relaxation experiences limit meaningful interaction.
                         </p>
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                             This gap highlighted an opportunity for Coral Way Lounge to design a socially driven VR lounge that encourages connection, shared activities, and emotional ease within a welcoming virtual environment.
                         </p>
                     </div>
@@ -350,7 +359,7 @@ const CoralWayLoungePage = () => {
 
             <ContentSection className="!pt-0 !pb-16">
                 <img
-                    className="w-full h-auto object-cover"
+                    className="w-full max-w-[1100px] mx-auto h-auto rounded-xl shadow-sm"
                     alt="Competitive audit table"
                     src={`${import.meta.env.BASE_URL}figmaAssets/coral-competitive-audit.png`}
                 />
@@ -363,42 +372,44 @@ const CoralWayLoungePage = () => {
                 insights={keyInsights}
             />
 
-            {/* How Might We */}
+            {/* How Might We (Already Updated) */}
             <TwoColumnSection
                 left={<SectionHeading title="How Might We?" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
-                        <p className="font-medium text-[#6e6764] text-xl md:text-2xl leading-tight">
+                    <div className="flex flex-col gap-6">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight">
                             Turning insights into opportunity through the right questions.
                         </p>
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                            These questions guided the exploration of how Coral Way Lounge's physical space, flow, and atmosphere could better support comfort, clarity, and meaningful social connection.
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
+                            We aimed to create a brand that honors the lounge's speakeasy roots
+                            while positioning it as a modern destination for high-end cocktails
+                            and social connection.
                         </p>
                     </div>
                 }
             />
 
             <ContentSection className="!py-0">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1100px] mx-auto">
                     <img
-                        className="w-full h-auto object-cover transform rotate-1 hover:rotate-0 transition-transform duration-300"
+                        className="w-full h-auto rounded-2xl transform rotate-1 hover:rotate-0 transition-transform duration-300"
                         alt="How might we help guests feel welcomed..."
                         src={`${import.meta.env.BASE_URL}figmaAssets/coral-hmw-blue.png`}
                     />
                     <img
-                        className="w-full h-auto object-cover transform -rotate-1 hover:rotate-0 transition-transform duration-300"
-                        alt="How might we make the theater room feel approachable..."
+                        className="w-full h-auto rounded-2xl transform -rotate-1 hover:rotate-0 transition-transform duration-300"
+                        alt="How might we ensure the menu is accessible..."
+                        src={`${import.meta.env.BASE_URL}figmaAssets/coral-hmw-yellow.png`}
+                    />
+                    <img
+                        className="w-full h-auto rounded-2xl transform rotate-1 hover:rotate-0 transition-transform duration-300"
+                        alt="How might we create a sense of exclusivity..."
                         src={`${import.meta.env.BASE_URL}figmaAssets/coral-hmw-green.png`}
                     />
                     <img
-                        className="w-full h-auto object-cover transform rotate-1 hover:rotate-0 transition-transform duration-300"
-                        alt="How might we design the space to feel calm..."
-                        src={`${import.meta.env.BASE_URL}figmaAssets/coral-hmw-pink.png`}
-                    />
-                    <img
-                        className="w-full h-auto object-cover transform -rotate-1 hover:rotate-0 transition-transform duration-300"
-                        alt="How might we support social interaction..."
-                        src={`${import.meta.env.BASE_URL}figmaAssets/coral-hmw-yellow.png`}
+                        className="w-full h-auto rounded-2xl transform -rotate-1 hover:rotate-0 transition-transform duration-300"
+                        alt="How might we encourage social interaction..."
+                        src={`${import.meta.env.BASE_URL}figmaAssets/coral-hmw-orange.png`}
                     />
                 </div>
             </ContentSection>
@@ -407,11 +418,11 @@ const CoralWayLoungePage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Solution Overview:" />}
                 right={
-                    <div className="flex flex-col md:pt-16">
-                        <p className="font-medium text-[#6e6764] text-xl md:text-2xl leading-tight mb-8">
+                    <div className="flex flex-col">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight mb-8">
                             Turning insights into opportunity with the right solution.
                         </p>
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                             This solution is visualized through a storyboard that captures the Coral Way Lounge guest journey in real time. By mapping moments of entry, ordering, seating, and social interaction, the storyboard illustrates how intentional design decisions can reduce friction, enhance comfort, and support meaningful connection throughout the space.
                         </p>
                     </div>
@@ -420,7 +431,7 @@ const CoralWayLoungePage = () => {
 
             <ContentSection className="!py-4">
                 <img
-                    className="w-full h-auto object-cover"
+                    className="w-full max-w-[1100px] mx-auto h-auto rounded-xl shadow-sm"
                     alt="Solution storyboard"
                     src={`${import.meta.env.BASE_URL}figmaAssets/coral-solution-storyboard.png`}
                 />
@@ -432,12 +443,12 @@ const CoralWayLoungePage = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Final Screens:" />}
                 right={
-                    <div className="flex flex-col gap-6 md:pt-16">
+                    <div className="flex flex-col gap-6">
                         <div className="flex gap-4 mb-8">
                             <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center shrink-0 text-2xl">
                                 🥽
                             </div>
-                            <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
+                            <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                                 The following screens represent the final visual and experiential direction for Coral Way Lounge. Informed by research insights, narrative framing, and spatial exploration, these designs illustrate how atmosphere, flow, and interaction come together to support comfort, clarity, and social ease within the lounge experience.
                             </p>
                         </div>
@@ -445,17 +456,17 @@ const CoralWayLoungePage = () => {
                 }
             />
 
-            <ContentSection className="!py-16 space-y-24">
+            <ContentSection className="!py-16 space-y-24 max-w-[1100px] mx-auto">
                 {/* Lobby & Arrival */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <img
-                        className="w-full h-auto object-cover rounded-lg shadow-lg"
+                        className="w-full h-auto rounded-2xl shadow-lg"
                         alt="Lobby & Arrival"
                         src={`${import.meta.env.BASE_URL}figmaAssets/coral-final-1.png`}
                     />
                     <div className="flex flex-col gap-4">
-                        <h3 className="text-2xl font-medium text-[#6e6764]">Lobby & Arrival</h3>
-                        <p className="text-[#6e6764] text-lg leading-relaxed">
+                        <h3 className="md:text-[34px] md:leading-[41px] font-medium text-[#6F6864]">Lobby & Arrival</h3>
+                        <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                             The lobby is the main entry point where users exit the elevator and orient themselves within the experience. This space provides a calm pause before transitioning into the lounge.
                         </p>
                     </div>
@@ -464,13 +475,13 @@ const CoralWayLoungePage = () => {
                 {/* Welcome Portal */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <img
-                        className="w-full h-auto object-cover rounded-lg shadow-lg"
+                        className="w-full h-auto rounded-2xl shadow-lg"
                         alt="Welcome Portal"
                         src={`${import.meta.env.BASE_URL}figmaAssets/coral-final-2.png`}
                     />
                     <div className="flex flex-col gap-4">
-                        <h3 className="text-2xl font-medium text-[#6e6764]">Welcome Portal</h3>
-                        <p className="text-[#6e6764] text-lg leading-relaxed">
+                        <h3 className="md:text-[34px] md:leading-[41px] font-medium text-[#6F6864]">Welcome Portal</h3>
+                        <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                             The welcome sign acts as a visual and interactive threshold into the lounge. Passing through it seamlessly transports users into the main social space.
                         </p>
                     </div>
@@ -479,13 +490,13 @@ const CoralWayLoungePage = () => {
                 {/* Main Lounge */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <img
-                        className="w-full h-auto object-cover rounded-lg shadow-lg"
+                        className="w-full h-auto rounded-2xl shadow-lg"
                         alt="Main Lounge"
                         src={`${import.meta.env.BASE_URL}figmaAssets/coral-final-3.png`}
                     />
                     <div className="flex flex-col gap-4">
-                        <h3 className="text-2xl font-medium text-[#6e6764]">Main Lounge</h3>
-                        <p className="text-[#6e6764] text-lg leading-relaxed">
+                        <h3 className="md:text-[34px] md:leading-[41px] font-medium text-[#6F6864]">Main Lounge</h3>
+                        <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                             The lounge serves as the central gathering area, designed for relaxed exploration and low-pressure interaction. Open sightlines and ambient lighting support comfort and ease.
                         </p>
                     </div>
@@ -494,13 +505,13 @@ const CoralWayLoungePage = () => {
                 {/* Theater Room */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <img
-                        className="w-full h-auto object-cover rounded-lg shadow-lg"
+                        className="w-full h-auto rounded-2xl shadow-lg"
                         alt="Theater Room"
                         src={`${import.meta.env.BASE_URL}figmaAssets/coral-final-4.png`}
                     />
                     <div className="flex flex-col gap-4">
-                        <h3 className="text-2xl font-medium text-[#6e6764]">Theater Room</h3>
-                        <p className="text-[#6e6764] text-lg leading-relaxed">
+                        <h3 className="md:text-[34px] md:leading-[41px] font-medium text-[#6F6864]">Theater Room</h3>
+                        <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                             The theater offers a more focused shared experience within the lounge environment. Its separation helps maintain immersion without disrupting nearby spaces.
                         </p>
                     </div>
@@ -509,13 +520,13 @@ const CoralWayLoungePage = () => {
                 {/* Lounge Immersion */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <img
-                        className="w-full h-auto object-cover rounded-lg shadow-lg"
+                        className="w-full h-auto rounded-2xl shadow-lg"
                         alt="Lounge Immersion"
                         src={`${import.meta.env.BASE_URL}figmaAssets/coral-final-5.png`}
                     />
                     <div className="flex flex-col gap-4">
-                        <h3 className="text-2xl font-medium text-[#6e6764]">Lounge Immersion</h3>
-                        <p className="text-[#6e6764] text-lg leading-relaxed">
+                        <h3 className="md:text-[34px] md:leading-[41px] font-medium text-[#6F6864]">Lounge Immersion</h3>
+                        <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                             This view removes visible controllers to emphasize presence and immersion. Reducing interface elements allows users to engage more naturally with the environment.
                         </p>
                     </div>
@@ -535,15 +546,14 @@ const CoralWayLoungePage = () => {
                         <StepCard key={index} {...step} />
                     ))}
                 </div>
-                <p className="mt-12 text-left text-[#6e6764] text-base md:text-lg max-w-3xl mx-auto">
-                    Thank you for reviewing this case study. I’m always open to feedback and interested in
-                    exploring how spatial and experiential design can shape meaningful social environments.
+                <p className="mt-12 text-center text-[#6F6864] text-base md:text-[28px] md:leading-[33px] max-w-5xl mx-auto">
+                    Thank you for reviewing this case study. I’m always open to feedback and interested in exploring how spatial and experiential design can shape meaningful social environments.
                 </p>
             </ContentSection>
 
             {/* Contact CTA */}
             {/* Contact CTA */}
-            <GetInTouchSection theme="dark" />
+            <GetInTouchSection theme="dark" bgColor="bg-[#492300]" buttonBgColor="#B6936E" buttonTextColor="white" />
 
         </div>
     );

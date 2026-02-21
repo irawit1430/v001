@@ -12,7 +12,7 @@ const RecordzHowMightWeSection: React.FC = () => {
             <div className="w-full">
                 {/* Header */}
                 <div className="flex gap-[60px] items-start flex-wrap mb-[50px] md:flex-col md:gap-5">
-                    <h2 className="text-[32px] font-medium text-black m-0 flex-[0_0_200px] md:text-[26px] md:flex-none">How Might We?</h2>
+                    <h2 className="text-[32px] font-medium text-black m-0 flex-[0_0_200px] md:text-[26px] md:flex-none whitespace-nowrap">How Might We?</h2>
                     <div className="flex-1 min-w-[300px]">
                         <p className="text-[20px] leading-[1.5] text-[#333] mb-6 md:text-[18px]">
                             <strong>Turning insights into opportunity through the right questions.</strong>

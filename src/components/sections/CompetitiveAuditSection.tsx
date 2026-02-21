@@ -6,7 +6,7 @@ const CompetitiveAuditSection: React.FC = () => {
         <section className="py-20 px-5 max-w-[1244px] mx-auto pt-10 pb-20">
             <div className="flex gap-10 items-start flex-wrap mb-10 md:gap-5 md:flex-col">
                 <div className="flex-1 min-w-[250px]">
-                    <h2 className="text-[40px] font-medium text-black mb-[30px] md:text-[32px]">Competitive Audit:</h2>
+                    <h2 className="text-[40px] font-medium text-black mb-[30px] md:text-[32px] whitespace-nowrap">Competitive Audit:</h2>
                 </div>
                 <div className="flex-[2] min-w-[300px]">
                     <p className="text-[30px] leading-[1.4] font-normal text-[#6F6864] mb-5 md:text-[20px]">

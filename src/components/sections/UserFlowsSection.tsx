@@ -7,9 +7,9 @@ const UserFlowsSection: React.FC = () => {
         <section className="py-20 px-5 max-w-[1244px] mx-auto pb-20">
             <div className="max-w-[1440px] mx-auto relative">
                 {/* Row 1: Title and Intro */}
-                <div className="flex gap-10 items-start flex-wrap mb-[60px] md:flex-col md:mb-10 md:gap-5">
+                <div className="flex gap-10 items-start flex-wrap mb-[30px] md:flex-col md:mb-10 md:gap-5">
                     <div className="flex-1 min-w-[300px] w-full">
-                        <h2 className="text-[40px] font-medium text-black mb-[30px] md:text-[32px]">User Flows:</h2>
+                        <h2 className="text-[40px] font-medium text-black mb-[30px] md:text-[32px] whitespace-nowrap">User Flows:</h2>
                     </div>
                     <div className="flex-[2] min-w-[300px] w-full">
                         <p className="text-[30px] leading-[1.4] font-normal text-[#6F6864] mb-5 md:text-[20px]">
@@ -22,7 +22,7 @@ const UserFlowsSection: React.FC = () => {
                 </div>
 
                 {/* Row 2: Image and Details */}
-                <div className="flex gap-10 items-start flex-wrap mb-[60px] md:flex-col md:mb-10 md:gap-5">
+                <div className="flex gap-10 items-start flex-wrap mb-[30px] md:flex-col md:mb-10 md:gap-5">
                     <div className="flex-1 min-w-[300px] w-full">
                         <h3 className="text-[24px] font-medium text-[#6F6864] mb-5">Account Creation</h3>
                         <div className="w-full">
@@ -47,7 +47,7 @@ const UserFlowsSection: React.FC = () => {
                 </div>
 
                 {/* Row 3: Purchasing Flow */}
-                <div className="flex gap-10 items-start flex-wrap mb-[60px] md:flex-col md:mb-10 md:gap-5">
+                <div className="flex gap-10 items-start flex-wrap mb-[30px] md:flex-col md:mb-10 md:gap-5">
                     <div className="w-full">
                         <h3 className="text-[24px] font-medium text-[#6F6864] mb-5">Purchasing</h3>
                         <div className="w-full">

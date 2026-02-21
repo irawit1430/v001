@@ -17,7 +17,7 @@ export function TwoColumnSection({
     reverseOnMobile = false,
 }: TwoColumnSectionProps) {
     return (
-        <section className={`${bgColor} w-full py-16 md:py-24 px-6 md:px-16 lg:px-24 ${className}`}>
+        <section className={`${bgColor} w-full py-6 md:py-8 lg:py-10 px-6 md:px-16 lg:px-24 ${className}`}>
             <div
                 className={`max-w-[1200px] mx-auto flex flex-col ${reverseOnMobile ? "flex-col-reverse" : ""
                     } md:flex-row gap-10 md:gap-16`}
@@ -27,7 +27,7 @@ export function TwoColumnSection({
                         {left}
                     </ScrollReveal>
                 </div>
-                <div className="lg:w-2/3">
+                <div className="lg:w-2/3 md:pt-[52px]">
                     <ScrollReveal width="100%" delay={0.2}>
                         {right}
                     </ScrollReveal>

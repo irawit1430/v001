@@ -19,7 +19,7 @@ const CaseStudySideSection: React.FC<CaseStudySideSectionProps> = ({
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
                     {/* Left Column - Header */}
                     <div className="lg:w-1/3">
-                        <h2 className="font-['SF_Pro_Display',sans-serif] text-[40px] font-medium text-black leading-tight">
+                        <h2 className="font-['SF_Pro_Display',sans-serif] text-[40px] font-medium text-black leading-tight whitespace-nowrap">
                             {title}
                         </h2>
                     </div>

@@ -60,12 +60,14 @@ const Skills: React.FC = () => {
                     <p className="font-['SF_Pro_Display',sans-serif] text-[24px] text-[#6f6864] mb-6 max-w-[485px] flex-grow">
                         I leverage industry-leading design tools and methodologies to create user-centered solutions that drive measurable business impact.
                     </p>
-                    <button
-                        className="bg-gradient-to-r from-[#ff6f61] to-[#ff9e80] text-white rounded-[10px] px-8 py-4 font-['Instrument_Sans',sans-serif] font-medium text-[24px] hover:shadow-lg transition-shadow w-fit border-none cursor-pointer"
+                    <motion.button
+                        className="bg-gradient-to-r from-[#ff6f61] to-[#ff9e80] text-white rounded-[10px] px-8 py-4 font-['Instrument_Sans',sans-serif] font-medium text-[24px] shadow-lg hover:shadow-2xl transition-all duration-300 w-fit border-none cursor-pointer"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                         onClick={() => window.open(`${import.meta.env.BASE_URL}figmaAssets/Desiree Walker resume 2026.pdf`, '_blank')}
                     >
                         View My Resume
-                    </button>
+                    </motion.button>
                 </div>
 
                 {/* Right Column - Skills Tags */}
@@ -81,7 +83,7 @@ const Skills: React.FC = () => {
                                 style={{ background: skill.color }}
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: false }}
                                 transition={{
                                     duration: 0.3,
                                     delay: index * 0.04,
@@ -104,7 +106,7 @@ const Skills: React.FC = () => {
                         className="bg-white border border-[#ff9e80] rounded-[10px] p-6 flex items-start gap-4"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
                         {/* Icon Circle */}
