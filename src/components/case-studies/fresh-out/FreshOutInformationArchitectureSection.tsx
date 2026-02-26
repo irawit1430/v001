@@ -7,32 +7,26 @@ const HeaderBox = ({ text }: { text: string }) => (
 );
 
 const SubItem = ({ text }: { text: string }) => (
-    <div className="flex items-center gap-0">
-        {/* horizontal tick from spine */}
-        <div className="w-4 h-[2px] bg-[#A0AAB4] shrink-0" />
-        <div className="border border-[#E5E7EB] rounded-lg py-2.5 px-4 text-center text-[13px] md:text-[15px] text-[#3C3C3C] bg-white w-full whitespace-nowrap">
-            {text}
-        </div>
+    <div className="border border-[#E5E7EB] rounded-lg py-2.5 px-5 text-center text-[13px] md:text-[15px] text-[#3C3C3C] bg-white whitespace-nowrap">
+        {text}
     </div>
 );
 
 const Column = ({ title, items }: { title: string; items: string[] }) => (
-    <div className="flex flex-col items-center min-w-[140px]">
-        {/* vertical connector from horizontal bar to header */}
+    <div className="flex flex-col items-center" style={{ minWidth: 140 }}>
+        {/* vertical connector from horizontal bar down to header box */}
         <div className="w-[2px] h-5 bg-[#A0AAB4]" />
 
         <HeaderBox text={title} />
 
-        {/* Sub‑items with a vertical spine on the left */}
-        <div className="relative mt-3 w-full pl-5">
-            {/* vertical spine */}
-            <div className="absolute left-[9px] top-0 bottom-3 w-[2px] bg-[#A0AAB4]" />
+        {/* vertical connector from header box down to first sub-item */}
+        <div className="w-[2px] h-4 bg-[#A0AAB4]" />
 
-            <div className="flex flex-col gap-2.5">
-                {items.map((item) => (
-                    <SubItem key={item} text={item} />
-                ))}
-            </div>
+        {/* Sub‑items stacked and centered */}
+        <div className="flex flex-col items-center gap-3">
+            {items.map((item) => (
+                <SubItem key={item} text={item} />
+            ))}
         </div>
     </div>
 );

@@ -72,7 +72,7 @@ const InfoArchitectureSection = () => {
                                     <div className="w-full flex justify-center mt-6 relative">
                                         <div className="w-[85%] flex flex-col gap-4 relative">
                                             {/* Vertical spine line */}
-                                            <div className="absolute -left-[16%] top-[-24px] bottom-1/2 w-px bg-[#A0AAB4]"></div>
+                                            <div className="absolute -left-[16%] top-[-24px] bottom-[24px] w-px bg-[#A0AAB4]"></div>
 
                                             {col.items.map((item, itemIdx) => (
                                                 <div key={itemIdx} className="w-full relative">

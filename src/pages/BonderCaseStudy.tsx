@@ -15,9 +15,9 @@ import CompetitiveAuditSection from "../components/case-studies/bonder/Competiti
 import InfoArchitectureSection from "../components/case-studies/bonder/InfoArchitectureSection";
 
 // Import assets
-import iconCommunity from "../assets/icon-community.png";
+import iconCommunity from "../assets/icon-community-grey.png";
 import iconLocation from "../assets/icon-location.png";
-import iconBadge from "../assets/icon-badge.png";
+import iconBadge from "../assets/icon-speech-bubble.png";
 import iconUserTesting from "../assets/icon-user-testing.png";
 import iconIterate from "../assets/icon-iterate.png";
 import iconAnalytics from "../assets/icon-analytics.png";
@@ -113,6 +113,8 @@ const BonderCaseStudy = () => {
                 subtitle="Social Media Application"
                 imageSrc={`${import.meta.env.BASE_URL}bonder-hero-mockups.png`}
                 imageAlt="Bonder App Mockups"
+                imageClassName="w-full h-auto object-contain"
+                imageContainerClassName="relative z-0 w-full flex justify-center -mt-12 md:-mt-24"
             />
 
             {/* Project Details */}
@@ -178,6 +180,27 @@ const BonderCaseStudy = () => {
                     </div>
                 }
             />
+
+            {/* Discovery Images */}
+            <ContentSection className="!py-0">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[1100px] mx-auto">
+                    <img
+                        className="w-full h-auto object-cover rounded-xl"
+                        alt="Discovery research 1"
+                        src={`${import.meta.env.BASE_URL}figmaAssets/bonder-discovery-1.jpg`}
+                    />
+                    <img
+                        className="w-full h-auto object-cover rounded-xl"
+                        alt="Discovery research 2"
+                        src={`${import.meta.env.BASE_URL}figmaAssets/bonder-discovery-2.jpg`}
+                    />
+                    <img
+                        className="w-full h-auto object-cover rounded-xl"
+                        alt="Discovery research 3"
+                        src={`${import.meta.env.BASE_URL}figmaAssets/bonder-discovery-3.jpg`}
+                    />
+                </div>
+            </ContentSection>
 
             {/* Persona */}
             <TwoColumnSection
@@ -267,7 +290,7 @@ const BonderCaseStudy = () => {
             <ContentSection bgColor="bg-[#f0f0f0]">
                 <div className="flex flex-col md:flex-row gap-10 mb-12">
                     <SectionHeading title="User Journey:" className="md:whitespace-nowrap" />
-                    <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                    <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed md:pt-[52px]">
                         Mapping the emotional journey from discovery to lasting connections. This journey illustrates how a first-time Bonder user moves from initial awareness to long-term community engagement. Each stage highlights the user's goals, emotions, and key product opportunities that reduce friction and support meaningful, real-world connections.
                     </p>
                 </div>

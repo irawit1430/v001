@@ -50,7 +50,7 @@ const UserJourneyMapSection = () => {
                             User Journey:
                         </h2>
                     </div>
-                    <div className="lg:w-2/3">
+                    <div className="lg:w-2/3 md:pt-[52px]">
                         <p className="text-[24px] font-medium text-[#333333] leading-tight mb-4">
                             Mapping the emotional journey from discovery to lasting connections.
                         </p>

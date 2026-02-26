@@ -30,17 +30,19 @@
 .bt-audit-content {
     flex: 1;
     min-width: 300px;
+    padding-top: 48px;
 }
 
 .bt-audit-text {
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 500;
     color: #6F6864;
     margin: 0;
 }
 
 .bt-audit-text strong {
-    color: #333333;
+    color: #6F6864;
 }
 
 /* Table Wrapper */

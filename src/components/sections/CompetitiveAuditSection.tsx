@@ -8,8 +8,8 @@ const CompetitiveAuditSection: React.FC = () => {
                 <div className="flex-1 min-w-[250px]">
                     <h2 className="text-[40px] font-medium text-black mb-[30px] md:text-[32px] whitespace-nowrap">Competitive Audit:</h2>
                 </div>
-                <div className="flex-[2] min-w-[300px]">
-                    <p className="text-[30px] leading-[1.4] font-normal text-[#6F6864] mb-5 md:text-[20px]">
+                <div className="flex-[2] min-w-[300px] pt-12">
+                    <p className="text-[30px] leading-[36px] font-medium text-[#6F6864] mb-5 md:text-[20px]">
                         Analyzing competing resale platforms showed that while many support secondhand transactions, they fail to create a meaningful community for parents. The absence of trust-building and peer connection highlights an opportunity for Baby Thrift to design a more parent-centered resale experience.
                     </p>
                 </div>

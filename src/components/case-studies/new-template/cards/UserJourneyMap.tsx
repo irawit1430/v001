@@ -32,7 +32,7 @@ export const UserJourneyMap: React.FC<UserJourneyMapProps> = ({ steps }) => {
                 {/* Description Row */}
                 <div className="grid grid-cols-5 gap-4">
                     {steps.map((step, index) => (
-                        <div key={index} className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-sm text-[#6e6764] leading-relaxed h-full">
+                        <div key={index} className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-[20px] leading-[24px] font-medium text-black h-full">
                             {step.description}
                         </div>
                     ))}
@@ -41,7 +41,7 @@ export const UserJourneyMap: React.FC<UserJourneyMapProps> = ({ steps }) => {
                 {/* Quote Row */}
                 <div className="grid grid-cols-5 gap-4">
                     {steps.map((step, index) => (
-                        <div key={index} className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-sm text-[#6e6764] italic h-full flex flex-col justify-center">
+                        <div key={index} className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-[20px] leading-[24px] font-normal text-[#6F6864] italic h-full flex flex-col justify-center">
                             "{step.quote}"
                         </div>
                     ))}
@@ -60,8 +60,8 @@ export const UserJourneyMap: React.FC<UserJourneyMapProps> = ({ steps }) => {
                 {/* Opportunity Row */}
                 <div className="grid grid-cols-5 gap-4">
                     {steps.map((step, index) => (
-                        <div key={index} className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-sm text-[#6e6764] leading-relaxed h-full">
-                            <span className="block font-semibold mb-2 text-black/80">Opportunity</span>
+                        <div key={index} className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-[20px] leading-[24px] font-medium text-black h-full">
+                            <span className="block font-semibold mb-2">Opportunity</span>
                             {step.opportunity}
                         </div>
                     ))}

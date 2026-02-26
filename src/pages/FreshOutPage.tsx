@@ -101,8 +101,8 @@ const FreshOutPage = () => {
                 subtitle="Veteran Social Application"
                 imageSrc={`${import.meta.env.BASE_URL}figmaAssets/freshout-hero-image.png`}
                 imageAlt="Fresh Out hero image"
-                imageClassName="w-full max-w-[1200px] h-auto object-contain px-2 md:px-6"
-                imageContainerClassName="relative z-0 w-full flex justify-center -mt-8 md:-mt-16"
+                imageClassName="w-full h-auto object-contain"
+                imageContainerClassName="relative z-0 w-full flex justify-center -mt-12 md:-mt-24"
             />
 
             {/* Project Details */}
@@ -287,9 +287,9 @@ const FreshOutPage = () => {
                 }
             />
 
-            {/* Information Architecture */}
+            {/* Information Architecture (Site Map) */}
             <TwoColumnSection
-                left={<SectionHeading title="Information Architecture:" />}
+                left={<SectionHeading title="Site Map:" />}
                 right={
                     <div className="flex flex-col gap-6">
                         <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-relaxed">
@@ -297,7 +297,7 @@ const FreshOutPage = () => {
                             mapped Fresh Out's core navigation system.
                         </p>
                         <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
-                            The information architecture shows how veterans move through key areas
+                            The site map shows how veterans move through key areas
                             of the app, forming the basis for its user flows and interface design.
                         </p>
                     </div>
@@ -408,32 +408,82 @@ const FreshOutPage = () => {
                 <img className="w-full max-w-[1100px] mx-auto h-auto rounded-2xl" alt="Hi-Fi wireframes" src={`${import.meta.env.BASE_URL}figmaAssets/hifi.png`} />
             </ContentSection>
 
+            <ContentSection>
+                <p className="text-[#6F6864] text-base md:text-[28px] md:leading-[33px] leading-relaxed text-left max-w-[1146px] mx-auto">
+                    A collection of key screens from the veteran social experience, designed with a focus on consistency,
+                    clarity, and visual cohesion. Each screen reflects a unified design system and supports an intuitive,
+                    easy-to-navigate interface.
+                </p>
+            </ContentSection>
+
+            <ContentSection className="!py-0">
+                <img className="w-full max-w-[1100px] mx-auto h-auto rounded-2xl" alt="Fresh Out Hi-Fi screens collection" src={`${import.meta.env.BASE_URL}figmaAssets/freshout-hifi-screens.png`} />
+            </ContentSection>
+
             {/* Key Features */}
             <TwoColumnSection
-                left={
-                    <div>
-                        <SectionHeading title="Key Features:" />
-                        <img className="w-full max-w-md h-auto mt-8" alt="Key feature" src={`${import.meta.env.BASE_URL}figmaAssets/key-feature.png`} />
-                    </div>
-                }
+                left={<SectionHeading title="Key Features:" />}
                 right={
                     <div className="flex flex-col gap-6">
-                        <p className="font-normal text-[#6F6864] text-lg md:text-[34px] md:leading-[41px] leading-relaxed">
-                            The key features below highlight the core
-                            functionality of the product, each designed to support veterans in staying informed,
-                            connected, and in control of their transition journey.
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight">
+                            Designing for Trust, Connection, and Purpose
                         </p>
-                        <ul className="space-y-3 text-[#6F6864] font-normal text-lg md:text-[30px] md:leading-[36px]">
-                            <li>Housing Finder</li>
-                            <li>Roommate Search</li>
-                            <li>Localized Events</li>
-                            <li>Mentor Finder</li>
-                            <li>Community Finder</li>
-                            <li>Veteran Affairs Updates</li>
-                        </ul>
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                            Veterans transitioning out of service need a platform that feels safe, familiar, and purposeful.{" "}
+                            <span className="font-medium">Research focused on how veterans seek community, navigate resources, and build connections on mobile.</span>
+                        </p>
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                            Through early exploration, several recurring themes emerged.{" "}
+                            <span className="font-medium">Veterans expressed concerns around isolation, fragmented resources, and difficulty finding meaningful connections.</span>{" "}
+                            These issues often led to disengagement, reduced trust, and missed opportunities within existing social platforms.
+                        </p>
                     </div>
                 }
             />
+
+            <ContentSection bgColor="bg-[#212873]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    {[
+                        {
+                            icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-housing.png`,
+                            title: "Housing Finder",
+                            description: "Browse veteran-friendly housing options and connect with roommates who share similar backgrounds and values.",
+                        },
+                        {
+                            icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-events.png`,
+                            title: "Localized Events",
+                            description: "Discover nearby veteran meetups, community events, and networking opportunities tailored to your area.",
+                        },
+                        {
+                            icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-mentor.png`,
+                            title: "Mentor Finder",
+                            description: "Connect with experienced veterans who can offer guidance on career transitions, education, and personal growth.",
+                        },
+                        {
+                            icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-community.png`,
+                            title: "Community Finder",
+                            description: "Find and join veteran communities based on shared interests, service branches, and geographic proximity.",
+                        },
+                    ].map((feature, index) => (
+                        <div
+                            key={index}
+                            className="bg-white rounded-xl p-6 flex flex-col items-start gap-3"
+                        >
+                            <img
+                                src={feature.icon}
+                                alt={feature.title}
+                                className="w-14 h-14 object-contain mx-auto"
+                            />
+                            <h3 className="font-semibold text-[#1a1a1a] text-lg md:text-xl text-center w-full">
+                                {feature.title}
+                            </h3>
+                            <p className="text-[#6F6864] text-sm md:text-base leading-relaxed">
+                                {feature.description}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </ContentSection>
 
             {/* Next Steps */}
             <ContentSection>
