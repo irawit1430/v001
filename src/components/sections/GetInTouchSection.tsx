@@ -25,9 +25,14 @@ const GetInTouchSection: React.FC<GetInTouchSectionProps> = ({
                         Get in Touch!
                     </h2>
 
-                    <p className={`font-['SF_Pro_Display',sans-serif] text-[24px] md:text-[30px] md:leading-[36px] font-normal leading-relaxed max-w-[674px] mx-auto mb-10 text-center ${isDark ? 'text-[#d9d9d9]' : 'text-[#6F6864]'}`}>
-                        If you'd like to connect or learn more about this project, feel free to reach out.
-                    </p>
+                    <div className="w-fit mx-auto text-left mb-10">
+                        <p className={`font-['SF_Pro_Display',sans-serif] text-[24px] md:text-[30px] md:leading-[36px] font-normal leading-relaxed ${isDark ? 'text-[#d9d9d9]' : 'text-[#6F6864]'}`}>
+                            If you'd like to connect or learn more about this project,
+                        </p>
+                        <p className={`font-['SF_Pro_Display',sans-serif] text-[24px] md:text-[30px] md:leading-[36px] font-normal leading-relaxed ${isDark ? 'text-[#d9d9d9]' : 'text-[#6F6864]'}`}>
+                            feel free to reach out.
+                        </p>
+                    </div>
 
                     {/* CTA Buttons */}
                     <div className="flex gap-4 mt-6 justify-center">

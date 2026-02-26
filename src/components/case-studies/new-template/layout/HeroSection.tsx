@@ -3,9 +3,18 @@ interface HeroSectionProps {
     subtitle: string;
     imageSrc: string;
     imageAlt?: string;
+    imageClassName?: string;
+    imageContainerClassName?: string;
 }
 
-export function HeroSection({ title, subtitle, imageSrc, imageAlt = "" }: HeroSectionProps) {
+export function HeroSection({
+    title,
+    subtitle,
+    imageSrc,
+    imageAlt = "",
+    imageClassName = "w-full max-w-[1000px] h-auto object-contain px-6",
+    imageContainerClassName = "relative z-0 w-full flex justify-center mt-2 md:mt-0"
+}: HeroSectionProps) {
     return (
         <section className="relative w-full pt-[70px]">
             <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-16 lg:px-24 py-12 md:py-16 flex flex-col items-start gap-1">
@@ -16,9 +25,9 @@ export function HeroSection({ title, subtitle, imageSrc, imageAlt = "" }: HeroSe
                     {subtitle}
                 </p>
             </div>
-            <div className="relative z-0 w-full flex justify-center mt-2 md:mt-0">
+            <div className={imageContainerClassName}>
                 <img
-                    className="w-full max-w-[1000px] h-auto object-contain px-6"
+                    className={imageClassName}
                     alt={imageAlt}
                     src={imageSrc}
                 />

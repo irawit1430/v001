@@ -101,6 +101,8 @@ const FreshOutPage = () => {
                 subtitle="Veteran Social Application"
                 imageSrc={`${import.meta.env.BASE_URL}figmaAssets/freshout-hero-image.png`}
                 imageAlt="Fresh Out hero image"
+                imageClassName="w-full max-w-[1200px] h-auto object-contain px-2 md:px-6"
+                imageContainerClassName="relative z-0 w-full flex justify-center -mt-8 md:-mt-16"
             />
 
             {/* Project Details */}

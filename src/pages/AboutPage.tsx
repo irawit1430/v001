@@ -31,8 +31,8 @@ const AboutPage: React.FC = () => {
 
 
     return (
-        <>
-            <div className="bg-white min-h-screen pt-[120px] w-full max-w-[1440px] mx-auto px-4">
+        <div style={{ backgroundColor: '#FFFFFF' }} className="w-full min-h-screen">
+            <div className="pt-[120px] w-full max-w-[1440px] mx-auto px-4">
                 {/* Hero Section - Title and Subtitle */}
                 <section className="text-center mb-10">
                     {/* About Me Title */}
@@ -294,8 +294,8 @@ const AboutPage: React.FC = () => {
 
 
             </div>
-            <GetInTouchSection />
-        </>
+            <GetInTouchSection bgColor="bg-[#F9FAFB]" />
+        </div>
     );
 };
 

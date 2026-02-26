@@ -24,6 +24,7 @@
     color: #000000;
     margin: 0;
     flex: 0 0 250px;
+    white-space: nowrap;
 }
 
 .rz-audit-content {
