@@ -13,19 +13,34 @@ const SubItem = ({ text }: { text: string }) => (
 );
 
 const Column = ({ title, items }: { title: string; items: string[] }) => (
-    <div className="flex flex-col items-center" style={{ minWidth: 140 }}>
+    <div className="flex flex-col items-center" style={{ minWidth: 120 }}>
         {/* vertical connector from horizontal bar down to header box */}
         <div className="w-[2px] h-5 bg-[#A0AAB4]" />
 
         <HeaderBox text={title} />
 
-        {/* vertical connector from header box down to first sub-item */}
-        <div className="w-[2px] h-4 bg-[#A0AAB4]" />
-
-        {/* Sub‑items stacked and centered */}
-        <div className="flex flex-col items-center gap-3">
-            {items.map((item) => (
-                <SubItem key={item} text={item} />
+        {/* Sub‑items with branching lines */}
+        <div className="flex flex-col items-center relative">
+            {/* Vertical spine line from header to last sub-item */}
+            {items.length > 0 && (
+                <div
+                    className="absolute bg-[#A0AAB4]"
+                    style={{
+                        width: 2,
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        top: 0,
+                        /* Each sub-item row: 16px connector + ~40px item height + gap, last item connects at midpoint */
+                        height: items.length === 1 ? 32 : `calc(${(items.length - 1) * 52 + 32}px)`,
+                    }}
+                />
+            )}
+            {items.map((item, idx) => (
+                <div key={item} className="flex items-center relative" style={{ marginTop: idx === 0 ? 16 : 12 }}>
+                    {/* horizontal branch from spine to sub-item */}
+                    <div className="w-4 h-[2px] bg-[#A0AAB4]" />
+                    <SubItem text={item} />
+                </div>
             ))}
         </div>
     </div>
@@ -58,10 +73,10 @@ const FreshOutInformationArchitectureSection = () => {
                 {/* Horizontal bar spanning all columns */}
                 <div className="relative w-full flex items-start">
                     {/* The horizontal connector line */}
-                    <div className="absolute top-0 left-[70px] right-[70px] h-[2px] bg-[#A0AAB4]" />
+                    <div className="absolute top-0 left-[60px] right-[60px] h-[2px] bg-[#A0AAB4]" />
 
                     {/* Columns */}
-                    <div className="flex justify-between w-full gap-5">
+                    <div className="flex justify-between w-full gap-3 md:gap-5">
                         {columns.map((col) => (
                             <Column key={col.title} title={col.title} items={col.items} />
                         ))}

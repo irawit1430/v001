@@ -325,14 +325,24 @@ const FreshOutPage = () => {
                 }
             />
 
-            <ContentSection className="!px-0 sm:!px-4 md:!px-8 w-full max-w-full">
-                <div className="space-y-12 w-full">
+            <ContentSection className="!px-6 md:!px-16 lg:!px-24 w-full max-w-full">
+                <div className="space-y-12 w-full max-w-[1200px] mx-auto">
                     <div className="w-full overflow-hidden">
-                        <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4 pl-4 md:pl-0">Sign up</p>
+                        <div className="flex flex-col lg:flex-row lg:gap-16">
+                            <div className="hidden lg:block lg:w-1/3 shrink-0" />
+                            <div className="lg:w-2/3">
+                                <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4">Sign up</p>
+                            </div>
+                        </div>
                         <FreshOutUserFlow />
                     </div>
-                    <div className="px-4 md:px-0 overflow-hidden">
-                        <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4 pl-4 md:pl-0">Events</p>
+                    <div className="overflow-hidden">
+                        <div className="flex flex-col lg:flex-row lg:gap-16">
+                            <div className="hidden lg:block lg:w-1/3 shrink-0" />
+                            <div className="lg:w-2/3">
+                                <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4">Events</p>
+                            </div>
+                        </div>
                         <FreshOutEventFlow />
                     </div>
                 </div>
