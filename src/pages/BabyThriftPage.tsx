@@ -17,7 +17,6 @@ import heroImage from '../assets/baby-thrift-hero.png';
 import discoveryImage1 from '../assets/discovery-1.png';
 import discoveryImage2 from '../assets/discovery-2.png';
 import discoveryImage3 from '../assets/discovery-3.png';
-import auditTableImage from '../assets/competitive-audit-table.png';
 import iaImage from '../assets/information-architecture.png';
 import userFlowImage from '../assets/user-flow.png';
 import purchasingFlowImage from '../assets/purchasing-flow.png';

@@ -1,7 +1,6 @@
 
 
 // Import diagram images
-import iaDiagram from '../../assets/ia-diagram.png';
 import userFlowDiagram from '../../assets/user-flow-diagram.png';
 
 const RecordzArchitectureSection: React.FC = () => {
