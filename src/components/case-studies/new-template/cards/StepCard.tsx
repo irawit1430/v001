@@ -3,13 +3,15 @@ interface StepCardProps {
     title: string;
     description: string;
     overlayIcon?: string;
+    iconClassName?: string;
+    iconContainerClassName?: string;
 }
 
-export function StepCard({ icon, title, description, overlayIcon }: StepCardProps) {
+export function StepCard({ icon, title, description, overlayIcon, iconClassName, iconContainerClassName }: StepCardProps) {
     return (
         <div className="bg-white rounded-2xl border border-[#d9d9d9] p-6 flex items-start gap-5 flex-1 min-w-[280px]">
-            <div className="relative w-14 h-14 flex-shrink-0 bg-[#d9d9d9] rounded-full flex items-center justify-center">
-                <img className="w-7 h-7 object-contain" alt={title} src={icon} />
+            <div className={`relative flex-shrink-0 flex items-center justify-center ${iconContainerClassName || "w-14 h-14 bg-[#d9d9d9] rounded-full"}`}>
+                <img className={`object-contain ${iconClassName || "w-7 h-7"}`} alt={title} src={icon} />
                 {overlayIcon && (
                     <img
                         src={overlayIcon}

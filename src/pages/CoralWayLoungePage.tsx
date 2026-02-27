@@ -9,7 +9,7 @@ import { ProjectDetailGrid } from "../components/case-studies/new-template/cards
 import { StepCard } from "../components/case-studies/new-template/cards/StepCard";
 
 import ResearchOverview from "../components/case-studies/shared/ResearchOverview";
-import KeyInsights from "../components/case-studies/shared/KeyInsights";
+import { Users, Compass, Tv, Orbit } from "lucide-react";
 
 
 const projectDetails = [
@@ -29,28 +29,7 @@ const researchLabels = [
     { icon: `${import.meta.env.BASE_URL}figmaAssets/lightbuldddd-removebg-preview-1.svg`, label: "Insight" },
 ];
 
-const keyInsights = [
-    {
-        emoji: "🛌",
-        title: "Emotional Comfort Enables Socialization",
-        description: "Emotional comfort plays a key role in users' willingness to engage socially in VR environments.",
-    },
-    {
-        emoji: "🧭",
-        title: "Simple Navigation Reduces Social Friction",
-        description: "Simple navigation and gentle onboarding help users feel confident engaging in shared spaces.",
-    },
-    {
-        emoji: "👯",
-        title: "Shared Activities Spark Connection",
-        description: "Casual, low-stakes activities make it easier for users to connect without social pressure.",
-    },
-    {
-        emoji: "🎧",
-        title: "Sensory Design Strengthens Presence",
-        description: "Multi-sensory cues enhance presence and creates a more immersive experience.",
-    },
-];
+
 
 const nextSteps = [
     {
@@ -183,157 +162,179 @@ const CoralWayLoungePage = () => {
             </ContentSection>
 
             {/* User Survey Research */}
-            <ContentSection className="!py-16">
-                <div className="max-w-6xl mx-auto">
-                    <SectionHeading title="User Survey Research:" className="mb-8" />
+            <ContentSection className="!py-16 md:!py-24" bgColor="bg-white">
+                <SectionHeading title="User Survey Research:" className="mb-6" />
 
-                    {/* Overview */}
-                    <div className="flex flex-col md:flex-row gap-6 mb-16">
-                        <div className="shrink-0">
-                            <span className="bg-[#6e6764] text-white px-4 py-1.5 rounded text-sm font-medium uppercase tracking-wider">
-                                Overview
-                            </span>
+                {/* Horizontal Divider */}
+                <div className="w-full h-[1px] bg-gray-200 mb-12"></div>
+
+                {/* Overview Block */}
+                <div className="flex flex-col md:flex-row gap-6 mb-12 items-start">
+                    <div className="shrink-0 pt-1">
+                        <div className="inline-flex items-center justify-center bg-[#212873] rounded-[6px] px-6 py-2.5">
+                            <span className="text-white font-medium text-[18px] md:text-[20px]">Overview</span>
                         </div>
-                        <p className="text-[#6e6764] text-lg md:text-xl leading-relaxed">
-                            To inform the early design direction of Coral Way Lounge, we conducted concept-stage usability interviews with college students to understand how they socialize, relax, and seek connection, both digitally and in physical spaces.
-                            <br /><br />
-                            This early research focused on behaviors, needs, and expectations. The goal was to validate whether a virtual lounge concept aligned with students' social habits and emotional needs before moving into full production.
+                    </div>
+                    <div className="max-w-[800px]">
+                        <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-relaxed font-normal">
+                            To inform the early design direction of Coral Way Lounge, we <span className="font-semibold">conducted concept-stage usability interviews</span> with college students to understand how they socialize, relax, and seek connection, both digitally and in physical spaces.
                         </p>
                     </div>
+                </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-                        {/* Left Column */}
-                        <div className="flex flex-col gap-12">
-                            {/* Participants */}
-                            <div>
-                                <div className="flex flex-wrap gap-3 mb-6">
-                                    <span className="bg-[#6e6764] text-white px-4 py-1.5 rounded text-sm font-medium uppercase tracking-wider">
-                                        Participants
-                                    </span>
-                                    <span className="bg-gray-100 text-[#6e6764] px-3 py-1.5 rounded flex items-center gap-2 text-sm font-medium">
-                                        👥 12 College Students
-                                    </span>
-                                    <span className="bg-gray-100 text-[#6e6764] px-3 py-1.5 rounded flex items-center gap-2 text-sm font-medium">
-                                        📅 Ages 20–24
-                                    </span>
-                                    <span className="bg-gray-100 text-[#6e6764] px-3 py-1.5 rounded flex items-center gap-2 text-sm font-medium">
-                                        📹 Zoom Session
-                                    </span>
-                                    <span className="bg-gray-100 text-[#6e6764] px-3 py-1.5 rounded flex items-center gap-2 text-sm font-medium">
-                                        👤 1-on-1
-                                    </span>
+                {/* Goal Text */}
+                <div className="mb-16 md:mb-24">
+                    <p className="text-[#6F6864] text-[20px] md:text-[24px] leading-snug md:leading-[36px] font-medium max-w-[1000px] ml-0 md:ml-2">
+                        The goal of this research was to validate whether a virtual lounge concept aligned with students' social habits and emotional needs before moving into full production.
+                    </p>
+                </div>
+
+                {/* Two-Column Layout */}
+                <div className="flex flex-col lg:flex-row relative gap-16 lg:gap-8 justify-between">
+                    {/* Left Column */}
+                    <div className="flex-1 lg:max-w-[48%] flex flex-col gap-12">
+                        {/* Participants Section */}
+                        <div>
+                            {/* Pill Grid */}
+                            <div className="flex flex-wrap items-center gap-3 mb-8">
+                                <div className="inline-flex items-center justify-center bg-[#212873] rounded-[6px] px-6 py-2.5">
+                                    <span className="text-white font-medium text-[18px] md:text-[20px]">Participants</span>
                                 </div>
-                                <ul className="space-y-2 text-[#6e6764] text-base md:text-lg leading-relaxed list-disc pl-5">
-                                    <li>Mix of undergraduate and graduate students</li>
-                                    <li>All participants socialize regularly both online and in person</li>
-                                    <li>Majority use social media, Discord, FaceTime, or gaming platforms</li>
-                                    <li>Many reported feeling socially burnt out or overwhelmed by large group settings</li>
-                                    <li>Participants represented varying comfort levels with VR and gaming environments</li>
-                                </ul>
+                                <div className="bg-[#EEF0F8] rounded-[6px] flex items-center gap-2.5 px-3 py-2">
+                                    <div className="flex items-center justify-center bg-transparent">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#212873" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="5" r="3" /><path d="M9.5 10c0-1.7-1.3-3-3-3h-1c-1.7 0-3 1.3-3 3v6h2v6h4v-6h2v-6z" /><path d="M11 11.5l3.5-4 4.5 4z" /><path d="M11 12.5v3h11v-3z" /><circle cx="14" cy="18" r="2" /><circle cx="19" cy="18" r="2" /></svg>
+                                    </div>
+                                    <span className="text-[#212873] font-medium text-[16px] md:text-[18px]">12 College Students</span>
+                                </div>
+                                <div className="bg-[#EEF0F8] rounded-[6px] flex items-center gap-2.5 px-3 py-2">
+                                    <div className="flex items-center justify-center bg-transparent">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#212873" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M7 2v4M17 2v4" stroke="#212873" strokeWidth="2" strokeLinecap="round" /><rect x="6" y="9" width="3" height="3" fill="white" /><rect x="10.5" y="9" width="3" height="3" fill="white" /><rect x="15" y="9" width="3" height="3" fill="white" /><rect x="6" y="13.5" width="3" height="3" fill="white" /><rect x="10.5" y="13.5" width="3" height="3" fill="white" /><rect x="15" y="13.5" width="3" height="3" fill="white" /><rect x="6" y="18" width="3" height="3" fill="white" /><rect x="10.5" y="18" width="3" height="3" fill="white" /><rect x="15" y="18" width="3" height="3" fill="white" /></svg>
+                                    </div>
+                                    <span className="text-[#212873] font-medium text-[16px] md:text-[18px]">Ages 20-24</span>
+                                </div>
+                                <div className="bg-[#EEF0F8] rounded-[6px] flex items-center gap-2.5 px-3 py-2 mt-1 lg:mt-0">
+                                    <div className="flex items-center justify-center bg-transparent">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#212873" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="5" r="3" /><path d="M16 13c0-2-2-3-4-3s-4 1-4 3v3h8v-3z" /><circle cx="6" cy="8" r="2.5" /><path d="M10 16v-2c0-.52-.16-1.02-.45-1.45A3.95 3.95 0 0 0 6 11c-1.66 0-3 1-3 2.5V16h7z" /><circle cx="18" cy="8" r="2.5" /><path d="M21 16v-2.5c0-1.5-1.34-2.5-3-2.5a3.95 3.95 0 0 0-3.55 1.55c.29.43.45.93.45 1.45v2h6z" /><circle cx="12" cy="17" r="2.5" /><path d="M16 23v-1.5c0-1.5-1.5-2.5-4-2.5s-4 1-4 2.5V23h8z" /></svg>
+                                    </div>
+                                    <span className="text-[#212873] font-medium text-[16px] md:text-[18px]">Zoom Session</span>
+                                </div>
+                                <div className="bg-[#EEF0F8] rounded-[6px] flex items-center gap-2.5 px-3 py-2 mt-1 lg:mt-0">
+                                    <div className="flex items-center justify-center bg-transparent">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#212873" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="2" width="14" height="20" rx="3" /><circle cx="9" cy="6" r="1.5" fill="white" /><circle cx="9" cy="11" r="1.5" fill="white" /><circle cx="12" cy="8.5" r="1" fill="white" /></svg>
+                                    </div>
+                                    <span className="text-[#212873] font-medium text-[16px] md:text-[18px]">1-on-1</span>
+                                </div>
                             </div>
 
-                            {/* Methodology */}
-                            <div>
-                                <div className="mb-6">
-                                    <span className="bg-[#6e6764] text-white px-4 py-1.5 rounded text-sm font-medium uppercase tracking-wider">
-                                        Methodology
-                                    </span>
+                            <ul className="list-disc pl-5 space-y-2 text-[#6F6864] font-normal text-[18px] md:text-[22px] md:leading-[32px] ml-2">
+                                <li>Mix of <span className="font-medium">undergraduate</span> and <span className="font-medium">graduate students</span></li>
+                                <li>All participants socialize regularly both <span className="font-medium">online and in person</span></li>
+                                <li>Majority use <span className="font-medium">social media, Discord, FaceTime, or gaming platforms</span></li>
+                                <li>Many reported feeling <span className="font-medium">socially burnt out</span> or overwhelmed by large group settings</li>
+                                <li>Participants represented varying comfort levels with <span className="font-medium">VR and gaming environments</span></li>
+                            </ul>
+                        </div>
+
+                        {/* Methodology */}
+                        <div>
+                            <div className="inline-flex items-center justify-center bg-[#212873] rounded-[6px] px-6 py-2.5 mb-6">
+                                <span className="text-white font-medium text-[16px] md:text-[20px]">Methodology</span>
+                            </div>
+                            <p className="text-[#6F6864] font-medium text-[18px] md:text-[22px] md:leading-[32px] ml-1">
+                                This study used one-on-one Zoom interviews during early ideation. Each session was a 20–30 minute semi-structured interview focused on participants' social habits, comfort levels, and preferences for digital spaces. No prototype was shown, allowing for unbiased, concept-level feedback.
+                            </p>
+                        </div>
+
+                        {/* Sample Questions */}
+                        <div>
+                            <div className="inline-flex items-center justify-center bg-[#212873] rounded-[6px] px-6 py-2.5 mb-6">
+                                <span className="text-white font-medium text-[16px] md:text-[20px]">Sample Questions</span>
+                            </div>
+                            <ul className="list-disc pl-5 space-y-2 text-[#6F6864] font-medium text-[18px] md:text-[22px] md:leading-[32px] ml-1">
+                                <li>How do you usually spend time with friends during the week?</li>
+                                <li>Do you prefer <span className="font-semibold">small gatherings</span> or <span className="font-semibold">large social settings</span>? Why?</li>
+                                <li>Have you ever used <span className="font-semibold">digital spaces</span> (games, Discord, VR, etc.) to socialize?</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Vertical Line Divider */}
+                    <div className="hidden lg:block w-[1px] bg-[#D9D9D9] self-stretch mx-2"></div>
+
+                    {/* Right Column */}
+                    <div className="flex-1 lg:max-w-[48%] flex flex-col pt-2 lg:pt-0">
+                        {/* Key Findings header */}
+                        <div className="inline-flex items-center justify-center bg-[#212873] rounded-[6px] px-6 py-2.5 mb-8 self-start">
+                            <span className="text-white font-medium text-[16px] md:text-[20px]">Key Findings</span>
+                        </div>
+
+                        {/* Ellipses key findings */}
+                        <div className="flex flex-col gap-10">
+                            {/* Key finding 1 */}
+                            <div className="flex items-center gap-6">
+                                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#EEF0F8] flex items-center justify-center shrink-0">
+                                    <span className="text-3xl md:text-4xl text-[#212873]">🧘</span>
                                 </div>
-                                <p className="text-[#6e6764] text-base md:text-lg leading-relaxed mb-4">
-                                    This study used one-on-one Zoom interviews, conducted during early ideation.
-                                </p>
-                                <p className="text-[#6e6764] text-base md:text-lg leading-relaxed">
-                                    Each session was a 20–30 minute semi-structured Zoom interview focused on participants' social habits, comfort levels, and preferences for digital social spaces. No prototype was shown, allowing for unbiased, concept-level feedback.
+                                <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-normal">
+                                    <span className="font-semibold">Low-pressure socializing is preferred</span> – Students want spaces where interaction is optional
                                 </p>
                             </div>
 
-                            {/* Sample Questions */}
-                            <div>
-                                <div className="mb-6">
-                                    <span className="bg-[#6e6764] text-white px-4 py-1.5 rounded text-sm font-medium uppercase tracking-wider">
-                                        Sample Questions
-                                    </span>
+                            {/* Key finding 2 */}
+                            <div className="flex items-center gap-6">
+                                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#EEF0F8] flex items-center justify-center shrink-0">
+                                    <span className="text-3xl md:text-4xl text-[#212873]">🛋️</span>
                                 </div>
-                                <ol className="space-y-2 text-[#6e6764] text-base md:text-lg leading-relaxed list-decimal pl-5">
-                                    <li>How do you usually spend time with friends during the week?</li>
-                                    <li>Do you prefer small gatherings or large social settings? Why?</li>
-                                    <li>Have you ever used digital spaces (games, Discord, VR, etc.) to socialize?</li>
-                                </ol>
+                                <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-medium">
+                                    <span className="font-semibold">Ambient presence is valued</span> – Many students enjoy "being around people" without active conversation
+                                </p>
+                            </div>
+
+                            {/* Key finding 3 */}
+                            <div className="flex items-center gap-6">
+                                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#EEF0F8] flex items-center justify-center shrink-0">
+                                    <span className="text-3xl md:text-4xl text-[#212873]">🛌</span>
+                                </div>
+                                <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-medium">
+                                    <span className="font-semibold">Comfort &gt; excitement</span> – Calm, cozy environments feel more appealing than high-energy ones
+                                </p>
+                            </div>
+
+                            {/* Key finding 4 */}
+                            <div className="flex items-center gap-6">
+                                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#EEF0F8] flex items-center justify-center shrink-0">
+                                    <span className="text-3xl md:text-4xl text-[#212873]">🕹️</span>
+                                </div>
+                                <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-medium">
+                                    <span className="font-semibold">Light interaction helps break the ice</span> – Games are useful when optional, not competitive
+                                </p>
                             </div>
                         </div>
 
-                        {/* Right Column */}
-                        <div className="flex flex-col gap-12">
-                            {/* Key Findings */}
-                            <div>
-                                <div className="mb-6">
-                                    <span className="bg-[#6e6764] text-white px-4 py-1.5 rounded text-sm font-medium uppercase tracking-wider">
-                                        Key Findings
-                                    </span>
-                                </div>
-                                <div className="space-y-6">
-                                    <div className="flex gap-4">
-                                        <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center shrink-0 text-2xl">
-                                            🧘
-                                        </div>
-                                        <div>
-                                            <h4 className="font-semibold text-[#6e6764] text-lg">Low-pressure socializing is preferred –</h4>
-                                            <p className="text-[#6e6764] text-base leading-relaxed">Students want spaces where interaction is optional</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4">
-                                        <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center shrink-0 text-2xl">
-                                            🛋️
-                                        </div>
-                                        <div>
-                                            <h4 className="font-semibold text-[#6e6764] text-lg">Ambient presence is valued –</h4>
-                                            <p className="text-[#6e6764] text-base leading-relaxed">Many students enjoy "being around people" without active conversation</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4">
-                                        <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center shrink-0 text-2xl">
-                                            🛌
-                                        </div>
-                                        <div>
-                                            <h4 className="font-semibold text-[#6e6764] text-lg">Comfort &gt; excitement –</h4>
-                                            <p className="text-[#6e6764] text-base leading-relaxed">Calm, cozy environments feel more appealing than high-energy ones</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4">
-                                        <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center shrink-0 text-2xl">
-                                            🕹️
-                                        </div>
-                                        <div>
-                                            <h4 className="font-semibold text-[#6e6764] text-lg">Light interaction helps break the ice –</h4>
-                                            <p className="text-[#6e6764] text-base leading-relaxed">Games are useful when optional, not competitive</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Quote */}
-                            <div className="border border-gray-200 rounded-lg p-8 relative">
-                                <span className="text-6xl text-gray-300 absolute top-4 left-4 font-serif">“</span>
-                                <p className="text-[#6e6764] text-xl md:text-2xl font-medium leading-relaxed italic relative z-10 pt-4">
+                        {/* Quote Box */}
+                        <div className="bg-[#EEF0F8] rounded-[10px] flex items-center p-8 mt-12 mb-12 relative w-full lg:max-w-[576px] lg:h-[178px]">
+                            <span className="absolute top-6 left-6 text-[50px] md:text-[60px] text-[#212873] font-serif leading-none">"</span>
+                            <div className="ml-12 md:ml-10 mt-4">
+                                <p className="text-[#212873] font-medium text-[16px] md:text-[24px] leading-snug italic relative z-10 pt-2">
                                     Sometimes I don't want to talk — I just want to exist in the same space as other people.
                                 </p>
-                                <p className="text-[#6e6764] text-right mt-4 font-medium">— Interview Participant</p>
+                                <p className="text-[#212873] text-[14px] md:text-[22px] mt-2 md:mt-4 font-normal">
+                                    — Interview Participant
+                                </p>
                             </div>
+                        </div>
 
-                            {/* Impact on Design */}
-                            <div>
-                                <div className="mb-6">
-                                    <span className="bg-[#6e6764] text-white px-4 py-1.5 rounded text-sm font-medium uppercase tracking-wider">
-                                        Impact on Design
-                                    </span>
-                                </div>
-                                <ul className="space-y-2 text-[#6e6764] text-base md:text-lg leading-relaxed list-disc pl-5">
-                                    <li>Design the lounge as a non-linear experience with multiple paths</li>
-                                    <li>Allow users to choose their level of interaction</li>
-                                    <li>Include passive activities (balcony, theater) alongside playful ones</li>
-                                    <li>Focus on atmosphere, sound, and lighting as primary design elements</li>
-                                </ul>
+                        {/* Impact on Design */}
+                        <div>
+                            <div className="inline-flex items-center justify-center bg-[#212873] rounded-[6px] px-6 py-2.5 mb-6 self-start">
+                                <span className="text-white font-medium text-[16px] md:text-[20px]">Impact on Design</span>
                             </div>
+                            <ul className="list-disc pl-5 space-y-3 text-[#6F6864] font-medium text-[18px] md:text-[22px] md:leading-[32px] ml-1">
+                                <li>Design the lounge as a non-linear experience with multiple paths</li>
+                                <li>Allow users to choose their level of interaction</li>
+                                <li>Include passive activities (balcony, theater) alongside playful ones</li>
+                                <li>Focus on atmosphere, sound, and lighting as primary design elements</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -365,12 +366,83 @@ const CoralWayLoungePage = () => {
                 />
             </ContentSection>
 
-            {/* Key Insights */}
-            <KeyInsights
-                backgroundColor="bg-[#6e6764]"
-                description="These insights summarize the most important patterns uncovered during research and discovery, highlighting the core challenges users face when trying to feel comfortable, socially open, and emotionally present in VR environments"
-                insights={keyInsights}
-            />
+            {/* Key Insights Section (Custom for Coral Way Lounge) */}
+            <section className="bg-[#6F6864] w-full py-20 px-4 md:px-8 mt-10">
+                <div className="max-w-[1244px] mx-auto flex flex-col gap-16">
+                    {/* Header Text */}
+                    <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-20">
+                        <h2 className="text-white text-[40px] font-semibold font-['SF Pro Display'] leading-[48px] whitespace-nowrap">
+                            Key Insights:
+                        </h2>
+                        <p className="text-white text-[24px] md:text-[30px] font-medium font-['SF Pro Display'] leading-[36px] max-w-[725px]">
+                            These insights summarize the most important patterns uncovered during research and discovery, highlighting the core challenges users face when trying to feel comfortable, socially open, and emotionally present in VR environments
+                        </p>
+                    </div>
+
+                    {/* Insights Grid */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[30px] gap-y-[30px]">
+                        {/* Card 1 */}
+                        <div className="bg-[#F9FAFB] border border-[#6F6864] rounded-[10px] p-6 flex items-start gap-4 shadow-sm w-full md:max-w-[552px] md:h-[145px]">
+                            <div className="w-[60px] h-[60px] shrink-0 bg-[#D9D9D9] rounded-full flex items-center justify-center">
+                                <Tv className="w-8 h-8 text-[#6F6864]" />
+                            </div>
+                            <div className="flex flex-col gap-1 overflow-hidden">
+                                <h3 className="text-black text-xl md:text-2xl font-medium font-['SF Pro Display'] leading-[29px] truncate">
+                                    Emotional Comfort Enables Socialization
+                                </h3>
+                                <p className="text-[#6F6864] text-base md:text-xl font-normal font-['SF Pro Display'] leading-snug line-clamp-2 md:line-clamp-none">
+                                    Emotional comfort plays a key role in users’ willingness to engage socially in VR environments.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Card 2 */}
+                        <div className="bg-[#F9FAFB] border border-[#6F6864] rounded-[10px] p-6 flex items-start gap-4 shadow-sm w-full md:max-w-[552px] md:h-[145px]">
+                            <div className="w-[60px] h-[60px] shrink-0 bg-[#D9D9D9] rounded-full flex items-center justify-center">
+                                <Compass className="w-8 h-8 text-[#6F6864]" />
+                            </div>
+                            <div className="flex flex-col gap-1 overflow-hidden">
+                                <h3 className="text-black text-xl md:text-2xl font-medium font-['SF Pro Display'] leading-[29px] truncate">
+                                    Simple Navigation Reduces Social Friction
+                                </h3>
+                                <p className="text-[#6F6864] text-base md:text-xl font-normal font-['SF Pro Display'] leading-snug line-clamp-2 md:line-clamp-none">
+                                    Simple navigation and gentle onboarding help users feel confident engaging in shared spaces.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Card 3 */}
+                        <div className="bg-[#F9FAFB] border border-[#6F6864] rounded-[10px] p-6 flex items-start gap-4 shadow-sm w-full md:max-w-[552px] md:h-[145px]">
+                            <div className="w-[60px] h-[60px] shrink-0 bg-[#D9D9D9] rounded-full flex items-center justify-center">
+                                <Users className="w-8 h-8 text-[#6F6864]" />
+                            </div>
+                            <div className="flex flex-col gap-1 overflow-hidden">
+                                <h3 className="text-black text-xl md:text-2xl font-medium font-['SF Pro Display'] leading-[29px] truncate">
+                                    Shared Activities Spark Connection
+                                </h3>
+                                <p className="text-[#6F6864] text-base md:text-xl font-normal font-['SF Pro Display'] leading-snug line-clamp-2 md:line-clamp-none">
+                                    Casual, low-stakes activities make it easier for users to connect without social pressure.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Card 4 */}
+                        <div className="bg-[#F9FAFB] border border-[#6F6864] rounded-[10px] p-6 flex items-start gap-4 shadow-sm w-full md:max-w-[552px] md:h-[145px]">
+                            <div className="w-[60px] h-[60px] shrink-0 bg-[#D9D9D9] rounded-full flex items-center justify-center">
+                                <Orbit className="w-8 h-8 text-[#6F6864]" />
+                            </div>
+                            <div className="flex flex-col gap-1 overflow-hidden">
+                                <h3 className="text-black text-xl md:text-2xl font-medium font-['SF Pro Display'] leading-[29px] truncate">
+                                    Sensory Design Strengthens Presence
+                                </h3>
+                                <p className="text-[#6F6864] text-base md:text-xl font-normal font-['SF Pro Display'] leading-snug line-clamp-2 md:line-clamp-none">
+                                    Multi-sensory cues enhance presence and creates a more immersive experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* How Might We (Already Updated) */}
             <TwoColumnSection
@@ -409,7 +481,7 @@ const CoralWayLoungePage = () => {
                     <img
                         className="w-full h-auto rounded-2xl transform -rotate-1 hover:rotate-0 transition-transform duration-300"
                         alt="How might we encourage social interaction..."
-                        src={`${import.meta.env.BASE_URL}figmaAssets/coral-hmw-orange.png`}
+                        src={`${import.meta.env.BASE_URL}figmaAssets/coral-hmw-pink.png`}
                     />
                 </div>
             </ContentSection>
@@ -445,8 +517,8 @@ const CoralWayLoungePage = () => {
                 right={
                     <div className="flex flex-col gap-6">
                         <div className="flex gap-4 mb-8">
-                            <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center shrink-0 text-2xl">
-                                🥽
+                            <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
+                                <img src={`${import.meta.env.BASE_URL}figmaAssets/Apple Vision Pro.png`} alt="Apple Vision Pro" className="w-8 h-8 object-contain" />
                             </div>
                             <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
                                 The following screens represent the final visual and experiential direction for Coral Way Lounge. Informed by research insights, narrative framing, and spatial exploration, these designs illustrate how atmosphere, flow, and interaction come together to support comfort, clarity, and social ease within the lounge experience.

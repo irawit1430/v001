@@ -493,7 +493,7 @@ const FreshOutPage = () => {
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
                     {nextSteps.map((step, index) => (
-                        <StepCard key={index} {...step} />
+                        <StepCard key={index} {...step} iconClassName="w-14 h-14" iconContainerClassName="w-14 h-14 bg-transparent" />
                     ))}
                 </div>
                 <p className="mt-12 text-center text-[#6F6864] text-base md:text-[28px] md:leading-[33px] max-w-5xl mx-auto">

@@ -23,7 +23,6 @@ import iconUserTesting from '../assets/icon-user-testing.png';
 import iconIterate from '../assets/icon-iterate.png';
 import iconAnalytics from '../assets/icon-analytics.png';
 import iconFeatures from '../assets/icon-features.png';
-import eventRef from '../assets/event-overlay.png';
 
 import challengeLaptop from '../assets/challenge-laptop.png';
 import challengeCircle from '../assets/challenge-circle.png';
@@ -129,7 +128,6 @@ const nextSteps = [
         icon: iconFeatures,
         title: "Future Features",
         description: "Explore premium features like event creation, business partnerships, and community moderation tools.",
-        overlayIcon: eventRef,
     },
 ];
 
