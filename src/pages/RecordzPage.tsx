@@ -142,6 +142,8 @@ const RecordzPage = () => {
                 subtitle="Music Studio & Label Website"
                 imageSrc={heroImage}
                 imageAlt="1331 Recordz Website Mockup"
+                imageClassName="w-full max-w-[1000px] h-auto object-contain"
+                imageContainerClassName="relative z-0 w-full flex justify-center -mt-4 md:-mt-10"
                 gradientOverlay="linear-gradient(180deg, #FFFFFF 21.15%, #CCCCCC 50%, #B3B3B3 75%, #999999 100%)"
             />
 

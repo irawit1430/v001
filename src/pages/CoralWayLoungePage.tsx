@@ -9,7 +9,7 @@ import { ProjectDetailGrid } from "../components/case-studies/new-template/cards
 import { StepCard } from "../components/case-studies/new-template/cards/StepCard";
 
 import ResearchOverview from "../components/case-studies/shared/ResearchOverview";
-import { Users, Compass, Tv, Orbit } from "lucide-react";
+
 
 
 const projectDetails = [
@@ -68,6 +68,8 @@ const CoralWayLoungePage = () => {
                 subtitle="Virtual Reality Experience & Game"
                 imageSrc={`${import.meta.env.BASE_URL}figmaAssets/coral-way-hero.png`}
                 imageAlt="Coral Way Lounge hero image"
+                imageClassName="w-full max-w-[1000px] h-auto object-contain"
+                imageContainerClassName="relative z-0 w-full flex justify-center -mt-14 md:-mt-28"
             />
 
             {/* Project Details */}
@@ -272,8 +274,8 @@ const CoralWayLoungePage = () => {
                         <div className="flex flex-col gap-10">
                             {/* Key finding 1 */}
                             <div className="flex items-center gap-6">
-                                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#EEF0F8] flex items-center justify-center shrink-0">
-                                    <span className="text-3xl md:text-4xl text-[#212873]">🧘</span>
+                                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] shrink-0">
+                                    <img src={`${import.meta.env.BASE_URL}figmaAssets/Group 179.png`} alt="Low-pressure socializing icon" className="w-full h-full object-contain" />
                                 </div>
                                 <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-normal">
                                     <span className="font-semibold">Low-pressure socializing is preferred</span> – Students want spaces where interaction is optional
@@ -282,8 +284,8 @@ const CoralWayLoungePage = () => {
 
                             {/* Key finding 2 */}
                             <div className="flex items-center gap-6">
-                                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#EEF0F8] flex items-center justify-center shrink-0">
-                                    <span className="text-3xl md:text-4xl text-[#212873]">🛋️</span>
+                                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] shrink-0">
+                                    <img src={`${import.meta.env.BASE_URL}figmaAssets/Group 179 (1).png`} alt="Ambient presence icon" className="w-full h-full object-contain" />
                                 </div>
                                 <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-medium">
                                     <span className="font-semibold">Ambient presence is valued</span> – Many students enjoy "being around people" without active conversation
@@ -292,8 +294,8 @@ const CoralWayLoungePage = () => {
 
                             {/* Key finding 3 */}
                             <div className="flex items-center gap-6">
-                                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#EEF0F8] flex items-center justify-center shrink-0">
-                                    <span className="text-3xl md:text-4xl text-[#212873]">🛌</span>
+                                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] shrink-0">
+                                    <img src={`${import.meta.env.BASE_URL}figmaAssets/Group 179 (2).png`} alt="Comfort icon" className="w-full h-full object-contain" />
                                 </div>
                                 <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-medium">
                                     <span className="font-semibold">Comfort &gt; excitement</span> – Calm, cozy environments feel more appealing than high-energy ones
@@ -302,8 +304,8 @@ const CoralWayLoungePage = () => {
 
                             {/* Key finding 4 */}
                             <div className="flex items-center gap-6">
-                                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#EEF0F8] flex items-center justify-center shrink-0">
-                                    <span className="text-3xl md:text-4xl text-[#212873]">🕹️</span>
+                                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] shrink-0">
+                                    <img src={`${import.meta.env.BASE_URL}figmaAssets/Group 179 (3).png`} alt="Light interaction icon" className="w-full h-full object-contain" />
                                 </div>
                                 <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-medium">
                                     <span className="font-semibold">Light interaction helps break the ice</span> – Games are useful when optional, not competitive
@@ -371,7 +373,7 @@ const CoralWayLoungePage = () => {
                 <div className="max-w-[1244px] mx-auto flex flex-col gap-16">
                     {/* Header Text */}
                     <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-20">
-                        <h2 className="text-white text-[40px] font-semibold font-['SF Pro Display'] leading-[48px] whitespace-nowrap">
+                        <h2 className="text-white text-[40px] font-medium font-['SF Pro Display'] leading-[48px] whitespace-nowrap">
                             Key Insights:
                         </h2>
                         <p className="text-white text-[24px] md:text-[30px] font-medium font-['SF Pro Display'] leading-[36px] max-w-[725px]">
@@ -383,8 +385,8 @@ const CoralWayLoungePage = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[30px] gap-y-[30px]">
                         {/* Card 1 */}
                         <div className="bg-[#F9FAFB] border border-[#6F6864] rounded-[10px] p-6 flex items-start gap-4 shadow-sm w-full md:max-w-[552px] md:h-[145px]">
-                            <div className="w-[60px] h-[60px] shrink-0 bg-[#D9D9D9] rounded-full flex items-center justify-center">
-                                <Tv className="w-8 h-8 text-[#6F6864]" />
+                            <div className="w-[60px] h-[60px] shrink-0 flex items-center justify-center">
+                                <img src={`${import.meta.env.BASE_URL}figmaAssets/image.png`} alt="Emotional Comfort" className="w-full h-full object-contain" />
                             </div>
                             <div className="flex flex-col gap-1 overflow-hidden">
                                 <h3 className="text-black text-xl md:text-2xl font-medium font-['SF Pro Display'] leading-[29px] truncate">
@@ -398,8 +400,8 @@ const CoralWayLoungePage = () => {
 
                         {/* Card 2 */}
                         <div className="bg-[#F9FAFB] border border-[#6F6864] rounded-[10px] p-6 flex items-start gap-4 shadow-sm w-full md:max-w-[552px] md:h-[145px]">
-                            <div className="w-[60px] h-[60px] shrink-0 bg-[#D9D9D9] rounded-full flex items-center justify-center">
-                                <Compass className="w-8 h-8 text-[#6F6864]" />
+                            <div className="w-[60px] h-[60px] shrink-0 flex items-center justify-center">
+                                <img src={`${import.meta.env.BASE_URL}figmaAssets/image copy.png`} alt="Simple Navigation" className="w-full h-full object-contain" />
                             </div>
                             <div className="flex flex-col gap-1 overflow-hidden">
                                 <h3 className="text-black text-xl md:text-2xl font-medium font-['SF Pro Display'] leading-[29px] truncate">
@@ -413,8 +415,8 @@ const CoralWayLoungePage = () => {
 
                         {/* Card 3 */}
                         <div className="bg-[#F9FAFB] border border-[#6F6864] rounded-[10px] p-6 flex items-start gap-4 shadow-sm w-full md:max-w-[552px] md:h-[145px]">
-                            <div className="w-[60px] h-[60px] shrink-0 bg-[#D9D9D9] rounded-full flex items-center justify-center">
-                                <Users className="w-8 h-8 text-[#6F6864]" />
+                            <div className="w-[60px] h-[60px] shrink-0 flex items-center justify-center">
+                                <img src={`${import.meta.env.BASE_URL}figmaAssets/image copy 2.png`} alt="Shared Activities" className="w-full h-full object-contain" />
                             </div>
                             <div className="flex flex-col gap-1 overflow-hidden">
                                 <h3 className="text-black text-xl md:text-2xl font-medium font-['SF Pro Display'] leading-[29px] truncate">
@@ -428,8 +430,8 @@ const CoralWayLoungePage = () => {
 
                         {/* Card 4 */}
                         <div className="bg-[#F9FAFB] border border-[#6F6864] rounded-[10px] p-6 flex items-start gap-4 shadow-sm w-full md:max-w-[552px] md:h-[145px]">
-                            <div className="w-[60px] h-[60px] shrink-0 bg-[#D9D9D9] rounded-full flex items-center justify-center">
-                                <Orbit className="w-8 h-8 text-[#6F6864]" />
+                            <div className="w-[60px] h-[60px] shrink-0 flex items-center justify-center">
+                                <img src={`${import.meta.env.BASE_URL}figmaAssets/image copy 3.png`} alt="Sensory Design" className="w-full h-full object-contain" />
                             </div>
                             <div className="flex flex-col gap-1 overflow-hidden">
                                 <h3 className="text-black text-xl md:text-2xl font-medium font-['SF Pro Display'] leading-[29px] truncate">
@@ -512,103 +514,114 @@ const CoralWayLoungePage = () => {
 
 
             {/* Final Screens */}
-            <TwoColumnSection
-                left={<SectionHeading title="Final Screens:" />}
-                right={
-                    <div className="flex flex-col gap-6">
-                        <div className="flex gap-4 mb-8">
-                            <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
-                                <img src={`${import.meta.env.BASE_URL}figmaAssets/Apple Vision Pro.png`} alt="Apple Vision Pro" className="w-8 h-8 object-contain" />
-                            </div>
-                            <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
-                                The following screens represent the final visual and experiential direction for Coral Way Lounge. Informed by research insights, narrative framing, and spatial exploration, these designs illustrate how atmosphere, flow, and interaction come together to support comfort, clarity, and social ease within the lounge experience.
-                            </p>
-                        </div>
+            <div className="max-w-[1244px] mx-auto px-4 md:px-8 pt-16 pb-8 flex flex-col lg:flex-row justify-between relative">
+                <div className="lg:w-1/3 mt-3">
+                    <SectionHeading title="Final Screens:" className="text-black text-[40px] leading-[48px] font-medium font-['SF_Pro_Display'] pt-1" />
+                </div>
+                <div className="max-w-[743px] lg:w-2/3 flex flex-col relative mt-8 lg:mt-0">
+                    <div className="flex gap-4 items-start mb-6">
+                        <img src={`${import.meta.env.BASE_URL}figmaAssets/Apple Vision Pro.png`} alt="Apple Vision Pro" className="w-[60px] h-[60px] object-contain shrink-0 mt-[-8px]" />
+                        <h3 className="font-medium text-[#6F6864] text-[34px] leading-[41px] font-['SF_Pro_Display']">
+                            The following screens represent the final visual and experiential direction for Coral Way Lounge.
+                        </h3>
                     </div>
-                }
-            />
+                    <p className="font-normal text-[#6F6864] text-[30px] leading-[36px] font-['SF_Pro_Display']">
+                        Informed by research insights, narrative framing, and spatial exploration, these designs illustrate how atmosphere, flow, and interaction come together to support comfort, clarity, and social ease within the lounge experience.
+                    </p>
+                </div>
+            </div>
 
-            <ContentSection className="!py-16 space-y-24 max-w-[1100px] mx-auto">
+            <div className="w-full max-w-[1440px] mx-auto py-16 flex flex-col gap-y-[150px] items-center">
                 {/* Lobby & Arrival */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <img
-                        className="w-full h-auto rounded-2xl shadow-lg"
-                        alt="Lobby & Arrival"
-                        src={`${import.meta.env.BASE_URL}figmaAssets/coral-final-1.png`}
-                    />
-                    <div className="flex flex-col gap-4">
-                        <h3 className="md:text-[34px] md:leading-[41px] font-medium text-[#6F6864]">Lobby & Arrival</h3>
-                        <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center justify-between w-full px-4 lg:px-20 max-w-[1400px]">
+                    <div className="flex-1 max-w-[800px]">
+                        <img
+                            className="w-full h-auto drop-shadow-2xl"
+                            alt="Lobby & Arrival"
+                            src={`${import.meta.env.BASE_URL}figmaAssets/image copy 4.png`}
+                        />
+                    </div>
+                    <div className="flex flex-col gap-4 max-w-[400px]">
+                        <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Lobby & Arrival</h3>
+                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
                             The lobby is the main entry point where users exit the elevator and orient themselves within the experience. This space provides a calm pause before transitioning into the lounge.
                         </p>
                     </div>
                 </div>
 
                 {/* Welcome Portal */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <img
-                        className="w-full h-auto rounded-2xl shadow-lg"
-                        alt="Welcome Portal"
-                        src={`${import.meta.env.BASE_URL}figmaAssets/coral-final-2.png`}
-                    />
-                    <div className="flex flex-col gap-4">
-                        <h3 className="md:text-[34px] md:leading-[41px] font-medium text-[#6F6864]">Welcome Portal</h3>
-                        <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center justify-between w-full px-4 lg:px-20 max-w-[1400px]">
+                    <div className="flex-1 max-w-[800px]">
+                        <img
+                            className="w-full h-auto drop-shadow-2xl"
+                            alt="Welcome Portal"
+                            src={`${import.meta.env.BASE_URL}figmaAssets/image copy 5.png`}
+                        />
+                    </div>
+                    <div className="flex flex-col gap-4 max-w-[400px]">
+                        <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Welcome Portal</h3>
+                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
                             The welcome sign acts as a visual and interactive threshold into the lounge. Passing through it seamlessly transports users into the main social space.
                         </p>
                     </div>
                 </div>
 
                 {/* Main Lounge */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <img
-                        className="w-full h-auto rounded-2xl shadow-lg"
-                        alt="Main Lounge"
-                        src={`${import.meta.env.BASE_URL}figmaAssets/coral-final-3.png`}
-                    />
-                    <div className="flex flex-col gap-4">
-                        <h3 className="md:text-[34px] md:leading-[41px] font-medium text-[#6F6864]">Main Lounge</h3>
-                        <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center justify-between w-full px-4 lg:px-20 max-w-[1400px]">
+                    <div className="flex-1 max-w-[800px]">
+                        <img
+                            className="w-full h-auto drop-shadow-2xl"
+                            alt="Main Lounge"
+                            src={`${import.meta.env.BASE_URL}figmaAssets/image copy 6.png`}
+                        />
+                    </div>
+                    <div className="flex flex-col gap-4 max-w-[400px]">
+                        <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Main Lounge</h3>
+                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
                             The lounge serves as the central gathering area, designed for relaxed exploration and low-pressure interaction. Open sightlines and ambient lighting support comfort and ease.
                         </p>
                     </div>
                 </div>
 
                 {/* Theater Room */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <img
-                        className="w-full h-auto rounded-2xl shadow-lg"
-                        alt="Theater Room"
-                        src={`${import.meta.env.BASE_URL}figmaAssets/coral-final-4.png`}
-                    />
-                    <div className="flex flex-col gap-4">
-                        <h3 className="md:text-[34px] md:leading-[41px] font-medium text-[#6F6864]">Theater Room</h3>
-                        <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center justify-between w-full px-4 lg:px-20 max-w-[1400px]">
+                    <div className="flex-1 max-w-[800px]">
+                        <img
+                            className="w-full h-auto drop-shadow-2xl"
+                            alt="Theater Room"
+                            src={`${import.meta.env.BASE_URL}figmaAssets/image copy 7.png`}
+                        />
+                    </div>
+                    <div className="flex flex-col gap-4 max-w-[400px]">
+                        <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Theater Room</h3>
+                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
                             The theater offers a more focused shared experience within the lounge environment. Its separation helps maintain immersion without disrupting nearby spaces.
                         </p>
                     </div>
                 </div>
 
                 {/* Lounge Immersion */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <img
-                        className="w-full h-auto rounded-2xl shadow-lg"
-                        alt="Lounge Immersion"
-                        src={`${import.meta.env.BASE_URL}figmaAssets/coral-final-5.png`}
-                    />
-                    <div className="flex flex-col gap-4">
-                        <h3 className="md:text-[34px] md:leading-[41px] font-medium text-[#6F6864]">Lounge Immersion</h3>
-                        <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
-                            This view removes visible controllers to emphasize presence and immersion. Reducing interface elements allows users to engage more naturally with the environment.
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center justify-between w-full px-4 lg:px-20 max-w-[1400px]">
+                    <div className="flex-1 max-w-[800px]">
+                        <img
+                            className="w-full h-auto drop-shadow-2xl"
+                            alt="Lounge Immersion"
+                            src={`${import.meta.env.BASE_URL}figmaAssets/image copy 8.png`}
+                        />
+                    </div>
+                    <div className="flex flex-col gap-4 max-w-[400px]">
+                        <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Lounge Immersion</h3>
+                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
+                            This view removes visible controllers to prioritize presence and immersion. Reducing interface elements allows users to engage more naturally with the environment.
                         </p>
                     </div>
                 </div>
-            </ContentSection>
+            </div>
 
 
 
             {/* Next Steps */}
-            <ContentSection>
+            < ContentSection >
                 <SectionHeading
                     title="Next Steps:"
                     description="Road map for future development and continuous improvement"
@@ -621,13 +634,13 @@ const CoralWayLoungePage = () => {
                 <p className="mt-12 text-center text-[#6F6864] text-base md:text-[28px] md:leading-[33px] max-w-5xl mx-auto">
                     Thank you for reviewing this case study. I’m always open to feedback and interested in exploring how spatial and experiential design can shape meaningful social environments.
                 </p>
-            </ContentSection>
+            </ContentSection >
 
             {/* Contact CTA */}
             {/* Contact CTA */}
             <GetInTouchSection theme="dark" bgColor="bg-[#492300]" buttonBgColor="#B6936E" buttonTextColor="white" />
 
-        </div>
+        </div >
     );
 };
 

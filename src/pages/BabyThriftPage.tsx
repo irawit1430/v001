@@ -121,7 +121,8 @@ const BabyThriftPage = () => {
                 subtitle="Thrifting Application"
                 imageSrc={`${import.meta.env.BASE_URL}figmaAssets/baby thrive hero image.jpeg`}
                 imageAlt="Baby Thrift App Screens"
-                imageContainerClassName="relative z-0 w-full flex justify-center -mt-12 md:-mt-24"
+                imageClassName="w-full max-w-[1000px] h-auto object-contain"
+                imageContainerClassName="relative z-0 w-full flex justify-center -mt-14 md:-mt-28"
             />
 
             {/* Project Details */}
@@ -472,7 +473,7 @@ const BabyThriftPage = () => {
                 <div className="space-y-16 w-full max-w-[1200px] mx-auto">
                     {/* Account Creation - 2 column layout */}
                     <div className="w-full overflow-hidden">
-                        <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-8 lg:mb-12">Account Creation</p>
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-8 lg:mb-12">Account Creation</p>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
                             <img src={userFlowImage} alt="Account Creation Flow" className="w-full max-w-[450px] lg:max-w-none h-auto rounded-xl mx-auto lg:mx-0 object-contain" />
                             <div className="flex flex-col gap-6 lg:gap-8 pt-0 lg:pt-16">
@@ -497,7 +498,7 @@ const BabyThriftPage = () => {
                     </div>
                     {/* Purchasing */}
                     <div className="overflow-hidden pt-8">
-                        <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-8 lg:mb-12">Purchasing</p>
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-8 lg:mb-12">Purchasing</p>
                         <img src={purchasingFlowImage} alt="Purchasing Flow" className="w-full h-auto rounded-xl" />
                     </div>
                 </div>

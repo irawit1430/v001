@@ -96,10 +96,10 @@ const loFiScreens = [
 ];
 
 const hiFiScreens = [
-    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hifi-1.png`, alt: "Lifetime Circle Screen", label: "Lifetime Circle Screen" },
-    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hifi-2.png`, alt: "OTP Verification Screen", label: "OTP Verification Screen" },
-    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hifi-3.png`, alt: "Lifetime Bonder Screen", label: "Lifetime Bonder Screen" },
-    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hifi-4.png`, alt: "Lifetime Event Screen", label: "Lifetime Event Screen" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/image copy 9.png`, alt: "Lifetime Circle Screen", label: "Lifetime Circle Screen" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/image copy 10.png`, alt: "OTP Verification Screen", label: "OTP Verification Screen" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/image copy 11.png`, alt: "Lifetime Bonder Screen", label: "Lifetime Bonder Screen" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/image copy 12.png`, alt: "Lifetime Event Screen", label: "Lifetime Event Screen" },
 ];
 
 
@@ -113,8 +113,8 @@ const BonderCaseStudy = () => {
                 subtitle="Social Media Application"
                 imageSrc={`${import.meta.env.BASE_URL}figmaAssets/bonder hero img.jpeg`}
                 imageAlt="Bonder App Mockups"
-                imageClassName="w-full h-auto object-contain"
-                imageContainerClassName="relative z-0 w-full flex justify-center -mt-12 md:-mt-24"
+                imageClassName="w-full max-w-[1000px] h-auto object-contain"
+                imageContainerClassName="relative z-0 w-full flex justify-center -mt-14 md:-mt-28"
             />
 
             {/* Project Details */}

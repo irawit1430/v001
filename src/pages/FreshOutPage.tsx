@@ -101,8 +101,8 @@ const FreshOutPage = () => {
                 subtitle="Veteran Social Application"
                 imageSrc={`${import.meta.env.BASE_URL}figmaAssets/freshout-hero-image.png`}
                 imageAlt="Fresh Out hero image"
-                imageClassName="w-full h-auto object-contain"
-                imageContainerClassName="relative z-0 w-full flex justify-center -mt-12 md:-mt-24"
+                imageClassName="w-full max-w-[1000px] h-auto object-contain"
+                imageContainerClassName="relative z-0 w-full flex justify-center -mt-14 md:-mt-28"
             />
 
             {/* Project Details */}
@@ -276,7 +276,7 @@ const FreshOutPage = () => {
                             <p className="font-medium text-xl md:text-[34px] md:leading-[41px] mb-6">
                                 The solution is shaped by four core goals:
                             </p>
-                            <ol className="list-decimal pl-5 space-y-6 md:space-y-8 text-lg md:text-[34px] md:leading-[41px] font-normal">
+                            <ol className="list-decimal pl-5 space-y-6 md:space-y-8 text-lg md:text-[30px] md:leading-[36px] font-normal">
                                 <li className="pl-2">Enable veterans to connect through shared service experience</li>
                                 <li className="pl-2">Create a safe and trusted environment for communication</li>
                                 <li className="pl-2">Reduce the noise of traditional social feeds</li>
@@ -328,11 +328,11 @@ const FreshOutPage = () => {
             <ContentSection className="!px-6 md:!px-16 lg:!px-24 w-full max-w-full">
                 <div className="space-y-12 w-full max-w-[1200px] mx-auto">
                     <div className="w-full overflow-hidden">
-                        <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4">Sign up</p>
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4">Sign up</p>
                         <FreshOutUserFlow />
                     </div>
                     <div className="overflow-hidden">
-                        <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4">Events</p>
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4">Events</p>
                         <FreshOutEventFlow />
                     </div>
                 </div>
