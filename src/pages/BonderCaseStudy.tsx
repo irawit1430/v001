@@ -96,10 +96,10 @@ const loFiScreens = [
 ];
 
 const hiFiScreens = [
-    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hifi-1.png`, alt: "Lifetime Circle Screen", label: "Lifetime Circle Screen", sublabel: "Featured circles & clubs" },
-    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hifi-2.png`, alt: "Verification Screen", label: "Verification Screen", sublabel: "Secure account verification" },
-    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hifi-3.png`, alt: "Lifetime Home Screen", label: "Lifetime Home Screen", sublabel: "Services & amenities hub" },
-    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hifi-4.png`, alt: "Events Screen", label: "Events Screen", sublabel: "Browse & join events" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hifi-1.png`, alt: "Lifetime Circle Screen", label: "Lifetime Circle Screen" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hifi-2.png`, alt: "OTP Verification Screen", label: "OTP Verification Screen" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hifi-3.png`, alt: "Lifetime Bonder Screen", label: "Lifetime Bonder Screen" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hifi-4.png`, alt: "Lifetime Event Screen", label: "Lifetime Event Screen" },
 ];
 
 
@@ -111,7 +111,7 @@ const BonderCaseStudy = () => {
             <HeroSection
                 title="Bonder"
                 subtitle="Social Media Application"
-                imageSrc={`${import.meta.env.BASE_URL}bonder-hero-mockups.png`}
+                imageSrc={`${import.meta.env.BASE_URL}figmaAssets/bonder hero img.jpeg`}
                 imageAlt="Bonder App Mockups"
                 imageClassName="w-full h-auto object-contain"
                 imageContainerClassName="relative z-0 w-full flex justify-center -mt-12 md:-mt-24"
@@ -260,7 +260,7 @@ const BonderCaseStudy = () => {
                 }
             />
 
-            <ContentSection className="!pt-0 !pb-16">
+            <ContentSection className="!py-0">
                 <ImageGallery
                     images={[
                         { src: `${import.meta.env.BASE_URL}figmaAssets/bonder-hmw-1.png`, alt: "How Might We Sketch 1" },
@@ -275,13 +275,24 @@ const BonderCaseStudy = () => {
             <TwoColumnSection
                 left={<SectionHeading title="Solution Overview:" />}
                 right={
-                    <div className="flex flex-col gap-6">
-                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight">
-                            Bonder is a community-first platform designed to bridge the gap between digital interaction and real-world connection.
+                    <div className="flex flex-col">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight mb-8">
+                            Turning insights into a streamlined, unified member experience.
                         </p>
                         <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
-                            For Life Time Fitness, the goal was to create a branded digital ecosystem—a "Third Place"—where members could connect, find workout partners, and engage with the club’s community beyond the gym floor.
+                            Bonder streamlines the Lifetime member experience by unifying events, community engagement, and staff communication into one clear platform. It reduces the confusion of scattered tools and helps members stay informed, connected, and engaged with their venue.
                         </p>
+                        <div className="mt-12 text-[#6F6864] leading-relaxed">
+                            <p className="font-medium text-xl md:text-[34px] md:leading-[41px] mb-6">
+                                The solution is shaped by four core goals:
+                            </p>
+                            <ol className="list-decimal pl-5 space-y-6 md:space-y-8 text-lg md:text-[34px] md:leading-[41px] font-normal">
+                                <li className="pl-2">Help members easily discover and join relevant events and communities.</li>
+                                <li className="pl-2">Create a unified space where communication with staff and advisors feels simple and accessible.</li>
+                                <li className="pl-2">Reduce friction caused by fragmented tools, calendars, and discovery channels.</li>
+                                <li className="pl-2">Support long-term engagement through personalized recommendations and connected member journeys.</li>
+                            </ol>
+                        </div>
                     </div>
                 }
             />
@@ -350,7 +361,7 @@ const BonderCaseStudy = () => {
                     </div>
                 }
             />
-            <ContentSection className="!pt-0 !pb-16">
+            <ContentSection className="!py-4">
                 <InfoArchitectureSection />
             </ContentSection>
 
@@ -369,7 +380,10 @@ const BonderCaseStudy = () => {
                     </div>
                 }
             />
-            <ContentSection className="!pt-0 !pb-16">
+            <ContentSection className="!py-0">
+                <div className="w-full max-w-[800px] mx-auto flex justify-start mb-4">
+                    <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">Events</p>
+                </div>
                 <div className="w-full rounded-2xl">
                     <img src={`${import.meta.env.BASE_URL}figmaAssets/bonder-user-flow.png`} alt="User Flow Diagram" className="w-full max-w-[800px] mx-auto h-auto rounded-2xl shadow-sm" />
                 </div>
@@ -386,7 +400,7 @@ const BonderCaseStudy = () => {
                     </div>
                 }
             />
-            <ContentSection bgColor="bg-taupe">
+            <ContentSection bgColor="bg-[#6F6864]">
                 <ImageGallery images={loFiScreens} columns={4} centerLabels />
             </ContentSection>
 
@@ -404,8 +418,8 @@ const BonderCaseStudy = () => {
                     </div>
                 }
             />
-            <ContentSection>
-                <ImageGallery images={hiFiScreens} columns={4} centerLabels />
+            <ContentSection className="!py-0">
+                <ImageGallery images={hiFiScreens} columns={4} textColor="text-[#6F6864]" centerLabels />
             </ContentSection>
 
             {/* Next Steps */}

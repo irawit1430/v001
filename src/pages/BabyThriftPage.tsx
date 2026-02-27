@@ -13,7 +13,7 @@ import ResearchOverview from "../components/case-studies/shared/ResearchOverview
 import KeyInsights from "../components/case-studies/shared/KeyInsights";
 
 // Import images
-import heroImage from '../assets/baby-thrift-hero.png';
+
 import discoveryImage1 from '../assets/discovery-1.png';
 import discoveryImage2 from '../assets/discovery-2.png';
 import discoveryImage3 from '../assets/discovery-3.png';
@@ -39,12 +39,10 @@ import iconBadge from '../assets/icon-badge.png';
 import iconBooks from '../assets/icon-books.png';
 import iconCommunity from '../assets/icon-community.png';
 
-import iconUserTesting from '../assets/icon-user-testing.png';
-import iconIterate from '../assets/icon-iterate.png';
-import iconAnalytics from '../assets/icon-analytics.png';
-import iconFeatures from '../assets/icon-features.png';
-
-
+import iconUserGroups from '../assets/new-icon-user-groups.png';
+import iconRestart from '../assets/new-icon-restart.png';
+import iconLineChart from '../assets/new-icon-line-chart.png';
+import iconFeatures from '../assets/new-icon-features-list.png';
 
 const projectDetails = [
     { label: "ROLE", value: "Lead UX Designer" },
@@ -91,17 +89,17 @@ const hifiImages = [
 
 const nextSteps = [
     {
-        icon: iconUserTesting,
+        icon: iconUserGroups,
         title: "User Testing",
         description: "Conduct usability testing with target users to validate design decisions and identify pain points.",
     },
     {
-        icon: iconIterate,
+        icon: iconRestart,
         title: "Iterate & Refine",
         description: "Incorporate feedback to improve the user experience and address any discovered issues.",
     },
     {
-        icon: iconAnalytics,
+        icon: iconLineChart,
         title: "Analytics Integration",
         description: "Implement tracking to measure key metrics like user engagement and retention rates.",
     },
@@ -121,8 +119,9 @@ const BabyThriftPage = () => {
             <HeroSection
                 title="Baby Thrift"
                 subtitle="Thrifting Application"
-                imageSrc={heroImage}
+                imageSrc={`${import.meta.env.BASE_URL}figmaAssets/baby thrive hero image.jpeg`}
                 imageAlt="Baby Thrift App Screens"
+                imageContainerClassName="relative z-0 w-full flex justify-center -mt-12 md:-mt-24"
             />
 
             {/* Project Details */}
@@ -388,11 +387,23 @@ const BabyThriftPage = () => {
                         <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight">
                             Turning insights into opportunity through the right questions.
                         </p>
-                        <ul className="list-disc pl-5 space-y-4 text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
-                            <li>How might we help parents feel confident purchasing secondhand baby items?</li>
-                            <li>How might we improve clarity around product condition and quality?</li>
-                            <li>How might we simplify product discovery on mobile?</li>
-                            <li>How might we create a parent-centered marketplace that builds trust and community?</li>
+                        <ul className="space-y-4 text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
+                            <li className="flex gap-3 items-start">
+                                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
+                                <span>How might we help parents feel confident purchasing secondhand baby items?</span>
+                            </li>
+                            <li className="flex gap-3 items-start">
+                                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
+                                <span>How might we improve clarity around product condition and quality?</span>
+                            </li>
+                            <li className="flex gap-3 items-start">
+                                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
+                                <span>How might we simplify product discovery on mobile?</span>
+                            </li>
+                            <li className="flex gap-3 items-start">
+                                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
+                                <span>How might we create a parent-centered marketplace that builds trust and community?</span>
+                            </li>
                         </ul>
                     </div>
                 }
@@ -449,31 +460,44 @@ const BabyThriftPage = () => {
                 right={
                     <div className="flex flex-col gap-6">
                         <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
-                            These user flows outline the key steps veterans take inside the app.
+                            These user flows outline the key steps parents take inside the app.
                         </p>
                         <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
-                            Mapping them early allowed me to validate the logic of each path and confirm that the experience remains seamless from onboarding to event participation.
+                            Mapping them early allowed me to validate the logic of each path and confirm that the experience remains seamless from onboarding to checkout.
                         </p>
                     </div>
                 }
             />
-            <ContentSection className="max-w-[1100px] mx-auto">
-                <div className="flex flex-col gap-12">
+            <ContentSection className="!px-6 md:!px-16 lg:!px-24 w-full max-w-full">
+                <div className="space-y-16 w-full max-w-[1200px] mx-auto">
                     {/* Account Creation - 2 column layout */}
-                    <div>
-                        <h3 className="text-2xl font-medium text-[#6e6764] mb-6">Account Creation</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                            <img src={userFlowImage} alt="Account Creation Flow" className="w-full h-auto rounded-xl" />
-                            <div className="flex flex-col gap-4">
-                                <p className="text-[#6e6764] text-base md:text-lg leading-relaxed">
-                                    <span className="font-semibold">These user flows map the key decision points parents encounter while using Baby Thrift.</span> The account creation flow is presented vertically to emphasize onboarding logic and authentication states, while the purchasing flow is presented horizontally to reflect a linear, end-to-end shopping journey. Mapping these flows early helped validate system logic, reduce friction, and ensure a seamless experience from launch to checkout.
+                    <div className="w-full overflow-hidden">
+                        <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-8 lg:mb-12">Account Creation</p>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+                            <img src={userFlowImage} alt="Account Creation Flow" className="w-full max-w-[450px] lg:max-w-none h-auto rounded-xl mx-auto lg:mx-0 object-contain" />
+                            <div className="flex flex-col gap-6 lg:gap-8 pt-0 lg:pt-16">
+                                <h3 className="text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] font-medium">
+                                    These user flows map the key decision points parents encounter while using Baby Thrift.
+                                </h3>
+                                <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] font-normal">
+                                    The account creation flow is presented vertically to emphasize onboarding logic and authentication states, while the purchasing flow is presented horizontally to reflect a linear, end-to-end shopping journey. Mapping these flows early helped validate system logic, reduce friction, and ensure a seamless experience from launch to checkout.
                                 </p>
+
+                                <div className="mt-4 md:mt-8">
+                                    <h4 className="text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] font-medium mb-4 lg:mb-6">This:</h4>
+                                    <ul className="list-disc pl-8 space-y-2 text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] font-normal">
+                                        <li className="pl-2">Explains why the layouts differ</li>
+                                        <li className="pl-2">Frames it as intentional UX reasoning</li>
+                                        <li className="pl-2">Sounds confident and professional</li>
+                                        <li className="pl-2">Keeps things concise</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                     {/* Purchasing */}
-                    <div>
-                        <h3 className="text-2xl font-medium text-[#6e6764] mb-6">Purchasing</h3>
+                    <div className="overflow-hidden pt-8">
+                        <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-8 lg:mb-12">Purchasing</p>
                         <img src={purchasingFlowImage} alt="Purchasing Flow" className="w-full h-auto rounded-xl" />
                     </div>
                 </div>
@@ -490,7 +514,7 @@ const BabyThriftPage = () => {
                     </div>
                 }
             />
-            <ContentSection bgColor="bg-[#5C3D1E]">
+            <ContentSection bgColor="bg-[#6F6864]">
                 <ImageGallery images={lofiImages} columns={4} centerLabels />
             </ContentSection>
 
@@ -510,8 +534,8 @@ const BabyThriftPage = () => {
             />
             <ContentSection className="!py-0">
                 <ImageGallery images={hifiImages} columns={4} />
-                <div className="mt-20 max-w-[1100px] mx-auto">
-                    <p className="text-base md:text-lg text-[#6e6764] mb-10 max-w-3xl leading-relaxed">
+                <div className="mt-16 md:mt-24 max-w-[1100px] mx-auto">
+                    <p className="text-[#6F6864] text-base md:text-[28px] md:leading-[33px] leading-relaxed text-left max-w-[1146px] mx-auto mb-10 md:mb-16">
                         A collection of key screens from the mobile shopping experience, designed with a focus on consistency, clarity, and visual cohesion. Each screen reflects a unified design system and supports an intuitive, easy-to-navigate interface.
                     </p>
                     <img src={hifiCollectionImage} alt="HiFi Collection" className="w-full h-auto rounded-2xl" />
@@ -536,40 +560,40 @@ const BabyThriftPage = () => {
                 }
             />
             <ContentSection bgColor="bg-[#3E2613]">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-                    <div className="bg-white rounded-xl p-6 flex flex-col items-start">
-                        <div className="mb-4 bg-[#F5F0EB] w-12 h-12 rounded-full flex items-center justify-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="bg-white rounded-xl p-6 flex flex-col items-center justify-start gap-[10px] text-center w-full max-w-[261px] mx-auto h-[251px]">
+                        <div className="bg-[#F5F0EB] w-12 h-12 rounded-full flex items-center justify-center shrink-0">
                             <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-chat.png`} alt="" className="w-6 h-6 object-contain" />
                         </div>
-                        <h4 className="text-lg font-semibold text-[#3E2613] mb-2">Parenthood Support</h4>
-                        <p className="text-sm text-[#6F6864] leading-relaxed">Access community advice, guides, and tips to help parents make confident secondhand purchases.</p>
+                        <h4 className="text-lg font-semibold text-[#3E2613] m-0">Parenthood Support</h4>
+                        <p className="text-sm text-[#6F6864] leading-relaxed m-0">Access community advice, guides, and tips to help parents make confident secondhand purchases.</p>
                     </div>
-                    <div className="bg-white rounded-xl p-6 flex flex-col items-start">
-                        <div className="mb-4 bg-[#F5F0EB] w-12 h-12 rounded-full flex items-center justify-center">
+                    <div className="bg-white rounded-xl p-6 flex flex-col items-center justify-start gap-[10px] text-center w-full max-w-[261px] mx-auto h-[251px]">
+                        <div className="bg-[#F5F0EB] w-12 h-12 rounded-full flex items-center justify-center shrink-0">
                             <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-piggy.png`} alt="" className="w-6 h-6 object-contain" />
                         </div>
-                        <h4 className="text-lg font-semibold text-[#3E2613] mb-2">Trusted Sellers</h4>
-                        <p className="text-sm text-[#6F6864] leading-relaxed">Shop from verified sellers with clear ratings, reviews, and transparent product details.</p>
+                        <h4 className="text-lg font-semibold text-[#3E2613] m-0">Trusted Sellers</h4>
+                        <p className="text-sm text-[#6F6864] leading-relaxed m-0">Shop from verified sellers with clear ratings, reviews, and transparent product details.</p>
                     </div>
-                    <div className="bg-white rounded-xl p-6 flex flex-col items-start">
-                        <div className="mb-4 bg-[#F5F0EB] w-12 h-12 rounded-full flex items-center justify-center">
+                    <div className="bg-white rounded-xl p-6 flex flex-col items-center justify-start gap-[10px] text-center w-full max-w-[261px] mx-auto h-[251px]">
+                        <div className="bg-[#F5F0EB] w-12 h-12 rounded-full flex items-center justify-center shrink-0">
                             <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-phones.png`} alt="" className="w-6 h-6 object-contain" />
                         </div>
-                        <h4 className="text-lg font-semibold text-[#3E2613] mb-2">Localized Events</h4>
-                        <p className="text-sm text-[#6F6864] leading-relaxed">Discover nearby swaps, meetups, and resale events tailored to local parenting community.</p>
+                        <h4 className="text-lg font-semibold text-[#3E2613] m-0">Localized Events</h4>
+                        <p className="text-sm text-[#6F6864] leading-relaxed m-0">Discover nearby swaps, meetups, and resale events tailored to local parenting community.</p>
                     </div>
-                    <div className="bg-white rounded-xl p-6 flex flex-col items-start">
-                        <div className="mb-4 bg-[#F5F0EB] w-12 h-12 rounded-full flex items-center justify-center">
+                    <div className="bg-white rounded-xl p-6 flex flex-col items-center justify-start gap-[10px] text-center w-full max-w-[261px] mx-auto h-[251px]">
+                        <div className="bg-[#F5F0EB] w-12 h-12 rounded-full flex items-center justify-center shrink-0">
                             <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-camera.png`} alt="" className="w-6 h-6 object-contain" />
                         </div>
-                        <h4 className="text-lg font-semibold text-[#3E2613] mb-2">Eco-Friendly</h4>
-                        <p className="text-sm text-[#6F6864] leading-relaxed">Reduce waste and support sustainability by extending the life of baby products through reuse.</p>
+                        <h4 className="text-lg font-semibold text-[#3E2613] m-0">Eco-Friendly</h4>
+                        <p className="text-sm text-[#6F6864] leading-relaxed m-0">Reduce waste and support sustainability by extending the life of baby products through reuse.</p>
                     </div>
                 </div>
             </ContentSection>
 
             {/* Next Steps */}
-            <ContentSection>
+            < ContentSection >
                 <SectionHeading
                     title="Next Steps:"
                     description="Road map for future development and continuous improvement"
@@ -582,12 +606,12 @@ const BabyThriftPage = () => {
                 <p className="mt-12 text-center text-[#6F6864] text-base md:text-[28px] md:leading-[33px] max-w-5xl mx-auto">
                     Thank you for reviewing this case study. I'm always open to feedback and would love to discuss how these design solutions could be applied to your projects.
                 </p>
-            </ContentSection>
+            </ContentSection >
 
             {/* Contact CTA */}
-            <GetInTouchSection theme="dark" bgColor="bg-[#492300]" buttonBgColor="#B6936E" buttonTextColor="white" />
+            < GetInTouchSection theme="dark" bgColor="bg-[#492300]" buttonBgColor="#B6936E" buttonTextColor="white" />
 
-        </div>
+        </div >
     );
 };
 

@@ -20,28 +20,54 @@ const Column = ({ title, items }: { title: string; items: string[] }) => (
         <HeaderBox text={title} />
 
         {/* Sub‑items with branching lines */}
-        <div className="flex flex-col items-center relative">
-            {/* Vertical spine line from header to last sub-item */}
-            {items.length > 0 && (
-                <div
-                    className="absolute bg-[#A0AAB4]"
-                    style={{
-                        width: 2,
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        top: 0,
-                        /* Each sub-item row: 16px connector + ~40px item height + gap, last item connects at midpoint */
-                        height: items.length === 1 ? 32 : `calc(${(items.length - 1) * 52 + 32}px)`,
-                    }}
-                />
-            )}
-            {items.map((item, idx) => (
-                <div key={item} className="flex items-center relative" style={{ marginTop: idx === 0 ? 16 : 12 }}>
-                    {/* horizontal branch from spine to sub-item */}
-                    <div className="w-4 h-[2px] bg-[#A0AAB4]" />
-                    <SubItem text={item} />
+        <div className="flex flex-col relative w-full items-center mt-4">
+            <div className="relative w-max">
+                {/* Vertical spine line on the left edge */}
+                {items.length > 0 && (
+                    <div
+                        className="absolute bg-[#A0AAB4]"
+                        style={{
+                            width: 2,
+                            left: 0,
+                            top: -16,
+                            height: 'calc(100% - 6px)',
+                        }}
+                    />
+                )}
+                {/* Horizontal connector from the center of column to the left spine */}
+                {items.length > 0 && (
+                    <div
+                        className="absolute bg-[#A0AAB4]"
+                        style={{
+                            height: 2,
+                            left: 0,
+                            width: '50%',
+                            top: -16,
+                        }}
+                    />
+                )}
+                {/* Vertical drop from HeaderBox */}
+                {items.length > 0 && (
+                    <div
+                        className="absolute bg-[#A0AAB4]"
+                        style={{
+                            width: 2,
+                            left: '50%',
+                            top: -16,
+                            height: 16,
+                        }}
+                    />
+                )}
+                <div className="flex flex-col items-start w-full">
+                    {items.map((item, idx) => (
+                        <div key={item} className="flex items-center relative" style={{ marginTop: idx === 0 ? 0 : 12 }}>
+                            {/* horizontal branch from spine to sub-item */}
+                            <div className="w-4 h-[2px] bg-[#A0AAB4]" />
+                            <SubItem text={item} />
+                        </div>
+                    ))}
                 </div>
-            ))}
+            </div>
         </div>
     </div>
 );

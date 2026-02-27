@@ -92,7 +92,7 @@ const CoralWayLoungePage = () => {
             />
 
             {/* Project Details */}
-            <ContentSection bgColor="bg-gray-50">
+            <ContentSection bgColor="bg-[#F9FAFB]">
                 <ProjectDetailGrid details={projectDetails} />
             </ContentSection>
 

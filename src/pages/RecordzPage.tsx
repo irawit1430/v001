@@ -157,13 +157,11 @@ const RecordzPage = () => {
                 left={<SectionHeading title="Client Problem:" />}
                 right={
                     <div className="flex flex-col gap-6">
-                        <p className="text-[#6F6864] leading-relaxed">
-                            <span className="text-lg md:text-[34px] md:leading-[41px] font-medium">1331 Recordz needed a cohesive website that clearly represented both sides of their business:</span>
-                            <span className="text-lg md:text-[30px] md:leading-[36px]">
-                                {" "}<em>a professional recording studio</em> and an <em>independent music label</em>. The challenge was to merge these two identities into a single experience while keeping each distinct,{" "}
-                            </span>
-                            <span className="text-lg md:text-[30px] md:leading-[36px] font-medium">using color and visual hierarchy to differentiate studio services from label content</span>
-                            <span className="text-lg md:text-[30px] md:leading-[36px]"> without confusing users.</span>
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight">
+                            1331 Recordz needed a cohesive website that clearly represented both sides of their business:
+                        </p>
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                            a professional recording studio and an independent music label. The challenge was to merge these two identities into a single experience while keeping each distinct, <span className="font-medium">using color and visual hierarchy to differentiate studio services from label content</span> without confusing users.
                         </p>
                     </div>
                 }
@@ -210,6 +208,11 @@ const RecordzPage = () => {
                 </div>
             </ContentSection>
 
+            {/* Competitive Audit Table */}
+            <ContentSection className="!p-0">
+                <RecordzCompetitiveAuditSection />
+            </ContentSection>
+
             {/* Key Insights */}
             <KeyInsights
                 backgroundColor="bg-[#D1D1D1]"
@@ -217,11 +220,6 @@ const RecordzPage = () => {
                 insights={keyInsights}
                 textColor="text-black"
             />
-
-            {/* Competitive Audit Table */}
-            <ContentSection className="!p-0">
-                <RecordzCompetitiveAuditSection />
-            </ContentSection>
 
             {/* How Might We */}
             <TwoColumnSection
@@ -253,7 +251,9 @@ const RecordzPage = () => {
                 }
             />
             <ContentSection className="!py-0">
-                <ImageGallery images={hmwImages} columns={2} />
+                <div className="max-w-[1100px] mx-auto">
+                    <ImageGallery images={hmwImages} columns={2} />
+                </div>
             </ContentSection>
 
             {/* Solution Overview */}
@@ -261,35 +261,40 @@ const RecordzPage = () => {
                 left={<SectionHeading title="Solution Overview:" />}
                 right={
                     <div className="flex flex-col gap-6">
-                        <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
-                            1331 Recordz is a Miami, FL–based independent record label and music studio that empowers artists through creative freedom, transparent practices, and hands-on production support.
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight">
+                            Turning creative vision into cultural impact with the right platform.
                         </p>
-                        <div className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
-                            <p className="font-medium text-xl md:text-[34px] md:leading-[41px] mb-6">
-                                The solution is shaped by four core goals:
-                            </p>
-                            <ul className="space-y-4 md:space-y-8">
-                                <li className="flex gap-3 items-start">
-                                    <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
-                                    <span>Empower Artists</span>
-                                </li>
-                                <li className="flex gap-3 items-start">
-                                    <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
-                                    <span>Establish Trust</span>
-                                </li>
-                                <li className="flex gap-3 items-start">
-                                    <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
-                                    <span>Reduce Barriers</span>
-                                </li>
-                                <li className="flex gap-3 items-start">
-                                    <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
-                                    <span>Build a Creative Community</span>
-                                </li>
-                            </ul>
-                        </div>
+                        <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                            1331 Recordz is a Miami, FL–based independent record label and music studio that empowers artists through <span className="font-medium">creative freedom</span>, transparent practices, and hands-on production support. Prioritizing artist ownership and authentic, culturally driven sound, <span className="font-medium">1331 Recordz combines professional studio access with modern distribution to support artists in South Florida and beyond.</span>
+                        </p>
                     </div>
                 }
             />
+
+            {/* Solution Core Goals */}
+            <ContentSection>
+                <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-10">
+                    The solution is shaped by four core goals:
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="border border-[#6F6864] rounded-2xl p-8 md:p-10 bg-white">
+                        <h3 className="font-medium text-xl md:text-2xl mb-6 text-[#6F6864]">Empower Artists</h3>
+                        <p className="text-lg md:text-xl leading-relaxed text-[#6F6864]">Provide artists with the tools, studio access, amd resources needed to maintain control over their music and creative direction</p>
+                    </div>
+                    <div className="border border-[#6F6864] rounded-2xl p-8 md:p-10 bg-white">
+                        <h3 className="font-medium text-xl md:text-2xl mb-6 text-[#6F6864]">Establish Trust</h3>
+                        <p className="text-lg md:text-xl leading-relaxed text-[#6F6864]">Establish clear communication, fair agreements, and ethical practices that foster long-term artist-label relationships</p>
+                    </div>
+                    <div className="border border-[#6F6864] rounded-2xl p-8 md:p-10 bg-white">
+                        <h3 className="font-medium text-xl md:text-2xl mb-6 text-[#6F6864]">Reduce Barriers</h3>
+                        <p className="text-lg md:text-xl leading-relaxed text-[#6F6864]">Simplify access to professional recording, production, and distribution for independent artists.</p>
+                    </div>
+                    <div className="border border-[#6F6864] rounded-2xl p-8 md:p-10 bg-white">
+                        <h3 className="font-medium text-xl md:text-2xl mb-6 text-[#6F6864]">Build a Creative Community</h3>
+                        <p className="text-lg md:text-xl leading-relaxed text-[#6F6864]">Support collaboration, mentorship, and cultural expression rooted in Miami's diverse music scene.</p>
+                    </div>
+                </div>
+            </ContentSection>
 
             {/* Architecture */}
             <TwoColumnSection
@@ -310,13 +315,75 @@ const RecordzPage = () => {
                 }
             />
 
-            <ContentSection className="!py-4">
-                <img
-                    className="w-full max-w-[800px] mx-auto h-auto rounded-2xl"
-                    alt="Information Architecture Diagram"
-                    src={`${import.meta.env.BASE_URL}figmaAssets/ia-diagram.png`}
-                />
-            </ContentSection>
+            <section className="w-full py-8 px-4 md:px-8">
+                <div className="w-full max-w-[1400px] mx-auto">
+                    <div style={{ width: '100%', overflowX: 'auto', padding: '10px 0 40px' }}>
+                        <div style={{ minWidth: '1100px', width: '100%', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: 'inherit' }}>
+                            {/* Level 0: 1331 Recordz */}
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                <div style={{ background: '#2D1F1A', color: '#fff', fontSize: '24px', fontWeight: 500, padding: '16px 48px', borderRadius: '8px', letterSpacing: '0.5px' }}>
+                                    1331 Recordz
+                                </div>
+                                <div style={{ width: '1px', height: '40px', background: '#8a8a8a' }} />
+                            </div>
+
+                            {/* Horizontal connector between branches */}
+                            <div style={{ width: '100%', display: 'flex', position: 'relative' }}>
+                                {/* The horizontal line spans exactly from the center of the left branch to the center of the right branch */}
+                                <div style={{ position: 'absolute', top: 0, left: '25%', right: '25%', height: '1px', background: '#8a8a8a' }} />
+
+                                {/* Branch 1: The Label */}
+                                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
+                                    <div style={{ width: '1px', height: '40px', background: '#8a8a8a' }} />
+                                    <div style={{ background: '#22AD0A', color: '#fff', fontSize: '20px', fontWeight: 500, padding: '14px 44px', borderRadius: '8px' }}>
+                                        The Label
+                                    </div>
+                                    <div style={{ width: '1px', height: '40px', background: '#8a8a8a' }} />
+
+                                    {/* Label children */}
+                                    <div style={{ display: 'flex', width: '100%', position: 'relative' }}>
+                                        {/* Horizontal line connecting children */}
+                                        <div style={{ position: 'absolute', top: 0, left: '12.5%', right: '12.5%', height: '1px', background: '#8a8a8a' }} />
+
+                                        {['Label Home', 'About', 'Artist', 'Contact'].map((name, i) => (
+                                            <div key={i} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative', padding: '0 8px' }}>
+                                                <div style={{ width: '1px', height: '40px', background: '#8a8a8a' }} />
+                                                <div style={{ background: '#716864', color: '#fff', fontSize: '17px', padding: '14px 10px', borderRadius: '8px', whiteSpace: 'nowrap', textAlign: 'center', width: '100%', maxWidth: '180px' }}>
+                                                    {name}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Branch 2: The Studio */}
+                                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
+                                    <div style={{ width: '1px', height: '40px', background: '#8a8a8a' }} />
+                                    <div style={{ background: '#22AD0A', color: '#fff', fontSize: '20px', fontWeight: 500, padding: '14px 44px', borderRadius: '8px' }}>
+                                        The Studio
+                                    </div>
+                                    <div style={{ width: '1px', height: '40px', background: '#8a8a8a' }} />
+
+                                    {/* Studio children */}
+                                    <div style={{ display: 'flex', width: '100%', position: 'relative' }}>
+                                        {/* Horizontal line connecting children */}
+                                        <div style={{ position: 'absolute', top: 0, left: '12.5%', right: '12.5%', height: '1px', background: '#8a8a8a' }} />
+
+                                        {['Studio Home', 'About', 'Services', 'Contact'].map((name, i) => (
+                                            <div key={i} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative', padding: '0 8px' }}>
+                                                <div style={{ width: '1px', height: '40px', background: '#8a8a8a' }} />
+                                                <div style={{ background: '#716864', color: '#fff', fontSize: '17px', padding: '14px 10px', borderRadius: '8px', whiteSpace: 'nowrap', textAlign: 'center', width: '100%', maxWidth: '180px' }}>
+                                                    {name}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* User Flows */}
             <TwoColumnSection
@@ -334,9 +401,11 @@ const RecordzPage = () => {
                 }
             />
 
-            <ContentSection className="!p-0 max-w-[1400px]">
-                <RecordzUserFlowSection />
-            </ContentSection>
+            <section className="w-full mt-6 md:mt-10">
+                <div className="w-full max-w-[1400px] mx-auto px-4 md:px-8">
+                    <RecordzUserFlowSection />
+                </div>
+            </section>
 
             {/* Lo-Fi Wireframes */}
             <TwoColumnSection
@@ -372,11 +441,25 @@ const RecordzPage = () => {
                 }
             />
             <ContentSection className="!py-0">
-                <div className="flex flex-col gap-12 mb-12 max-w-[1100px] mx-auto">
-                    <img src={hifiStudioLanding} alt="Studio Landing" className="w-full rounded-2xl" />
-                    <img src={hifiStudioAbout} alt="Studio About" className="w-full rounded-2xl" />
+                <div className="flex flex-col gap-12 md:gap-[80px] mb-16 max-w-[1301px] mx-auto w-full px-4 xl:px-0">
+                    <div className="flex flex-col gap-4 md:gap-6 w-full">
+                        <img src={`${import.meta.env.BASE_URL}figmaAssets/1331 Recordz Music Studio Landing (2).png`} alt="Studio Landing" className="w-full rounded-2xl" />
+                        <p className="font-medium text-[24px] md:text-[34px] leading-tight md:leading-[41px] text-[#6F6864] text-center md:text-left md:ml-12">1331 Recordz Music Studio Landing</p>
+                    </div>
+                    <div className="flex flex-col gap-4 md:gap-6 w-full">
+                        <img src={`${import.meta.env.BASE_URL}figmaAssets/1331 Recordz Music Studio About.png`} alt="Studio About" className="w-full rounded-2xl" />
+                        <p className="font-medium text-[24px] md:text-[34px] leading-tight md:leading-[41px] text-[#6F6864] text-center md:text-left md:ml-12">1331 Recordz Music Studio About</p>
+                    </div>
                 </div>
-                <ImageGallery images={hifiScreens} columns={2} />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-x-12 md:gap-y-[80px] max-w-[1590px] mx-auto w-full px-4 xl:px-0 pb-16">
+                    {hifiScreens.map((screen, index) => (
+                        <div key={index} className="flex flex-col gap-4 md:gap-6 w-full">
+                            <img src={screen.src} alt={screen.alt} className="w-full rounded-2xl" />
+                            <p className="font-medium text-[24px] md:text-[34px] leading-tight md:leading-[41px] text-[#6F6864] text-center md:text-left md:ml-8">{screen.label}</p>
+                        </div>
+                    ))}
+                </div>
             </ContentSection>
 
             {/* Next Steps */}

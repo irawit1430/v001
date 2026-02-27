@@ -10,7 +10,7 @@ const BabyThriftCompetitiveAuditSection: React.FC = () => {
                     <h2 className="bt-audit-title">Competitive Audit:</h2>
                     <div className="bt-audit-content">
                         <p className="bt-audit-text">
-                            <strong>Analyzing competing resale platforms showed that while many support secondhand transactions, they fail to create a meaningful community for parents.</strong>
+                            <strong>Analyzing competing resale platforms showed that while many support secondhand transactions, they fail to create a meaningful community for parents.</strong> The absence of trust-building and peer connection highlights an opportunity for Baby Thrift to design a more parent-centered resale experience.
                         </p>
                     </div>
                 </div>
@@ -29,7 +29,7 @@ const BabyThriftCompetitiveAuditSection: React.FC = () => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td className="bt-row-label">Product Summary</td>
+                                <td className="bt-row-label">Product name</td>
                                 <td>Online resale platform specializing in secondhand clothing, including kids and baby items.</td>
                                 <td>Peer-to-peer marketplace for buying and selling locally across multiple product categories.</td>
                                 <td>Affordable children's clothing platform focused on fast fashion and direct-to-consumer sales.</td>

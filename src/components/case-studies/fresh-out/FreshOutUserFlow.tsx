@@ -26,7 +26,7 @@ const LArrow = ({ text }: { text?: string }) => (
 
 const FreshOutUserFlow = () => {
     return (
-        <div className="w-full overflow-x-auto py-12 px-4 no-scrollbar">
+        <div className="w-full overflow-x-auto py-12 px-0 no-scrollbar">
             <div className="min-w-[1020px] w-max mx-auto relative grid" style={{
                 gridTemplateColumns: '120px 40px 120px 40px 120px 40px 120px 40px 120px 40px 120px 40px 120px',
                 gridTemplateRows: '120px 120px',

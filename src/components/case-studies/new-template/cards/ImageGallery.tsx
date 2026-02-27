@@ -11,9 +11,10 @@ interface ImageGalleryProps {
     images: GalleryImage[];
     rounded?: boolean;
     columns?: number;
+    textColor?: string;
 }
 
-export function ImageGallery({ images, rounded = true, columns = 4, centerLabels = false }: ImageGalleryProps & { centerLabels?: boolean }) {
+export function ImageGallery({ images, rounded = true, columns = 4, centerLabels = false, textColor = "text-white" }: ImageGalleryProps & { centerLabels?: boolean }) {
     const gridCols =
         columns === 2
             ? "grid-cols-1 sm:grid-cols-2"
@@ -33,9 +34,9 @@ export function ImageGallery({ images, rounded = true, columns = 4, centerLabels
                         />
                         {image.label && (
                             <div>
-                                <p className="font-medium text-lg text-white mt-2">{image.label}</p>
+                                <p className={`font-medium text-lg ${textColor} mt-2`}>{image.label}</p>
                                 {image.sublabel && (
-                                    <p className="font-normal text-base text-white opacity-90 mt-1">{image.sublabel}</p>
+                                    <p className={`font-normal text-base ${textColor} opacity-90 mt-1`}>{image.sublabel}</p>
                                 )}
                             </div>
                         )}

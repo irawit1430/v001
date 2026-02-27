@@ -61,22 +61,22 @@ const keyInsights = [
 
 const nextSteps = [
     {
-        icon: `${import.meta.env.BASE_URL}figmaAssets/user-groups.png`,
+        icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-community.png`,
         title: "User Testing",
         description: "Conduct usability testing with target users to validate design decisions and identify pain points.",
     },
     {
-        icon: `${import.meta.env.BASE_URL}figmaAssets/restart.png`,
+        icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-events.png`,
         title: "Iterate & Refine",
         description: "Incorporate feedback to improve the user experience and address any discovered issues.",
     },
     {
-        icon: `${import.meta.env.BASE_URL}figmaAssets/line-chart.png`,
+        icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-housing.png`,
         title: "Analytics Integration",
         description: "Implement tracking to measure key metrics like user engagement and retention rates.",
     },
     {
-        icon: `${import.meta.env.BASE_URL}figmaAssets/features-list.png`,
+        icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-mentor.png`,
         title: "Future Features",
         description: "Explore premium features like event creation, business partnerships, and community moderation tools.",
     },
@@ -328,21 +328,11 @@ const FreshOutPage = () => {
             <ContentSection className="!px-6 md:!px-16 lg:!px-24 w-full max-w-full">
                 <div className="space-y-12 w-full max-w-[1200px] mx-auto">
                     <div className="w-full overflow-hidden">
-                        <div className="flex flex-col lg:flex-row lg:gap-16">
-                            <div className="hidden lg:block lg:w-1/3 shrink-0" />
-                            <div className="lg:w-2/3">
-                                <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4">Sign up</p>
-                            </div>
-                        </div>
+                        <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4">Sign up</p>
                         <FreshOutUserFlow />
                     </div>
                     <div className="overflow-hidden">
-                        <div className="flex flex-col lg:flex-row lg:gap-16">
-                            <div className="hidden lg:block lg:w-1/3 shrink-0" />
-                            <div className="lg:w-2/3">
-                                <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4">Events</p>
-                            </div>
-                        </div>
+                        <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-4">Events</p>
                         <FreshOutEventFlow />
                     </div>
                 </div>

@@ -22,7 +22,7 @@ const VArrow = ({ text, className = "" }: { text?: string, className?: string })
 
 const FreshOutEventFlow = () => {
     return (
-        <div className="w-full overflow-x-auto py-8 px-4 no-scrollbar">
+        <div className="w-full overflow-x-auto py-8 px-0 no-scrollbar">
             <div className="min-w-[700px] w-max mx-auto relative grid" style={{
                 gridTemplateColumns: '120px 50px 140px 50px 120px 110px 120px',
                 gridTemplateRows: '75px 40px 75px',
