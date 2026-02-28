@@ -640,8 +640,7 @@ const CoralWayLoungePage = () => {
             </ContentSection >
 
             {/* Contact CTA */}
-            {/* Contact CTA */}
-            <GetInTouchSection theme="dark" bgColor="bg-[#6F6864]" buttonBgColor="#B6936E" buttonTextColor="white" />
+            <GetInTouchSection theme="dark" bgColor="bg-[#6F6864]" buttonBgColor="#D9D9D9" buttonTextColor="black" />
 
         </div >
     );
