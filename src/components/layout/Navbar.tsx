@@ -127,7 +127,7 @@ const Navbar: React.FC = () => {
       >
         <div className="max-w-[1440px] mx-auto h-full px-4 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center p-2.5">
+          <Link to="/" className="flex items-center p-2.5 z-[100]">
             <motion.div
               className="logo flex items-center"
               whileHover={{ scale: 1.1, rotate: 5 }}
@@ -164,7 +164,7 @@ const Navbar: React.FC = () => {
 
           {/* Hamburger Button (Mobile) */}
           <button
-            className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px] z-[110]"
+            className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-[6px] z-[100]"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle navigation menu"
           >
@@ -191,7 +191,7 @@ const Navbar: React.FC = () => {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            className="fixed inset-0 z-[99] flex flex-col items-center justify-center md:hidden"
+            className="fixed inset-0 z-[90] flex flex-col items-center justify-center md:hidden"
             style={{
               background: 'linear-gradient(180deg, rgba(255, 111, 97, 0.98) 0%, rgba(255, 158, 128, 0.98) 100%)',
               backdropFilter: 'blur(20px)'
