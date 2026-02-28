@@ -1,80 +1,9 @@
-// ── Reusable sub‑components ──────────────────────────────────────
-
-const HeaderBox = ({ text }: { text: string }) => (
-    <div className="bg-[#212873] text-white rounded-lg px-6 py-3 text-center text-[15px] md:text-[18px] font-medium whitespace-nowrap shadow-sm">
-        {text}
-    </div>
-);
-
-const SubItem = ({ text }: { text: string }) => (
-    <div className="border border-[#E5E7EB] rounded-lg py-2.5 px-5 text-center text-[13px] md:text-[15px] text-[#3C3C3C] bg-white whitespace-nowrap">
-        {text}
-    </div>
-);
-
-const Column = ({ title, items }: { title: string; items: string[] }) => (
-    <div className="flex flex-col items-center" style={{ minWidth: 120 }}>
-        {/* vertical connector from horizontal bar down to header box */}
-        <div className="w-[2px] h-5 bg-[#A0AAB4]" />
-
-        <HeaderBox text={title} />
-
-        {/* Sub‑items with branching lines */}
-        <div className="flex flex-col relative w-full items-center mt-4">
-            <div className="relative w-max">
-                {/* Vertical spine line on the left edge */}
-                {items.length > 0 && (
-                    <div
-                        className="absolute bg-[#A0AAB4]"
-                        style={{
-                            width: 2,
-                            left: 0,
-                            top: -16,
-                            height: 'calc(100% - 6px)',
-                        }}
-                    />
-                )}
-                {/* Horizontal connector from the center of column to the left spine */}
-                {items.length > 0 && (
-                    <div
-                        className="absolute bg-[#A0AAB4]"
-                        style={{
-                            height: 2,
-                            left: 0,
-                            width: '50%',
-                            top: -16,
-                        }}
-                    />
-                )}
-                {/* Vertical drop from HeaderBox */}
-                {items.length > 0 && (
-                    <div
-                        className="absolute bg-[#A0AAB4]"
-                        style={{
-                            width: 2,
-                            left: '50%',
-                            top: -16,
-                            height: 16,
-                        }}
-                    />
-                )}
-                <div className="flex flex-col items-start w-full">
-                    {items.map((item, idx) => (
-                        <div key={item} className="flex items-center relative" style={{ marginTop: idx === 0 ? 0 : 12 }}>
-                            {/* horizontal branch from spine to sub-item */}
-                            <div className="w-4 h-[2px] bg-[#A0AAB4]" />
-                            <SubItem text={item} />
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-    </div>
-);
+import React from "react";
+import "./FreshOutSiteMap.css";
 
 // ── Data ─────────────────────────────────────────────────────────
 
-const columns: { title: string; items: string[] }[] = [
+const columns = [
     { title: "Home", items: ["Feed", "Suggested content", "Groups preview"] },
     { title: "Discover", items: ["Suggested vets", "Suggested groups"] },
     { title: "Events", items: ["Event feed", "Suggested groups", "Explore filters"] },
@@ -82,32 +11,155 @@ const columns: { title: string; items: string[] }[] = [
     { title: "Profile", items: ["Settings", "Edit profile"] },
 ];
 
+/* ─── Geometry constants (in viewBox units) ─── */
+const VB_W = 1000;
+const VB_H = 310;
+const LINE_COLOR = "#3C3C3C";
+const SW = 2;
+
+// Column centers (evenly spaced across the 1000-unit width)
+const COL_CX = [100, 300, 500, 700, 900];
+
+// Y positions
+const ROOT_BOTTOM = 50;        // bottom of Authentication box
+const HBAR_Y = 75;             // horizontal bar
+const HEADER_TOP = 95;         // top of column header boxes
+const HEADER_BOTTOM = 135;     // bottom of column header boxes
+const ITEMS_START_Y = 160;     // Y where first sub-item row starts
+const ITEM_H = 40;             // height of each sub-item row
+const ITEM_GAP = 10;           // gap between items
+const SPINE_OFFSET = -50;      // spine X offset from column center (to the left)
+const BRANCH_LEN = 20;         // horizontal branch from spine to item box
+
+// ── Build all SVG lines ──────────────────────────────────────────
+function buildLines() {
+    const elements: React.ReactElement[] = [];
+
+    // 1. Vertical: Root → Horizontal bar
+    elements.push(
+        <line key="root-bar" x1={VB_W / 2} y1={ROOT_BOTTOM} x2={VB_W / 2} y2={HBAR_Y}
+            stroke={LINE_COLOR} strokeWidth={SW} />
+    );
+
+    // 2. Horizontal bar spanning column centers
+    elements.push(
+        <line key="hbar" x1={COL_CX[0]} y1={HBAR_Y} x2={COL_CX[4]} y2={HBAR_Y}
+            stroke={LINE_COLOR} strokeWidth={SW} />
+    );
+
+    columns.forEach((col, i) => {
+        const cx = COL_CX[i];
+        const spineX = cx + SPINE_OFFSET;
+
+        // 3. Vertical: horizontal bar → header top
+        elements.push(
+            <line key={`bar-hdr-${i}`} x1={cx} y1={HBAR_Y} x2={cx} y2={HEADER_TOP}
+                stroke={LINE_COLOR} strokeWidth={SW} />
+        );
+
+        // 4. Vertical: header bottom → first spine junction
+        elements.push(
+            <line key={`hdr-junc-${i}`} x1={cx} y1={HEADER_BOTTOM} x2={cx} y2={ITEMS_START_Y - 15}
+                stroke={LINE_COLOR} strokeWidth={SW} />
+        );
+
+        // 5. Horizontal: column center → spine X at junction
+        elements.push(
+            <line key={`junc-h-${i}`} x1={spineX} y1={ITEMS_START_Y - 15} x2={cx} y2={ITEMS_START_Y - 15}
+                stroke={LINE_COLOR} strokeWidth={SW} />
+        );
+
+        // 6. Vertical spine from junction down to last item center
+        const lastItemCY = ITEMS_START_Y + (col.items.length - 1) * (ITEM_H + ITEM_GAP) + ITEM_H / 2;
+        elements.push(
+            <line key={`spine-${i}`} x1={spineX} y1={ITEMS_START_Y - 15} x2={spineX} y2={lastItemCY}
+                stroke={LINE_COLOR} strokeWidth={SW} />
+        );
+
+        // 7. Horizontal branches to each item
+        col.items.forEach((_, j) => {
+            const itemCY = ITEMS_START_Y + j * (ITEM_H + ITEM_GAP) + ITEM_H / 2;
+            elements.push(
+                <line key={`branch-${i}-${j}`} x1={spineX} y1={itemCY} x2={spineX + BRANCH_LEN} y2={itemCY}
+                    stroke={LINE_COLOR} strokeWidth={SW} />
+            );
+        });
+    });
+
+    return elements;
+}
+
 // ── Main Component ───────────────────────────────────────────────
 
 const FreshOutInformationArchitectureSection = () => {
+    const svgLines = buildLines();
+
     return (
-        <div className="w-full overflow-x-auto py-8 px-4 no-scrollbar">
-            <div className="w-max min-w-[700px] mx-auto flex flex-col items-center">
-                {/* Top‑level root node */}
-                <div className="bg-[#212873] text-white rounded-lg px-10 py-3.5 text-[18px] md:text-[22px] font-medium shadow-sm">
-                    Authentication
-                </div>
+        <div className="fo-sitemap-wrapper">
+            <div className="fo-sitemap-svg-container">
+                {/* SVG with all lines */}
+                <svg
+                    viewBox={`0 0 ${VB_W} ${VB_H}`}
+                    className="fo-sitemap-svg"
+                    preserveAspectRatio="xMidYMid meet"
+                >
+                    {svgLines}
 
-                {/* Short vertical line from root to horizontal bar */}
-                <div className="w-[2px] h-6 bg-[#A0AAB4]" />
+                    {/* Root box */}
+                    <rect x={VB_W / 2 - 90} y={10} width={180} height={40} rx={8} fill="#212873" />
+                    <text x={VB_W / 2} y={35} textAnchor="middle" fill="white" fontSize="16" fontWeight="500" fontFamily="inherit">
+                        Authentication
+                    </text>
 
-                {/* Horizontal bar spanning all columns */}
-                <div className="relative w-full flex items-start">
-                    {/* The horizontal connector line */}
-                    <div className="absolute top-0 left-[60px] right-[60px] h-[2px] bg-[#A0AAB4]" />
+                    {/* Column headers */}
+                    {columns.map((col, i) => {
+                        const cx = COL_CX[i];
+                        const boxW = 100;
+                        return (
+                            <g key={col.title}>
+                                <rect x={cx - boxW / 2} y={HEADER_TOP} width={boxW} height={HEADER_BOTTOM - HEADER_TOP} rx={8} fill="#212873" />
+                                <text x={cx} y={HEADER_TOP + 25} textAnchor="middle" fill="white" fontSize="14" fontWeight="500" fontFamily="inherit">
+                                    {col.title}
+                                </text>
+                            </g>
+                        );
+                    })}
 
-                    {/* Columns */}
-                    <div className="flex justify-between w-full gap-3 md:gap-5">
-                        {columns.map((col) => (
-                            <Column key={col.title} title={col.title} items={col.items} />
-                        ))}
-                    </div>
-                </div>
+                    {/* Sub-item boxes */}
+                    {columns.map((col, i) => {
+                        const cx = COL_CX[i];
+                        const spineX = cx + SPINE_OFFSET;
+                        const itemStartX = spineX + BRANCH_LEN;
+                        return col.items.map((item, j) => {
+                            const itemCY = ITEMS_START_Y + j * (ITEM_H + ITEM_GAP) + ITEM_H / 2;
+                            const boxW = Math.max(item.length * 8 + 20, 90);
+                            return (
+                                <g key={`item-${i}-${j}`}>
+                                    <rect
+                                        x={itemStartX}
+                                        y={itemCY - ITEM_H / 2 + 2}
+                                        width={boxW}
+                                        height={ITEM_H - 4}
+                                        rx={8}
+                                        fill="white"
+                                        stroke="#D1D5DB"
+                                        strokeWidth={1}
+                                    />
+                                    <text
+                                        x={itemStartX + boxW / 2}
+                                        y={itemCY + 5}
+                                        textAnchor="middle"
+                                        fill="#3C3C3C"
+                                        fontSize="12"
+                                        fontFamily="inherit"
+                                    >
+                                        {item}
+                                    </text>
+                                </g>
+                            );
+                        });
+                    })}
+                </svg>
             </div>
         </div>
     );

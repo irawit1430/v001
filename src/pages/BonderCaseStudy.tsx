@@ -1,5 +1,5 @@
 
-import { UserJourneyMap } from "../components/case-studies/new-template/cards/UserJourneyMap";
+
 
 import { HeroSection } from "../components/case-studies/new-template/layout/HeroSection";
 import { ContentSection } from "../components/case-studies/new-template/layout/ContentSection";
@@ -297,55 +297,6 @@ const BonderCaseStudy = () => {
                 }
             />
 
-            {/* User Journey Map */}
-            <ContentSection bgColor="bg-[#f0f0f0]">
-                <div className="flex flex-col md:flex-row gap-10 mb-12">
-                    <SectionHeading title="User Journey:" className="md:whitespace-nowrap" />
-                    <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed md:pt-[52px]">
-                        Mapping the emotional journey from discovery to lasting connections. This journey illustrates how a first-time Bonder user moves from initial awareness to long-term community engagement. Each stage highlights the user's goals, emotions, and key product opportunities that reduce friction and support meaningful, real-world connections.
-                    </p>
-                </div>
-
-                <UserJourneyMap
-                    steps={[
-                        {
-                            phase: "Awareness",
-                            description: "Users discover the app through social media or word of mouth",
-                            quote: "I want to find people with similar interest nearby",
-                            emotion: { icon: "🤔", label: "Curious" },
-                            opportunity: "Clear value proposition in marketing"
-                        },
-                        {
-                            phase: "Onboarding",
-                            description: "Creates profile, selects interest, sets location preferences",
-                            quote: "This should be quick and easy to set up",
-                            emotion: { icon: "😄", label: "Hopeful" },
-                            opportunity: "Streamlines sign-up with smart defaults"
-                        },
-                        {
-                            phase: "Discovery",
-                            description: "Browses events, explores groups, views potential connections",
-                            quote: "I hope I find people I can actually connect with",
-                            emotion: { icon: "🤩", label: "Excited" },
-                            opportunity: "Personalized recommendations based on interest"
-                        },
-                        {
-                            phase: "Engagement",
-                            description: "Joins an event, starts conversations, makes first connection",
-                            quote: "This feels natural and not awkward",
-                            emotion: { icon: "😌", label: "Satisfied" },
-                            opportunity: "Ice-breaker prompts and shared activity context"
-                        },
-                        {
-                            phase: "Retention",
-                            description: "Attends multiple events, forms lasting friendships",
-                            quote: "I found my community!",
-                            emotion: { icon: "🥰", label: "Delighted" },
-                            opportunity: "Community features and recurring events"
-                        }
-                    ]}
-                />
-            </ContentSection>
 
             {/* Information Architecture */}
             <TwoColumnSection
@@ -365,10 +316,10 @@ const BonderCaseStudy = () => {
                 <InfoArchitectureSection />
             </ContentSection>
 
-            {/* User Flows */}
+            {/* User Journey */}
             <TwoColumnSection
                 className="!pb-5"
-                left={<SectionHeading title="User Flows:" />}
+                left={<SectionHeading title="User Journey:" />}
                 right={
                     <div className="flex flex-col gap-6">
                         <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
@@ -381,13 +332,14 @@ const BonderCaseStudy = () => {
                 }
             />
             <ContentSection className="!py-0">
-                <div className="w-full max-w-[800px] mx-auto flex justify-start mb-4">
+                <div className="w-full max-w-[1100px] mx-auto mb-4">
                     <p className="font-normal text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">Events</p>
                 </div>
-                <div className="w-full rounded-2xl">
-                    <img src={`${import.meta.env.BASE_URL}figmaAssets/bonder-user-flow.png`} alt="User Flow Diagram" className="w-full max-w-[800px] mx-auto h-auto rounded-2xl shadow-sm" />
-                </div>
             </ContentSection>
+
+            <div className="w-full">
+                <img className="w-full h-auto" alt="User Journey Map" src={`${import.meta.env.BASE_URL}figmaAssets/image copy 14.png`} />
+            </div>
 
             {/* Lo-Fi Wireframes */}
             <TwoColumnSection

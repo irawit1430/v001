@@ -410,6 +410,14 @@ const BabyThriftPage = () => {
                 }
             />
 
+            <ContentSection className="!py-0">
+                <img
+                    className="w-full max-w-[1100px] mx-auto h-auto rounded-2xl"
+                    alt="How might we"
+                    src={`${import.meta.env.BASE_URL}figmaAssets/how-might-we-image-group.png`}
+                />
+            </ContentSection>
+
             {/* Solution Overview */}
             <TwoColumnSection
                 left={<SectionHeading title="Solution Overview:" />}
@@ -539,9 +547,12 @@ const BabyThriftPage = () => {
                     <p className="text-[#6F6864] text-base md:text-[28px] md:leading-[33px] leading-relaxed text-left max-w-[1146px] mx-auto mb-10 md:mb-16">
                         A collection of key screens from the mobile shopping experience, designed with a focus on consistency, clarity, and visual cohesion. Each screen reflects a unified design system and supports an intuitive, easy-to-navigate interface.
                     </p>
-                    <img src={hifiCollectionImage} alt="HiFi Collection" className="w-full h-auto rounded-2xl" />
                 </div>
             </ContentSection>
+
+            <div className="w-full">
+                <img className="w-full h-auto" alt="HiFi Collection" src={`${import.meta.env.BASE_URL}figmaAssets/image copy 16.png`} />
+            </div>
 
             {/* Key Features */}
             <TwoColumnSection

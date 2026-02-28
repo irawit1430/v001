@@ -66,7 +66,7 @@ const CoralWayLoungePage = () => {
             <HeroSection
                 title="Coral Way Lounge"
                 subtitle="Virtual Reality Experience & Game"
-                imageSrc={`${import.meta.env.BASE_URL}figmaAssets/coral-way-hero.png`}
+                imageSrc={`${import.meta.env.BASE_URL}figmaAssets/image copy 21.png`}
                 imageAlt="Coral Way Lounge hero image"
                 imageClassName="w-full max-w-[1000px] h-auto object-contain"
                 imageContainerClassName="relative z-0 w-full flex justify-center -mt-14 md:-mt-28"
@@ -112,7 +112,7 @@ const CoralWayLoungePage = () => {
 
             {/* Research Overview */}
             <ResearchOverview
-                backgroundColor="bg-[#212873]"
+                backgroundColor="bg-[#6F6864]"
                 description="A combination of exploratory research, environmental observation, and competitive analysis informed the design of Coral Way Lounge. Research focused on understanding how users emotionally experience virtual spaces, particularly in relation to comfort, presence, and relaxation within VR environments."
                 cards={researchLabels}
             />
@@ -173,7 +173,7 @@ const CoralWayLoungePage = () => {
                 {/* Overview Block */}
                 <div className="flex flex-col md:flex-row gap-6 mb-12 items-start">
                     <div className="shrink-0 pt-1">
-                        <div className="inline-flex items-center justify-center bg-[#212873] rounded-[6px] px-6 py-2.5">
+                        <div className="inline-flex items-center justify-center bg-[#6F6864] rounded-[6px] px-6 py-2.5">
                             <span className="text-white font-medium text-[18px] md:text-[20px]">Overview</span>
                         </div>
                     </div>
@@ -199,32 +199,32 @@ const CoralWayLoungePage = () => {
                         <div>
                             {/* Pill Grid */}
                             <div className="flex flex-wrap items-center gap-3 mb-8">
-                                <div className="inline-flex items-center justify-center bg-[#212873] rounded-[6px] px-6 py-2.5">
+                                <div className="inline-flex items-center justify-center bg-[#6F6864] rounded-[6px] px-6 py-2.5">
                                     <span className="text-white font-medium text-[18px] md:text-[20px]">Participants</span>
                                 </div>
                                 <div className="bg-[#EEF0F8] rounded-[6px] flex items-center gap-2.5 px-3 py-2">
                                     <div className="flex items-center justify-center bg-transparent">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#212873" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="5" r="3" /><path d="M9.5 10c0-1.7-1.3-3-3-3h-1c-1.7 0-3 1.3-3 3v6h2v6h4v-6h2v-6z" /><path d="M11 11.5l3.5-4 4.5 4z" /><path d="M11 12.5v3h11v-3z" /><circle cx="14" cy="18" r="2" /><circle cx="19" cy="18" r="2" /></svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#6F6864" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="5" r="3" /><path d="M9.5 10c0-1.7-1.3-3-3-3h-1c-1.7 0-3 1.3-3 3v6h2v6h4v-6h2v-6z" /><path d="M11 11.5l3.5-4 4.5 4z" /><path d="M11 12.5v3h11v-3z" /><circle cx="14" cy="18" r="2" /><circle cx="19" cy="18" r="2" /></svg>
                                     </div>
-                                    <span className="text-[#212873] font-medium text-[16px] md:text-[18px]">12 College Students</span>
+                                    <span className="text-[#6F6864] font-medium text-[16px] md:text-[18px]">12 College Students</span>
                                 </div>
                                 <div className="bg-[#EEF0F8] rounded-[6px] flex items-center gap-2.5 px-3 py-2">
                                     <div className="flex items-center justify-center bg-transparent">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#212873" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M7 2v4M17 2v4" stroke="#212873" strokeWidth="2" strokeLinecap="round" /><rect x="6" y="9" width="3" height="3" fill="white" /><rect x="10.5" y="9" width="3" height="3" fill="white" /><rect x="15" y="9" width="3" height="3" fill="white" /><rect x="6" y="13.5" width="3" height="3" fill="white" /><rect x="10.5" y="13.5" width="3" height="3" fill="white" /><rect x="15" y="13.5" width="3" height="3" fill="white" /><rect x="6" y="18" width="3" height="3" fill="white" /><rect x="10.5" y="18" width="3" height="3" fill="white" /><rect x="15" y="18" width="3" height="3" fill="white" /></svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#6F6864" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M7 2v4M17 2v4" stroke="#6F6864" strokeWidth="2" strokeLinecap="round" /><rect x="6" y="9" width="3" height="3" fill="white" /><rect x="10.5" y="9" width="3" height="3" fill="white" /><rect x="15" y="9" width="3" height="3" fill="white" /><rect x="6" y="13.5" width="3" height="3" fill="white" /><rect x="10.5" y="13.5" width="3" height="3" fill="white" /><rect x="15" y="13.5" width="3" height="3" fill="white" /><rect x="6" y="18" width="3" height="3" fill="white" /><rect x="10.5" y="18" width="3" height="3" fill="white" /><rect x="15" y="18" width="3" height="3" fill="white" /></svg>
                                     </div>
-                                    <span className="text-[#212873] font-medium text-[16px] md:text-[18px]">Ages 20-24</span>
+                                    <span className="text-[#6F6864] font-medium text-[16px] md:text-[18px]">Ages 20-24</span>
                                 </div>
                                 <div className="bg-[#EEF0F8] rounded-[6px] flex items-center gap-2.5 px-3 py-2 mt-1 lg:mt-0">
                                     <div className="flex items-center justify-center bg-transparent">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#212873" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="5" r="3" /><path d="M16 13c0-2-2-3-4-3s-4 1-4 3v3h8v-3z" /><circle cx="6" cy="8" r="2.5" /><path d="M10 16v-2c0-.52-.16-1.02-.45-1.45A3.95 3.95 0 0 0 6 11c-1.66 0-3 1-3 2.5V16h7z" /><circle cx="18" cy="8" r="2.5" /><path d="M21 16v-2.5c0-1.5-1.34-2.5-3-2.5a3.95 3.95 0 0 0-3.55 1.55c.29.43.45.93.45 1.45v2h6z" /><circle cx="12" cy="17" r="2.5" /><path d="M16 23v-1.5c0-1.5-1.5-2.5-4-2.5s-4 1-4 2.5V23h8z" /></svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#6F6864" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="5" r="3" /><path d="M16 13c0-2-2-3-4-3s-4 1-4 3v3h8v-3z" /><circle cx="6" cy="8" r="2.5" /><path d="M10 16v-2c0-.52-.16-1.02-.45-1.45A3.95 3.95 0 0 0 6 11c-1.66 0-3 1-3 2.5V16h7z" /><circle cx="18" cy="8" r="2.5" /><path d="M21 16v-2.5c0-1.5-1.34-2.5-3-2.5a3.95 3.95 0 0 0-3.55 1.55c.29.43.45.93.45 1.45v2h6z" /><circle cx="12" cy="17" r="2.5" /><path d="M16 23v-1.5c0-1.5-1.5-2.5-4-2.5s-4 1-4 2.5V23h8z" /></svg>
                                     </div>
-                                    <span className="text-[#212873] font-medium text-[16px] md:text-[18px]">Zoom Session</span>
+                                    <span className="text-[#6F6864] font-medium text-[16px] md:text-[18px]">Zoom Session</span>
                                 </div>
                                 <div className="bg-[#EEF0F8] rounded-[6px] flex items-center gap-2.5 px-3 py-2 mt-1 lg:mt-0">
                                     <div className="flex items-center justify-center bg-transparent">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#212873" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="2" width="14" height="20" rx="3" /><circle cx="9" cy="6" r="1.5" fill="white" /><circle cx="9" cy="11" r="1.5" fill="white" /><circle cx="12" cy="8.5" r="1" fill="white" /></svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#6F6864" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="2" width="14" height="20" rx="3" /><circle cx="9" cy="6" r="1.5" fill="white" /><circle cx="9" cy="11" r="1.5" fill="white" /><circle cx="12" cy="8.5" r="1" fill="white" /></svg>
                                     </div>
-                                    <span className="text-[#212873] font-medium text-[16px] md:text-[18px]">1-on-1</span>
+                                    <span className="text-[#6F6864] font-medium text-[16px] md:text-[18px]">1-on-1</span>
                                 </div>
                             </div>
 
@@ -239,7 +239,7 @@ const CoralWayLoungePage = () => {
 
                         {/* Methodology */}
                         <div>
-                            <div className="inline-flex items-center justify-center bg-[#212873] rounded-[6px] px-6 py-2.5 mb-6">
+                            <div className="inline-flex items-center justify-center bg-[#6F6864] rounded-[6px] px-6 py-2.5 mb-6">
                                 <span className="text-white font-medium text-[16px] md:text-[20px]">Methodology</span>
                             </div>
                             <p className="text-[#6F6864] font-medium text-[18px] md:text-[22px] md:leading-[32px] ml-1">
@@ -249,7 +249,7 @@ const CoralWayLoungePage = () => {
 
                         {/* Sample Questions */}
                         <div>
-                            <div className="inline-flex items-center justify-center bg-[#212873] rounded-[6px] px-6 py-2.5 mb-6">
+                            <div className="inline-flex items-center justify-center bg-[#6F6864] rounded-[6px] px-6 py-2.5 mb-6">
                                 <span className="text-white font-medium text-[16px] md:text-[20px]">Sample Questions</span>
                             </div>
                             <ul className="list-disc pl-5 space-y-2 text-[#6F6864] font-medium text-[18px] md:text-[22px] md:leading-[32px] ml-1">
@@ -266,7 +266,7 @@ const CoralWayLoungePage = () => {
                     {/* Right Column */}
                     <div className="flex-1 lg:max-w-[48%] flex flex-col pt-2 lg:pt-0">
                         {/* Key Findings header */}
-                        <div className="inline-flex items-center justify-center bg-[#212873] rounded-[6px] px-6 py-2.5 mb-8 self-start">
+                        <div className="inline-flex items-center justify-center bg-[#6F6864] rounded-[6px] px-6 py-2.5 mb-8 self-start">
                             <span className="text-white font-medium text-[16px] md:text-[20px]">Key Findings</span>
                         </div>
 
@@ -315,12 +315,12 @@ const CoralWayLoungePage = () => {
 
                         {/* Quote Box */}
                         <div className="bg-[#EEF0F8] rounded-[10px] flex items-center p-8 mt-12 mb-12 relative w-full lg:max-w-[576px] lg:h-[178px]">
-                            <span className="absolute top-6 left-6 text-[50px] md:text-[60px] text-[#212873] font-serif leading-none">"</span>
+                            <span className="absolute top-6 left-6 text-[50px] md:text-[60px] text-[#6F6864] font-serif leading-none">"</span>
                             <div className="ml-12 md:ml-10 mt-4">
-                                <p className="text-[#212873] font-medium text-[16px] md:text-[24px] leading-snug italic relative z-10 pt-2">
+                                <p className="text-[#6F6864] font-medium text-[16px] md:text-[24px] leading-snug italic relative z-10 pt-2">
                                     Sometimes I don't want to talk — I just want to exist in the same space as other people.
                                 </p>
-                                <p className="text-[#212873] text-[14px] md:text-[22px] mt-2 md:mt-4 font-normal">
+                                <p className="text-[#6F6864] text-[14px] md:text-[22px] mt-2 md:mt-4 font-normal">
                                     — Interview Participant
                                 </p>
                             </div>
@@ -328,7 +328,7 @@ const CoralWayLoungePage = () => {
 
                         {/* Impact on Design */}
                         <div>
-                            <div className="inline-flex items-center justify-center bg-[#212873] rounded-[6px] px-6 py-2.5 mb-6 self-start">
+                            <div className="inline-flex items-center justify-center bg-[#6F6864] rounded-[6px] px-6 py-2.5 mb-6 self-start">
                                 <span className="text-white font-medium text-[16px] md:text-[20px]">Impact on Design</span>
                             </div>
                             <ul className="list-disc pl-5 space-y-3 text-[#6F6864] font-medium text-[18px] md:text-[22px] md:leading-[32px] ml-1">
@@ -503,13 +503,13 @@ const CoralWayLoungePage = () => {
                 }
             />
 
-            <ContentSection className="!py-4">
+            <div className="w-full py-8">
                 <img
-                    className="w-full max-w-[1100px] mx-auto h-auto rounded-xl shadow-sm"
+                    className="w-full h-auto"
                     alt="Solution storyboard"
-                    src={`${import.meta.env.BASE_URL}figmaAssets/coral-solution-storyboard.png`}
+                    src={`${import.meta.env.BASE_URL}figmaAssets/image copy 22.png`}
                 />
-            </ContentSection>
+            </div>
 
 
 
@@ -518,7 +518,7 @@ const CoralWayLoungePage = () => {
                 <div className="lg:w-1/3 mt-3">
                     <SectionHeading title="Final Screens:" className="text-black text-[40px] leading-[48px] font-medium font-['SF_Pro_Display'] pt-1" />
                 </div>
-                <div className="max-w-[743px] lg:w-2/3 flex flex-col relative mt-8 lg:mt-0">
+                <div className="max-w-[743px] lg:w-2/3 flex flex-col relative mt-8 lg:mt-12">
                     <div className="flex gap-4 items-start mb-6">
                         <img src={`${import.meta.env.BASE_URL}figmaAssets/Apple Vision Pro.png`} alt="Apple Vision Pro" className="w-[60px] h-[60px] object-contain shrink-0 mt-[-8px]" />
                         <h3 className="font-medium text-[#6F6864] text-[34px] leading-[41px] font-['SF_Pro_Display']">
@@ -543,7 +543,7 @@ const CoralWayLoungePage = () => {
                     </div>
                     <div className="flex flex-col gap-4 max-w-[400px]">
                         <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Lobby & Arrival</h3>
-                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
+                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-left">
                             The lobby is the main entry point where users exit the elevator and orient themselves within the experience. This space provides a calm pause before transitioning into the lounge.
                         </p>
                     </div>
@@ -560,7 +560,7 @@ const CoralWayLoungePage = () => {
                     </div>
                     <div className="flex flex-col gap-4 max-w-[400px]">
                         <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Welcome Portal</h3>
-                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
+                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-left">
                             The welcome sign acts as a visual and interactive threshold into the lounge. Passing through it seamlessly transports users into the main social space.
                         </p>
                     </div>
@@ -577,7 +577,7 @@ const CoralWayLoungePage = () => {
                     </div>
                     <div className="flex flex-col gap-4 max-w-[400px]">
                         <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Main Lounge</h3>
-                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
+                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-left">
                             The lounge serves as the central gathering area, designed for relaxed exploration and low-pressure interaction. Open sightlines and ambient lighting support comfort and ease.
                         </p>
                     </div>
@@ -594,7 +594,7 @@ const CoralWayLoungePage = () => {
                     </div>
                     <div className="flex flex-col gap-4 max-w-[400px]">
                         <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Theater Room</h3>
-                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
+                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-left">
                             The theater offers a more focused shared experience within the lounge environment. Its separation helps maintain immersion without disrupting nearby spaces.
                         </p>
                     </div>
@@ -611,7 +611,7 @@ const CoralWayLoungePage = () => {
                     </div>
                     <div className="flex flex-col gap-4 max-w-[400px]">
                         <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Lounge Immersion</h3>
-                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
+                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-left">
                             This view removes visible controllers to prioritize presence and immersion. Reducing interface elements allows users to engage more naturally with the environment.
                         </p>
                     </div>
@@ -638,7 +638,7 @@ const CoralWayLoungePage = () => {
 
             {/* Contact CTA */}
             {/* Contact CTA */}
-            <GetInTouchSection theme="dark" bgColor="bg-[#492300]" buttonBgColor="#B6936E" buttonTextColor="white" />
+            <GetInTouchSection theme="dark" bgColor="bg-[#6F6864]" buttonBgColor="#B6936E" buttonTextColor="white" />
 
         </div >
     );

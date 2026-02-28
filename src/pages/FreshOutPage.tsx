@@ -416,9 +416,9 @@ const FreshOutPage = () => {
                 </p>
             </ContentSection>
 
-            <ContentSection className="!py-0">
-                <img className="w-full max-w-[1100px] mx-auto h-auto rounded-2xl" alt="Fresh Out Hi-Fi screens collection" src={`${import.meta.env.BASE_URL}figmaAssets/freshout-hifi-screens.png`} />
-            </ContentSection>
+            <div className="w-full">
+                <img className="w-full h-auto" alt="Fresh Out Hi-Fi screens collection" src={`${import.meta.env.BASE_URL}figmaAssets/image copy 13.png`} />
+            </div>
 
             {/* Key Features */}
             <TwoColumnSection

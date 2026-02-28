@@ -277,21 +277,33 @@ const RecordzPage = () => {
                     The solution is shaped by four core goals:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="border border-[#6F6864] rounded-2xl p-8 md:p-10 bg-white">
-                        <h3 className="font-medium text-xl md:text-2xl mb-6 text-[#6F6864]">Empower Artists</h3>
-                        <p className="text-lg md:text-xl leading-relaxed text-[#6F6864]">Provide artists with the tools, studio access, amd resources needed to maintain control over their music and creative direction</p>
+                    <div className="border border-[#6F6864] rounded-2xl p-8 md:p-10 bg-white flex items-start gap-5 md:gap-6">
+                        <img src={`${import.meta.env.BASE_URL}figmaAssets/image copy 17.png`} alt="1" className="w-[60px] h-[60px] shrink-0" />
+                        <div>
+                            <h3 className="font-medium text-xl md:text-2xl mb-6 text-[#6F6864]">Empower Artists</h3>
+                            <p className="text-lg md:text-xl leading-relaxed text-[#6F6864]">Provide artists with the tools, studio access, amd resources needed to maintain control over their music and creative direction</p>
+                        </div>
                     </div>
-                    <div className="border border-[#6F6864] rounded-2xl p-8 md:p-10 bg-white">
-                        <h3 className="font-medium text-xl md:text-2xl mb-6 text-[#6F6864]">Establish Trust</h3>
-                        <p className="text-lg md:text-xl leading-relaxed text-[#6F6864]">Establish clear communication, fair agreements, and ethical practices that foster long-term artist-label relationships</p>
+                    <div className="border border-[#6F6864] rounded-2xl p-8 md:p-10 bg-white flex items-start gap-5 md:gap-6">
+                        <img src={`${import.meta.env.BASE_URL}figmaAssets/image copy 18.png`} alt="2" className="w-[60px] h-[60px] shrink-0" />
+                        <div>
+                            <h3 className="font-medium text-xl md:text-2xl mb-6 text-[#6F6864]">Establish Trust</h3>
+                            <p className="text-lg md:text-xl leading-relaxed text-[#6F6864]">Establish clear communication, fair agreements, and ethical practices that foster long-term artist-label relationships</p>
+                        </div>
                     </div>
-                    <div className="border border-[#6F6864] rounded-2xl p-8 md:p-10 bg-white">
-                        <h3 className="font-medium text-xl md:text-2xl mb-6 text-[#6F6864]">Reduce Barriers</h3>
-                        <p className="text-lg md:text-xl leading-relaxed text-[#6F6864]">Simplify access to professional recording, production, and distribution for independent artists.</p>
+                    <div className="border border-[#6F6864] rounded-2xl p-8 md:p-10 bg-white flex items-start gap-5 md:gap-6">
+                        <img src={`${import.meta.env.BASE_URL}figmaAssets/image copy 19.png`} alt="3" className="w-[60px] h-[60px] shrink-0" />
+                        <div>
+                            <h3 className="font-medium text-xl md:text-2xl mb-6 text-[#6F6864]">Reduce Barriers</h3>
+                            <p className="text-lg md:text-xl leading-relaxed text-[#6F6864]">Simplify access to professional recording, production, and distribution for independent artists.</p>
+                        </div>
                     </div>
-                    <div className="border border-[#6F6864] rounded-2xl p-8 md:p-10 bg-white">
-                        <h3 className="font-medium text-xl md:text-2xl mb-6 text-[#6F6864]">Build a Creative Community</h3>
-                        <p className="text-lg md:text-xl leading-relaxed text-[#6F6864]">Support collaboration, mentorship, and cultural expression rooted in Miami's diverse music scene.</p>
+                    <div className="border border-[#6F6864] rounded-2xl p-8 md:p-10 bg-white flex items-start gap-5 md:gap-6">
+                        <img src={`${import.meta.env.BASE_URL}figmaAssets/image copy 20.png`} alt="4" className="w-[60px] h-[60px] shrink-0" />
+                        <div>
+                            <h3 className="font-medium text-xl md:text-2xl mb-6 text-[#6F6864]">Build a Creative Community</h3>
+                            <p className="text-lg md:text-xl leading-relaxed text-[#6F6864]">Support collaboration, mentorship, and cultural expression rooted in Miami's diverse music scene.</p>
+                        </div>
                     </div>
                 </div>
             </ContentSection>
