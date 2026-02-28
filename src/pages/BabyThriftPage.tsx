@@ -4,6 +4,7 @@ import { ContentSection } from "../components/case-studies/new-template/layout/C
 import { TwoColumnSection } from "../components/case-studies/new-template/layout/TwoColumnSection";
 import { SectionHeading } from "../components/case-studies/new-template/layout/SectionHeading";
 import BabyThriftCompetitiveAuditSection from "../components/case-studies/baby-thrift/BabyThriftCompetitiveAuditSection";
+import { useDesktopViewport } from "../hooks/useDesktopViewport";
 
 import GetInTouchSection from "../components/sections/GetInTouchSection";
 import { ProjectDetailGrid } from "../components/case-studies/new-template/cards/ProjectDetailGrid";
@@ -26,7 +27,7 @@ import hifiScreen1 from '../assets/hifi-screen-1.png';
 import hifiScreen2 from '../assets/hifi-screen-2.png';
 import hifiScreen3 from '../assets/hifi-screen-3.png';
 import hifiScreen4 from '../assets/hifi-screen-4.png';
-import hifiCollectionImage from '../assets/hifi-collection.png';
+
 
 import welcomeScreen from '../assets/lofi-welcome.png';
 import newArrivalScreen from '../assets/lofi-new-arrival.png';
@@ -112,6 +113,8 @@ const nextSteps = [
 
 
 const BabyThriftPage = () => {
+    useDesktopViewport();
+
     return (
         <div className="min-h-screen bg-[#FFFFFF] overflow-hidden w-full">
 
@@ -135,7 +138,7 @@ const BabyThriftPage = () => {
                 left={<SectionHeading title="Problem Statement:" />}
                 right={
                     <div className="flex flex-col gap-6">
-                        <p className="text-[#6F6864] leading-relaxed">
+                        <p className="text-[#6F6864] leading-relaxed text-center md:text-left">
                             <span className="text-lg md:text-[34px] md:leading-[41px] font-medium">
                                 Many parents face frustration as their children quickly outgrow clothing,{" "}
                             </span>
@@ -143,7 +146,7 @@ const BabyThriftPage = () => {
                                 leading to wasted items and unnecessary spending. This challenge also contributes to environmental waste, prompting parents to seek more resourceful ways to de-clutter and reuse their children's wardrobes.
                             </span>
                         </p>
-                        <p className="text-[#6F6864] leading-relaxed">
+                        <p className="text-[#6F6864] leading-relaxed text-center md:text-left">
                             <span className="text-lg md:text-[30px] md:leading-[36px]">
                                 💡
                             </span>
@@ -174,7 +177,7 @@ const BabyThriftPage = () => {
                 right={
                     <div className="flex flex-col gap-5">
                         <p className="font-semibold text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] text-center">Understanding the Problem Space:</p>
-                        <div className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
+                        <div className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] text-center md:text-left">
                             <p>
                                 <span className="font-medium">Parents shopping for secondhand baby products must balance affordability with trust and safety.</span>
                                 <span> Research focused on how parents evaluate product quality, navigate resale marketplaces, and make purchasing decisions on mobile.</span>
@@ -209,7 +212,7 @@ const BabyThriftPage = () => {
                         </div>
                     </div>
                     <div className="max-w-[800px]">
-                        <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-relaxed font-normal">
+                        <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-relaxed font-normal text-center md:text-left">
                             To better understand parents experiences with parenting, resale habits, and community connection, I <span className="font-semibold">conducted a Zoom-based survey</span> with parents of children ages 0-12.
                         </p>
                     </div>
@@ -217,7 +220,7 @@ const BabyThriftPage = () => {
 
                 {/* Goal Text */}
                 <div className="mb-16 md:mb-24">
-                    <p className="text-[#6F6864] text-[20px] md:text-[24px] leading-snug md:leading-[36px] font-medium max-w-[1000px] ml-0 md:ml-2">
+                    <p className="text-[#6F6864] text-[20px] md:text-[24px] leading-snug md:leading-[36px] font-medium max-w-[1000px] ml-0 md:ml-2 text-center md:text-left">
                         The goal of this research was to identify behaviors, pain points, and opportunities related to secondhand shopping, trust, and how parents seek advice and support.
                     </p>
                 </div>
@@ -272,7 +275,7 @@ const BabyThriftPage = () => {
                             <div className="inline-flex items-center justify-center bg-[#492300] rounded-[6px] px-6 py-2.5 mb-6">
                                 <span className="text-white font-medium text-[16px] md:text-[20px]">Methodology</span>
                             </div>
-                            <p className="text-[#6F6864] font-medium text-[18px] md:text-[22px] md:leading-[32px] ml-1">
+                            <p className="text-[#6F6864] font-medium text-[18px] md:text-[22px] md:leading-[32px] ml-1 text-center md:text-left">
                                 The survey was conducted through one-on-one Zoom sessions using a semi-structured format. Each session followed a set of 8 open ended questions designed to encourage participants to share their experiences and challenges in their own words.
                             </p>
                         </div>
@@ -302,7 +305,7 @@ const BabyThriftPage = () => {
 
                         {/* Ellipses key findings */}
                         <div className="flex flex-col gap-10">
-                            <div className="flex items-center gap-6">
+                            <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                                 <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#F4EFE2] flex items-center justify-center shrink-0">
                                     <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-piggy.png`} alt="" className="w-[35px] h-[35px] md:w-[45px] md:h-[45px] object-contain" />
                                 </div>
@@ -311,7 +314,7 @@ const BabyThriftPage = () => {
                                 </p>
                             </div>
 
-                            <div className="flex items-center gap-6">
+                            <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                                 <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#F4EFE2] flex items-center justify-center shrink-0">
                                     <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-phones.png`} alt="" className="w-[35px] h-[35px] md:w-[45px] md:h-[45px] object-contain" />
                                 </div>
@@ -320,7 +323,7 @@ const BabyThriftPage = () => {
                                 </p>
                             </div>
 
-                            <div className="flex items-center gap-6">
+                            <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                                 <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#F4EFE2] flex items-center justify-center shrink-0">
                                     <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-camera.png`} alt="" className="w-[35px] h-[35px] md:w-[45px] md:h-[45px] object-contain" />
                                 </div>
@@ -329,7 +332,7 @@ const BabyThriftPage = () => {
                                 </p>
                             </div>
 
-                            <div className="flex items-center gap-6">
+                            <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                                 <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#F4EFE2] flex items-center justify-center shrink-0">
                                     <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-chat.png`} alt="" className="w-[35px] h-[35px] md:w-[45px] md:h-[45px] object-contain" />
                                 </div>
@@ -342,7 +345,7 @@ const BabyThriftPage = () => {
                         {/* Quote Box */}
                         <div className="bg-[#F4EFE2] rounded-[10px] flex items-center p-8 mt-12 mb-12 relative w-full lg:max-w-[576px] lg:h-[178px]">
                             <span className="absolute top-6 left-6 text-[50px] md:text-[60px] text-[#492300] font-serif leading-none">"</span>
-                            <div className="ml-12 md:ml-10 mt-4">
+                            <div className="ml-12 md:ml-10 mt-4 text-center md:text-left">
                                 <p className="text-[#492300] font-medium text-[16px] md:text-[24px] leading-snug italic relative z-10 pt-2">
                                     I want affordable options, but I need to trust what I’m buying for my child
                                 </p>
@@ -385,10 +388,10 @@ const BabyThriftPage = () => {
                 left={<SectionHeading title="How Might We?" />}
                 right={
                     <div className="flex flex-col gap-6">
-                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight text-center md:text-left">
                             Turning insights into opportunity through the right questions.
                         </p>
-                        <ul className="space-y-4 text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
+                        <ul className="space-y-4 text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] text-center md:text-left">
                             <li className="flex gap-3 items-start">
                                 <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#6e6764] shrink-0" />
                                 <span>How might we help parents feel confident purchasing secondhand baby items?</span>
@@ -423,13 +426,13 @@ const BabyThriftPage = () => {
                 left={<SectionHeading title="Solution Overview:" />}
                 right={
                     <div className="flex flex-col">
-                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight mb-8">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight mb-8 text-center md:text-left">
                             Turning insights into a parent-focused, trustworthy marketplace.
                         </p>
-                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed text-center md:text-left">
                             Baby Thrift is a parent-focused resale marketplace designed to make buying and selling secondhand baby products simple, trustworthy, and efficient.
                         </p>
-                        <div className="mt-12 text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                        <div className="mt-12 text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed text-center md:text-left">
                             <p className="font-medium text-xl md:text-[34px] md:leading-[41px] mb-6">
                                 The solution is shaped by four core goals:
                             </p>
@@ -449,10 +452,10 @@ const BabyThriftPage = () => {
                 left={<SectionHeading title="Information Architecture:" />}
                 right={
                     <div className="flex flex-col gap-6">
-                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-relaxed">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-relaxed text-center md:text-left">
                             To translate research insights into a clear product structure, I mapped Baby Thrift's core navigation system.
                         </p>
-                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed text-center md:text-left">
                             The information architecture outlines how parents move through key areas of the marketplace, from browsing and evaluating items to purchasing, selling, and engaging with the community.
                         </p>
                     </div>
@@ -468,10 +471,10 @@ const BabyThriftPage = () => {
                 left={<SectionHeading title="User Flows:" />}
                 right={
                     <div className="flex flex-col gap-6">
-                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] text-center md:text-left">
                             These user flows outline the key steps parents take inside the app.
                         </p>
-                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed text-center md:text-left">
                             Mapping them early allowed me to validate the logic of each path and confirm that the experience remains seamless from onboarding to checkout.
                         </p>
                     </div>
@@ -481,19 +484,19 @@ const BabyThriftPage = () => {
                 <div className="space-y-16 w-full max-w-[1200px] mx-auto">
                     {/* Account Creation - 2 column layout */}
                     <div className="w-full overflow-hidden">
-                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-8 lg:mb-12">Account Creation</p>
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-8 lg:mb-12 text-center md:text-left">Account Creation</p>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
                             <img src={userFlowImage} alt="Account Creation Flow" className="w-full max-w-[450px] lg:max-w-none h-auto rounded-xl mx-auto lg:mx-0 object-contain" />
                             <div className="flex flex-col gap-6 lg:gap-8 pt-0 lg:pt-16">
-                                <h3 className="text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] font-medium">
+                                <h3 className="text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] font-medium text-center md:text-left">
                                     These user flows map the key decision points parents encounter while using Baby Thrift.
                                 </h3>
-                                <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] font-normal">
+                                <p className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] font-normal text-center md:text-left">
                                     The account creation flow is presented vertically to emphasize onboarding logic and authentication states, while the purchasing flow is presented horizontally to reflect a linear, end-to-end shopping journey. Mapping these flows early helped validate system logic, reduce friction, and ensure a seamless experience from launch to checkout.
                                 </p>
 
                                 <div className="mt-4 md:mt-8">
-                                    <h4 className="text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] font-medium mb-4 lg:mb-6">This:</h4>
+                                    <h4 className="text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] font-medium mb-4 lg:mb-6 text-center md:text-left">This:</h4>
                                     <ul className="list-disc pl-8 space-y-2 text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] font-normal">
                                         <li className="pl-2">Explains why the layouts differ</li>
                                         <li className="pl-2">Frames it as intentional UX reasoning</li>
@@ -506,7 +509,7 @@ const BabyThriftPage = () => {
                     </div>
                     {/* Purchasing */}
                     <div className="overflow-hidden pt-8">
-                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-8 lg:mb-12">Purchasing</p>
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] mb-8 lg:mb-12 text-center md:text-left">Purchasing</p>
                         <img src={purchasingFlowImage} alt="Purchasing Flow" className="w-full h-auto rounded-xl" />
                     </div>
                 </div>
@@ -517,7 +520,7 @@ const BabyThriftPage = () => {
                 left={<SectionHeading title="Lo-Fi Wireframes:" />}
                 right={
                     <div className="flex flex-col gap-6">
-                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed text-center md:text-left">
                             To support the Baby Thrift application, <span className="font-semibold">I created Lo-Fi wireframes that outline key user journeys and essential functionality.</span> This step prioritized usability, trust, and clear content flow to ensure a safe and intuitive experience before refining visual design.
                         </p>
                     </div>
@@ -532,10 +535,10 @@ const BabyThriftPage = () => {
                 left={<SectionHeading title="Hi-Fi Wireframes:" />}
                 right={
                     <div className="flex flex-col gap-6">
-                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] text-center md:text-left">
                             The Hi-Fi designs brought the app's visual identity to life.
                         </p>
-                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed text-center md:text-left">
                             Moving into high-fidelity screens allowed the design to refine trust signals, improve clarity around item condition, and create a warm, approachable interface. Thoughtful color, typography, and layout choices work together to support confident secondhand shopping and community connection.
                         </p>
                     </div>
@@ -544,7 +547,7 @@ const BabyThriftPage = () => {
             <ContentSection className="!py-0">
                 <ImageGallery images={hifiImages} columns={4} />
                 <div className="mt-16 md:mt-24 max-w-[1100px] mx-auto">
-                    <p className="text-[#6F6864] text-base md:text-[28px] md:leading-[33px] leading-relaxed text-left max-w-[1146px] mx-auto mb-10 md:mb-16">
+                    <p className="text-[#6F6864] text-base md:text-[28px] md:leading-[33px] leading-relaxed text-center md:text-left max-w-[1146px] mx-auto mb-10 md:mb-16">
                         A collection of key screens from the mobile shopping experience, designed with a focus on consistency, clarity, and visual cohesion. Each screen reflects a unified design system and supports an intuitive, easy-to-navigate interface.
                     </p>
                 </div>
@@ -559,13 +562,13 @@ const BabyThriftPage = () => {
                 left={<SectionHeading title="Key Features:" />}
                 right={
                     <div className="flex flex-col gap-6">
-                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px]">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] text-center md:text-left">
                             Designing for Trust, Clarity, and Ease of Use
                         </p>
-                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed text-center md:text-left">
                             <span className="font-medium">Parents shopping for secondhand baby products must balance affordability with trust and safety.</span> Research focused on how parents evaluate product quality, navigate resale marketplaces, and make purchasing decisions on mobile.
                         </p>
-                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed text-center md:text-left">
                             <span className="font-medium">Through early exploration, several recurring themes emerged.</span> Parents expressed concerns around unclear product conditions, inconsistent seller information, and overwhelming navigation. <span className="font-medium">These issues often led to hesitation, reduced trust, and abandoned purchase attempts within existing secondhand marketplaces.</span>
                         </p>
                     </div>

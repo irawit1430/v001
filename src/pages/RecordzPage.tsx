@@ -12,6 +12,7 @@ import ResearchOverview from "../components/case-studies/shared/ResearchOverview
 import KeyInsights from "../components/case-studies/shared/KeyInsights";
 import RecordzCompetitiveAuditSection from "../components/recordz/RecordzCompetitiveAuditSection";
 import RecordzUserFlowSection from "../components/recordz/RecordzUserFlowSection";
+import { useDesktopViewport } from "../hooks/useDesktopViewport";
 
 // Import images
 import heroImage from '../assets/1331-recordz-hero.png';
@@ -133,6 +134,8 @@ const nextSteps = [
 
 
 const RecordzPage = () => {
+    useDesktopViewport();
+
     return (
         <div className="min-h-screen bg-[#FFFFFF] overflow-hidden w-full">
 

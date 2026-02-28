@@ -1,0 +1,23 @@
+---
+description: How to make the site responsive without breaking desktop
+---
+# Skill: ResponsivePreserver
+
+**Purpose:** Add mobile and tablet responsiveness to the project WITHOUT altering the existing desktop layout in any way.
+
+## Context
+The site is currently built with Tailwind CSS. The classes used (e.g., `flex`, `w-1/2`, `text-6xl`) currently apply to ALL screen sizes. This makes the site look correct on a laptop/desktop but broken, squished, or horizontally scrolling on mobile devices.
+
+## Hard Global Rules (MUST OBEY)
+1. **PRESERVE LAPTOP STRUCTURE**: You are strictly NOT ALLOWED to change or remove any existing Tailwind classes that define the current desktop layout.
+2. **USE OVERRIDES**: To style smaller screens without affecting desktop, you MUST use Tailwind's `max-md:` or `max-lg:` variants.
+   * *Why?* Changing existing base classes to `lg:` is risky and might accidentally alter the desktop look if a class is missed. The safest approach is to add override classes specific to smaller screens.
+   * *Example:* `<div class="flex flex-row max-md:flex-col">` ensures the desktop remains `flex-row` but stacks on mobile.
+3. **ONLY ADD, NEVER REPLACE**: You may only *add* these `max-*` classes. Do not replace existing layout classes.
+
+## Implementation Steps for a Page
+**Step A - Layout Stacking**: Add `max-md:flex-col` or `max-lg:flex-col` to horizontal flex containers (`flex-row`, `gap-x`) that need stacking on mobile.
+**Step B - Width Fixing**: Add `max-md:w-full` or `max-md:max-w-full` to inner items that have fixed widths or percentage widths (like `w-1/2` or `w-[800px]`).
+**Step C - Typography Scaling**: Downsize overly large headings using `max-md:text-3xl`, `max-md:leading-tight`, etc.
+**Step D - Spacing Adjustment**: Adjust excessive padding and margins using `max-md:px-4`, `max-md:py-8`, `max-md:mt-4`.
+**Step E - Verification**: Double-check that no base grid columns, widths, or flex directions were removed. The desktop must look exactly as it did before your edits.

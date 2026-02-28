@@ -35,7 +35,7 @@ export function HeroSection({
                     }}
                 />
             )}
-            <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-16 lg:px-24 py-12 md:py-16 flex flex-col items-start gap-1">
+            <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-16 lg:px-24 py-12 md:py-16 flex flex-col items-center md:items-start text-center md:text-left gap-1">
                 <h1 className="font-medium text-black text-3xl md:text-[50px] leading-tight">
                     {title}
                 </h1>

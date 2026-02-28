@@ -13,6 +13,7 @@ import ResearchOverview from "../components/case-studies/shared/ResearchOverview
 import KeyInsights from "../components/case-studies/shared/KeyInsights";
 import CompetitiveAuditSection from "../components/case-studies/bonder/CompetitiveAuditSection";
 import InfoArchitectureSection from "../components/case-studies/bonder/InfoArchitectureSection";
+import { useDesktopViewport } from "../hooks/useDesktopViewport";
 
 // Import assets
 import iconCommunity from "../assets/icon-community-grey.png";
@@ -104,6 +105,8 @@ const hiFiScreens = [
 
 
 const BonderCaseStudy = () => {
+    useDesktopViewport();
+
     return (
         <div className="min-h-screen bg-[#FFFFFF] overflow-hidden w-full">
 

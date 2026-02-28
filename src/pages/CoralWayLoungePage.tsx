@@ -9,6 +9,7 @@ import { ProjectDetailGrid } from "../components/case-studies/new-template/cards
 import { StepCard } from "../components/case-studies/new-template/cards/StepCard";
 
 import ResearchOverview from "../components/case-studies/shared/ResearchOverview";
+import { useDesktopViewport } from "../hooks/useDesktopViewport";
 
 
 
@@ -59,6 +60,8 @@ const nextSteps = [
 
 
 const CoralWayLoungePage = () => {
+    useDesktopViewport();
+
     return (
         <div className="bg-white overflow-hidden w-full">
 
@@ -84,7 +87,7 @@ const CoralWayLoungePage = () => {
                 }
                 right={
                     <div className="flex flex-col gap-6">
-                        <p className="text-[#6F6864] leading-relaxed">
+                        <p className="text-[#6F6864] leading-relaxed text-center md:text-left">
                             <span className="text-lg md:text-[34px] md:leading-[41px] font-medium">
                                 Many VR environments prioritize visual spectacle over emotional comfort, which can leave users feeling detached or overwhelmed.{" "}
                             </span>
@@ -92,7 +95,7 @@ const CoralWayLoungePage = () => {
                                 When virtual spaces lack warmth, natural cues, and meaningful interactivity, it becomes difficult for users to feel grounded or present within the experience.
                             </span>
                         </p>
-                        <p className="text-[#6F6864] leading-relaxed">
+                        <p className="text-[#6F6864] leading-relaxed text-center md:text-left">
                             <span className="text-lg md:text-[30px] md:leading-[36px]">
                                 💡
                             </span>
@@ -125,7 +128,7 @@ const CoralWayLoungePage = () => {
                         <p className="font-semibold text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] text-center">
                             Understanding the Problem Space:
                         </p>
-                        <div className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
+                        <div className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] text-center md:text-left">
                             <p>
                                 <span className="font-medium">Exploratory research revealed that while many VR environments support social interaction, they often lack the emotional safety and atmosphere needed for meaningful connection.</span>
                                 <span> Users can feel hesitant to engage with others when virtual spaces feel overwhelming, impersonal, or overly game-driven.</span>
@@ -178,7 +181,7 @@ const CoralWayLoungePage = () => {
                         </div>
                     </div>
                     <div className="max-w-[800px]">
-                        <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-relaxed font-normal">
+                        <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-relaxed font-normal text-center md:text-left">
                             To inform the early design direction of Coral Way Lounge, we <span className="font-semibold">conducted concept-stage usability interviews</span> with college students to understand how they socialize, relax, and seek connection, both digitally and in physical spaces.
                         </p>
                     </div>
@@ -186,7 +189,7 @@ const CoralWayLoungePage = () => {
 
                 {/* Goal Text */}
                 <div className="mb-16 md:mb-24">
-                    <p className="text-[#6F6864] text-[20px] md:text-[24px] leading-snug md:leading-[36px] font-medium max-w-[1000px] ml-0 md:ml-2">
+                    <p className="text-[#6F6864] text-[20px] md:text-[24px] leading-snug md:leading-[36px] font-medium max-w-[1000px] ml-0 md:ml-2 text-center md:text-left">
                         The goal of this research was to validate whether a virtual lounge concept aligned with students' social habits and emotional needs before moving into full production.
                     </p>
                 </div>
@@ -242,7 +245,7 @@ const CoralWayLoungePage = () => {
                             <div className="inline-flex items-center justify-center bg-[#6F6864] rounded-[6px] px-6 py-2.5 mb-6">
                                 <span className="text-white font-medium text-[16px] md:text-[20px]">Methodology</span>
                             </div>
-                            <p className="text-[#6F6864] font-medium text-[18px] md:text-[22px] md:leading-[32px] ml-1">
+                            <p className="text-[#6F6864] font-medium text-[18px] md:text-[22px] md:leading-[32px] ml-1 text-center md:text-left">
                                 This study used one-on-one Zoom interviews during early ideation. Each session was a 20–30 minute semi-structured interview focused on participants' social habits, comfort levels, and preferences for digital spaces. No prototype was shown, allowing for unbiased, concept-level feedback.
                             </p>
                         </div>
@@ -273,7 +276,7 @@ const CoralWayLoungePage = () => {
                         {/* Ellipses key findings */}
                         <div className="flex flex-col gap-10">
                             {/* Key finding 1 */}
-                            <div className="flex items-center gap-6">
+                            <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                                 <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] shrink-0">
                                     <img src={`${import.meta.env.BASE_URL}figmaAssets/Group 179.png`} alt="Low-pressure socializing icon" className="w-full h-full object-contain" />
                                 </div>
@@ -283,7 +286,7 @@ const CoralWayLoungePage = () => {
                             </div>
 
                             {/* Key finding 2 */}
-                            <div className="flex items-center gap-6">
+                            <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                                 <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] shrink-0">
                                     <img src={`${import.meta.env.BASE_URL}figmaAssets/Group 179 (1).png`} alt="Ambient presence icon" className="w-full h-full object-contain" />
                                 </div>
@@ -293,7 +296,7 @@ const CoralWayLoungePage = () => {
                             </div>
 
                             {/* Key finding 3 */}
-                            <div className="flex items-center gap-6">
+                            <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                                 <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] shrink-0">
                                     <img src={`${import.meta.env.BASE_URL}figmaAssets/Group 179 (2).png`} alt="Comfort icon" className="w-full h-full object-contain" />
                                 </div>
@@ -303,7 +306,7 @@ const CoralWayLoungePage = () => {
                             </div>
 
                             {/* Key finding 4 */}
-                            <div className="flex items-center gap-6">
+                            <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                                 <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] shrink-0">
                                     <img src={`${import.meta.env.BASE_URL}figmaAssets/Group 179 (3).png`} alt="Light interaction icon" className="w-full h-full object-contain" />
                                 </div>
@@ -316,7 +319,7 @@ const CoralWayLoungePage = () => {
                         {/* Quote Box */}
                         <div className="bg-[#EEF0F8] rounded-[10px] flex items-center p-8 mt-12 mb-12 relative w-full lg:max-w-[576px] lg:h-[178px]">
                             <span className="absolute top-6 left-6 text-[50px] md:text-[60px] text-[#6F6864] font-serif leading-none">"</span>
-                            <div className="ml-12 md:ml-10 mt-4">
+                            <div className="ml-12 md:ml-10 mt-4 text-center md:text-left">
                                 <p className="text-[#6F6864] font-medium text-[16px] md:text-[24px] leading-snug italic relative z-10 pt-2">
                                     Sometimes I don't want to talk — I just want to exist in the same space as other people.
                                 </p>
@@ -347,13 +350,13 @@ const CoralWayLoungePage = () => {
                 left={<SectionHeading title="Competitive Audit:" />}
                 right={
                     <div className="flex flex-col gap-6">
-                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed text-center md:text-left">
                             <span className="font-medium">
                                 Analyzing existing social and wellness-focused VR platforms revealed that while many support either social interaction or relaxation, few successfully combine both.
                             </span>{" "}
                             Social VR spaces often lack emotional comfort, while relaxation experiences limit meaningful interaction.
                         </p>
-                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed text-center md:text-left">
                             This gap highlighted an opportunity for Coral Way Lounge to design a socially driven VR lounge that encourages connection, shared activities, and emotional ease within a welcoming virtual environment.
                         </p>
                     </div>
@@ -373,10 +376,10 @@ const CoralWayLoungePage = () => {
                 <div className="max-w-[1244px] mx-auto flex flex-col gap-16">
                     {/* Header Text */}
                     <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-20">
-                        <h2 className="text-white text-[40px] font-medium font-['SF Pro Display'] leading-[48px] whitespace-nowrap">
+                        <h2 className="text-white text-[28px] md:text-[40px] font-medium font-['SF Pro Display'] leading-tight md:leading-[48px] whitespace-normal md:whitespace-nowrap">
                             Key Insights:
                         </h2>
-                        <p className="text-white text-[24px] md:text-[30px] font-medium font-['SF Pro Display'] leading-[36px] max-w-[725px]">
+                        <p className="text-white text-[24px] md:text-[30px] font-medium font-['SF Pro Display'] leading-[36px] max-w-[725px] text-center md:text-left">
                             These insights summarize the most important patterns uncovered during research and discovery, highlighting the core challenges users face when trying to feel comfortable, socially open, and emotionally present in VR environments
                         </p>
                     </div>
@@ -451,10 +454,10 @@ const CoralWayLoungePage = () => {
                 left={<SectionHeading title="How Might We?" />}
                 right={
                     <div className="flex flex-col gap-6">
-                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight text-center md:text-left">
                             Turning insights into opportunity through the right questions.
                         </p>
-                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] text-center md:text-left">
                             We aimed to create a brand that honors the lounge's speakeasy roots
                             while positioning it as a modern destination for high-end cocktails
                             and social connection.
@@ -493,10 +496,10 @@ const CoralWayLoungePage = () => {
                 left={<SectionHeading title="Solution Overview:" />}
                 right={
                     <div className="flex flex-col">
-                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight mb-8">
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] leading-tight mb-8 text-center md:text-left">
                             Turning insights into opportunity with the right solution.
                         </p>
-                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed">
+                        <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] leading-relaxed text-center md:text-left">
                             This solution is visualized through a storyboard that captures the Coral Way Lounge guest journey in real time. By mapping moments of entry, ordering, seating, and social interaction, the storyboard illustrates how intentional design decisions can reduce friction, enhance comfort, and support meaningful connection throughout the space.
                         </p>
                     </div>
@@ -516,16 +519,16 @@ const CoralWayLoungePage = () => {
             {/* Final Screens */}
             <div className="max-w-[1244px] mx-auto px-4 md:px-8 pt-16 pb-8 flex flex-col lg:flex-row justify-between relative">
                 <div className="lg:w-1/3 mt-3">
-                    <SectionHeading title="Final Screens:" className="text-black text-[40px] leading-[48px] font-medium font-['SF_Pro_Display'] pt-1" />
+                    <SectionHeading title="Final Screens:" className="text-black text-3xl md:text-[40px] md:leading-[48px] font-medium font-['SF_Pro_Display'] pt-1" />
                 </div>
                 <div className="max-w-[743px] lg:w-2/3 flex flex-col relative mt-8 lg:mt-12">
-                    <div className="flex gap-4 items-start mb-6">
-                        <img src={`${import.meta.env.BASE_URL}figmaAssets/Apple Vision Pro.png`} alt="Apple Vision Pro" className="w-[60px] h-[60px] object-contain shrink-0 mt-[-8px]" />
-                        <h3 className="font-medium text-[#6F6864] text-[34px] leading-[41px] font-['SF_Pro_Display']">
+                    <div className="flex flex-col md:flex-row gap-4 items-center md:items-start mb-6 text-center md:text-left">
+                        <img src={`${import.meta.env.BASE_URL}figmaAssets/Apple Vision Pro.png`} alt="Apple Vision Pro" className="w-[60px] h-[60px] object-contain shrink-0 mt-0 md:mt-[-8px]" />
+                        <h3 className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] font-['SF_Pro_Display']">
                             The following screens represent the final visual and experiential direction for Coral Way Lounge.
                         </h3>
                     </div>
-                    <p className="font-normal text-[#6F6864] text-[30px] leading-[36px] font-['SF_Pro_Display']">
+                    <p className="font-normal text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] font-['SF_Pro_Display'] text-center md:text-left">
                         Informed by research insights, narrative framing, and spatial exploration, these designs illustrate how atmosphere, flow, and interaction come together to support comfort, clarity, and social ease within the lounge experience.
                     </p>
                 </div>
@@ -542,8 +545,8 @@ const CoralWayLoungePage = () => {
                         />
                     </div>
                     <div className="flex flex-col gap-4 max-w-[400px]">
-                        <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Lobby & Arrival</h3>
-                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-left">
+                        <h3 className="text-2xl md:text-[34px] md:leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Lobby & Arrival</h3>
+                        <p className="text-[#6F6864] font-normal text-lg md:text-[24px] md:leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
                             The lobby is the main entry point where users exit the elevator and orient themselves within the experience. This space provides a calm pause before transitioning into the lounge.
                         </p>
                     </div>
@@ -559,8 +562,8 @@ const CoralWayLoungePage = () => {
                         />
                     </div>
                     <div className="flex flex-col gap-4 max-w-[400px]">
-                        <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Welcome Portal</h3>
-                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-left">
+                        <h3 className="text-2xl md:text-[34px] md:leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Welcome Portal</h3>
+                        <p className="text-[#6F6864] font-normal text-lg md:text-[24px] md:leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
                             The welcome sign acts as a visual and interactive threshold into the lounge. Passing through it seamlessly transports users into the main social space.
                         </p>
                     </div>
@@ -576,8 +579,8 @@ const CoralWayLoungePage = () => {
                         />
                     </div>
                     <div className="flex flex-col gap-4 max-w-[400px]">
-                        <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Main Lounge</h3>
-                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-left">
+                        <h3 className="text-2xl md:text-[34px] md:leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Main Lounge</h3>
+                        <p className="text-[#6F6864] font-normal text-lg md:text-[24px] md:leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
                             The lounge serves as the central gathering area, designed for relaxed exploration and low-pressure interaction. Open sightlines and ambient lighting support comfort and ease.
                         </p>
                     </div>
@@ -593,8 +596,8 @@ const CoralWayLoungePage = () => {
                         />
                     </div>
                     <div className="flex flex-col gap-4 max-w-[400px]">
-                        <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Theater Room</h3>
-                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-left">
+                        <h3 className="text-2xl md:text-[34px] md:leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Theater Room</h3>
+                        <p className="text-[#6F6864] font-normal text-lg md:text-[24px] md:leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
                             The theater offers a more focused shared experience within the lounge environment. Its separation helps maintain immersion without disrupting nearby spaces.
                         </p>
                     </div>
@@ -610,8 +613,8 @@ const CoralWayLoungePage = () => {
                         />
                     </div>
                     <div className="flex flex-col gap-4 max-w-[400px]">
-                        <h3 className="text-[34px] leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Lounge Immersion</h3>
-                        <p className="text-[#6F6864] font-normal text-[24px] leading-[36px] font-['SF_Pro_Display'] text-left">
+                        <h3 className="text-2xl md:text-[34px] md:leading-[41px] font-medium font-['SF_Pro_Display'] text-[#6F6864] text-center lg:text-left">Lounge Immersion</h3>
+                        <p className="text-[#6F6864] font-normal text-lg md:text-[24px] md:leading-[36px] font-['SF_Pro_Display'] text-center lg:text-left">
                             This view removes visible controllers to prioritize presence and immersion. Reducing interface elements allows users to engage more naturally with the environment.
                         </p>
                     </div>

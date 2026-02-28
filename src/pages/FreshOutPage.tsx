@@ -15,6 +15,7 @@ import ResearchOverview from "../components/case-studies/shared/ResearchOverview
 import KeyInsights from "../components/case-studies/shared/KeyInsights";
 import FreshOutUserFlow from "../components/case-studies/fresh-out/FreshOutUserFlow";
 import FreshOutEventFlow from "../components/case-studies/fresh-out/FreshOutEventFlow";
+import { useDesktopViewport } from "../hooks/useDesktopViewport";
 
 
 const projectDetails = [
@@ -92,6 +93,8 @@ const loFiScreens = [
 
 
 const FreshOutPage = () => {
+    useDesktopViewport();
+
     return (
         <div className="min-h-screen bg-[#FFFFFF] overflow-hidden w-full">
 

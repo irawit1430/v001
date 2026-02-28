@@ -113,7 +113,7 @@ const ProjectsPage: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="font-['SF_Pro_Display',sans-serif] text-[24px] leading-relaxed text-[#6f6864] max-w-[960px] mx-auto text-left"
+                        className="font-['SF_Pro_Display',sans-serif] text-[10px] sm:text-[12px] md:text-[24px] leading-relaxed text-[#6f6864] max-w-[960px] mx-auto text-left w-fit whitespace-nowrap"
                     >
                         <p>
                             A collection of design work that reflects how I approach storytelling, problem-solving,<br />
@@ -123,19 +123,19 @@ const ProjectsPage: React.FC = () => {
                 </div>
 
                 {/* Filter Section */}
-                <div className="flex justify-center items-center gap-4 mb-[60px] flex-wrap px-5">
-                    <span className="font-['SF_Pro_Display',sans-serif] text-[16px] text-[#6f6864] font-medium mr-2">
+                <div className="flex justify-center items-center gap-1 sm:gap-2 md:gap-4 mb-[60px] flex-nowrap md:flex-wrap px-2 md:px-5">
+                    <span className="font-['SF_Pro_Display',sans-serif] text-[9px] sm:text-[12px] md:text-[16px] text-[#6f6864] font-medium mr-1 md:mr-2 whitespace-nowrap">
                         FILTER: Showing All
                     </span>
 
-                    <div className="flex gap-3 flex-wrap justify-center">
+                    <div className="flex gap-1 md:gap-3 flex-nowrap md:flex-wrap justify-center">
                         {(['ALL', 'APPLICATIONS', 'UI', 'EXTRAS'] as const).map((item) => (
                             <motion.button
                                 key={item}
                                 onClick={() => setFilter(item)}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className={`py-2 px-6 rounded-full border-none text-[16px] font-medium cursor-pointer transition-all duration-200 ${filter === item ? 'bg-[#FF6F61] text-white' : 'bg-[#FFF1E5] text-[#FF6F61]'
+                                className={`py-1 md:py-2 px-2 md:px-6 rounded-full border-none text-[8px] sm:text-[10px] md:text-[16px] font-medium cursor-pointer transition-all duration-200 whitespace-nowrap ${filter === item ? 'bg-[#FF6F61] text-white' : 'bg-[#FFF1E5] text-[#FF6F61]'
                                     }`}
                             >
                                 {item}
