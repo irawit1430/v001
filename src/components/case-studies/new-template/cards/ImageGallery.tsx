@@ -28,7 +28,7 @@ export function ImageGallery({ images, rounded = true, columns = 4, centerLabels
             {images.map((image, index) => (
                 <ScrollReveal key={index} width="100%" delay={index * 0.1} className="h-full">
                     <div className={`flex flex-col h-full ${centerLabels ? "items-center text-center" : ""}`}>
-                        <div className="flex items-end justify-center flex-1 w-full">
+                        <div className="flex items-start justify-center flex-1 w-full">
                             <ImageLightbox src={image.src} alt={image.alt}>
                                 <img
                                     className={`w-full h-auto object-contain ${rounded ? "rounded-lg" : ""} cursor-pointer hover:opacity-90 transition-opacity`}
