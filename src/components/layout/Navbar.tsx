@@ -120,7 +120,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <motion.nav
-        className="navbar fixed top-0 left-0 right-0 h-[70px] bg-gradient-to-r from-[rgba(255,218,185,0.7)] via-[rgba(255,111,97,0.7)] to-[rgba(255,158,128,0.7)] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.2)] z-[100]"
+        className="navbar fixed top-0 left-0 right-0 h-[70px] bg-gradient-to-r from-[rgba(255,218,185,0.7)] via-[rgba(255,111,97,0.7)] to-[rgba(255,158,128,0.7)] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.2)] z-[100] backdrop-blur-lg"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

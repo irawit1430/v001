@@ -192,7 +192,7 @@ const RecordzPage = () => {
                 left={<SectionHeading title="Discovery:" />}
                 right={
                     <div className="flex flex-col gap-5">
-                        <p className="font-semibold text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] text-center">Understanding the Creative Landscape:</p>
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] text-center">Understanding the Creative Landscape:</p>
                         <div className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px]">
                             <p>
                                 <span className="font-medium">1331 Recordz was created to support independent artists</span>
@@ -221,7 +221,7 @@ const RecordzPage = () => {
                 backgroundColor="bg-[#D1D1D1]"
                 description="These insights summarize the most important patterns uncovered during research and discovery."
                 insights={keyInsights}
-                textColor="text-black"
+                textColor="text-white"
             />
 
             {/* How Might We */}
@@ -467,7 +467,7 @@ const RecordzPage = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-x-12 md:gap-y-[80px] max-w-[1590px] mx-auto w-full px-4 xl:px-0 pb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-[80px] max-w-[1301px] mx-auto w-full px-4 xl:px-0 pb-16">
                     {hifiScreens.map((screen, index) => (
                         <div key={index} className="flex flex-col gap-4 md:gap-6 w-full">
                             <img src={screen.src} alt={screen.alt} className="w-full rounded-2xl" />
@@ -485,7 +485,7 @@ const RecordzPage = () => {
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
                     {nextSteps.map((step, index) => (
-                        <StepCard key={index} {...step} />
+                        <StepCard key={index} {...step} iconClassName="w-14 h-14" iconContainerClassName="w-14 h-14 bg-transparent" />
                     ))}
                 </div>
                 <p className="text-center text-[#6F6864] text-base md:text-[28px] md:leading-[33px] mt-12 max-w-5xl mx-auto leading-relaxed">
@@ -494,7 +494,7 @@ const RecordzPage = () => {
             </ContentSection>
 
             {/* Contact CTA */}
-            <GetInTouchSection theme="dark" bgColor="bg-[#6F6864]" buttonBgColor="#D9D9D9" buttonTextColor="black" />
+            <GetInTouchSection theme="dark" bgColor="bg-[#6F6864]" buttonBgColor="#D9D9D9" buttonTextColor="#6F6864" />
 
         </div>
     );

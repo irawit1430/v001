@@ -6,7 +6,7 @@ import img1 from '../assets/1st.png';
 import img2 from '../assets/2nd.png';
 import img3 from '../assets/3rd.png';
 import logo from '../assets/logo.png';
-import GetInTouchSection from '../components/sections/GetInTouchSection';
+
 
 const AboutPage: React.FC = () => {
     const containerVariants = {
@@ -294,7 +294,58 @@ const AboutPage: React.FC = () => {
 
 
             </div>
-            <GetInTouchSection bgColor="bg-[#F9FAFB]" />
+            {/* Get In Touch Section */}
+            <section
+                style={{ backgroundColor: '#F9FAFB' }}
+                className="w-full py-20"
+            >
+                <div className="flex flex-col items-center max-w-[1244px] mx-auto px-5 md:px-8">
+                    <div className="text-left">
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false }}
+                            transition={{ duration: 0.5 }}
+                            className="font-['SF_Pro_Display',sans-serif] text-[32px] md:text-[40px] font-medium leading-tight mb-4 text-[#2E211B]"
+                        >
+                            Have a project or story to share?
+                        </motion.h2>
+
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                            className="font-['SF_Pro_Display',sans-serif] text-[20px] md:text-[24px] font-normal leading-relaxed text-[#6F6864] mb-10"
+                        >
+                            I'd love to connect , learn about your goals, and design<br />
+                            something that truly resonates with people.
+                        </motion.p>
+
+                        <div className="flex justify-center w-full">
+                            <motion.a
+                                href="mailto:desireewalkerux@yahoo.com"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false }}
+                                transition={{ duration: 0.5, delay: 0.2 }}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="inline-flex flex-row justify-center items-center no-underline cursor-pointer font-['SF_Pro_Display',sans-serif] font-medium text-[20px] text-white transition-all duration-300"
+                                style={{
+                                    width: '220px',
+                                    height: '60px',
+                                    padding: '16px 49px',
+                                    background: '#FF6F61',
+                                    borderRadius: '10px',
+                                }}
+                            >
+                                Let's Talk
+                            </motion.a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };

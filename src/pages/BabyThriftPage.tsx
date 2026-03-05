@@ -12,6 +12,7 @@ import { StepCard } from "../components/case-studies/new-template/cards/StepCard
 import { ImageGallery } from "../components/case-studies/new-template/cards/ImageGallery";
 import ResearchOverview from "../components/case-studies/shared/ResearchOverview";
 import KeyInsights from "../components/case-studies/shared/KeyInsights";
+import { ImageLightbox } from "../components/ui/ImageLightbox";
 
 // Import images
 
@@ -35,10 +36,6 @@ import donateScreen from '../assets/lofi-donate.png';
 import itemDetailsScreen from '../assets/lofi-item-details.png';
 
 // Icons
-import iconShield from '../assets/icon-shield.png';
-import iconBadge from '../assets/icon-badge.png';
-import iconBooks from '../assets/icon-books.png';
-import iconCommunity from '../assets/icon-community.png';
 
 import iconUserGroups from '../assets/new-icon-user-groups.png';
 import iconRestart from '../assets/new-icon-restart.png';
@@ -55,10 +52,10 @@ const projectDetails = [
 ];
 
 const keyInsights = [
-    { title: 'Trust & Safety', description: 'Clear product conditions and trusted sellers build confidence', icon: iconShield },
-    { title: 'Product Clarity', description: 'Inconsistent descriptions and images hinder product evaluation', icon: iconBadge },
-    { title: 'Navigation Simplicity', description: 'Cluttered layouts and categories hinder mobile product discovery', icon: iconBooks },
-    { title: 'Parent Community', description: 'Existing platforms lack parent-focused community and trust features', icon: iconCommunity },
+    { title: 'Trust & Safety', description: 'Clear product conditions and trusted sellers build confidence', icon: `${import.meta.env.BASE_URL}figmaAssets/image copy 38.png` },
+    { title: 'Product Clarity', description: 'Inconsistent descriptions and images hinder product evaluation', icon: `${import.meta.env.BASE_URL}figmaAssets/image copy 39.png` },
+    { title: 'Navigation Simplicity', description: 'Cluttered layouts and categories hinder mobile product discovery', icon: `${import.meta.env.BASE_URL}figmaAssets/image copy 40.png` },
+    { title: 'Parent Community', description: 'Existing platforms lack parent-focused community and trust features', icon: `${import.meta.env.BASE_URL}figmaAssets/image copy 41.png` },
 ];
 
 const researchLabels = [
@@ -90,22 +87,22 @@ const hifiImages = [
 
 const nextSteps = [
     {
-        icon: iconUserGroups,
+        icon: iconFeatures,
         title: "User Testing",
         description: "Conduct usability testing with target users to validate design decisions and identify pain points.",
     },
     {
-        icon: iconRestart,
+        icon: iconLineChart,
         title: "Iterate & Refine",
         description: "Incorporate feedback to improve the user experience and address any discovered issues.",
     },
     {
-        icon: iconLineChart,
+        icon: iconRestart,
         title: "Analytics Integration",
         description: "Implement tracking to measure key metrics like user engagement and retention rates.",
     },
     {
-        icon: iconFeatures,
+        icon: iconUserGroups,
         title: "Future Features",
         description: "Explore premium features like event creation, business partnerships, and community moderation tools.",
     },
@@ -176,7 +173,7 @@ const BabyThriftPage = () => {
                 left={<SectionHeading title="Discovery:" />}
                 right={
                     <div className="flex flex-col gap-5">
-                        <p className="font-semibold text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] text-center">Understanding the Problem Space:</p>
+                        <p className="font-medium text-[#6F6864] text-xl md:text-[34px] md:leading-[41px] text-center">Understanding the Problem Space:</p>
                         <div className="text-[#6F6864] text-lg md:text-[30px] md:leading-[36px] text-center md:text-left">
                             <p>
                                 <span className="font-medium">Parents shopping for secondhand baby products must balance affordability with trust and safety.</span>
@@ -213,7 +210,7 @@ const BabyThriftPage = () => {
                     </div>
                     <div className="max-w-[800px]">
                         <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-relaxed font-normal text-center md:text-left">
-                            To better understand parents experiences with parenting, resale habits, and community connection, I <span className="font-semibold">conducted a Zoom-based survey</span> with parents of children ages 0-12.
+                            To better understand parents experiences with parenting, resale habits, and community connection, I <span className="font-medium">conducted a Zoom-based survey</span> with parents of children ages 0-12.
                         </p>
                     </div>
                 </div>
@@ -286,9 +283,9 @@ const BabyThriftPage = () => {
                                 <span className="text-white font-medium text-[16px] md:text-[20px]">Sample Questions</span>
                             </div>
                             <ul className="list-disc pl-5 space-y-2 text-[#6F6864] font-medium text-[18px] md:text-[22px] md:leading-[32px] ml-1">
-                                <li>How do you <span className="font-semibold">shop</span> for children's clothing?</li>
-                                <li>What <span className="font-semibold">challenges do you face</span> when buying or selling secondhand items?</li>
-                                <li>What factors help you <span className="font-semibold">trust</span> a secondhand product or seller?</li>
+                                <li>How do you <span className="font-medium">shop</span> for children's clothing?</li>
+                                <li>What <span className="font-medium">challenges do you face</span> when buying or selling secondhand items?</li>
+                                <li>What factors help you <span className="font-medium">trust</span> a secondhand product or seller?</li>
                             </ul>
                         </div>
                     </div>
@@ -310,7 +307,7 @@ const BabyThriftPage = () => {
                                     <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-piggy.png`} alt="" className="w-[35px] h-[35px] md:w-[45px] md:h-[45px] object-contain" />
                                 </div>
                                 <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-normal">
-                                    Parents value <span className="font-semibold">affordability but prioritize trust and safety</span> when purchasing clothing
+                                    Parents value <span className="font-medium">affordability but prioritize trust and safety</span> when purchasing clothing
                                 </p>
                             </div>
 
@@ -318,8 +315,8 @@ const BabyThriftPage = () => {
                                 <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#F4EFE2] flex items-center justify-center shrink-0">
                                     <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-phones.png`} alt="" className="w-[35px] h-[35px] md:w-[45px] md:h-[45px] object-contain" />
                                 </div>
-                                <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-medium">
-                                    Many parents use <span className="font-semibold">secondhand platforms</span> but feel uncertain about <span className="font-semibold">product condition and seller credibility.</span>
+                                <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-normal">
+                                    Many parents use <span className="font-medium">secondhand platforms</span> but feel uncertain about <span className="font-medium">product condition and seller credibility.</span>
                                 </p>
                             </div>
 
@@ -327,8 +324,8 @@ const BabyThriftPage = () => {
                                 <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#F4EFE2] flex items-center justify-center shrink-0">
                                     <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-camera.png`} alt="" className="w-[35px] h-[35px] md:w-[45px] md:h-[45px] object-contain" />
                                 </div>
-                                <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-medium">
-                                    <span className="font-semibold">Clear photos and detailed descriptions</span> play a major role in <span className="font-semibold">purchase confidence</span>
+                                <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-normal">
+                                    <span className="font-medium">Clear photos and detailed descriptions</span> play a major role in <span className="font-medium">purchase confidence</span>
                                 </p>
                             </div>
 
@@ -336,8 +333,8 @@ const BabyThriftPage = () => {
                                 <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full bg-[#F4EFE2] flex items-center justify-center shrink-0">
                                     <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-chat.png`} alt="" className="w-[35px] h-[35px] md:w-[45px] md:h-[45px] object-contain" />
                                 </div>
-                                <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-medium">
-                                    Parents often rely on <span className="font-semibold">informal communities</span> such as social media groups, friends, or word-of-mouth for advice.
+                                <p className="text-[#6F6864] text-[18px] md:text-[22px] leading-snug md:leading-[30px] font-normal">
+                                    Parents often rely on <span className="font-medium">informal communities</span> such as social media groups, friends, or word-of-mouth for advice.
                                 </p>
                             </div>
                         </div>
@@ -414,11 +411,29 @@ const BabyThriftPage = () => {
             />
 
             <ContentSection className="!py-0">
-                <img
-                    className="w-full max-w-[1100px] mx-auto h-auto rounded-2xl"
-                    alt="How might we"
-                    src={`${import.meta.env.BASE_URL}figmaAssets/how-might-we-image-group.png`}
-                />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[1100px] mx-auto">
+                    <ImageLightbox src={`${import.meta.env.BASE_URL}figmaAssets/image copy 35.png`} alt="How might we process 1">
+                        <img
+                            className="w-full h-auto object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                            alt="How might we process 1"
+                            src={`${import.meta.env.BASE_URL}figmaAssets/image copy 35.png`}
+                        />
+                    </ImageLightbox>
+                    <ImageLightbox src={`${import.meta.env.BASE_URL}figmaAssets/image copy 36.png`} alt="How might we process 2">
+                        <img
+                            className="w-full h-auto object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                            alt="How might we process 2"
+                            src={`${import.meta.env.BASE_URL}figmaAssets/image copy 36.png`}
+                        />
+                    </ImageLightbox>
+                    <ImageLightbox src={`${import.meta.env.BASE_URL}figmaAssets/image copy 37.png`} alt="How might we process 3">
+                        <img
+                            className="w-full h-auto object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                            alt="How might we process 3"
+                            src={`${import.meta.env.BASE_URL}figmaAssets/image copy 37.png`}
+                        />
+                    </ImageLightbox>
+                </div>
             </ContentSection>
 
             {/* Solution Overview */}
@@ -577,30 +592,22 @@ const BabyThriftPage = () => {
             <ContentSection bgColor="bg-[#3E2613]">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                     <div className="bg-white rounded-xl p-6 flex flex-col items-center justify-start gap-[10px] text-center w-full max-w-[261px] mx-auto h-[251px]">
-                        <div className="bg-[#F5F0EB] w-12 h-12 rounded-full flex items-center justify-center shrink-0">
-                            <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-chat.png`} alt="" className="w-6 h-6 object-contain" />
-                        </div>
+                        <img src={`${import.meta.env.BASE_URL}figmaAssets/image copy 42.png`} alt="Parenthood Support" className="w-14 h-14 object-contain mx-auto" />
                         <h4 className="text-lg font-semibold text-[#3E2613] m-0">Parenthood Support</h4>
                         <p className="text-sm text-[#6F6864] leading-relaxed m-0">Access community advice, guides, and tips to help parents make confident secondhand purchases.</p>
                     </div>
                     <div className="bg-white rounded-xl p-6 flex flex-col items-center justify-start gap-[10px] text-center w-full max-w-[261px] mx-auto h-[251px]">
-                        <div className="bg-[#F5F0EB] w-12 h-12 rounded-full flex items-center justify-center shrink-0">
-                            <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-piggy.png`} alt="" className="w-6 h-6 object-contain" />
-                        </div>
+                        <img src={`${import.meta.env.BASE_URL}figmaAssets/image copy 43.png`} alt="Trusted Sellers" className="w-14 h-14 object-contain mx-auto" />
                         <h4 className="text-lg font-semibold text-[#3E2613] m-0">Trusted Sellers</h4>
                         <p className="text-sm text-[#6F6864] leading-relaxed m-0">Shop from verified sellers with clear ratings, reviews, and transparent product details.</p>
                     </div>
                     <div className="bg-white rounded-xl p-6 flex flex-col items-center justify-start gap-[10px] text-center w-full max-w-[261px] mx-auto h-[251px]">
-                        <div className="bg-[#F5F0EB] w-12 h-12 rounded-full flex items-center justify-center shrink-0">
-                            <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-phones.png`} alt="" className="w-6 h-6 object-contain" />
-                        </div>
+                        <img src={`${import.meta.env.BASE_URL}figmaAssets/image copy 44.png`} alt="Localized Events" className="w-14 h-14 object-contain mx-auto" />
                         <h4 className="text-lg font-semibold text-[#3E2613] m-0">Localized Events</h4>
                         <p className="text-sm text-[#6F6864] leading-relaxed m-0">Discover nearby swaps, meetups, and resale events tailored to local parenting community.</p>
                     </div>
                     <div className="bg-white rounded-xl p-6 flex flex-col items-center justify-start gap-[10px] text-center w-full max-w-[261px] mx-auto h-[251px]">
-                        <div className="bg-[#F5F0EB] w-12 h-12 rounded-full flex items-center justify-center shrink-0">
-                            <img src={`${import.meta.env.BASE_URL}figmaAssets/survey-icon-camera.png`} alt="" className="w-6 h-6 object-contain" />
-                        </div>
+                        <img src={`${import.meta.env.BASE_URL}figmaAssets/image copy 45.png`} alt="Eco-Friendly" className="w-14 h-14 object-contain mx-auto" />
                         <h4 className="text-lg font-semibold text-[#3E2613] m-0">Eco-Friendly</h4>
                         <p className="text-sm text-[#6F6864] leading-relaxed m-0">Reduce waste and support sustainability by extending the life of baby products through reuse.</p>
                     </div>
@@ -615,7 +622,7 @@ const BabyThriftPage = () => {
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
                     {nextSteps.map((step, index) => (
-                        <StepCard key={index} {...step} />
+                        <StepCard key={index} {...step} iconClassName="w-14 h-14" iconContainerClassName="w-14 h-14 bg-transparent" />
                     ))}
                 </div>
                 <p className="mt-12 text-center text-[#6F6864] text-base md:text-[28px] md:leading-[33px] max-w-5xl mx-auto">

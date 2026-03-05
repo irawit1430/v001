@@ -52,7 +52,7 @@ const Projects: React.FC = () => {
     return (
         <section
             id="projects"
-            className="bg-white max-w-[1440px] mx-auto px-4 pt-12 pb-8"
+            className="bg-white max-w-[1440px] mx-auto px-4 pt-8 pb-8"
         >
             {/* Section Title */}
             <h2 className="font-['SF_Pro_Display',sans-serif] font-semibold text-[40px] text-[#ff6f61] text-center mb-4">
@@ -60,8 +60,8 @@ const Projects: React.FC = () => {
             </h2>
 
             {/* Subtitle */}
-            <p className="font-['SF_Pro_Display',sans-serif] text-[24px] text-[#6f6864] text-left max-w-[960px] mx-auto mb-16 leading-normal tracking-[1.2px]">
-                A showcase of recent work spanning from mobile apps, web applications,<br />
+            <p className="font-['SF_Pro_Display',sans-serif] text-[24px] text-[#6f6864] text-center lg:text-left max-w-[960px] mx-auto mb-[24px] leading-normal tracking-[1.2px]">
+                A showcase of recent work spanning from mobile apps, web applications,<br className="hidden lg:block" />
                 and comprehensive UX research projects.
             </p>
 

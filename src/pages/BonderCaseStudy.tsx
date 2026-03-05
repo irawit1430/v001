@@ -230,7 +230,7 @@ const BonderCaseStudy = () => {
                 backgroundColor="bg-[#D1D1D1]"
                 description="Analysis of competitors revealed that while many apps solve parts of the problem, none offer a cohesive ecosystem for a single venue."
                 insights={keyInsights}
-                textColor="text-black"
+                textColor="text-white"
             />
 
             {/* How Might We */}
@@ -374,7 +374,7 @@ const BonderCaseStudy = () => {
                 }
             />
             <ContentSection className="!py-0">
-                <ImageGallery images={hiFiScreens} columns={4} textColor="text-[#6F6864]" centerLabels />
+                <ImageGallery images={hiFiScreens} columns={4} textColor="text-[#6F6864]" />
             </ContentSection>
 
             {/* Next Steps */}
@@ -395,7 +395,7 @@ const BonderCaseStudy = () => {
 
             {/* CTA */}
             {/* Contact CTA */}
-            <GetInTouchSection theme="dark" bgColor="bg-[#6F6864]" buttonBgColor="#D9D9D9" buttonTextColor="black" />
+            <GetInTouchSection theme="dark" bgColor="bg-[#D9D9D9]" buttonBgColor="#6F6864" buttonTextColor="white" textColor="#6F6864" />
 
         </div>
     );

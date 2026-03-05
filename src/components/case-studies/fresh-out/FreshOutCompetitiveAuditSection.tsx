@@ -10,7 +10,7 @@ const FreshOutCompetitiveAuditSection: React.FC = () => {
                     <h2 className="fo-audit-title">Competitive Audit:</h2>
                     <div className="fo-audit-content">
                         <p className="fo-audit-text">
-                            <strong>The competitive audit evaluates key platforms that support veterans in building community, accessing resources, and navigating post-service life.</strong> By comparing core features, strengths, and weaknesses across competitors, this analysis reveals clear opportunities to differentiate the product and address unmet needs within the veteran support landscape.
+                            <strong>The competitive audit evaluates key platforms</strong> that support veterans in building community, accessing resources, and navigating post-service life. By comparing core features, strengths, and weaknesses across competitors, this analysis reveals clear opportunities to differentiate the product and address unmet needs within the veteran support landscape.
                         </p>
                     </div>
                 </div>

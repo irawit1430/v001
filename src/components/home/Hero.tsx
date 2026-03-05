@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
 
     return (
         <motion.section
-            className="hero relative flex items-center justify-center text-white text-center overflow-hidden w-full min-h-screen mt-[70px]"
+            className="hero relative flex items-center justify-center text-white text-center overflow-hidden w-full min-h-[calc(100vh-70px)] mt-[70px]"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -109,14 +109,14 @@ const Hero: React.FC = () => {
                         opacity: textOpacity,
                         y: textY
                     }}
-                    className="font-['SF_Pro_Display',sans-serif] font-semibold text-[32px] md:text-[40px] lg:text-[50px] text-white mb-6 mt-[100px] max-w-[900px] leading-[1.3]"
+                    className="font-['SF_Pro_Display',sans-serif] font-semibold text-[32px] md:text-[40px] lg:text-[50px] text-white mb-4 mt-[24px] max-w-[900px] leading-[1.3]"
                 >
                     Hi, I'm Desiree,<br />
                     UX Designer turning complex problems into elegant, user-centered solutions. Based in <span className="bg-clip-text bg-gradient-to-r from-[#ffdab9] to-[#ff6f61] text-transparent" style={{ WebkitTextFillColor: 'transparent' }}>Miami, FL</span>
                 </motion.h1>
 
                 <motion.div
-                    className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-[40px] items-center justify-center"
+                    className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-[16px] items-center justify-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
@@ -142,7 +142,7 @@ const Hero: React.FC = () => {
 
             {/* Enhanced scroll indicator with arrow */}
             <motion.div
-                className="mt-[225px] cursor-pointer absolute bottom-10 left-1/2 -translate-x-1/2"
+                className="cursor-pointer absolute bottom-6 left-1/2 -translate-x-1/2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}

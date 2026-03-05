@@ -48,12 +48,13 @@
 .bd-audit-text {
     font-size: 30px;
     line-height: 36px;
-    font-weight: 500;
+    font-weight: 400;
     color: #6F6864;
     margin: 0;
 }
 
 .bd-audit-text strong {
+    font-weight: 500;
     color: #6F6864;
 }
 

@@ -1,5 +1,4 @@
 
-
 import { HeroSection } from "../components/case-studies/new-template/layout/HeroSection";
 import { ContentSection } from "../components/case-studies/new-template/layout/ContentSection";
 import { TwoColumnSection } from "../components/case-studies/new-template/layout/TwoColumnSection";
@@ -16,6 +15,7 @@ import KeyInsights from "../components/case-studies/shared/KeyInsights";
 import FreshOutUserFlow from "../components/case-studies/fresh-out/FreshOutUserFlow";
 import FreshOutEventFlow from "../components/case-studies/fresh-out/FreshOutEventFlow";
 import { useDesktopViewport } from "../hooks/useDesktopViewport";
+import { ImageLightbox } from "../components/ui/ImageLightbox";
 
 
 const projectDetails = [
@@ -62,32 +62,32 @@ const keyInsights = [
 
 const nextSteps = [
     {
-        icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-community.png`,
+        icon: `${import.meta.env.BASE_URL}figmaAssets/image copy 27.png`,
         title: "User Testing",
         description: "Conduct usability testing with target users to validate design decisions and identify pain points.",
     },
     {
-        icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-events.png`,
+        icon: `${import.meta.env.BASE_URL}figmaAssets/image copy 28.png`,
         title: "Iterate & Refine",
         description: "Incorporate feedback to improve the user experience and address any discovered issues.",
     },
     {
-        icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-housing.png`,
+        icon: `${import.meta.env.BASE_URL}figmaAssets/image copy 29.png`,
         title: "Analytics Integration",
         description: "Implement tracking to measure key metrics like user engagement and retention rates.",
     },
     {
-        icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-mentor.png`,
+        icon: `${import.meta.env.BASE_URL}figmaAssets/image copy 30.png`,
         title: "Future Features",
         description: "Explore premium features like event creation, business partnerships, and community moderation tools.",
     },
 ];
 
 const loFiScreens = [
-    { src: `${import.meta.env.BASE_URL}figmaAssets/group-70.png`, alt: "Connect Screen", label: "Connect Screen", sublabel: "Meet new veterans" },
-    { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "Housing Screen", label: "Housing Screen", sublabel: "Find safe housing" },
-    { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "Housing Screen", label: "Housing Screen", sublabel: "Find safe housing" },
-    { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "Housing Screen", label: "Housing Screen", sublabel: "Find safe housing" },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/group-70.png`, alt: "Discovery Screen", label: "Discovery Screen", sublabel: "Discover events, meet\nnew veterans." },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "Main Home Screen", label: "Main Home Screen", sublabel: "Localized feed of events\nand social Opps." },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "Events  Screen", label: "Events  Screen", sublabel: "Events near user." },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "For You  Screen", label: "For You  Screen", sublabel: "Curated feed for\nuser." },
 ];
 
 
@@ -195,21 +195,27 @@ const FreshOutPage = () => {
             {/* Discovery Images */}
             <ContentSection className="!py-0">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[1100px] mx-auto">
-                    <img
-                        className="w-full h-auto object-cover rounded-xl"
-                        alt="Discovery research 1"
-                        src={`${import.meta.env.BASE_URL}figmaAssets/freshout-discovery-1.jpg`}
-                    />
-                    <img
-                        className="w-full h-auto object-cover rounded-xl"
-                        alt="Discovery research 2"
-                        src={`${import.meta.env.BASE_URL}figmaAssets/freshout-discovery-2.png`}
-                    />
-                    <img
-                        className="w-full h-auto object-cover rounded-xl"
-                        alt="Discovery research 3"
-                        src={`${import.meta.env.BASE_URL}figmaAssets/freshout-discovery-3.jpg`}
-                    />
+                    <ImageLightbox src={`${import.meta.env.BASE_URL}figmaAssets/freshout-discovery-1.jpg`} alt="Discovery research 1">
+                        <img
+                            className="w-full h-auto object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                            alt="Discovery research 1"
+                            src={`${import.meta.env.BASE_URL}figmaAssets/freshout-discovery-1.jpg`}
+                        />
+                    </ImageLightbox>
+                    <ImageLightbox src={`${import.meta.env.BASE_URL}figmaAssets/freshout-discovery-2.png`} alt="Discovery research 2">
+                        <img
+                            className="w-full h-auto object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                            alt="Discovery research 2"
+                            src={`${import.meta.env.BASE_URL}figmaAssets/freshout-discovery-2.png`}
+                        />
+                    </ImageLightbox>
+                    <ImageLightbox src={`${import.meta.env.BASE_URL}figmaAssets/freshout-discovery-3.jpg`} alt="Discovery research 3">
+                        <img
+                            className="w-full h-auto object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                            alt="Discovery research 3"
+                            src={`${import.meta.env.BASE_URL}figmaAssets/freshout-discovery-3.jpg`}
+                        />
+                    </ImageLightbox>
                 </div>
             </ContentSection>
 
@@ -254,11 +260,29 @@ const FreshOutPage = () => {
             />
 
             <ContentSection className="!py-0">
-                <img
-                    className="w-full max-w-[1100px] mx-auto h-auto rounded-2xl"
-                    alt="How might we"
-                    src={`${import.meta.env.BASE_URL}figmaAssets/how-might-we-image-group.png`}
-                />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[1100px] mx-auto">
+                    <ImageLightbox src={`${import.meta.env.BASE_URL}figmaAssets/image copy 35.png`} alt="How might we process 1">
+                        <img
+                            className="w-full h-auto object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                            alt="How might we process 1"
+                            src={`${import.meta.env.BASE_URL}figmaAssets/image copy 35.png`}
+                        />
+                    </ImageLightbox>
+                    <ImageLightbox src={`${import.meta.env.BASE_URL}figmaAssets/image copy 36.png`} alt="How might we process 2">
+                        <img
+                            className="w-full h-auto object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                            alt="How might we process 2"
+                            src={`${import.meta.env.BASE_URL}figmaAssets/image copy 36.png`}
+                        />
+                    </ImageLightbox>
+                    <ImageLightbox src={`${import.meta.env.BASE_URL}figmaAssets/image copy 37.png`} alt="How might we process 3">
+                        <img
+                            className="w-full h-auto object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                            alt="How might we process 3"
+                            src={`${import.meta.env.BASE_URL}figmaAssets/image copy 37.png`}
+                        />
+                    </ImageLightbox>
+                </div>
             </ContentSection>
 
             {/* Solution Overview */}
@@ -408,7 +432,12 @@ const FreshOutPage = () => {
             />
 
             <ContentSection className="!py-0">
-                <img className="w-full max-w-[1100px] mx-auto h-auto rounded-2xl" alt="Hi-Fi wireframes" src={`${import.meta.env.BASE_URL}figmaAssets/hifi.png`} />
+                <div className="flex justify-center gap-4 max-w-[1100px] mx-auto items-center">
+                    <div className="flex-1 flex justify-center items-center h-[500px]"><img className="max-h-[500px] w-auto object-contain" alt="Home Screen" src={`${import.meta.env.BASE_URL}figmaAssets/image copy 31.png`} /></div>
+                    <div className="flex-1 flex justify-center items-center h-[500px]"><img className="max-h-[500px] w-auto object-contain" alt="Events Screen" src={`${import.meta.env.BASE_URL}figmaAssets/image copy 32.png`} /></div>
+                    <div className="flex-1 flex justify-center items-center h-[500px]"><img className="max-h-[500px] w-auto object-contain" alt="Get Connected Screen" src={`${import.meta.env.BASE_URL}figmaAssets/image copy 33.png`} /></div>
+                    <div className="flex-1 flex justify-center items-center h-[500px]"><img className="max-h-[500px] w-auto object-contain" alt="Brotherhood Screen" src={`${import.meta.env.BASE_URL}figmaAssets/image copy 34.png`} /></div>
+                </div>
             </ContentSection>
 
             <ContentSection>
@@ -448,22 +477,22 @@ const FreshOutPage = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                     {[
                         {
-                            icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-housing.png`,
+                            icon: `${import.meta.env.BASE_URL}figmaAssets/image copy 23.png`,
                             title: "Housing Finder",
                             description: "Browse veteran-friendly housing options and connect with roommates who share similar backgrounds and values.",
                         },
                         {
-                            icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-events.png`,
+                            icon: `${import.meta.env.BASE_URL}figmaAssets/image copy 24.png`,
                             title: "Localized Events",
                             description: "Discover nearby veteran meetups, community events, and networking opportunities tailored to your area.",
                         },
                         {
-                            icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-mentor.png`,
+                            icon: `${import.meta.env.BASE_URL}figmaAssets/image copy 25.png`,
                             title: "Mentor Finder",
                             description: "Connect with experienced veterans who can offer guidance on career transitions, education, and personal growth.",
                         },
                         {
-                            icon: `${import.meta.env.BASE_URL}figmaAssets/freshout-kf-community.png`,
+                            icon: `${import.meta.env.BASE_URL}figmaAssets/image copy 26.png`,
                             title: "Community Finder",
                             description: "Find and join veteran communities based on shared interests, service branches, and geographic proximity.",
                         },
@@ -477,7 +506,7 @@ const FreshOutPage = () => {
                                 alt={feature.title}
                                 className="w-14 h-14 object-contain mx-auto"
                             />
-                            <h3 className="font-semibold text-[#1a1a1a] text-lg md:text-xl text-center w-full">
+                            <h3 className="font-semibold text-[#492300] text-lg md:text-xl text-center w-full">
                                 {feature.title}
                             </h3>
                             <p className="text-[#6F6864] text-sm md:text-base leading-relaxed">
