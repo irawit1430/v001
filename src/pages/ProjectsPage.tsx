@@ -78,11 +78,12 @@ const projects: Project[] = [
     {
         id: 6,
         title: "Room Designer",
-        category: "Mobile Application | Social App",
+        category: "Mobile Application | Interior Design App",
         type: 'APPLICATIONS',
         role: "Lead UX Designer",
-        description: "Conducted comprehensive UX research and designed complete user experience for a second hand baby products marketplace, improving navigations and check-out flow.",
-        image: projectRoomDesigner
+        description: "Led the design of an intuitive room design application, enabling users to visualize, plan, and furnish their living spaces with confidence and ease.",
+        image: projectRoomDesigner,
+        link: "/projects/room-designer"
     }
 ];
 

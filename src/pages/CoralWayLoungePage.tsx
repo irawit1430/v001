@@ -539,7 +539,7 @@ const CoralWayLoungePage = () => {
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center justify-between w-full px-4 lg:px-20 max-w-[1400px]">
                     <div className="flex-1 max-w-[800px]">
                         <img
-                            className="w-full h-auto drop-shadow-2xl"
+                            className="w-full h-auto drop-shadow-2xl transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_25px_50px_rgba(0,0,0,0.3)] cursor-pointer"
                             alt="Lobby & Arrival"
                             src={`${import.meta.env.BASE_URL}figmaAssets/image copy 4.png`}
                         />
@@ -556,7 +556,7 @@ const CoralWayLoungePage = () => {
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center justify-between w-full px-4 lg:px-20 max-w-[1400px]">
                     <div className="flex-1 max-w-[800px]">
                         <img
-                            className="w-full h-auto drop-shadow-2xl"
+                            className="w-full h-auto drop-shadow-2xl transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_25px_50px_rgba(0,0,0,0.3)] cursor-pointer"
                             alt="Welcome Portal"
                             src={`${import.meta.env.BASE_URL}figmaAssets/image copy 5.png`}
                         />
@@ -573,7 +573,7 @@ const CoralWayLoungePage = () => {
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center justify-between w-full px-4 lg:px-20 max-w-[1400px]">
                     <div className="flex-1 max-w-[800px]">
                         <img
-                            className="w-full h-auto drop-shadow-2xl"
+                            className="w-full h-auto drop-shadow-2xl transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_25px_50px_rgba(0,0,0,0.3)] cursor-pointer"
                             alt="Main Lounge"
                             src={`${import.meta.env.BASE_URL}figmaAssets/image copy 6.png`}
                         />
@@ -590,7 +590,7 @@ const CoralWayLoungePage = () => {
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center justify-between w-full px-4 lg:px-20 max-w-[1400px]">
                     <div className="flex-1 max-w-[800px]">
                         <img
-                            className="w-full h-auto drop-shadow-2xl"
+                            className="w-full h-auto drop-shadow-2xl transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_25px_50px_rgba(0,0,0,0.3)] cursor-pointer"
                             alt="Theater Room"
                             src={`${import.meta.env.BASE_URL}figmaAssets/image copy 7.png`}
                         />
@@ -607,7 +607,7 @@ const CoralWayLoungePage = () => {
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center justify-between w-full px-4 lg:px-20 max-w-[1400px]">
                     <div className="flex-1 max-w-[800px]">
                         <img
-                            className="w-full h-auto drop-shadow-2xl"
+                            className="w-full h-auto drop-shadow-2xl transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_25px_50px_rgba(0,0,0,0.3)] cursor-pointer"
                             alt="Lounge Immersion"
                             src={`${import.meta.env.BASE_URL}figmaAssets/image copy 8.png`}
                         />
@@ -640,7 +640,7 @@ const CoralWayLoungePage = () => {
             </ContentSection >
 
             {/* Contact CTA */}
-            <GetInTouchSection theme="dark" bgColor="bg-[#6F6864]" buttonBgColor="#D9D9D9" buttonTextColor="black" />
+            <GetInTouchSection theme="dark" bgColor="bg-[#6F6864]" buttonBgColor="#D9D9D9" buttonTextColor="#6F6864" />
 
         </div >
     );
