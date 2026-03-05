@@ -72,10 +72,10 @@ const discoveryImages = [
 ];
 
 const lofiImages = [
-    { src: welcomeScreen, alt: "Welcome Screen Wireframe", label: "Welcome Screen", sublabel: "Login or sign up" },
-    { src: newArrivalScreen, alt: "New Arrival Screen Wireframe", label: "New Arrival Screen", sublabel: "Explore curated new items" },
-    { src: donateScreen, alt: "Donate Screen Wireframe", label: "Donate Screen", sublabel: "Donate children's items" },
-    { src: itemDetailsScreen, alt: "Item Details Screen Wireframe", label: "Item Details Screen", sublabel: "Main home screen" },
+    { src: itemDetailsScreen, alt: "Welcome Screen Wireframe", label: "Welcome Screen", sublabel: "Login or sign up" },
+    { src: donateScreen, alt: "New Arrival Screen Wireframe", label: "New Arrival Screen", sublabel: "Explore curated new items" },
+    { src: newArrivalScreen, alt: "Donate Screen Wireframe", label: "Donate Screen", sublabel: "Donate children's items" },
+    { src: welcomeScreen, alt: "Item Details Screen Wireframe", label: "Item Details Screen", sublabel: "Main home screen" },
 ];
 
 const hifiImages = [

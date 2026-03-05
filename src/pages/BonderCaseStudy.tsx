@@ -155,7 +155,7 @@ const BonderCaseStudy = () => {
 
             {/* Research Overview */}
             <ResearchOverview
-                backgroundColor="bg-[#212873]"
+                backgroundColor="bg-[#6F6864]"
                 description="A combination of discovery research, competitive analysis, and early user exploration helped reveal the challenges members face."
                 cards={researchLabels}
             />
@@ -227,7 +227,7 @@ const BonderCaseStudy = () => {
 
             {/* Key Insights */}
             <KeyInsights
-                backgroundColor="bg-[#D1D1D1]"
+                backgroundColor="bg-[#6F6864]"
                 description="Analysis of competitors revealed that while many apps solve parts of the problem, none offer a cohesive ecosystem for a single venue."
                 insights={keyInsights}
                 textColor="text-white"

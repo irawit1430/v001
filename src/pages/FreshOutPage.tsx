@@ -86,8 +86,8 @@ const nextSteps = [
 const loFiScreens = [
     { src: `${import.meta.env.BASE_URL}figmaAssets/group-70.png`, alt: "Discovery Screen", label: "Discovery Screen", sublabel: "Discover events, meet\nnew veterans." },
     { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "Main Home Screen", label: "Main Home Screen", sublabel: "Localized feed of events\nand social Opps." },
-    { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "Events  Screen", label: "Events  Screen", sublabel: "Events near user." },
-    { src: `${import.meta.env.BASE_URL}figmaAssets/housing-3.png`, alt: "For You  Screen", label: "For You  Screen", sublabel: "Curated feed for\nuser." },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/image copy 46.png`, alt: "Events  Screen", label: "Events  Screen", sublabel: "Events near user." },
+    { src: `${import.meta.env.BASE_URL}figmaAssets/image copy 47.png`, alt: "For You  Screen", label: "For You  Screen", sublabel: "Curated feed for\nuser." },
 ];
 
 

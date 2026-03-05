@@ -218,7 +218,7 @@ const RecordzPage = () => {
 
             {/* Key Insights */}
             <KeyInsights
-                backgroundColor="bg-[#D1D1D1]"
+                backgroundColor="bg-[#6F6864]"
                 description="These insights summarize the most important patterns uncovered during research and discovery."
                 insights={keyInsights}
                 textColor="text-white"
