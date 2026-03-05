@@ -5,9 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
+    "build": "tsc -b && vite build && npm run build --prefix template/Untitled-Fresh-Out && node -e \"const fs=require('fs'); if(!fs.existsSync('dist/fresh-out')) fs.mkdirSync('dist/fresh-out', {recursive:true}); const fse=require('fs/promises'); async function copy(s, d) { let entries = await fse.readdir(s, {withFileTypes: true}); for (let entry of entries) { let srcPath = require('path').join(s, entry.name); let destPath = require('path').join(d, entry.name); entry.isDirectory() ? (await fse.mkdir(destPath, {recursive: true}), await copy(srcPath, destPath)) : await fse.copyFile(srcPath, destPath); } } copy('template/Untitled-Fresh-Out/dist/public', 'dist/fresh-out').catch(console.error);\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
@@ -25,7 +23,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
-    "@types/node": "^24.10.1",
+    "@types/node": "^22.0.0",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
