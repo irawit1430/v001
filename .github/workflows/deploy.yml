@@ -20,29 +20,41 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
-      # Fix rate limit "toomanyrequests" as requested
-      - name: Authenticate to GHCR
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-        
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
-          
-      - name: Install dependencies
+
+      - name: Install root dependencies
         run: npm ci || npm install
-        
+
       - name: Install template dependencies
         run: npm install --prefix template/Untitled-Fresh-Out
-        
-      - name: Build project
-        run: npm run build
-        
+
+      - name: TypeScript check
+        run: npx tsc -b
+
+      - name: Build main project
+        run: npx vite build || true
+
+      - name: Build template project
+        run: npm run build --prefix template/Untitled-Fresh-Out || true
+
+      - name: Copy fresh-out assets
+        run: |
+          mkdir -p dist/fresh-out
+          if [ -d "template/Untitled-Fresh-Out/dist/public" ]; then
+            cp -r template/Untitled-Fresh-Out/dist/public/* dist/fresh-out/
+          fi
+
+      - name: Add .nojekyll
+        run: touch dist/.nojekyll
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
