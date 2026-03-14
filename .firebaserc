@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "test-for-1"
+  },
+  "targets": {
+    "test-for-1": {
+      "hosting": {
+        "storyforyou-irawit": [
+          "storyforyou-irawit"
+        ]
+      }
+    }
+  }
+}

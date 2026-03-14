@@ -50,89 +50,54 @@
 .rd-audit-table-wrapper {
     width: 100%;
     overflow-x: auto;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: #FFFFFF;
 }
 
 /* Table Styles */
 .rd-audit-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 14px;
-    min-width: 900px;
+    font-size: 16px;
+    min-width: 700px;
 }
 
 .rd-audit-table th,
 .rd-audit-table td {
-    padding: 16px 20px;
+    padding: 24px 20px;
     text-align: left;
-    vertical-align: top;
+    vertical-align: middle;
     border-bottom: 1px solid #E5E5E5;
 }
 
-/* Header Row */
+/* Header Row — clean minimal style */
 .rd-table-header {
-    background: #000000;
-    color: #FFFFFF;
+    background: transparent;
+    color: #000000;
     font-weight: 600;
-    font-size: 15px;
-}
-
-.rd-table-header.rd-row-header {
-    background: #000000;
-    width: 140px;
+    font-size: 18px;
+    border-bottom: 2px solid #E5E5E5;
+    padding-bottom: 16px;
 }
 
 /* Row Labels */
 .rd-row-label {
-    background: #492300 !important;
-    color: #FFFFFF !important;
+    background: transparent !important;
+    color: #000000 !important;
     font-weight: 600;
-    width: 140px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
-/* Table Body alternating columns */
-.rd-audit-table td:nth-child(2),
-.rd-audit-table td:nth-child(4) {
-    background: #FFFFFF;
-}
-
-.rd-audit-table td:nth-child(3),
-.rd-audit-table td:nth-child(5) {
-    background: #FFF7EB;
-}
-
+/* Table Body — clean white background */
 .rd-audit-table td {
-    color: #333333;
-    line-height: 1.5;
+    background: #FFFFFF;
+    color: #6F6864;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
-/* Links */
-.rd-audit-table a {
-    color: #4A90D9;
-    text-decoration: underline;
-    word-break: break-all;
-}
-
-.rd-audit-table a:hover {
-    color: #2E6BB0;
-}
-
-/* Lists in table */
-.rd-audit-table ul {
-    margin: 0;
-    padding-left: 18px;
-    list-style-type: disc;
-}
-
-.rd-audit-table li {
-    margin-bottom: 6px;
-    line-height: 1.4;
-}
-
-.rd-audit-table li:last-child {
-    margin-bottom: 0;
+/* Last row no bottom border */
+.rd-audit-table tbody tr:last-child td {
+    border-bottom: none;
 }
 
 /* Responsive */
@@ -149,14 +114,19 @@
 
     .rd-audit-text {
         font-size: 16px;
+        line-height: 24px;
     }
 
     .rd-audit-table {
-        font-size: 13px;
+        font-size: 14px;
+    }
+
+    .rd-table-header {
+        font-size: 15px;
     }
 
     .rd-audit-table th,
     .rd-audit-table td {
-        padding: 12px 14px;
+        padding: 16px 14px;
     }
 }

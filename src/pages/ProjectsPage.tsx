@@ -8,7 +8,7 @@ import projectBonder from '../assets/Bonder.png';
 import projectRecordz from '../assets/1331 Recordz.png';
 import projectBabyThrift from '../assets/Baby Thrift.png';
 import projectCoralWay from '../assets/Coral Way Lounge.png';
-import projectRoomDesigner from '../assets/Room Designer.png';
+import projectRoomDesigner from '/figmaAssets/image copy 48.png';
 
 // Define project types
 type Category = 'APPLICATIONS' | 'UI' | 'EXTRAS';
@@ -77,11 +77,11 @@ const projects: Project[] = [
     },
     {
         id: 6,
-        title: "Room Designer",
-        category: "Mobile Application | Interior Design App",
+        title: "Watch Tower",
+        category: "Camera Management Application | Evidence Management App",
         type: 'APPLICATIONS',
         role: "Lead UX Designer",
-        description: "Led the design of an intuitive room design application, enabling users to visualize, plan, and furnish their living spaces with confidence and ease.",
+        description: "Designed a mobile workflow for police officers to record, review, and manage body-worn camera footage efficiently and securely.",
         image: projectRoomDesigner,
         link: "/projects/room-designer"
     }

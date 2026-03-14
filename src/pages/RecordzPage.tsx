@@ -467,13 +467,12 @@ const RecordzPage = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-[80px] max-w-[1301px] mx-auto w-full px-4 xl:px-0 pb-16">
-                    {hifiScreens.map((screen, index) => (
-                        <div key={index} className="flex flex-col gap-4 md:gap-6 w-full">
-                            <img src={screen.src} alt={screen.alt} className="w-full rounded-2xl" />
-                            <p className="font-medium text-[24px] md:text-[34px] leading-tight md:leading-[41px] text-[#6F6864] text-center md:text-left md:ml-8">{screen.label}</p>
-                        </div>
-                    ))}
+                <div className="max-w-[1301px] mx-auto w-full px-4 xl:px-0 pb-16">
+                    <img
+                        src={`${import.meta.env.BASE_URL}figmaAssets/image copy 75.png`}
+                        alt="1331 Recordz Hi-Fi Screens"
+                        className="w-full rounded-2xl"
+                    />
                 </div>
             </ContentSection>
 
