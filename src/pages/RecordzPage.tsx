@@ -46,11 +46,6 @@ import wireframeWelcome from '../assets/wireframe-welcome.png';
 import wireframeLanding from '../assets/wireframe-studio-landing.png';
 import wireframeAbout from '../assets/wireframe-studio-about.png';
 
-import hifiStudioLanding from '../assets/hifi-studio-landing.png';
-import hifiStudioAbout from '../assets/hifi-studio-about.png';
-import hifiWelcome from '../assets/hifi-welcome.png';
-import hifiLabelAbout from '../assets/hifi-label-about.png';
-
 
 
 const projectDetails = [
@@ -100,13 +95,6 @@ const wireframeImages = [
     { src: wireframeWelcome, alt: "Initial Welcome Screen", label: "Initial Welcome Screen", sublabel: "Label or Studio entrance" },
     { src: wireframeLanding, alt: "Studio Landing Screen", label: "Studio Landing Screen", sublabel: "Studio main page" },
     { src: wireframeAbout, alt: "Studio About Screen", label: "Studio About Screen", sublabel: "Login or sign up" },
-];
-
-const hifiScreens = [
-    { src: hifiWelcome, alt: "Initial Welcome Screen", label: "1331 Recordz Initial Welcome Screen" },
-    { src: hifiStudioLanding, alt: "Studio Landing Screen", label: "1331 Recordz Studio Landing Screen" },
-    { src: hifiStudioAbout, alt: "Studio About Screen", label: "1331 Recordz Studio About Screen" },
-    { src: hifiLabelAbout, alt: "Label About Screen", label: "1331 Recordz Label About Screen" },
 ];
 
 const nextSteps = [
